@@ -1,0 +1,986 @@
+[
+  {
+    "start": 0.0,
+    "end": 7.0,
+    "text": " Hello friends, welcome to GatesMesh here. Today we are going to start with the very first lecture of DBMS, that is Database Management System.",
+    "language": "en"
+  },
+  {
+    "start": 7.0,
+    "end": 14.0,
+    "text": " DBMS is a very important unit in terms of gate exam, UGC net exam and other competitive exam.",
+    "language": "en"
+  },
+  {
+    "start": 14.0,
+    "end": 22.0,
+    "text": " Even if I say simple thing, today's time for a BTEC student or even BCA student, DBMS is a very important subject.",
+    "language": "en"
+  },
+  {
+    "start": 23.0,
+    "end": 27.0,
+    "text": " You can say that it is a very emerging subject.",
+    "language": "en"
+  },
+  {
+    "start": 27.0,
+    "end": 36.0,
+    "text": " Means if I talk about 6-7 years ago, then at that time the questions were asked less in interviews.",
+    "language": "en"
+  },
+  {
+    "start": 36.0,
+    "end": 40.0,
+    "text": " But at today's time the most questions are being asked on database.",
+    "language": "en"
+  },
+  {
+    "start": 40.0,
+    "end": 47.0,
+    "text": " The major reason for this is that all the top companies, the major MNC companies which are known as top 50,",
+    "language": "en"
+  },
+  {
+    "start": 48.0,
+    "end": 53.0,
+    "text": " Fortune companies in which you come are Facebook, Google, Amazon.",
+    "language": "en"
+  },
+  {
+    "start": 53.0,
+    "end": 59.0,
+    "text": " So all the major companies whose work is going on on database,",
+    "language": "en"
+  },
+  {
+    "start": 59.0,
+    "end": 67.0,
+    "text": " All these companies whose work is going on database, then obviously they will ask the question from the database itself.",
+    "language": "en"
+  },
+  {
+    "start": 67.0,
+    "end": 72.0,
+    "text": " So that's why the point of view of interviews is very important subject.",
+    "language": "en"
+  },
+  {
+    "start": 72.0,
+    "end": 77.0,
+    "text": " So we are starting this DBMS from the very initial level.",
+    "language": "en"
+  },
+  {
+    "start": 77.0,
+    "end": 80.0,
+    "text": " So the first term I have written here is Database System.",
+    "language": "en"
+  },
+  {
+    "start": 80.0,
+    "end": 85.0,
+    "text": " I am not talking about DBMS, the first term I am talking about is Database System.",
+    "language": "en"
+  },
+  {
+    "start": 85.0,
+    "end": 88.0,
+    "text": " What is Database System?",
+    "language": "en"
+  },
+  {
+    "start": 88.0,
+    "end": 90.0,
+    "text": " As I have just told you, it is Facebook.",
+    "language": "en"
+  },
+  {
+    "start": 90.0,
+    "end": 93.0,
+    "text": " Even if we talk about India, then Indian Railways.",
+    "language": "en"
+  },
+  {
+    "start": 93.0,
+    "end": 100.0,
+    "text": " If we talk about IRCTC, then what is the own database system of Indian Railway?",
+    "language": "en"
+  },
+  {
+    "start": 100.0,
+    "end": 103.0,
+    "text": " What is the own database system of Facebook?",
+    "language": "en"
+  },
+  {
+    "start": 103.0,
+    "end": 106.0,
+    "text": " What is the own database system of Flipkart?",
+    "language": "en"
+  },
+  {
+    "start": 106.0,
+    "end": 112.0,
+    "text": " Now in that database system there are two terms, one is database and one is DBMS.",
+    "language": "en"
+  },
+  {
+    "start": 112.0,
+    "end": 120.0,
+    "text": " Means database system is comprised of two things, one is a database and another one is DBMS.",
+    "language": "en"
+  },
+  {
+    "start": 120.0,
+    "end": 124.0,
+    "text": " Now if I talk about database, what is the database?",
+    "language": "en"
+  },
+  {
+    "start": 124.0,
+    "end": 129.0,
+    "text": " Its very simple definition is database is a collection of related data.",
+    "language": "en"
+  },
+  {
+    "start": 129.0,
+    "end": 138.0,
+    "text": " If I tell you in a very lame language, it is a collection of related data.",
+    "language": "en"
+  },
+  {
+    "start": 138.0,
+    "end": 145.0,
+    "text": " From the name itself you can know that database means where a lot of data is collected.",
+    "language": "en"
+  },
+  {
+    "start": 145.0,
+    "end": 150.0,
+    "text": " But related data means like we are talking about Indian Railway,",
+    "language": "en"
+  },
+  {
+    "start": 150.0,
+    "end": 155.0,
+    "text": " IRCTC has its own database, it is a very big database.",
+    "language": "en"
+  },
+  {
+    "start": 155.0,
+    "end": 158.0,
+    "text": " Now what will be in that database? What happens in it?",
+    "language": "en"
+  },
+  {
+    "start": 158.0,
+    "end": 162.0,
+    "text": " When you log in, what happens? First of all, it is information of trains.",
+    "language": "en"
+  },
+  {
+    "start": 162.0,
+    "end": 166.0,
+    "text": " Means if you want to go anywhere, then you are finding information of trains.",
+    "language": "en"
+  },
+  {
+    "start": 166.0,
+    "end": 170.0,
+    "text": " What will be the information of passengers other than that?",
+    "language": "en"
+  },
+  {
+    "start": 170.0,
+    "end": 177.0,
+    "text": " Which passengers who have travelled on trains or have logged in IRCTC account?",
+    "language": "en"
+  },
+  {
+    "start": 177.0,
+    "end": 182.0,
+    "text": " Do they have the data of whole India? No.",
+    "language": "en"
+  },
+  {
+    "start": 182.0,
+    "end": 187.0,
+    "text": " So what I am trying to tell you here is that database is a collection of related data.",
+    "language": "en"
+  },
+  {
+    "start": 187.0,
+    "end": 190.0,
+    "text": " We don't want to make any data a club.",
+    "language": "en"
+  },
+  {
+    "start": 190.0,
+    "end": 195.0,
+    "text": " Means with the data of Indian Railways, Indian Passport's data cannot be a club.",
+    "language": "en"
+  },
+  {
+    "start": 195.0,
+    "end": 204.0,
+    "text": " Their own database, their own database, Indian Railways have their own database.",
+    "language": "en"
+  },
+  {
+    "start": 204.0,
+    "end": 206.0,
+    "text": " That's why it is a related data.",
+    "language": "en"
+  },
+  {
+    "start": 206.0,
+    "end": 209.0,
+    "text": " Now here I have bifurcated it further.",
+    "language": "en"
+  },
+  {
+    "start": 209.0,
+    "end": 213.0,
+    "text": " The database is generally structured and it is called unstructured.",
+    "language": "en"
+  },
+  {
+    "start": 213.0,
+    "end": 217.0,
+    "text": " By the way it is generally structured, semi-structured, unstructured.",
+    "language": "en"
+  },
+  {
+    "start": 217.0,
+    "end": 221.0,
+    "text": " But actually if we talk about our DBMS, then in such detail,",
+    "language": "en"
+  },
+  {
+    "start": 221.0,
+    "end": 224.0,
+    "text": " it doesn't come on today's time in GATE or UGC net.",
+    "language": "en"
+  },
+  {
+    "start": 224.0,
+    "end": 229.0,
+    "text": " But you should know about this that what structure data and unstructured data is?",
+    "language": "en"
+  },
+  {
+    "start": 229.0,
+    "end": 231.0,
+    "text": " What is structure data?",
+    "language": "en"
+  },
+  {
+    "start": 231.0,
+    "end": 239.0,
+    "text": " Such a database which can be stored in any particular shape or structure.",
+    "language": "en"
+  },
+  {
+    "start": 239.0,
+    "end": 244.0,
+    "text": " And unstructured means for which there is no particular structure.",
+    "language": "en"
+  },
+  {
+    "start": 244.0,
+    "end": 249.0,
+    "text": " For example I have written here that the data of Indian Railways or University.",
+    "language": "en"
+  },
+  {
+    "start": 249.0,
+    "end": 253.0,
+    "text": " Now why is the data of University or the data of Indian Railways structured?",
+    "language": "en"
+  },
+  {
+    "start": 253.0,
+    "end": 256.0,
+    "text": " Because for them this is a particular structure.",
+    "language": "en"
+  },
+  {
+    "start": 256.0,
+    "end": 265.0,
+    "text": " The most important structure used for structured database that is our DBMS.",
+    "language": "en"
+  },
+  {
+    "start": 265.0,
+    "end": 269.0,
+    "text": " Relational database management system.",
+    "language": "en"
+  },
+  {
+    "start": 269.0,
+    "end": 273.0,
+    "text": " Now I am coming here on this term database management system.",
+    "language": "en"
+  },
+  {
+    "start": 273.0,
+    "end": 277.0,
+    "text": " Now we are talking that we saved the data.",
+    "language": "en"
+  },
+  {
+    "start": 277.0,
+    "end": 282.0,
+    "text": " Means I have a lot of data, I saved the data on hard drives, servers on back end.",
+    "language": "en"
+  },
+  {
+    "start": 282.0,
+    "end": 284.0,
+    "text": " Now what to do about that data?",
+    "language": "en"
+  },
+  {
+    "start": 284.0,
+    "end": 289.0,
+    "text": " Obviously the user will fetch that data, the user wants to access the data.",
+    "language": "en"
+  },
+  {
+    "start": 289.0,
+    "end": 295.0,
+    "text": " Now they will update something in that data, insert some new data, delete some old data.",
+    "language": "en"
+  },
+  {
+    "start": 295.0,
+    "end": 299.0,
+    "text": " Means what to perform on an average on that?",
+    "language": "en"
+  },
+  {
+    "start": 299.0,
+    "end": 305.0,
+    "text": " Insertion means to add some data, deletion, delete some data, update.",
+    "language": "it"
+  },
+  {
+    "start": 305.0,
+    "end": 308.0,
+    "text": " Update means there is an old data like address,",
+    "language": "en"
+  },
+  {
+    "start": 308.0,
+    "end": 312.0,
+    "text": " some student's address was something else, it was updated, it was changed.",
+    "language": "en"
+  },
+  {
+    "start": 312.0,
+    "end": 318.0,
+    "text": " So what do we call these? Operations.",
+    "language": "en"
+  },
+  {
+    "start": 318.0,
+    "end": 325.0,
+    "text": " Now to perform all these operations, I should have some system.",
+    "language": "en"
+  },
+  {
+    "start": 325.0,
+    "end": 330.0,
+    "text": " So what do we call that system? Database management system.",
+    "language": "en"
+  },
+  {
+    "start": 330.0,
+    "end": 334.0,
+    "text": " So what is the collection of operations of database management system?",
+    "language": "en"
+  },
+  {
+    "start": 334.0,
+    "end": 342.0,
+    "text": " The user provides easiness so that the user can easily perform operations in database.",
+    "language": "en"
+  },
+  {
+    "start": 342.0,
+    "end": 345.0,
+    "text": " Which operations? Insertion, deletion, update.",
+    "language": "en"
+  },
+  {
+    "start": 345.0,
+    "end": 347.0,
+    "text": " Now where can the data be read?",
+    "language": "en"
+  },
+  {
+    "start": 347.0,
+    "end": 349.0,
+    "text": " Data can be present in remote area.",
+    "language": "en"
+  },
+  {
+    "start": 349.0,
+    "end": 355.0,
+    "text": " Means if I am in Delhi for example and it can be that my data is in Mumbai.",
+    "language": "en"
+  },
+  {
+    "start": 355.0,
+    "end": 358.0,
+    "text": " So I don't have to take the data from location.",
+    "language": "en"
+  },
+  {
+    "start": 358.0,
+    "end": 362.0,
+    "text": " I have to access the data and change something in that data.",
+    "language": "en"
+  },
+  {
+    "start": 362.0,
+    "end": 367.0,
+    "text": " Means when we access IRCTC's data, we do some reservation of the train.",
+    "language": "en"
+  },
+  {
+    "start": 367.0,
+    "end": 369.0,
+    "text": " So we know where the data is stored.",
+    "language": "en"
+  },
+  {
+    "start": 369.0,
+    "end": 374.0,
+    "text": " No, because the user doesn't have to take these things, he has to perform only his operations.",
+    "language": "en"
+  },
+  {
+    "start": 374.0,
+    "end": 379.0,
+    "text": " And to perform those operations, DBMS helps.",
+    "language": "en"
+  },
+  {
+    "start": 379.0,
+    "end": 386.0,
+    "text": " Now DBMS also has a lot of different companies, they have made a database management system.",
+    "language": "en"
+  },
+  {
+    "start": 386.0,
+    "end": 391.0,
+    "text": " For example Microsoft Corporation has made a sequel server.",
+    "language": "en"
+  },
+  {
+    "start": 391.0,
+    "end": 393.0,
+    "text": " And the Rackles have made different versions.",
+    "language": "en"
+  },
+  {
+    "start": 393.0,
+    "end": 398.0,
+    "text": " There are also the sequel servers 2005, 2008, 2010, 2016.",
+    "language": "en"
+  },
+  {
+    "start": 398.0,
+    "end": 400.0,
+    "text": " There are a lot of different versions.",
+    "language": "en"
+  },
+  {
+    "start": 400.0,
+    "end": 405.0,
+    "text": " There are 9, 11, 12, 16 of these Rackles.",
+    "language": "en"
+  },
+  {
+    "start": 405.0,
+    "end": 409.0,
+    "text": " There are also the same MySQL and the Rackles and DB2.",
+    "language": "en"
+  },
+  {
+    "start": 409.0,
+    "end": 415.0,
+    "text": " This is the own DBMS of IBM to manage the data.",
+    "language": "en"
+  },
+  {
+    "start": 415.0,
+    "end": 418.0,
+    "text": " Now we were talking about the structure data here.",
+    "language": "en"
+  },
+  {
+    "start": 418.0,
+    "end": 422.0,
+    "text": " I am only focusing on the structure data from this whole.",
+    "language": "en"
+  },
+  {
+    "start": 422.0,
+    "end": 429.0,
+    "text": " Because structure data, what I told you, such data which has proper structure to store.",
+    "language": "en"
+  },
+  {
+    "start": 429.0,
+    "end": 433.0,
+    "text": " And what is that structure? Relation.",
+    "language": "en"
+  },
+  {
+    "start": 435.0,
+    "end": 438.0,
+    "text": " Relation means table.",
+    "language": "en"
+  },
+  {
+    "start": 439.0,
+    "end": 446.0,
+    "text": " Means we store structure data in which format in the format of table.",
+    "language": "en"
+  },
+  {
+    "start": 446.0,
+    "end": 450.0,
+    "text": " Table means if you don't know about it, there is no problem.",
+    "language": "en"
+  },
+  {
+    "start": 450.0,
+    "end": 453.0,
+    "text": " I am explaining it from a very simple point of view.",
+    "language": "en"
+  },
+  {
+    "start": 453.0,
+    "end": 458.0,
+    "text": " Means if you have an Excel file, then what happens in it?",
+    "language": "en"
+  },
+  {
+    "start": 458.0,
+    "end": 460.0,
+    "text": " Columns are there, rows are there.",
+    "language": "en"
+  },
+  {
+    "start": 460.0,
+    "end": 462.0,
+    "text": " You can compare it with it.",
+    "language": "en"
+  },
+  {
+    "start": 462.0,
+    "end": 464.0,
+    "text": " Means what is a table?",
+    "language": "en"
+  },
+  {
+    "start": 464.0,
+    "end": 469.0,
+    "text": " In which there are some columns and what is there? Different rows.",
+    "language": "en"
+  },
+  {
+    "start": 469.0,
+    "end": 473.0,
+    "text": " Now we call this table in technical form. Relation.",
+    "language": "en"
+  },
+  {
+    "start": 473.0,
+    "end": 481.0,
+    "text": " Now my point here is that how we store structure data.",
+    "language": "en"
+  },
+  {
+    "start": 481.0,
+    "end": 483.0,
+    "text": " It can be of different ways too.",
+    "language": "en"
+  },
+  {
+    "start": 483.0,
+    "end": 487.0,
+    "text": " But the most usable method is relation.",
+    "language": "en"
+  },
+  {
+    "start": 487.0,
+    "end": 491.0,
+    "text": " Means how to store data in the form of relation, in the form of table.",
+    "language": "en"
+  },
+  {
+    "start": 491.0,
+    "end": 499.0,
+    "text": " Now when I am storing data in relation form, obviously I also need management system.",
+    "language": "en"
+  },
+  {
+    "start": 499.0,
+    "end": 505.0,
+    "text": " Means I need a platform which supports relation.",
+    "language": "en"
+  },
+  {
+    "start": 505.0,
+    "end": 509.0,
+    "text": " Means whenever the user accesses data, I need relation show.",
+    "language": "en"
+  },
+  {
+    "start": 509.0,
+    "end": 514.0,
+    "text": " Whenever I store the user data, I store the data in relation.",
+    "language": "en"
+  },
+  {
+    "start": 514.0,
+    "end": 516.0,
+    "text": " Like IRCTC.",
+    "language": "af"
+  },
+  {
+    "start": 516.0,
+    "end": 520.0,
+    "text": " Now if you remember that you have logged in to IRCTC,",
+    "language": "en"
+  },
+  {
+    "start": 520.0,
+    "end": 524.0,
+    "text": " So if you check it first when you put source, destination etc.",
+    "language": "en"
+  },
+  {
+    "start": 524.0,
+    "end": 528.0,
+    "text": " Then you get all the information of trains and what format it comes in?",
+    "language": "en"
+  },
+  {
+    "start": 528.0,
+    "end": 529.0,
+    "text": " The form of table.",
+    "language": "en"
+  },
+  {
+    "start": 529.0,
+    "end": 536.0,
+    "text": " In which the first column is the train number, name of train and also different number of compartments,",
+    "language": "en"
+  },
+  {
+    "start": 536.0,
+    "end": 541.0,
+    "text": " type of seats, departure time, departure date, different, different.",
+    "language": "fr"
+  },
+  {
+    "start": 541.0,
+    "end": 544.0,
+    "text": " That is the column of different database.",
+    "language": "en"
+  },
+  {
+    "start": 544.0,
+    "end": 546.0,
+    "text": " Now we are not talking about that.",
+    "language": "en"
+  },
+  {
+    "start": 546.0,
+    "end": 548.0,
+    "text": " We are talking in simple form.",
+    "language": "en"
+  },
+  {
+    "start": 548.0,
+    "end": 555.0,
+    "text": " I am talking only about structure data because in BTECH we study in RDBMS,",
+    "language": "en"
+  },
+  {
+    "start": 555.0,
+    "end": 557.0,
+    "text": " Relational Database Management System,",
+    "language": "en"
+  },
+  {
+    "start": 557.0,
+    "end": 561.0,
+    "text": " All the things we are focusing on on structure.",
+    "language": "en"
+  },
+  {
+    "start": 561.0,
+    "end": 564.0,
+    "text": " In gate also questions come on it.",
+    "language": "fr"
+  },
+  {
+    "start": 564.0,
+    "end": 569.0,
+    "text": " Even in UGC net, all the questions coming in competitive exams are structure data.",
+    "language": "en"
+  },
+  {
+    "start": 569.0,
+    "end": 572.0,
+    "text": " How do we store structure data in relation form?",
+    "language": "en"
+  },
+  {
+    "start": 572.0,
+    "end": 578.0,
+    "text": " Now what do I need to store and access relations?",
+    "language": "en"
+  },
+  {
+    "start": 578.0,
+    "end": 579.0,
+    "text": " Management system.",
+    "language": "nl"
+  },
+  {
+    "start": 579.0,
+    "end": 581.0,
+    "text": " So what is DBMMS?",
+    "language": "en"
+  },
+  {
+    "start": 581.0,
+    "end": 583.0,
+    "text": " A management system but for whom?",
+    "language": "en"
+  },
+  {
+    "start": 583.0,
+    "end": 584.0,
+    "text": " For relation.",
+    "language": "en"
+  },
+  {
+    "start": 584.0,
+    "end": 588.0,
+    "text": " So that's why a new term came here, RDBMS.",
+    "language": "en"
+  },
+  {
+    "start": 588.0,
+    "end": 593.0,
+    "text": " That is Relational Database Management System.",
+    "language": "en"
+  },
+  {
+    "start": 594.0,
+    "end": 599.0,
+    "text": " So this is our subject that is Relational Database Management System.",
+    "language": "en"
+  },
+  {
+    "start": 599.0,
+    "end": 605.0,
+    "text": " Such a system where we can insert, delete, update, perform many operations.",
+    "language": "en"
+  },
+  {
+    "start": 605.0,
+    "end": 609.0,
+    "text": " But on whom will we perform relations?",
+    "language": "en"
+  },
+  {
+    "start": 609.0,
+    "end": 613.0,
+    "text": " So this is the basic introduction of the RDBMS.",
+    "language": "en"
+  },
+  {
+    "start": 613.0,
+    "end": 616.0,
+    "text": " I forgot to explain about the unstructured data actually.",
+    "language": "en"
+  },
+  {
+    "start": 616.0,
+    "end": 622.0,
+    "text": " Unstructured data means such data which is not a particular structure to store.",
+    "language": "en"
+  },
+  {
+    "start": 622.0,
+    "end": 626.0,
+    "text": " It means there is no predefined structure where I can store that data.",
+    "language": "en"
+  },
+  {
+    "start": 626.0,
+    "end": 627.0,
+    "text": " Why?",
+    "language": "cy"
+  },
+  {
+    "start": 627.0,
+    "end": 633.0,
+    "text": " Because in unstructured data, majority of the data is photos, videos,",
+    "language": "en"
+  },
+  {
+    "start": 633.0,
+    "end": 635.0,
+    "text": " which have no particular format.",
+    "language": "en"
+  },
+  {
+    "start": 635.0,
+    "end": 639.0,
+    "text": " Like if I talk about web page, what is in web page?",
+    "language": "en"
+  },
+  {
+    "start": 639.0,
+    "end": 644.0,
+    "text": " Web page is a collection of photos, videos, chats.",
+    "language": "en"
+  },
+  {
+    "start": 644.0,
+    "end": 646.0,
+    "text": " They have no particular format.",
+    "language": "en"
+  },
+  {
+    "start": 646.0,
+    "end": 648.0,
+    "text": " They can be in any format.",
+    "language": "en"
+  },
+  {
+    "start": 648.0,
+    "end": 654.0,
+    "text": " Maybe in web page, first there was a video, then your image, then there was text,",
+    "language": "en"
+  },
+  {
+    "start": 654.0,
+    "end": 656.0,
+    "text": " or maybe some paragraph came first.",
+    "language": "en"
+  },
+  {
+    "start": 656.0,
+    "end": 660.0,
+    "text": " But what will be the structure data in a particular format?",
+    "language": "en"
+  },
+  {
+    "start": 660.0,
+    "end": 662.0,
+    "text": " And what is its format?",
+    "language": "en"
+  },
+  {
+    "start": 662.0,
+    "end": 663.0,
+    "text": " Table.",
+    "language": "fr"
+  },
+  {
+    "start": 663.0,
+    "end": 667.0,
+    "text": " So we are not talking about unstructured data here because our main topic,",
+    "language": "en"
+  },
+  {
+    "start": 667.0,
+    "end": 672.0,
+    "text": " our subject RDBMS is only working on structured data.",
+    "language": "en"
+  },
+  {
+    "start": 672.0,
+    "end": 675.0,
+    "text": " This is just an extra thing I just want to explain to you.",
+    "language": "en"
+  },
+  {
+    "start": 675.0,
+    "end": 679.0,
+    "text": " And another one point is, if I talk about today's time,",
+    "language": "en"
+  },
+  {
+    "start": 679.0,
+    "end": 685.0,
+    "text": " then 90% of the data on this earth is actually unstructured.",
+    "language": "en"
+  },
+  {
+    "start": 685.0,
+    "end": 688.0,
+    "text": " So all the technologies at today's time,",
+    "language": "en"
+  },
+  {
+    "start": 688.0,
+    "end": 693.0,
+    "text": " the technology that is coming on most of the technologies is unstructured data.",
+    "language": "en"
+  },
+  {
+    "start": 693.0,
+    "end": 696.0,
+    "text": " But this doesn't mean that structured data is closed.",
+    "language": "en"
+  },
+  {
+    "start": 696.0,
+    "end": 699.0,
+    "text": " Structured data also exists, but on unstructured data,",
+    "language": "en"
+  },
+  {
+    "start": 699.0,
+    "end": 702.0,
+    "text": " there is more technology which is being used at today's time.",
+    "language": "en"
+  },
+  {
+    "start": 702.0,
+    "end": 706.0,
+    "text": " For example, if I tell you a simple example, then if we talk about big data,",
+    "language": "en"
+  },
+  {
+    "start": 706.0,
+    "end": 711.0,
+    "text": " or talk about the Hadoop, we use all these terms for unstructured data.",
+    "language": "en"
+  },
+  {
+    "start": 711.0,
+    "end": 718.0,
+    "text": " But here I will only explain about structured data and RDBMS in further videos.",
+    "language": "en"
+  },
+  {
+    "start": 718.0,
+    "end": 719.0,
+    "text": " Thank you.",
+    "language": "so"
+  }
+]

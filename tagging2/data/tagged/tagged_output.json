@@ -1,0 +1,1150 @@
+[
+  {
+    "id": "seg_5a41dc3d",
+    "start_time": 0.0,
+    "end_time": 7.0,
+    "text": "Hello friends, welcome to GatesMesh here. Today we are going to start with the very first lecture of DBMS, that is Database Management System.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_b289183c",
+    "start_time": 7.0,
+    "end_time": 14.0,
+    "text": "DBMS is a very important unit in terms of gate exam, UGC net exam and other competitive exam.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_8db1b6fc",
+    "start_time": 14.0,
+    "end_time": 22.0,
+    "text": "Even if I say simple thing, today's time for a BTEC student or even BCA student, DBMS is a very important subject.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bb338c60",
+    "start_time": 23.0,
+    "end_time": 27.0,
+    "text": "You can say that it is a very emerging subject.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8aa8814c",
+    "start_time": 27.0,
+    "end_time": 36.0,
+    "text": "Means if I talk about 6-7 years ago, then at that time the questions were asked less in interviews.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f81d6acc",
+    "start_time": 36.0,
+    "end_time": 40.0,
+    "text": "But at today's time the most questions are being asked on database.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f22ecb99",
+    "start_time": 40.0,
+    "end_time": 47.0,
+    "text": "The major reason for this is that all the top companies, the major MNC companies which are known as top 50,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9aee3599",
+    "start_time": 48.0,
+    "end_time": 53.0,
+    "text": "Fortune companies in which you come are Facebook, Google, Amazon.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f5b7d79b",
+    "start_time": 53.0,
+    "end_time": 59.0,
+    "text": "So all the major companies whose work is going on on database,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_62d2482e",
+    "start_time": 59.0,
+    "end_time": 67.0,
+    "text": "All these companies whose work is going on database, then obviously they will ask the question from the database itself.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_819013a7",
+    "start_time": 67.0,
+    "end_time": 72.0,
+    "text": "So that's why the point of view of interviews is very important subject.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fed4eb94",
+    "start_time": 72.0,
+    "end_time": 77.0,
+    "text": "So we are starting this DBMS from the very initial level.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a754733e",
+    "start_time": 77.0,
+    "end_time": 80.0,
+    "text": "So the first term I have written here is Database System.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c927ea7f",
+    "start_time": 80.0,
+    "end_time": 85.0,
+    "text": "I am not talking about DBMS, the first term I am talking about is Database System.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e2b89eea",
+    "start_time": 85.0,
+    "end_time": 88.0,
+    "text": "What is Database System?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b546ea47",
+    "start_time": 88.0,
+    "end_time": 90.0,
+    "text": "As I have just told you, it is Facebook.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_07ebf38d",
+    "start_time": 90.0,
+    "end_time": 93.0,
+    "text": "Even if we talk about India, then Indian Railways.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_e0872a98",
+    "start_time": 93.0,
+    "end_time": 100.0,
+    "text": "If we talk about IRCTC, then what is the own database system of Indian Railway?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_93221b8f",
+    "start_time": 100.0,
+    "end_time": 103.0,
+    "text": "What is the own database system of Facebook?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3e23648d",
+    "start_time": 103.0,
+    "end_time": 106.0,
+    "text": "What is the own database system of Flipkart?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fa25afeb",
+    "start_time": 106.0,
+    "end_time": 112.0,
+    "text": "Now in that database system there are two terms, one is database and one is DBMS.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_87da840c",
+    "start_time": 112.0,
+    "end_time": 120.0,
+    "text": "Means database system is comprised of two things, one is a database and another one is DBMS.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5dadd83a",
+    "start_time": 120.0,
+    "end_time": 124.0,
+    "text": "Now if I talk about database, what is the database?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4a51f288",
+    "start_time": 124.0,
+    "end_time": 129.0,
+    "text": "Its very simple definition is database is a collection of related data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d7a2784f",
+    "start_time": 129.0,
+    "end_time": 138.0,
+    "text": "If I tell you in a very lame language, it is a collection of related data.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_5b599406",
+    "start_time": 138.0,
+    "end_time": 145.0,
+    "text": "From the name itself you can know that database means where a lot of data is collected.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c5d37fb5",
+    "start_time": 145.0,
+    "end_time": 150.0,
+    "text": "But related data means like we are talking about Indian Railway,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_94b30686",
+    "start_time": 150.0,
+    "end_time": 155.0,
+    "text": "IRCTC has its own database, it is a very big database.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cd89c76d",
+    "start_time": 155.0,
+    "end_time": 158.0,
+    "text": "Now what will be in that database? What happens in it?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f85b2fb6",
+    "start_time": 158.0,
+    "end_time": 162.0,
+    "text": "When you log in, what happens? First of all, it is information of trains.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7a6f499a",
+    "start_time": 162.0,
+    "end_time": 166.0,
+    "text": "Means if you want to go anywhere, then you are finding information of trains.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c7640dce",
+    "start_time": 166.0,
+    "end_time": 170.0,
+    "text": "What will be the information of passengers other than that?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c2fc881c",
+    "start_time": 170.0,
+    "end_time": 177.0,
+    "text": "Which passengers who have travelled on trains or have logged in IRCTC account?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0cf46024",
+    "start_time": 177.0,
+    "end_time": 182.0,
+    "text": "Do they have the data of whole India? No.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_b7386d9a",
+    "start_time": 182.0,
+    "end_time": 187.0,
+    "text": "So what I am trying to tell you here is that database is a collection of related data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a425bc90",
+    "start_time": 187.0,
+    "end_time": 190.0,
+    "text": "We don't want to make any data a club.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_d2c9dc14",
+    "start_time": 190.0,
+    "end_time": 195.0,
+    "text": "Means with the data of Indian Railways, Indian Passport's data cannot be a club.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_49c6b49b",
+    "start_time": 195.0,
+    "end_time": 204.0,
+    "text": "Their own database, their own database, Indian Railways have their own database.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_36c5113d",
+    "start_time": 204.0,
+    "end_time": 206.0,
+    "text": "That's why it is a related data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_521b67c1",
+    "start_time": 206.0,
+    "end_time": 209.0,
+    "text": "Now here I have bifurcated it further.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bd5d0c09",
+    "start_time": 209.0,
+    "end_time": 213.0,
+    "text": "The database is generally structured and it is called unstructured.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e4771c47",
+    "start_time": 213.0,
+    "end_time": 217.0,
+    "text": "By the way it is generally structured, semi-structured, unstructured.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c07de9a3",
+    "start_time": 217.0,
+    "end_time": 221.0,
+    "text": "But actually if we talk about our DBMS, then in such detail,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1828438d",
+    "start_time": 221.0,
+    "end_time": 224.0,
+    "text": "it doesn't come on today's time in GATE or UGC net.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_35dd5788",
+    "start_time": 224.0,
+    "end_time": 229.0,
+    "text": "But you should know about this that what structure data and unstructured data is?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3f198bb1",
+    "start_time": 229.0,
+    "end_time": 231.0,
+    "text": "What is structure data?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4f8433c7",
+    "start_time": 231.0,
+    "end_time": 239.0,
+    "text": "Such a database which can be stored in any particular shape or structure.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_edc4ebc0",
+    "start_time": 239.0,
+    "end_time": 244.0,
+    "text": "And unstructured means for which there is no particular structure.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9b18dd6a",
+    "start_time": 244.0,
+    "end_time": 249.0,
+    "text": "For example I have written here that the data of Indian Railways or University.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_4605e5c1",
+    "start_time": 249.0,
+    "end_time": 253.0,
+    "text": "Now why is the data of University or the data of Indian Railways structured?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0907f902",
+    "start_time": 253.0,
+    "end_time": 256.0,
+    "text": "Because for them this is a particular structure.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_96e0c726",
+    "start_time": 256.0,
+    "end_time": 265.0,
+    "text": "The most important structure used for structured database that is our DBMS.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3b570e03",
+    "start_time": 265.0,
+    "end_time": 269.0,
+    "text": "Relational database management system.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2c18de1a",
+    "start_time": 269.0,
+    "end_time": 273.0,
+    "text": "Now I am coming here on this term database management system.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5a5f4f52",
+    "start_time": 273.0,
+    "end_time": 277.0,
+    "text": "Now we are talking that we saved the data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_697c317e",
+    "start_time": 277.0,
+    "end_time": 282.0,
+    "text": "Means I have a lot of data, I saved the data on hard drives, servers on back end.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3698e142",
+    "start_time": 282.0,
+    "end_time": 284.0,
+    "text": "Now what to do about that data?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fa01f7e1",
+    "start_time": 284.0,
+    "end_time": 289.0,
+    "text": "Obviously the user will fetch that data, the user wants to access the data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6fee5557",
+    "start_time": 289.0,
+    "end_time": 295.0,
+    "text": "Now they will update something in that data, insert some new data, delete some old data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_20345ea6",
+    "start_time": 295.0,
+    "end_time": 299.0,
+    "text": "Means what to perform on an average on that?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_2b320c5a",
+    "start_time": 299.0,
+    "end_time": 305.0,
+    "text": "Insertion means to add some data, deletion, delete some data, update.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fea824b8",
+    "start_time": 305.0,
+    "end_time": 308.0,
+    "text": "Update means there is an old data like address,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1e957175",
+    "start_time": 308.0,
+    "end_time": 312.0,
+    "text": "some student's address was something else, it was updated, it was changed.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b441a5a1",
+    "start_time": 312.0,
+    "end_time": 318.0,
+    "text": "So what do we call these? Operations.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bb829777",
+    "start_time": 318.0,
+    "end_time": 325.0,
+    "text": "Now to perform all these operations, I should have some system.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bf7f77df",
+    "start_time": 325.0,
+    "end_time": 330.0,
+    "text": "So what do we call that system? Database management system.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_858bb90f",
+    "start_time": 330.0,
+    "end_time": 334.0,
+    "text": "So what is the collection of operations of database management system?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1a35030c",
+    "start_time": 334.0,
+    "end_time": 342.0,
+    "text": "The user provides easiness so that the user can easily perform operations in database.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_86f9118c",
+    "start_time": 342.0,
+    "end_time": 345.0,
+    "text": "Which operations? Insertion, deletion, update.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_811f5a85",
+    "start_time": 345.0,
+    "end_time": 347.0,
+    "text": "Now where can the data be read?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_054801f8",
+    "start_time": 347.0,
+    "end_time": 349.0,
+    "text": "Data can be present in remote area.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3101b735",
+    "start_time": 349.0,
+    "end_time": 355.0,
+    "text": "Means if I am in Delhi for example and it can be that my data is in Mumbai.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_264ae87a",
+    "start_time": 355.0,
+    "end_time": 358.0,
+    "text": "So I don't have to take the data from location.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_88c0c88d",
+    "start_time": 358.0,
+    "end_time": 362.0,
+    "text": "I have to access the data and change something in that data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_45265089",
+    "start_time": 362.0,
+    "end_time": 367.0,
+    "text": "Means when we access IRCTC's data, we do some reservation of the train.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4ee2c209",
+    "start_time": 367.0,
+    "end_time": 369.0,
+    "text": "So we know where the data is stored.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5339f470",
+    "start_time": 369.0,
+    "end_time": 374.0,
+    "text": "No, because the user doesn't have to take these things, he has to perform only his operations.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_363dd1bb",
+    "start_time": 374.0,
+    "end_time": 379.0,
+    "text": "And to perform those operations, DBMS helps.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4c14d4b5",
+    "start_time": 379.0,
+    "end_time": 386.0,
+    "text": "Now DBMS also has a lot of different companies, they have made a database management system.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_89884fc7",
+    "start_time": 386.0,
+    "end_time": 391.0,
+    "text": "For example Microsoft Corporation has made a sequel server.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_4fe7ef21",
+    "start_time": 391.0,
+    "end_time": 393.0,
+    "text": "And the Rackles have made different versions.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_097275e3",
+    "start_time": 393.0,
+    "end_time": 398.0,
+    "text": "There are also the sequel servers 2005, 2008, 2010, 2016.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4f4efd57",
+    "start_time": 398.0,
+    "end_time": 400.0,
+    "text": "There are a lot of different versions.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_26975fb8",
+    "start_time": 400.0,
+    "end_time": 405.0,
+    "text": "There are 9, 11, 12, 16 of these Rackles.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7260c693",
+    "start_time": 405.0,
+    "end_time": 409.0,
+    "text": "There are also the same MySQL and the Rackles and DB2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0195ade0",
+    "start_time": 409.0,
+    "end_time": 415.0,
+    "text": "This is the own DBMS of IBM to manage the data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_78c4856e",
+    "start_time": 415.0,
+    "end_time": 418.0,
+    "text": "Now we were talking about the structure data here.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_c46f73d7",
+    "start_time": 418.0,
+    "end_time": 422.0,
+    "text": "I am only focusing on the structure data from this whole.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_710e0a63",
+    "start_time": 422.0,
+    "end_time": 429.0,
+    "text": "Because structure data, what I told you, such data which has proper structure to store.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ccd73fc8",
+    "start_time": 429.0,
+    "end_time": 433.0,
+    "text": "And what is that structure? Relation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a794bb51",
+    "start_time": 435.0,
+    "end_time": 438.0,
+    "text": "Relation means table.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_93e05695",
+    "start_time": 439.0,
+    "end_time": 446.0,
+    "text": "Means we store structure data in which format in the format of table.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e50a60fd",
+    "start_time": 446.0,
+    "end_time": 450.0,
+    "text": "Table means if you don't know about it, there is no problem.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_68138a9f",
+    "start_time": 450.0,
+    "end_time": 453.0,
+    "text": "I am explaining it from a very simple point of view.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3e30eafa",
+    "start_time": 453.0,
+    "end_time": 458.0,
+    "text": "Means if you have an Excel file, then what happens in it?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_999f62f2",
+    "start_time": 458.0,
+    "end_time": 460.0,
+    "text": "Columns are there, rows are there.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c24d64bb",
+    "start_time": 460.0,
+    "end_time": 462.0,
+    "text": "You can compare it with it.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f59bde68",
+    "start_time": 462.0,
+    "end_time": 464.0,
+    "text": "Means what is a table?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f904b080",
+    "start_time": 464.0,
+    "end_time": 469.0,
+    "text": "In which there are some columns and what is there? Different rows.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_51620acd",
+    "start_time": 469.0,
+    "end_time": 473.0,
+    "text": "Now we call this table in technical form. Relation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_944e400e",
+    "start_time": 473.0,
+    "end_time": 481.0,
+    "text": "Now my point here is that how we store structure data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fd0b92ab",
+    "start_time": 481.0,
+    "end_time": 483.0,
+    "text": "It can be of different ways too.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4bfb5de0",
+    "start_time": 483.0,
+    "end_time": 487.0,
+    "text": "But the most usable method is relation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5c2a815a",
+    "start_time": 487.0,
+    "end_time": 491.0,
+    "text": "Means how to store data in the form of relation, in the form of table.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4c303d10",
+    "start_time": 491.0,
+    "end_time": 499.0,
+    "text": "Now when I am storing data in relation form, obviously I also need management system.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ebb2f4d0",
+    "start_time": 499.0,
+    "end_time": 505.0,
+    "text": "Means I need a platform which supports relation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_12bbd3c5",
+    "start_time": 505.0,
+    "end_time": 509.0,
+    "text": "Means whenever the user accesses data, I need relation show.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_113bd4f0",
+    "start_time": 509.0,
+    "end_time": 514.0,
+    "text": "Whenever I store the user data, I store the data in relation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d6fed980",
+    "start_time": 514.0,
+    "end_time": 516.0,
+    "text": "Like IRCTC.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_047f1e3a",
+    "start_time": 516.0,
+    "end_time": 520.0,
+    "text": "Now if you remember that you have logged in to IRCTC,",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_b74bf44b",
+    "start_time": 520.0,
+    "end_time": 524.0,
+    "text": "So if you check it first when you put source, destination etc.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_54711ff2",
+    "start_time": 524.0,
+    "end_time": 528.0,
+    "text": "Then you get all the information of trains and what format it comes in?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b84fe298",
+    "start_time": 528.0,
+    "end_time": 529.0,
+    "text": "The form of table.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4ebd3a08",
+    "start_time": 529.0,
+    "end_time": 536.0,
+    "text": "In which the first column is the train number, name of train and also different number of compartments,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0187c310",
+    "start_time": 536.0,
+    "end_time": 541.0,
+    "text": "type of seats, departure time, departure date, different, different.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_d8a93b37",
+    "start_time": 541.0,
+    "end_time": 544.0,
+    "text": "That is the column of different database.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8c5380b6",
+    "start_time": 544.0,
+    "end_time": 546.0,
+    "text": "Now we are not talking about that.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_5a9c1de0",
+    "start_time": 546.0,
+    "end_time": 548.0,
+    "text": "We are talking in simple form.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a1bb6f18",
+    "start_time": 548.0,
+    "end_time": 555.0,
+    "text": "I am talking only about structure data because in BTECH we study in RDBMS,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_446399cd",
+    "start_time": 555.0,
+    "end_time": 557.0,
+    "text": "Relational Database Management System,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1bdf7a6d",
+    "start_time": 557.0,
+    "end_time": 561.0,
+    "text": "All the things we are focusing on on structure.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e35dd75a",
+    "start_time": 561.0,
+    "end_time": 564.0,
+    "text": "In gate also questions come on it.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_30dedfab",
+    "start_time": 564.0,
+    "end_time": 569.0,
+    "text": "Even in UGC net, all the questions coming in competitive exams are structure data.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_51f93a97",
+    "start_time": 569.0,
+    "end_time": 572.0,
+    "text": "How do we store structure data in relation form?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_48d6c721",
+    "start_time": 572.0,
+    "end_time": 578.0,
+    "text": "Now what do I need to store and access relations?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a028666d",
+    "start_time": 578.0,
+    "end_time": 579.0,
+    "text": "Management system.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_a49cc0cf",
+    "start_time": 579.0,
+    "end_time": 581.0,
+    "text": "So what is DBMMS?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_534852d9",
+    "start_time": 581.0,
+    "end_time": 583.0,
+    "text": "A management system but for whom?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2034d5c8",
+    "start_time": 583.0,
+    "end_time": 584.0,
+    "text": "For relation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_268d3c4f",
+    "start_time": 584.0,
+    "end_time": 588.0,
+    "text": "So that's why a new term came here, RDBMS.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ff55b3c3",
+    "start_time": 588.0,
+    "end_time": 593.0,
+    "text": "That is Relational Database Management System.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8123c284",
+    "start_time": 594.0,
+    "end_time": 599.0,
+    "text": "So this is our subject that is Relational Database Management System.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3f7ce6fd",
+    "start_time": 599.0,
+    "end_time": 605.0,
+    "text": "Such a system where we can insert, delete, update, perform many operations.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_66d740af",
+    "start_time": 605.0,
+    "end_time": 609.0,
+    "text": "But on whom will we perform relations?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e55efc74",
+    "start_time": 609.0,
+    "end_time": 613.0,
+    "text": "So this is the basic introduction of the RDBMS.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e382d542",
+    "start_time": 613.0,
+    "end_time": 616.0,
+    "text": "I forgot to explain about the unstructured data actually.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7abbe8f2",
+    "start_time": 616.0,
+    "end_time": 622.0,
+    "text": "Unstructured data means such data which is not a particular structure to store.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ab248f99",
+    "start_time": 622.0,
+    "end_time": 626.0,
+    "text": "It means there is no predefined structure where I can store that data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_91567dc2",
+    "start_time": 626.0,
+    "end_time": 627.0,
+    "text": "Why?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_d9b63c36",
+    "start_time": 627.0,
+    "end_time": 633.0,
+    "text": "Because in unstructured data, majority of the data is photos, videos,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bb9e7a34",
+    "start_time": 633.0,
+    "end_time": 635.0,
+    "text": "which have no particular format.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9cca043b",
+    "start_time": 635.0,
+    "end_time": 639.0,
+    "text": "Like if I talk about web page, what is in web page?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0741aad4",
+    "start_time": 639.0,
+    "end_time": 644.0,
+    "text": "Web page is a collection of photos, videos, chats.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9f57ab29",
+    "start_time": 644.0,
+    "end_time": 646.0,
+    "text": "They have no particular format.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bd432dd5",
+    "start_time": 646.0,
+    "end_time": 648.0,
+    "text": "They can be in any format.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4bdb1d6a",
+    "start_time": 648.0,
+    "end_time": 654.0,
+    "text": "Maybe in web page, first there was a video, then your image, then there was text,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_744b87d9",
+    "start_time": 654.0,
+    "end_time": 656.0,
+    "text": "or maybe some paragraph came first.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8806e9e6",
+    "start_time": 656.0,
+    "end_time": 660.0,
+    "text": "But what will be the structure data in a particular format?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d2b244de",
+    "start_time": 660.0,
+    "end_time": 662.0,
+    "text": "And what is its format?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_42223a0f",
+    "start_time": 662.0,
+    "end_time": 663.0,
+    "text": "Table.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a199fb00",
+    "start_time": 663.0,
+    "end_time": 667.0,
+    "text": "So we are not talking about unstructured data here because our main topic,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_70343340",
+    "start_time": 667.0,
+    "end_time": 672.0,
+    "text": "our subject RDBMS is only working on structured data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b938dd0b",
+    "start_time": 672.0,
+    "end_time": 675.0,
+    "text": "This is just an extra thing I just want to explain to you.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_33482d5f",
+    "start_time": 675.0,
+    "end_time": 679.0,
+    "text": "And another one point is, if I talk about today's time,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cc68cc67",
+    "start_time": 679.0,
+    "end_time": 685.0,
+    "text": "then 90% of the data on this earth is actually unstructured.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_579e75d0",
+    "start_time": 685.0,
+    "end_time": 688.0,
+    "text": "So all the technologies at today's time,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8f4c08f9",
+    "start_time": 688.0,
+    "end_time": 693.0,
+    "text": "the technology that is coming on most of the technologies is unstructured data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_92ab7e3f",
+    "start_time": 693.0,
+    "end_time": 696.0,
+    "text": "But this doesn't mean that structured data is closed.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_066ddabf",
+    "start_time": 696.0,
+    "end_time": 699.0,
+    "text": "Structured data also exists, but on unstructured data,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a9792fd7",
+    "start_time": 699.0,
+    "end_time": 702.0,
+    "text": "there is more technology which is being used at today's time.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f86aa615",
+    "start_time": 702.0,
+    "end_time": 706.0,
+    "text": "For example, if I tell you a simple example, then if we talk about big data,",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_cde7ab9b",
+    "start_time": 706.0,
+    "end_time": 711.0,
+    "text": "or talk about the Hadoop, we use all these terms for unstructured data.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f5a3af70",
+    "start_time": 711.0,
+    "end_time": 718.0,
+    "text": "But here I will only explain about structured data and RDBMS in further videos.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_95592d27",
+    "start_time": 718.0,
+    "end_time": 719.0,
+    "text": "Thank you.",
+    "tag": "OTHER_CHATTER"
+  }
+]
