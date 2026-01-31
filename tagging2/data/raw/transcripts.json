@@ -1,986 +1,3102 @@
 [
   {
     "start": 0.0,
-    "end": 7.0,
-    "text": " Hello friends, welcome to GatesMesh here. Today we are going to start with the very first lecture of DBMS, that is Database Management System.",
-    "language": "en"
+    "end": 2.48,
+    "text": " The following content is provided under a Creative"
   },
   {
-    "start": 7.0,
-    "end": 14.0,
-    "text": " DBMS is a very important unit in terms of gate exam, UGC net exam and other competitive exam.",
-    "language": "en"
+    "start": 2.48,
+    "end": 3.88,
+    "text": " Commons license."
   },
   {
-    "start": 14.0,
-    "end": 22.0,
-    "text": " Even if I say simple thing, today's time for a BTEC student or even BCA student, DBMS is a very important subject.",
-    "language": "en"
+    "start": 3.88,
+    "end": 6.92,
+    "text": " Your support will help MIT OpenCourseWare continue to"
   },
   {
-    "start": 23.0,
-    "end": 27.0,
-    "text": " You can say that it is a very emerging subject.",
-    "language": "en"
+    "start": 6.92,
+    "end": 10.56,
+    "text": " offer high quality educational resources for free."
   },
   {
-    "start": 27.0,
-    "end": 36.0,
-    "text": " Means if I talk about 6-7 years ago, then at that time the questions were asked less in interviews.",
-    "language": "en"
+    "start": 10.56,
+    "end": 13.48,
+    "text": " To make a donation or view additional materials from"
   },
   {
-    "start": 36.0,
-    "end": 40.0,
-    "text": " But at today's time the most questions are being asked on database.",
-    "language": "en"
+    "start": 13.48,
+    "end": 17.4,
+    "text": " hundreds of MIT courses, visit MIT OpenCourseWare at"
   },
   {
-    "start": 40.0,
-    "end": 47.0,
-    "text": " The major reason for this is that all the top companies, the major MNC companies which are known as top 50,",
-    "language": "en"
+    "start": 17.4,
+    "end": 18.68,
+    "text": " ocw.mit.edu."
   },
   {
-    "start": 48.0,
-    "end": 53.0,
-    "text": " Fortune companies in which you come are Facebook, Google, Amazon.",
-    "language": "en"
+    "start": 21.56,
+    "end": 24.24,
+    "text": " Good morning."
   },
   {
-    "start": 53.0,
-    "end": 59.0,
-    "text": " So all the major companies whose work is going on on database,",
-    "language": "en"
+    "start": 24.24,
+    "end": 26.92,
+    "text": " We should start with a confession for those of you"
   },
   {
-    "start": 59.0,
-    "end": 67.0,
-    "text": " All these companies whose work is going on database, then obviously they will ask the question from the database itself.",
-    "language": "en"
+    "start": 26.92,
+    "end": 30.56,
+    "text": " looking at this in OpenCourseWare that I'm currently"
   },
   {
-    "start": 67.0,
-    "end": 72.0,
-    "text": " So that's why the point of view of interviews is very important subject.",
-    "language": "en"
+    "start": 30.56,
+    "end": 34.84,
+    "text": " lecturing to an empty auditorium."
   },
   {
-    "start": 72.0,
-    "end": 77.0,
-    "text": " So we are starting this DBMS from the very initial level.",
-    "language": "en"
+    "start": 34.84,
+    "end": 38.8,
+    "text": " The fifth lecture for 600 this term, we ran into some"
   },
   {
-    "start": 77.0,
-    "end": 80.0,
-    "text": " So the first term I have written here is Database System.",
-    "language": "en"
+    "start": 38.8,
+    "end": 43.88,
+    "text": " technical difficulties, which left us with a recording we"
   },
   {
-    "start": 80.0,
-    "end": 85.0,
-    "text": " I am not talking about DBMS, the first term I am talking about is Database System.",
-    "language": "en"
+    "start": 43.88,
+    "end": 46.0,
+    "text": " weren't very satisfied with."
   },
   {
-    "start": 85.0,
-    "end": 88.0,
-    "text": " What is Database System?",
-    "language": "en"
+    "start": 46.0,
+    "end": 48.8,
+    "text": " So this is a redo."
   },
   {
-    "start": 88.0,
-    "end": 90.0,
-    "text": " As I have just told you, it is Facebook.",
-    "language": "en"
+    "start": 48.8,
+    "end": 52.0,
+    "text": " And if you will hear no questions from the audience,"
   },
   {
-    "start": 90.0,
-    "end": 93.0,
-    "text": " Even if we talk about India, then Indian Railways.",
-    "language": "en"
+    "start": 52.0,
+    "end": 54.52,
+    "text": " and that's because there is no audience."
   },
   {
-    "start": 93.0,
-    "end": 100.0,
-    "text": " If we talk about IRCTC, then what is the own database system of Indian Railway?",
-    "language": "en"
+    "start": 54.52,
+    "end": 57.72,
+    "text": " Nevertheless, I will do my best to pretend."
   },
   {
-    "start": 100.0,
-    "end": 103.0,
-    "text": " What is the own database system of Facebook?",
-    "language": "en"
+    "start": 57.72,
+    "end": 61.32,
+    "text": " I've been told this is a little bit like giving a speech in"
   },
   {
-    "start": 103.0,
-    "end": 106.0,
-    "text": " What is the own database system of Flipkart?",
-    "language": "en"
+    "start": 61.32,
+    "end": 64.96,
+    "text": " the floor of the US Congress when C-SPAN is the only"
   },
   {
-    "start": 106.0,
-    "end": 112.0,
-    "text": " Now in that database system there are two terms, one is database and one is DBMS.",
-    "language": "en"
+    "start": 64.96,
+    "end": 67.36,
+    "text": " thing watching."
   },
   {
-    "start": 112.0,
-    "end": 120.0,
-    "text": " Means database system is comprised of two things, one is a database and another one is DBMS.",
-    "language": "en"
+    "start": 67.36,
+    "end": 69.88,
+    "text": " OK."
   },
   {
-    "start": 120.0,
-    "end": 124.0,
-    "text": " Now if I talk about database, what is the database?",
-    "language": "en"
+    "start": 69.88,
+    "end": 74.44,
+    "text": " Computers are supposed to be good for crunching numbers."
   },
   {
-    "start": 124.0,
-    "end": 129.0,
-    "text": " Its very simple definition is database is a collection of related data.",
-    "language": "en"
+    "start": 74.44,
+    "end": 78.24,
+    "text": " And we've looked a little bit at numbers this term."
   },
   {
-    "start": 129.0,
-    "end": 138.0,
-    "text": " If I tell you in a very lame language, it is a collection of related data.",
-    "language": "en"
+    "start": 78.24,
+    "end": 81.6,
+    "text": " But I now want to get into looking at them in more depth"
   },
   {
-    "start": 138.0,
-    "end": 145.0,
-    "text": " From the name itself you can know that database means where a lot of data is collected.",
-    "language": "en"
+    "start": 81.6,
+    "end": 83.12,
+    "text": " than we've been doing."
   },
   {
-    "start": 145.0,
-    "end": 150.0,
-    "text": " But related data means like we are talking about Indian Railway,",
-    "language": "en"
+    "start": 83.12,
+    "end": 85.8,
+    "text": " Python has two different kinds of numbers."
   },
   {
-    "start": 150.0,
-    "end": 155.0,
-    "text": " IRCTC has its own database, it is a very big database.",
-    "language": "en"
+    "start": 92.16,
+    "end": 95.4,
+    "text": " So far, the only con we've really paid any"
   },
   {
-    "start": 155.0,
-    "end": 158.0,
-    "text": " Now what will be in that database? What happens in it?",
-    "language": "en"
+    "start": 95.4,
+    "end": 97.6,
+    "text": " attention to is type int."
   },
   {
-    "start": 158.0,
-    "end": 162.0,
-    "text": " When you log in, what happens? First of all, it is information of trains.",
-    "language": "en"
+    "start": 100.52,
+    "end": 105.48,
+    "text": " And those are intended to mirror the integers, as we all"
   },
   {
-    "start": 162.0,
-    "end": 166.0,
-    "text": " Means if you want to go anywhere, then you are finding information of trains.",
-    "language": "en"
+    "start": 105.48,
+    "end": 109.0,
+    "text": " learned about starting an elementary school."
   },
   {
-    "start": 166.0,
-    "end": 170.0,
-    "text": " What will be the information of passengers other than that?",
-    "language": "en"
+    "start": 109.0,
+    "end": 112.56,
+    "text": " And they're good for things that you can count."
   },
   {
-    "start": 170.0,
-    "end": 177.0,
-    "text": " Which passengers who have travelled on trains or have logged in IRCTC account?",
-    "language": "en"
+    "start": 112.56,
+    "end": 115.64,
+    "text": " Any place you use hold numbers."
   },
   {
-    "start": 177.0,
-    "end": 182.0,
-    "text": " Do they have the data of whole India? No.",
-    "language": "en"
+    "start": 115.64,
+    "end": 120.6,
+    "text": " Interestingly, Python, unlike some languages, has what are"
   },
   {
-    "start": 182.0,
-    "end": 187.0,
-    "text": " So what I am trying to tell you here is that database is a collection of related data.",
-    "language": "en"
+    "start": 120.6,
+    "end": 122.88,
+    "text": " called arbitrary precision integers."
   },
   {
-    "start": 187.0,
-    "end": 190.0,
-    "text": " We don't want to make any data a club.",
-    "language": "en"
+    "start": 129.56,
+    "end": 133.24,
+    "text": " By that, we mean you can make numbers as big as you want"
   },
   {
-    "start": 190.0,
-    "end": 195.0,
-    "text": " Means with the data of Indian Railways, Indian Passport's data cannot be a club.",
-    "language": "en"
+    "start": 133.24,
+    "end": 134.44,
+    "text": " them to."
   },
   {
-    "start": 195.0,
-    "end": 204.0,
-    "text": " Their own database, their own database, Indian Railways have their own database.",
-    "language": "en"
+    "start": 134.44,
+    "end": 137.64,
+    "text": " Let's look at an example."
   },
   {
-    "start": 204.0,
-    "end": 206.0,
-    "text": " That's why it is a related data.",
-    "language": "en"
+    "start": 137.64,
+    "end": 140.24,
+    "text": " We'll just take a for a variable name."
   },
   {
-    "start": 206.0,
-    "end": 209.0,
-    "text": " Now here I have bifurcated it further.",
-    "language": "en"
+    "start": 140.24,
+    "end": 147.08,
+    "text": " And we'll set a to be 2 raised to the 1,000th power."
   },
   {
-    "start": 209.0,
-    "end": 213.0,
-    "text": " The database is generally structured and it is called unstructured.",
-    "language": "en"
+    "start": 147.08,
+    "end": 151.48,
+    "text": " That, by the way, is a really big number."
   },
   {
-    "start": 213.0,
-    "end": 217.0,
-    "text": " By the way it is generally structured, semi-structured, unstructured.",
-    "language": "en"
+    "start": 151.48,
+    "end": 154.96,
+    "text": " And now what happens if we try and display it?"
   },
   {
-    "start": 217.0,
-    "end": 221.0,
-    "text": " But actually if we talk about our DBMS, then in such detail,",
-    "language": "en"
+    "start": 154.96,
+    "end": 157.44,
+    "text": " We get a lot of digits."
   },
   {
-    "start": 221.0,
-    "end": 224.0,
-    "text": " it doesn't come on today's time in GATE or UGC net.",
-    "language": "en"
+    "start": 157.44,
+    "end": 159.84,
+    "text": " You can see why I'm doing this on the screen instead of"
   },
   {
-    "start": 224.0,
-    "end": 229.0,
-    "text": " But you should know about this that what structure data and unstructured data is?",
-    "language": "en"
+    "start": 159.84,
+    "end": 161.32,
+    "text": " writing it on the blackboard."
   },
   {
-    "start": 229.0,
-    "end": 231.0,
-    "text": " What is structure data?",
-    "language": "en"
+    "start": 163.8,
+    "end": 165.8,
+    "text": " I'm not going to ask you whether you believe this is the"
   },
   {
-    "start": 231.0,
-    "end": 239.0,
-    "text": " Such a database which can be stored in any particular shape or structure.",
-    "language": "en"
+    "start": 165.8,
+    "end": 166.6,
+    "text": " right answer."
   },
   {
-    "start": 239.0,
-    "end": 244.0,
-    "text": " And unstructured means for which there is no particular structure.",
-    "language": "en"
+    "start": 166.6,
+    "end": 167.44,
+    "text": " Trust me."
   },
   {
-    "start": 244.0,
-    "end": 249.0,
-    "text": " For example I have written here that the data of Indian Railways or University.",
-    "language": "en"
+    "start": 167.44,
+    "end": 169.08,
+    "text": " Trust Python."
   },
   {
-    "start": 249.0,
-    "end": 253.0,
-    "text": " Now why is the data of University or the data of Indian Railways structured?",
-    "language": "en"
+    "start": 169.08,
+    "end": 172.12,
+    "text": " I would like you to notice that the very end of this is the"
   },
   {
-    "start": 253.0,
-    "end": 256.0,
-    "text": " Because for them this is a particular structure.",
-    "language": "en"
+    "start": 172.12,
+    "end": 178.36,
+    "text": " letter L. What does that mean?"
   },
   {
-    "start": 256.0,
-    "end": 265.0,
-    "text": " The most important structure used for structured database that is our DBMS.",
-    "language": "en"
+    "start": 178.36,
+    "end": 179.92,
+    "text": " It means long."
   },
   {
-    "start": 265.0,
-    "end": 269.0,
-    "text": " Relational database management system.",
-    "language": "en"
+    "start": 185.52,
+    "end": 190.96,
+    "text": " That's telling us that it's representing this particular"
   },
   {
-    "start": 269.0,
-    "end": 273.0,
-    "text": " Now I am coming here on this term database management system.",
-    "language": "en"
+    "start": 190.96,
+    "end": 195.56,
+    "text": " integer in what it calls its internal long format."
   },
   {
-    "start": 273.0,
-    "end": 277.0,
-    "text": " Now we are talking that we saved the data.",
-    "language": "en"
+    "start": 196.0,
+    "end": 197.96,
+    "text": " You needn't worry about that."
   },
   {
-    "start": 277.0,
-    "end": 282.0,
-    "text": " Means I have a lot of data, I saved the data on hard drives, servers on back end.",
-    "language": "en"
+    "start": 197.96,
+    "end": 200.12,
+    "text": " The only thing to say about it is when you're dealing with"
   },
   {
-    "start": 282.0,
-    "end": 284.0,
-    "text": " Now what to do about that data?",
-    "language": "en"
+    "start": 200.12,
+    "end": 203.24,
+    "text": " long integers, it's a lot less efficient than when you're"
   },
   {
-    "start": 284.0,
-    "end": 289.0,
-    "text": " Obviously the user will fetch that data, the user wants to access the data.",
-    "language": "en"
+    "start": 203.24,
+    "end": 205.84,
+    "text": " dealing with smaller numbers."
   },
   {
-    "start": 289.0,
-    "end": 295.0,
-    "text": " Now they will update something in that data, insert some new data, delete some old data.",
-    "language": "en"
+    "start": 205.84,
+    "end": 208.36,
+    "text": " And that's all it's kind of warning you by printing this"
   },
   {
-    "start": 295.0,
-    "end": 299.0,
-    "text": " Means what to perform on an average on that?",
-    "language": "en"
+    "start": 208.36,
+    "end": 215.28,
+    "text": " L. About 2 billion is the magic number."
   },
   {
-    "start": 299.0,
-    "end": 305.0,
-    "text": " Insertion means to add some data, deletion, delete some data, update.",
-    "language": "it"
+    "start": 215.28,
+    "end": 218.2,
+    "text": " When you get over 2 billion, it's now going to deal with"
   },
   {
-    "start": 305.0,
-    "end": 308.0,
-    "text": " Update means there is an old data like address,",
-    "language": "en"
+    "start": 218.2,
+    "end": 219.12,
+    "text": " long integers."
   },
   {
-    "start": 308.0,
-    "end": 312.0,
-    "text": " some student's address was something else, it was updated, it was changed.",
-    "language": "en"
+    "start": 219.12,
+    "end": 222.32,
+    "text": " So if, for example, you're trying to deal with US"
   },
   {
-    "start": 312.0,
-    "end": 318.0,
-    "text": " So what do we call these? Operations.",
-    "language": "en"
+    "start": 222.32,
+    "end": 230.2,
+    "text": " budget deficit, you will need integers of type L."
   },
   {
-    "start": 318.0,
-    "end": 325.0,
-    "text": " Now to perform all these operations, I should have some system.",
-    "language": "en"
+    "start": 230.2,
+    "end": 232.2,
+    "text": " OK."
   },
   {
-    "start": 325.0,
-    "end": 330.0,
-    "text": " So what do we call that system? Database management system.",
-    "language": "en"
+    "start": 232.2,
+    "end": 234.68,
+    "text": " Let's look at another interesting example."
   },
   {
-    "start": 330.0,
-    "end": 334.0,
-    "text": " So what is the collection of operations of database management system?",
-    "language": "en"
+    "start": 234.68,
+    "end": 244.08,
+    "text": " Suppose I set B equal to 2 raised to the 999th power."
   },
   {
-    "start": 334.0,
-    "end": 342.0,
-    "text": " The user provides easiness so that the user can easily perform operations in database.",
-    "language": "en"
+    "start": 244.08,
+    "end": 246.64,
+    "text": " I can display B."
   },
   {
-    "start": 342.0,
-    "end": 345.0,
-    "text": " Which operations? Insertion, deletion, update.",
-    "language": "en"
+    "start": 246.64,
+    "end": 252.76,
+    "text": " And it's a different number, considerably smaller, but again"
   },
   {
-    "start": 345.0,
-    "end": 347.0,
-    "text": " Now where can the data be read?",
-    "language": "en"
+    "start": 252.76,
+    "end": 254.48,
+    "text": " ending in an L."
   },
   {
-    "start": 347.0,
-    "end": 349.0,
-    "text": " Data can be present in remote area.",
-    "language": "en"
+    "start": 254.48,
+    "end": 261.64,
+    "text": " And now, what do you think I'll get if we try A divided by B?"
   },
   {
-    "start": 349.0,
-    "end": 355.0,
-    "text": " Means if I am in Delhi for example and it can be that my data is in Mumbai.",
-    "language": "en"
+    "start": 261.64,
+    "end": 265.56,
+    "text": " And remember, we're now doing integer division."
   },
   {
-    "start": 355.0,
-    "end": 358.0,
-    "text": " So I don't have to take the data from location.",
-    "language": "en"
+    "start": 265.56,
+    "end": 267.84,
+    "text": " Well, let's see."
   },
   {
-    "start": 358.0,
-    "end": 362.0,
-    "text": " I have to access the data and change something in that data.",
-    "language": "en"
+    "start": 267.84,
+    "end": 271.16,
+    "text": " We get 2 L."
   },
   {
-    "start": 362.0,
-    "end": 367.0,
-    "text": " Means when we access IRCTC's data, we do some reservation of the train.",
-    "language": "en"
+    "start": 271.16,
+    "end": 273.2,
+    "text": " Well, you'd expect it to be 2."
   },
   {
-    "start": 367.0,
-    "end": 369.0,
-    "text": " So we know where the data is stored.",
-    "language": "en"
+    "start": 273.24,
+    "end": 274.92,
+    "text": " Because if you think about the meaning of the"
   },
   {
-    "start": 369.0,
-    "end": 374.0,
-    "text": " No, because the user doesn't have to take these things, he has to perform only his operations.",
-    "language": "en"
+    "start": 274.92,
+    "end": 278.68,
+    "text": " exponentiation, indeed, the difference between raising"
   },
   {
-    "start": 374.0,
-    "end": 379.0,
-    "text": " And to perform those operations, DBMS helps.",
-    "language": "en"
+    "start": 278.68,
+    "end": 283.64,
+    "text": " something to the 999th power and to the 1,000th power"
   },
   {
-    "start": 379.0,
-    "end": 386.0,
-    "text": " Now DBMS also has a lot of different companies, they have made a database management system.",
-    "language": "en"
+    "start": 283.64,
+    "end": 287.0,
+    "text": " should be, in this case, 2, since that's what we're"
   },
   {
-    "start": 386.0,
-    "end": 391.0,
-    "text": " For example Microsoft Corporation has made a sequel server.",
-    "language": "en"
+    "start": 287.0,
+    "end": 289.28,
+    "text": " raising to a power."
   },
   {
-    "start": 391.0,
-    "end": 393.0,
-    "text": " And the Rackles have made different versions.",
-    "language": "en"
+    "start": 289.28,
+    "end": 292.4,
+    "text": " Why does it say 2 L?"
   },
   {
-    "start": 393.0,
-    "end": 398.0,
-    "text": " There are also the sequel servers 2005, 2008, 2010, 2016.",
-    "language": "en"
+    "start": 292.4,
+    "end": 295.68,
+    "text": " 2 is considerably less than 2 billion."
   },
   {
-    "start": 398.0,
-    "end": 400.0,
-    "text": " There are a lot of different versions.",
-    "language": "en"
+    "start": 295.68,
+    "end": 300.32,
+    "text": " And that's because once you get L, you stay L. Not"
   },
   {
-    "start": 400.0,
-    "end": 405.0,
-    "text": " There are 9, 11, 12, 16 of these Rackles.",
-    "language": "en"
+    "start": 300.36,
+    "end": 303.36,
+    "text": " particularly important, but kind of worth knowing."
   },
   {
-    "start": 405.0,
-    "end": 409.0,
-    "text": " There are also the same MySQL and the Rackles and DB2.",
-    "language": "en"
+    "start": 305.92,
+    "end": 309.04,
+    "text": " Why am I bothering you with this whole issue of how numbers"
   },
   {
-    "start": 409.0,
-    "end": 415.0,
-    "text": " This is the own DBMS of IBM to manage the data.",
-    "language": "en"
+    "start": 309.04,
+    "end": 312.44,
+    "text": " are represented in the computer?"
   },
   {
-    "start": 415.0,
-    "end": 418.0,
-    "text": " Now we were talking about the structure data here.",
-    "language": "en"
+    "start": 312.44,
+    "end": 316.0,
+    "text": " In an ideal world, you would ignore this completely and"
   },
   {
-    "start": 418.0,
-    "end": 422.0,
-    "text": " I am only focusing on the structure data from this whole.",
-    "language": "en"
+    "start": 316.0,
+    "end": 320.12,
+    "text": " just say, numbers do what numbers are supposed to do."
   },
   {
-    "start": 422.0,
-    "end": 429.0,
-    "text": " Because structure data, what I told you, such data which has proper structure to store.",
-    "language": "en"
+    "start": 320.12,
+    "end": 324.0,
+    "text": " But as we're about to see, sometimes in Python, and in"
   },
   {
-    "start": 429.0,
-    "end": 433.0,
-    "text": " And what is that structure? Relation.",
-    "language": "en"
+    "start": 324.0,
+    "end": 328.92,
+    "text": " fact in every programming language, things behave"
   },
   {
-    "start": 435.0,
-    "end": 438.0,
-    "text": " Relation means table.",
-    "language": "en"
+    "start": 328.92,
+    "end": 332.48,
+    "text": " contrary to what your intuition suggests."
   },
   {
-    "start": 439.0,
-    "end": 446.0,
-    "text": " Means we store structure data in which format in the format of table.",
-    "language": "en"
+    "start": 332.48,
+    "end": 335.88,
+    "text": " And I want to spend a little time helping you understand"
   },
   {
-    "start": 446.0,
-    "end": 450.0,
-    "text": " Table means if you don't know about it, there is no problem.",
-    "language": "en"
+    "start": 335.88,
+    "end": 338.56,
+    "text": " why this happens."
   },
   {
-    "start": 450.0,
-    "end": 453.0,
-    "text": " I am explaining it from a very simple point of view.",
-    "language": "en"
+    "start": 338.56,
+    "end": 341.64,
+    "text": " So let's look at a different kind of number."
   },
   {
-    "start": 453.0,
-    "end": 458.0,
-    "text": " Means if you have an Excel file, then what happens in it?",
-    "language": "en"
+    "start": 341.64,
+    "end": 348.68,
+    "text": " And now we're going to look at what Python and almost every"
   },
   {
-    "start": 458.0,
-    "end": 460.0,
-    "text": " Columns are there, rows are there.",
-    "language": "en"
+    "start": 348.68,
+    "end": 354.04,
+    "text": " other programming language calls type float, which is"
   },
   {
-    "start": 460.0,
-    "end": 462.0,
-    "text": " You can compare it with it.",
-    "language": "en"
+    "start": 354.04,
+    "end": 355.64,
+    "text": " short for floating point."
   },
   {
-    "start": 462.0,
-    "end": 464.0,
-    "text": " Means what is a table?",
-    "language": "en"
+    "start": 363.28,
+    "end": 367.4,
+    "text": " And that's the way that programming languages typically"
   },
   {
-    "start": 464.0,
-    "end": 469.0,
-    "text": " In which there are some columns and what is there? Different rows.",
-    "language": "en"
+    "start": 367.4,
+    "end": 372.64,
+    "text": " represent what we think of as real numbers."
   },
   {
-    "start": 469.0,
-    "end": 473.0,
-    "text": " Now we call this table in technical form. Relation.",
-    "language": "en"
+    "start": 372.64,
+    "end": 375.08,
+    "text": " So let's look at an example."
   },
   {
-    "start": 473.0,
-    "end": 481.0,
-    "text": " Now my point here is that how we store structure data.",
-    "language": "en"
+    "start": 375.08,
+    "end": 383.84,
+    "text": " I'm going to set the variable x to be 0.1, 1 tenth."
   },
   {
-    "start": 481.0,
-    "end": 483.0,
-    "text": " It can be of different ways too.",
-    "language": "en"
+    "start": 383.88,
+    "end": 385.96,
+    "text": " And now we're going to display x."
   },
   {
-    "start": 483.0,
-    "end": 487.0,
-    "text": " But the most usable method is relation.",
-    "language": "en"
+    "start": 389.84,
+    "end": 391.8,
+    "text": " Take a look at this."
   },
   {
-    "start": 487.0,
-    "end": 491.0,
-    "text": " Means how to store data in the form of relation, in the form of table.",
-    "language": "en"
+    "start": 391.8,
+    "end": 394.84,
+    "text": " Why isn't it 0.1?"
   },
   {
-    "start": 491.0,
-    "end": 499.0,
-    "text": " Now when I am storing data in relation form, obviously I also need management system.",
-    "language": "en"
+    "start": 394.84,
+    "end": 398.84,
+    "text": " Why is it 0.1, a whole bunch of zeros, and then this"
   },
   {
-    "start": 499.0,
-    "end": 505.0,
-    "text": " Means I need a platform which supports relation.",
-    "language": "en"
+    "start": 398.84,
+    "end": 403.16,
+    "text": " mysterious 1 appearing at the end?"
   },
   {
-    "start": 505.0,
-    "end": 509.0,
-    "text": " Means whenever the user accesses data, I need relation show.",
-    "language": "en"
+    "start": 403.16,
+    "end": 405.96,
+    "text": " Is it because Python just wants to be obnoxious and is"
   },
   {
-    "start": 509.0,
-    "end": 514.0,
-    "text": " Whenever I store the user data, I store the data in relation.",
-    "language": "en"
+    "start": 405.96,
+    "end": 408.04,
+    "text": " making life hard?"
   },
   {
-    "start": 514.0,
-    "end": 516.0,
-    "text": " Like IRCTC.",
-    "language": "af"
+    "start": 408.04,
+    "end": 409.28,
+    "text": " No."
   },
   {
-    "start": 516.0,
-    "end": 520.0,
-    "text": " Now if you remember that you have logged in to IRCTC,",
-    "language": "en"
+    "start": 409.28,
+    "end": 412.72,
+    "text": " It has to do with the way the numbers are represented"
   },
   {
-    "start": 520.0,
-    "end": 524.0,
-    "text": " So if you check it first when you put source, destination etc.",
-    "language": "en"
+    "start": 412.72,
+    "end": 414.4,
+    "text": " inside the computer."
   },
   {
-    "start": 524.0,
-    "end": 528.0,
-    "text": " Then you get all the information of trains and what format it comes in?",
-    "language": "en"
+    "start": 414.4,
+    "end": 419.84,
+    "text": " Python, like almost every modern programming language,"
   },
   {
-    "start": 528.0,
-    "end": 529.0,
-    "text": " The form of table.",
-    "language": "en"
+    "start": 419.84,
+    "end": 426.0,
+    "text": " represents numbers using the IEEE floating point standard."
   },
   {
-    "start": 529.0,
-    "end": 536.0,
-    "text": " In which the first column is the train number, name of train and also different number of compartments,",
-    "language": "en"
+    "start": 430.36,
+    "end": 431.84,
+    "text": " And it's IEEE 754."
   },
   {
-    "start": 536.0,
-    "end": 541.0,
-    "text": " type of seats, departure time, departure date, different, different.",
-    "language": "fr"
+    "start": 431.84,
+    "end": 440.84,
+    "text": " IEEE 754."
   },
   {
-    "start": 541.0,
-    "end": 544.0,
-    "text": " That is the column of different database.",
-    "language": "en"
+    "start": 440.84,
+    "end": 443.76,
+    "text": " Never again will you have to remember that it's 754."
   },
   {
-    "start": 544.0,
-    "end": 546.0,
-    "text": " Now we are not talking about that.",
-    "language": "en"
+    "start": 443.76,
+    "end": 447.48,
+    "text": " I promise not to ask you that question on a quiz."
   },
   {
-    "start": 546.0,
-    "end": 548.0,
-    "text": " We are talking in simple form.",
-    "language": "en"
+    "start": 447.48,
+    "end": 449.36,
+    "text": " But that's what they do."
   },
   {
-    "start": 548.0,
-    "end": 555.0,
-    "text": " I am talking only about structure data because in BTECH we study in RDBMS,",
-    "language": "en"
+    "start": 449.36,
+    "end": 453.4,
+    "text": " This is a variant of scientific notation."
   },
   {
-    "start": 555.0,
-    "end": 557.0,
-    "text": " Relational Database Management System,",
-    "language": "en"
+    "start": 461.88,
+    "end": 465.8,
+    "text": " Something you probably learned about in high school, as a"
   },
   {
-    "start": 557.0,
-    "end": 561.0,
-    "text": " All the things we are focusing on on structure.",
-    "language": "en"
+    "start": 465.8,
+    "end": 469.2,
+    "text": " way to represent very large numbers."
   },
   {
-    "start": 561.0,
-    "end": 564.0,
-    "text": " In gate also questions come on it.",
-    "language": "fr"
+    "start": 469.2,
+    "end": 474.32,
+    "text": " Typically, the way we do that is we represent the numbers in"
   },
   {
-    "start": 564.0,
-    "end": 569.0,
-    "text": " Even in UGC net, all the questions coming in competitive exams are structure data.",
-    "language": "en"
+    "start": 474.32,
+    "end": 482.76,
+    "text": " the form of a mantissa and an exponent."
   },
   {
-    "start": 569.0,
-    "end": 572.0,
-    "text": " How do we store structure data in relation form?",
-    "language": "en"
+    "start": 482.96,
+    "end": 489.72,
+    "text": " So we represent a floating point number as a pair of a"
   },
   {
-    "start": 572.0,
-    "end": 578.0,
-    "text": " Now what do I need to store and access relations?",
-    "language": "en"
+    "start": 489.72,
+    "end": 493.96,
+    "text": " mantissa and an exponent."
   },
   {
-    "start": 578.0,
-    "end": 579.0,
-    "text": " Management system.",
-    "language": "nl"
+    "start": 497.52,
+    "end": 502.72,
+    "text": " And because computers work in the binary system, it's"
   },
   {
-    "start": 579.0,
-    "end": 581.0,
-    "text": " So what is DBMMS?",
-    "language": "en"
+    "start": 502.72,
+    "end": 506.24,
+    "text": " unlike what you probably learned in high school, where we"
   },
   {
-    "start": 581.0,
-    "end": 583.0,
-    "text": " A management system but for whom?",
-    "language": "en"
+    "start": 506.24,
+    "end": 508.72,
+    "text": " raise 10 to some power."
   },
   {
-    "start": 583.0,
-    "end": 584.0,
-    "text": " For relation.",
-    "language": "en"
+    "start": 508.72,
+    "end": 511.16,
+    "text": " Here we'll always be raised to 10."
   },
   {
-    "start": 584.0,
-    "end": 588.0,
-    "text": " So that's why a new term came here, RDBMS.",
-    "language": "en"
+    "start": 511.56,
+    "end": 515.72,
+    "text": " Here we'll always be raising 2 to some power."
   },
   {
-    "start": 588.0,
-    "end": 593.0,
-    "text": " That is Relational Database Management System.",
-    "language": "en"
+    "start": 515.72,
+    "end": 517.92,
+    "text": " Maybe a little later in the term, if we talk about"
   },
   {
-    "start": 594.0,
-    "end": 599.0,
-    "text": " So this is our subject that is Relational Database Management System.",
-    "language": "en"
+    "start": 517.92,
+    "end": 520.56,
+    "text": " computer architecture, we'll get around to explaining why"
   },
   {
-    "start": 599.0,
-    "end": 605.0,
-    "text": " Such a system where we can insert, delete, update, perform many operations.",
-    "language": "en"
+    "start": 520.56,
+    "end": 522.8,
+    "text": " computers work in binary."
   },
   {
-    "start": 605.0,
-    "end": 609.0,
-    "text": " But on whom will we perform relations?",
-    "language": "en"
+    "start": 522.8,
+    "end": 527.0,
+    "text": " But for now, just assume that they do, and in fact, they"
   },
   {
-    "start": 609.0,
-    "end": 613.0,
-    "text": " So this is the basic introduction of the RDBMS.",
-    "language": "en"
+    "start": 527.0,
+    "end": 529.72,
+    "text": " always have."
   },
   {
-    "start": 613.0,
-    "end": 616.0,
-    "text": " I forgot to explain about the unstructured data actually.",
-    "language": "en"
+    "start": 529.72,
+    "end": 530.84,
+    "text": " All right."
   },
   {
-    "start": 616.0,
-    "end": 622.0,
-    "text": " Unstructured data means such data which is not a particular structure to store.",
-    "language": "en"
+    "start": 530.84,
+    "end": 541.08,
+    "text": " Purists manage to refer to the mantissa as a significant hand."
   },
   {
-    "start": 622.0,
-    "end": 626.0,
-    "text": " It means there is no predefined structure where I can store that data.",
-    "language": "en"
+    "start": 541.08,
+    "end": 545.44,
+    "text": " But I won't do that, because I'm an old guy, and it was a"
   },
   {
-    "start": 626.0,
-    "end": 627.0,
-    "text": " Why?",
-    "language": "cy"
+    "start": 545.44,
+    "end": 547.32,
+    "text": " mantissa when I first learned about it."
   },
   {
-    "start": 627.0,
-    "end": 633.0,
-    "text": " Because in unstructured data, majority of the data is photos, videos,",
-    "language": "en"
+    "start": 547.32,
+    "end": 551.52,
+    "text": " And I just can't break myself of the habit."
   },
   {
-    "start": 633.0,
-    "end": 635.0,
-    "text": " which have no particular format.",
-    "language": "en"
+    "start": 551.52,
+    "end": 553.12,
+    "text": " All right, so how does this work?"
   },
   {
-    "start": 635.0,
-    "end": 639.0,
-    "text": " Like if I talk about web page, what is in web page?",
-    "language": "en"
+    "start": 553.72,
+    "end": 561.44,
+    "text": " Well, when we recognize something, when we represent"
   },
   {
-    "start": 639.0,
-    "end": 644.0,
-    "text": " Web page is a collection of photos, videos, chats.",
-    "language": "en"
+    "start": 561.44,
+    "end": 577.28,
+    "text": " something, the mantissa is between 1 and 2."
   },
   {
-    "start": 644.0,
-    "end": 646.0,
-    "text": " They have no particular format.",
-    "language": "en"
+    "start": 577.28,
+    "end": 582.12,
+    "text": " Strictly less than 2, greater than or equal to 1."
   },
   {
-    "start": 646.0,
-    "end": 648.0,
-    "text": " They can be in any format.",
-    "language": "en"
+    "start": 582.12,
+    "end": 607.44,
+    "text": " The exponent is in the range minus 1022 to plus 1023."
   },
   {
-    "start": 648.0,
-    "end": 654.0,
-    "text": " Maybe in web page, first there was a video, then your image, then there was text,",
-    "language": "en"
+    "start": 607.48,
+    "end": 613.36,
+    "text": " So this lets us represent numbers up to about 10 to the"
   },
   {
-    "start": 654.0,
-    "end": 656.0,
-    "text": " or maybe some paragraph came first.",
-    "language": "en"
+    "start": 613.36,
+    "end": 616.16,
+    "text": " 300th or 8th plus or minus."
   },
   {
-    "start": 656.0,
-    "end": 660.0,
-    "text": " But what will be the structure data in a particular format?",
-    "language": "en"
+    "start": 616.16,
+    "end": 619.84,
+    "text": " 10 to 308 plus or minus."
   },
   {
-    "start": 660.0,
-    "end": 662.0,
-    "text": " And what is its format?",
-    "language": "en"
+    "start": 619.84,
+    "end": 624.12,
+    "text": " So quite a large range of numbers."
   },
   {
-    "start": 662.0,
-    "end": 663.0,
-    "text": " Table.",
-    "language": "fr"
+    "start": 624.12,
+    "end": 627.24,
+    "text": " Where did these magic things come from?"
   },
   {
-    "start": 663.0,
-    "end": 667.0,
-    "text": " So we are not talking about unstructured data here because our main topic,",
-    "language": "en"
+    "start": 627.24,
+    "end": 629.76,
+    "text": " Kind of a strange number to see here."
   },
   {
-    "start": 667.0,
-    "end": 672.0,
-    "text": " our subject RDBMS is only working on structured data.",
-    "language": "en"
+    "start": 629.76,
+    "end": 637.08,
+    "text": " Well, it has to do with the fact that computers typically"
   },
   {
-    "start": 672.0,
-    "end": 675.0,
-    "text": " This is just an extra thing I just want to explain to you.",
-    "language": "en"
+    "start": 637.08,
+    "end": 639.6,
+    "text": " have words in them."
   },
   {
-    "start": 675.0,
-    "end": 679.0,
-    "text": " And another one point is, if I talk about today's time,",
-    "language": "en"
+    "start": 639.6,
+    "end": 646.36,
+    "text": " And the words today in a modern computer are 64 bits."
   },
   {
-    "start": 679.0,
-    "end": 685.0,
-    "text": " then 90% of the data on this earth is actually unstructured.",
-    "language": "en"
+    "start": 646.36,
+    "end": 649.28,
+    "text": " For many years, they were 32 bits."
   },
   {
-    "start": 685.0,
-    "end": 688.0,
-    "text": " So all the technologies at today's time,",
-    "language": "en"
+    "start": 649.28,
+    "end": 651.12,
+    "text": " Before that, they were 16 bits."
   },
   {
-    "start": 688.0,
-    "end": 693.0,
-    "text": " the technology that is coming on most of the technologies is unstructured data.",
-    "language": "en"
+    "start": 651.12,
+    "end": 653.44,
+    "text": " Before that, they were 8 bits."
   },
   {
-    "start": 693.0,
-    "end": 696.0,
-    "text": " But this doesn't mean that structured data is closed.",
-    "language": "en"
+    "start": 653.44,
+    "end": 655.6,
+    "text": " They continually grown."
   },
   {
-    "start": 696.0,
-    "end": 699.0,
-    "text": " Structured data also exists, but on unstructured data,",
-    "language": "en"
+    "start": 655.6,
+    "end": 658.76,
+    "text": " But we've been at 64 for a while, and I think we'll be"
   },
   {
-    "start": 699.0,
-    "end": 702.0,
-    "text": " there is more technology which is being used at today's time.",
-    "language": "en"
+    "start": 658.76,
+    "end": 662.32,
+    "text": " stuck at 64 for a while."
   },
   {
-    "start": 702.0,
-    "end": 706.0,
-    "text": " For example, if I tell you a simple example, then if we talk about big data,",
-    "language": "en"
+    "start": 662.32,
+    "end": 670.08,
+    "text": " So as we do this, what we do is we get one bit for the sign."
   },
   {
-    "start": 706.0,
-    "end": 711.0,
-    "text": " or talk about the Hadoop, we use all these terms for unstructured data.",
-    "language": "en"
+    "start": 670.08,
+    "end": 673.2,
+    "text": " Is it a positive or a negative number?"
   },
   {
-    "start": 711.0,
-    "end": 718.0,
-    "text": " But here I will only explain about structured data and RDBMS in further videos.",
-    "language": "en"
+    "start": 673.2,
+    "end": 677.68,
+    "text": " 11 for the exponent."
   },
   {
-    "start": 718.0,
-    "end": 719.0,
-    "text": " Thank you.",
-    "language": "so"
+    "start": 677.68,
+    "end": 688.24,
+    "text": " And that leaves 52 for the mantissa."
+  },
+  {
+    "start": 688.28,
+    "end": 692.4,
+    "text": " And that basically tells us how we're storing numbers."
+  },
+  {
+    "start": 692.4,
+    "end": 694.92,
+    "text": " Hi, are you here for the 600 lecture?"
+  },
+  {
+    "start": 694.92,
+    "end": 697.08,
+    "text": " There is none today, because we have a quiz this evening."
+  },
+  {
+    "start": 700.92,
+    "end": 703.16,
+    "text": " It's now the time that the lecture would normally have"
+  },
+  {
+    "start": 703.16,
+    "end": 706.48,
+    "text": " started, and a couple of students who forgot that we"
+  },
+  {
+    "start": 706.48,
+    "end": 709.24,
+    "text": " have a quiz this evening instead of a lecture just"
+  },
+  {
+    "start": 709.24,
+    "end": 713.8,
+    "text": " strolled in and now strolled out."
+  },
+  {
+    "start": 713.84,
+    "end": 720.28,
+    "text": " OK, you may never need to know these constants again, but"
+  },
+  {
+    "start": 720.28,
+    "end": 724.36,
+    "text": " it's worth knowing that they exist, and that basically"
+  },
+  {
+    "start": 724.36,
+    "end": 728.96,
+    "text": " this gives us about the equivalent of 17 decimal"
+  },
+  {
+    "start": 728.96,
+    "end": 730.4,
+    "text": " digits of precision."
+  },
+  {
+    "start": 733.24,
+    "end": 738.08,
+    "text": " So we can represent numbers up to 17 decimal digits long."
+  },
+  {
+    "start": 739.08,
+    "end": 744.08,
+    "text": " This is an important concept to understand that unlike the"
+  },
+  {
+    "start": 744.08,
+    "end": 747.56,
+    "text": " long ints where they can grow arbitrarily big, when we're"
+  },
+  {
+    "start": 747.56,
+    "end": 751.36,
+    "text": " dealing with floating points, if we need something more than"
+  },
+  {
+    "start": 751.36,
+    "end": 755.68,
+    "text": " 17 decimal digits, in Python at least, we won't be able to"
+  },
+  {
+    "start": 755.68,
+    "end": 756.84,
+    "text": " get it."
+  },
+  {
+    "start": 756.84,
+    "end": 758.88,
+    "text": " And that's true in many languages."
+  },
+  {
+    "start": 758.88,
+    "end": 762.64,
+    "text": " Now the good news, this is an enormous number, and it's"
+  },
+  {
+    "start": 762.64,
+    "end": 766.32,
+    "text": " highly unlikely that ever in your life, you'll be able to"
+  },
+  {
+    "start": 766.32,
+    "end": 769.8,
+    "text": " see that ever in your life, you will need more precision than"
+  },
+  {
+    "start": 769.8,
+    "end": 771.92,
+    "text": " that."
+  },
+  {
+    "start": 771.92,
+    "end": 778.88,
+    "text": " All right, now let's go back to the 0.1 mystery that we"
+  },
+  {
+    "start": 778.88,
+    "end": 785.0,
+    "text": " started at and ask ourselves why we have a problem"
+  },
+  {
+    "start": 785.0,
+    "end": 788.88,
+    "text": " representing that number in the computer."
+  },
+  {
+    "start": 788.88,
+    "end": 791.12,
+    "text": " Hence, we get something funny out when we"
+  },
+  {
+    "start": 791.12,
+    "end": 794.76,
+    "text": " try and print it back."
+  },
+  {
+    "start": 794.76,
+    "end": 798.24,
+    "text": " Well, let's look at an easier problem first."
+  },
+  {
+    "start": 798.24,
+    "end": 802.36,
+    "text": " Let's look at representing the fraction 1 eighth."
+  },
+  {
+    "start": 806.4,
+    "end": 809.2,
+    "text": " That has a nice representation."
+  },
+  {
+    "start": 809.2,
+    "end": 815.52,
+    "text": " That's equal in decimal to 0.125."
+  },
+  {
+    "start": 815.52,
+    "end": 820.48,
+    "text": " And we can represent it conveniently in both base 10"
+  },
+  {
+    "start": 820.48,
+    "end": 823.0,
+    "text": " and base 2."
+  },
+  {
+    "start": 823.04,
+    "end": 833.28,
+    "text": " So if we want to represent it in base 10, what is it?"
+  },
+  {
+    "start": 833.28,
+    "end": 836.16,
+    "text": " What is that equal to?"
+  },
+  {
+    "start": 836.16,
+    "end": 842.04,
+    "text": " Well, we'll take a mantissa, 1.25, and now we need to"
+  },
+  {
+    "start": 842.04,
+    "end": 849.6,
+    "text": " multiply it by something that we can represent nicely."
+  },
+  {
+    "start": 849.6,
+    "end": 854.48,
+    "text": " And in fact, that will be times 10 to the minus 1."
+  },
+  {
+    "start": 854.48,
+    "end": 857.92,
+    "text": " So the exponent would simply be minus 1, and we have a nice"
+  },
+  {
+    "start": 857.92,
+    "end": 860.76,
+    "text": " representation."
+  },
+  {
+    "start": 860.76,
+    "end": 869.36,
+    "text": " Suppose we want to represent it in base 2, what would it be?"
+  },
+  {
+    "start": 869.36,
+    "end": 877.28,
+    "text": " 1.0 times anybody?"
+  },
+  {
+    "start": 877.28,
+    "end": 884.08,
+    "text": " Well, 2 to the minus 3."
+  },
+  {
+    "start": 884.08,
+    "end": 893.4,
+    "text": " So in binary notation, that would be written as 0.001."
+  },
+  {
+    "start": 893.4,
+    "end": 896.16,
+    "text": " So you see, 1 eighth is kind of a nice number."
+  },
+  {
+    "start": 896.16,
+    "end": 901.92,
+    "text": " We can represent it nicely in either base 10 or base 2."
+  },
+  {
+    "start": 901.92,
+    "end": 915.04,
+    "text": " But how about that pesky fraction 1 over 10?"
+  },
+  {
+    "start": 915.04,
+    "end": 918.68,
+    "text": " Well, in base 10, we know how to represent."
+  },
+  {
+    "start": 918.68,
+    "end": 928.44,
+    "text": " It's 1 times 10 to the what?"
+  },
+  {
+    "start": 928.44,
+    "end": 930.12,
+    "text": " 10 to the 1?"
+  },
+  {
+    "start": 930.12,
+    "end": 932.88,
+    "text": " No."
+  },
+  {
+    "start": 932.88,
+    "end": 941.08,
+    "text": " But in base 2, it's a problem."
+  },
+  {
+    "start": 941.08,
+    "end": 946.48,
+    "text": " There is no finite binary number that exactly"
+  },
+  {
+    "start": 946.52,
+    "end": 951.4,
+    "text": " represents this decimal fraction."
+  },
+  {
+    "start": 951.4,
+    "end": 955.92,
+    "text": " In fact, if we try and find the binary number, what we find"
+  },
+  {
+    "start": 955.92,
+    "end": 959.64,
+    "text": " is we get an infinitely repeating series."
+  },
+  {
+    "start": 959.64,
+    "end": 969.96,
+    "text": " 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, and et cetera."
+  },
+  {
+    "start": 969.96,
+    "end": 974.52,
+    "text": " Stop at any finite number of bits, and you get only an"
+  },
+  {
+    "start": 974.56,
+    "end": 977.44,
+    "text": " approximation to the decimal fraction 1 tenth."
+  },
+  {
+    "start": 980.84,
+    "end": 987.28,
+    "text": " So on most computers, if you were to print the decimal"
+  },
+  {
+    "start": 987.28,
+    "end": 991.2,
+    "text": " value of the binary approximation, and that's"
+  },
+  {
+    "start": 991.2,
+    "end": 994.96,
+    "text": " what we're printing here on the screen, we think in"
+  },
+  {
+    "start": 994.96,
+    "end": 998.44,
+    "text": " decimal, so Python quite nicely for us is printing"
+  },
+  {
+    "start": 998.44,
+    "end": 1003.72,
+    "text": " things in decimal, it would have to display, well, I'm not"
+  },
+  {
+    "start": 1003.72,
+    "end": 1004.88,
+    "text": " going to write it."
+  },
+  {
+    "start": 1004.88,
+    "end": 1009.44,
+    "text": " It's a very long number, lots of digits."
+  },
+  {
+    "start": 1009.44,
+    "end": 1017.12,
+    "text": " However, in Python, whenever we display something, it uses"
+  },
+  {
+    "start": 1017.12,
+    "end": 1023.36,
+    "text": " the built-in function, R E P R, short for representation,"
+  },
+  {
+    "start": 1023.36,
+    "end": 1027.6,
+    "text": " that converts the internal representation, in this case of"
+  },
+  {
+    "start": 1027.6,
+    "end": 1032.64,
+    "text": " a number, to a string, and then displays that string, in"
+  },
+  {
+    "start": 1032.64,
+    "end": 1035.52,
+    "text": " this case, on the screen."
+  },
+  {
+    "start": 1035.52,
+    "end": 1044.08,
+    "text": " For floats, it rounds it to 17 digits."
+  },
+  {
+    "start": 1044.08,
+    "end": 1051.12,
+    "text": " There's that magic number 17 again."
+  },
+  {
+    "start": 1051.12,
+    "end": 1057.32,
+    "text": " Hence, when it rounds it to 17 digits, we get exactly what"
+  },
+  {
+    "start": 1057.32,
+    "end": 1060.08,
+    "text": " you see in the bottom of the screen up there."
+  },
+  {
+    "start": 1064.16,
+    "end": 1069.24,
+    "text": " Answer to the mystery, why does it display this?"
+  },
+  {
+    "start": 1069.24,
+    "end": 1072.56,
+    "text": " Now why should we care?"
+  },
+  {
+    "start": 1072.56,
+    "end": 1074.92,
+    "text": " Well, it's not so much that we care about what gets"
+  },
+  {
+    "start": 1074.92,
+    "end": 1079.12,
+    "text": " displayed, but we have to think about the implications, at"
+  },
+  {
+    "start": 1079.12,
+    "end": 1082.52,
+    "text": " least sometimes we have to think about the implications, of"
+  },
+  {
+    "start": 1082.52,
+    "end": 1087.0,
+    "text": " what this inexact representation of numbers means when we"
+  },
+  {
+    "start": 1087.0,
+    "end": 1091.16,
+    "text": " start doing more or less complex computations on"
+  },
+  {
+    "start": 1091.16,
+    "end": 1093.28,
+    "text": " those numbers."
+  },
+  {
+    "start": 1093.28,
+    "end": 1097.04,
+    "text": " So let's look at a little example here."
+  },
+  {
+    "start": 1097.04,
+    "end": 1101.32,
+    "text": " I'll start by setting the variable s to 0.0."
+  },
+  {
+    "start": 1101.32,
+    "end": 1104.36,
+    "text": " Notice I'm being careful to make it a float."
+  },
+  {
+    "start": 1104.36,
+    "end": 1114.0,
+    "text": " And then for i in range, let's see, let's take 10, will"
+  },
+  {
+    "start": 1114.0,
+    "end": 1124.76,
+    "text": " increase s by 0.1."
+  },
+  {
+    "start": 1124.76,
+    "end": 1126.28,
+    "text": " All right, we've done that."
+  },
+  {
+    "start": 1126.28,
+    "end": 1128.8,
+    "text": " And now, what happens when I print s?"
+  },
+  {
+    "start": 1132.44,
+    "end": 1136.6,
+    "text": " Well, again, you don't get what your intuition says you"
+  },
+  {
+    "start": 1136.6,
+    "end": 1138.24,
+    "text": " should get."
+  },
+  {
+    "start": 1138.24,
+    "end": 1145.48,
+    "text": " Notice the last two digits, which are 8 and 9."
+  },
+  {
+    "start": 1145.48,
+    "end": 1147.04,
+    "text": " Well, what's happening here?"
+  },
+  {
+    "start": 1149.8,
+    "end": 1153.68,
+    "text": " What's happened is the error has accumulated."
+  },
+  {
+    "start": 1153.68,
+    "end": 1157.2,
+    "text": " I had a small error when I started, but every time I"
+  },
+  {
+    "start": 1157.2,
+    "end": 1162.56,
+    "text": " added it, the error got bigger and it accumulates."
+  },
+  {
+    "start": 1162.56,
+    "end": 1167.2,
+    "text": " Sometimes you can get in trouble in a computation"
+  },
+  {
+    "start": 1167.2,
+    "end": 1170.44,
+    "text": " because of that."
+  },
+  {
+    "start": 1170.44,
+    "end": 1172.96,
+    "text": " Now what happens, by the way, if I print s?"
+  },
+  {
+    "start": 1172.96,
+    "end": 1176.16,
+    "text": " That's kind of an interesting question."
+  },
+  {
+    "start": 1176.16,
+    "end": 1180.8,
+    "text": " Notice that it prints 1."
+  },
+  {
+    "start": 1180.8,
+    "end": 1182.6,
+    "text": " And why is that?"
+  },
+  {
+    "start": 1182.6,
+    "end": 1187.96,
+    "text": " It's because the print command has done a rounding here."
+  },
+  {
+    "start": 1187.96,
+    "end": 1190.4,
+    "text": " It automatically rounds."
+  },
+  {
+    "start": 1190.4,
+    "end": 1194.84,
+    "text": " And that's kind of good, but it's also kind of bad, because"
+  },
+  {
+    "start": 1194.84,
+    "end": 1197.2,
+    "text": " that means when you're debugging your program, you can"
+  },
+  {
+    "start": 1197.2,
+    "end": 1199.04,
+    "text": " get very confused."
+  },
+  {
+    "start": 1199.04,
+    "end": 1201.36,
+    "text": " You say, it says it's 1."
+  },
+  {
+    "start": 1201.36,
+    "end": 1203.44,
+    "text": " Why am I getting a different answer when I do the"
+  },
+  {
+    "start": 1203.44,
+    "end": 1204.92,
+    "text": " computation?"
+  },
+  {
+    "start": 1204.92,
+    "end": 1208.12,
+    "text": " And that's because it's not really 1 inside."
+  },
+  {
+    "start": 1208.12,
+    "end": 1210.76,
+    "text": " So you have to be careful."
+  },
+  {
+    "start": 1210.76,
+    "end": 1216.04,
+    "text": " Now, mostly, these round off errors balance each other out."
+  },
+  {
+    "start": 1216.04,
+    "end": 1218.8,
+    "text": " Some floats are slightly higher than they're supposed to"
+  },
+  {
+    "start": 1218.8,
+    "end": 1220.88,
+    "text": " be, some are slightly lower."
+  },
+  {
+    "start": 1220.88,
+    "end": 1223.92,
+    "text": " And in most computations, it all comes out in the wash and"
+  },
+  {
+    "start": 1223.92,
+    "end": 1225.88,
+    "text": " you get the right answer."
+  },
+  {
+    "start": 1225.88,
+    "end": 1230.44,
+    "text": " Truth be told, most of the time you can avoid worrying"
+  },
+  {
+    "start": 1230.44,
+    "end": 1232.24,
+    "text": " about these things."
+  },
+  {
+    "start": 1232.24,
+    "end": 1237.48,
+    "text": " But as we say in Latin, caveat computor."
+  },
+  {
+    "start": 1237.48,
+    "end": 1240.56,
+    "text": " Sometimes you have to worry a little bit."
+  },
+  {
+    "start": 1240.56,
+    "end": 1244.96,
+    "text": " Now there is one thing about floating points, about which"
+  },
+  {
+    "start": 1244.96,
+    "end": 1246.52,
+    "text": " you should always worry."
+  },
+  {
+    "start": 1249.84,
+    "end": 1253.44,
+    "text": " And that's really the point I want to drive home."
+  },
+  {
+    "start": 1253.44,
+    "end": 1255.88,
+    "text": " And that's about the meaning of double equal."
+  },
+  {
+    "start": 1268.32,
+    "end": 1269.84,
+    "text": " Let's look at an example of this."
+  },
+  {
+    "start": 1273.04,
+    "end": 1276.36,
+    "text": " So we've before seen the use of import."
+  },
+  {
+    "start": 1276.36,
+    "end": 1278.64,
+    "text": " So I'm going to import math."
+  },
+  {
+    "start": 1278.64,
+    "end": 1281.72,
+    "text": " Gives me some useful mathematical functions."
+  },
+  {
+    "start": 1281.72,
+    "end": 1285.28,
+    "text": " Then I'm going to set the variable a to the square root"
+  },
+  {
+    "start": 1285.28,
+    "end": 1286.24,
+    "text": " of 2."
+  },
+  {
+    "start": 1291.64,
+    "end": 1293.12,
+    "text": " Why didn't this work?"
+  },
+  {
+    "start": 1293.12,
+    "end": 1297.88,
+    "text": " Because what I should have said is math.square root of 2."
+  },
+  {
+    "start": 1302.16,
+    "end": 1305.44,
+    "text": " Explaining to the interpreter that I want to get the"
+  },
+  {
+    "start": 1305.44,
+    "end": 1309.4,
+    "text": " function sqrt from the module math."
+  },
+  {
+    "start": 1312.64,
+    "end": 1316.12,
+    "text": " So now I've got a here."
+  },
+  {
+    "start": 1316.12,
+    "end": 1319.48,
+    "text": " And I can look at what a is."
+  },
+  {
+    "start": 1319.48,
+    "end": 1322.96,
+    "text": " Some approximation to the square root of 2."
+  },
+  {
+    "start": 1322.96,
+    "end": 1324.56,
+    "text": " Now here's the interesting question."
+  },
+  {
+    "start": 1324.56,
+    "end": 1333.0,
+    "text": " Suppose I ask about the Boolean a times a equals equals 2."
+  },
+  {
+    "start": 1333.0,
+    "end": 1336.44,
+    "text": " Now in my heart, I think if I've taken this square root of"
+  },
+  {
+    "start": 1336.44,
+    "end": 1340.16,
+    "text": " number and then I've multiplied it by itself, I should get"
+  },
+  {
+    "start": 1340.16,
+    "end": 1342.08,
+    "text": " the original number back."
+  },
+  {
+    "start": 1342.08,
+    "end": 1345.4,
+    "text": " After all, that's the meaning of square root."
+  },
+  {
+    "start": 1345.4,
+    "end": 1348.48,
+    "text": " But by now, you won't be surprised at the answer of"
+  },
+  {
+    "start": 1348.48,
+    "end": 1350.88,
+    "text": " this is false."
+  },
+  {
+    "start": 1350.88,
+    "end": 1353.04,
+    "text": " Because we know what we've stored is only an"
+  },
+  {
+    "start": 1353.04,
+    "end": 1354.96,
+    "text": " approximation to the square root."
+  },
+  {
+    "start": 1357.64,
+    "end": 1359.04,
+    "text": " And that's kind of interesting."
+  },
+  {
+    "start": 1359.04,
+    "end": 1364.64,
+    "text": " So we can see that by if I look at a times a, I'll get 2"
+  },
+  {
+    "start": 1364.64,
+    "end": 1368.76,
+    "text": " point, a whole bunch of zeros, and then a 4 at the end."
+  },
+  {
+    "start": 1368.76,
+    "end": 1373.2,
+    "text": " So this means if I've got a test in my program, in some"
+  },
+  {
+    "start": 1373.2,
+    "end": 1375.64,
+    "text": " sense it will give me the unexpected answer false."
+  },
+  {
+    "start": 1378.92,
+    "end": 1384.6,
+    "text": " What this tells us is that it's very risky to ever use the"
+  },
+  {
+    "start": 1384.6,
+    "end": 1388.72,
+    "text": " built-in double equals to compare floating points."
+  },
+  {
+    "start": 1388.72,
+    "end": 1393.04,
+    "text": " And in fact, you should never be testing for equality."
+  },
+  {
+    "start": 1393.04,
+    "end": 1396.2,
+    "text": " You should always be testing for close enough."
+  },
+  {
+    "start": 1398.76,
+    "end": 1402.84,
+    "text": " So typically what you want to do in your program is ask the"
+  },
+  {
+    "start": 1402.84,
+    "end": 1404.64,
+    "text": " following question."
+  },
+  {
+    "start": 1404.64,
+    "end": 1415.16,
+    "text": " Is the absolute value of a times a minus 2.0 less than"
+  },
+  {
+    "start": 1415.16,
+    "end": 1416.84,
+    "text": " epsilon?"
+  },
+  {
+    "start": 1420.56,
+    "end": 1423.04,
+    "text": " If we could easily type Greek, we'd have written it that"
+  },
+  {
+    "start": 1423.04,
+    "end": 1426.36,
+    "text": " way, but we can't."
+  },
+  {
+    "start": 1426.4,
+    "end": 1430.88,
+    "text": " So that's some small value chosen to be appropriate for"
+  },
+  {
+    "start": 1430.88,
+    "end": 1432.56,
+    "text": " the application."
+  },
+  {
+    "start": 1432.56,
+    "end": 1435.72,
+    "text": " Saying if these two things are with an epsilon of each"
+  },
+  {
+    "start": 1435.72,
+    "end": 1440.92,
+    "text": " other, then I'm going to treat them as equal."
+  },
+  {
+    "start": 1440.92,
+    "end": 1444.04,
+    "text": " And so what I typically do when I'm writing a Python code"
+  },
+  {
+    "start": 1444.04,
+    "end": 1447.04,
+    "text": " that's going to deal with floating point numbers, and I"
+  },
+  {
+    "start": 1447.04,
+    "end": 1452.08,
+    "text": " do this from time to time, is I introduce a function called"
+  },
+  {
+    "start": 1452.08,
+    "end": 1458.96,
+    "text": " almost equal, or near, or pick your favorite word, that does"
+  },
+  {
+    "start": 1458.96,
+    "end": 1460.12,
+    "text": " this for me."
+  },
+  {
+    "start": 1460.12,
+    "end": 1463.36,
+    "text": " And wherever I would normally have written x double equals"
+  },
+  {
+    "start": 1463.36,
+    "end": 1468.76,
+    "text": " y, instead I write near x comma y, and it"
+  },
+  {
+    "start": 1468.76,
+    "end": 1472.0,
+    "text": " computes it for me."
+  },
+  {
+    "start": 1472.0,
+    "end": 1476.36,
+    "text": " Not a big deal, but keep this in mind, or as soon as you"
+  },
+  {
+    "start": 1476.36,
+    "end": 1479.52,
+    "text": " start dealing with numbers, you will get very frustrated in"
+  },
+  {
+    "start": 1479.52,
+    "end": 1483.4,
+    "text": " trying to understand what your program does."
+  },
+  {
+    "start": 1483.4,
+    "end": 1487.44,
+    "text": " OK, enough of numbers for a while."
+  },
+  {
+    "start": 1487.44,
+    "end": 1489.44,
+    "text": " I'm sure some of you will find this a relief."
+  },
+  {
+    "start": 1492.16,
+    "end": 1497.12,
+    "text": " I now want to get away from details of floating point"
+  },
+  {
+    "start": 1497.12,
+    "end": 1501.76,
+    "text": " and talk about general methods, again returning to the real"
+  },
+  {
+    "start": 1501.76,
+    "end": 1506.84,
+    "text": " theme of the course of solving problems using computers."
+  },
+  {
+    "start": 1506.84,
+    "end": 1511.12,
+    "text": " Last week, we looked at the rather silly problem of"
+  },
+  {
+    "start": 1511.12,
+    "end": 1515.88,
+    "text": " finding the square root of a perfect square."
+  },
+  {
+    "start": 1515.88,
+    "end": 1519.08,
+    "text": " Well, that's not usually what you need."
+  },
+  {
+    "start": 1521.68,
+    "end": 1525.24,
+    "text": " Let's think about the more useful problem of finding the"
+  },
+  {
+    "start": 1525.24,
+    "end": 1527.72,
+    "text": " square root of a real number."
+  },
+  {
+    "start": 1527.72,
+    "end": 1529.64,
+    "text": " Well, you've just seen how you do that."
+  },
+  {
+    "start": 1529.64,
+    "end": 1532.72,
+    "text": " You import math and you call SQRT."
+  },
+  {
+    "start": 1532.72,
+    "end": 1536.28,
+    "text": " Let's pretend that we didn't know that trick."
+  },
+  {
+    "start": 1536.28,
+    "end": 1541.24,
+    "text": " Or let's pretend it's your job to implement rather math."
+  },
+  {
+    "start": 1541.24,
+    "end": 1546.28,
+    "text": " And so you need to figure out how to implement square root."
+  },
+  {
+    "start": 1546.28,
+    "end": 1549.28,
+    "text": " Why might this be a challenge?"
+  },
+  {
+    "start": 1549.28,
+    "end": 1552.24,
+    "text": " What are some of the issues?"
+  },
+  {
+    "start": 1552.24,
+    "end": 1553.88,
+    "text": " And there are several."
+  },
+  {
+    "start": 1553.88,
+    "end": 1563.2,
+    "text": " One is what we've just seen might not be an exact answer."
+  },
+  {
+    "start": 1567.28,
+    "end": 1572.6,
+    "text": " For example, the square root of 2."
+  },
+  {
+    "start": 1576.48,
+    "end": 1579.28,
+    "text": " So we need to worry about that."
+  },
+  {
+    "start": 1579.28,
+    "end": 1583.04,
+    "text": " And clearly, the way we're going to solve that, as we'll see,"
+  },
+  {
+    "start": 1583.04,
+    "end": 1586.92,
+    "text": " is using a concept similar to epsilon."
+  },
+  {
+    "start": 1586.92,
+    "end": 1588.44,
+    "text": " In fact, we'll even call it epsilon."
+  },
+  {
+    "start": 1589.44,
+    "end": 1597.0,
+    "text": " Another problem with the method we looked at last time is"
+  },
+  {
+    "start": 1597.0,
+    "end": 1600.12,
+    "text": " there we were doing exhaustive enumeration."
+  },
+  {
+    "start": 1600.12,
+    "end": 1603.96,
+    "text": " We were enumerating all the possible answers, checking"
+  },
+  {
+    "start": 1603.96,
+    "end": 1607.68,
+    "text": " each one, and if it was goods, stopping."
+  },
+  {
+    "start": 1607.68,
+    "end": 1615.36,
+    "text": " Well, the problem with reels as opposed to integers is we"
+  },
+  {
+    "start": 1615.36,
+    "end": 1621.68,
+    "text": " can't enumerate all guesses."
+  },
+  {
+    "start": 1626.44,
+    "end": 1629.68,
+    "text": " And that's because the reels are uncountable."
+  },
+  {
+    "start": 1634.56,
+    "end": 1639.32,
+    "text": " If I ask you to enumerate the positive integers, you'll say"
+  },
+  {
+    "start": 1639.32,
+    "end": 1647.88,
+    "text": " 1, 2, 3, 4, 5, if I ask you to enumerate the reels, the"
+  },
+  {
+    "start": 1647.88,
+    "end": 1649.96,
+    "text": " positive reels, where do you start?"
+  },
+  {
+    "start": 1649.96,
+    "end": 1652.96,
+    "text": " 1 over a billion plus who knows?"
+  },
+  {
+    "start": 1652.96,
+    "end": 1657.64,
+    "text": " Now as we've just seen, in fact, since there's a limit to"
+  },
+  {
+    "start": 1657.64,
+    "end": 1661.52,
+    "text": " the precision in floating point, technically you could"
+  },
+  {
+    "start": 1661.52,
+    "end": 1665.0,
+    "text": " enumerate all the floating point numbers."
+  },
+  {
+    "start": 1665.0,
+    "end": 1668.36,
+    "text": " And I say technically, because if you tried to do that,"
+  },
+  {
+    "start": 1668.4,
+    "end": 1673.68,
+    "text": " your computation would not terminate anytime soon."
+  },
+  {
+    "start": 1673.68,
+    "end": 1677.8,
+    "text": " So even though in principle you could enumerate them, in"
+  },
+  {
+    "start": 1677.8,
+    "end": 1679.84,
+    "text": " fact, you really can't."
+  },
+  {
+    "start": 1679.84,
+    "end": 1683.16,
+    "text": " And so we think of the floating points like the reels as"
+  },
+  {
+    "start": 1683.16,
+    "end": 1687.32,
+    "text": " being innumerable, or not innumerable, as to say as being"
+  },
+  {
+    "start": 1687.32,
+    "end": 1690.12,
+    "text": " uncountable."
+  },
+  {
+    "start": 1690.12,
+    "end": 1691.44,
+    "text": " So we can't do that."
+  },
+  {
+    "start": 1691.88,
+    "end": 1696.8,
+    "text": " So we have to find something clever, because we're now"
+  },
+  {
+    "start": 1696.8,
+    "end": 1702.12,
+    "text": " searching a very large space of possible answers, what"
+  },
+  {
+    "start": 1702.12,
+    "end": 1706.6,
+    "text": " technically we might call a large state space."
+  },
+  {
+    "start": 1706.6,
+    "end": 1710.32,
+    "text": " So we're going to take our previous method of guess and"
+  },
+  {
+    "start": 1710.32,
+    "end": 1717.16,
+    "text": " check and replace it by something called guess check"
+  },
+  {
+    "start": 1718.16,
+    "end": 1719.16,
+    "text": " and improve."
+  },
+  {
+    "start": 1721.68,
+    "end": 1727.68,
+    "text": " Previously, we just generated guesses in some systematic way,"
+  },
+  {
+    "start": 1727.68,
+    "end": 1731.0,
+    "text": " but without knowing that we were getting closer to the"
+  },
+  {
+    "start": 1731.0,
+    "end": 1732.32,
+    "text": " answer."
+  },
+  {
+    "start": 1732.32,
+    "end": 1735.44,
+    "text": " Think of the original barnyard problem with the chickens and"
+  },
+  {
+    "start": 1735.44,
+    "end": 1736.88,
+    "text": " the heads and the legs."
+  },
+  {
+    "start": 1736.88,
+    "end": 1739.88,
+    "text": " We just enumerated possibilities, but we didn't know"
+  },
+  {
+    "start": 1739.88,
+    "end": 1742.28,
+    "text": " that one guess was better than the previous guess."
+  },
+  {
+    "start": 1742.28,
+    "end": 1746.08,
+    "text": " Now we're going to find a way to do the enumeration where we"
+  },
+  {
+    "start": 1746.08,
+    "end": 1753.36,
+    "text": " have good reason to believe, at least with high probability,"
+  },
+  {
+    "start": 1753.36,
+    "end": 1758.88,
+    "text": " that each guess is better than the previous guess."
+  },
+  {
+    "start": 1758.88,
+    "end": 1760.96,
+    "text": " This is what's called successive approximation."
+  },
+  {
+    "start": 1772.28,
+    "end": 1785.88,
+    "text": " And that's a very important concept."
+  },
+  {
+    "start": 1785.88,
+    "end": 1790.2,
+    "text": " Many problems are solved computationally using"
+  },
+  {
+    "start": 1790.2,
+    "end": 1791.72,
+    "text": " successive approximation."
+  },
+  {
+    "start": 1796.24,
+    "end": 1801.96,
+    "text": " Every successive approximation method has the same rough"
+  },
+  {
+    "start": 1801.96,
+    "end": 1803.68,
+    "text": " structure."
+  },
+  {
+    "start": 1803.68,
+    "end": 1816.44,
+    "text": " You start with some guess, which will be the initial guess."
+  },
+  {
+    "start": 1816.44,
+    "end": 1820.16,
+    "text": " You then iterate, and in a minute I'll tell you why I'm"
+  },
+  {
+    "start": 1820.16,
+    "end": 1823.52,
+    "text": " doing it this particular way, over some range."
+  },
+  {
+    "start": 1824.52,
+    "end": 1833.52,
+    "text": " I've chosen 100, but it doesn't have to be 100, just some"
+  },
+  {
+    "start": 1833.52,
+    "end": 1838.32,
+    "text": " number there."
+  },
+  {
+    "start": 1838.32,
+    "end": 1847.88,
+    "text": " If f of x, that is to say some function of my, whoops, I"
+  },
+  {
+    "start": 1847.88,
+    "end": 1850.4,
+    "text": " shouldn't have said x."
+  },
+  {
+    "start": 1850.4,
+    "end": 1854.84,
+    "text": " My notes say x, but it's the wrong thing."
+  },
+  {
+    "start": 1854.84,
+    "end": 1864.96,
+    "text": " If f of x, f of the guess is close enough, so for example,"
+  },
+  {
+    "start": 1864.96,
+    "end": 1868.76,
+    "text": " if when I square a guess, I get close enough to the number"
+  },
+  {
+    "start": 1868.76,
+    "end": 1873.76,
+    "text": " whose square root I'm looking for, then I'll return the guess."
+  },
+  {
+    "start": 1880.76,
+    "end": 1899.8,
+    "text": " If it's not close enough, I'll get a better guess."
+  },
+  {
+    "start": 1899.8,
+    "end": 1906.4,
+    "text": " If I do my, in this case, 100 iterations, and I've not gotten"
+  },
+  {
+    "start": 1906.4,
+    "end": 1910.12,
+    "text": " the guess that it's good enough, I'm going to quit with"
+  },
+  {
+    "start": 1910.12,
+    "end": 1914.36,
+    "text": " some error."
+  },
+  {
+    "start": 1914.36,
+    "end": 1918.28,
+    "text": " Saying, wow, I thought my method was good enough that"
+  },
+  {
+    "start": 1918.28,
+    "end": 1920.72,
+    "text": " 100 guesses should have gotten me there."
+  },
+  {
+    "start": 1920.72,
+    "end": 1923.48,
+    "text": " If it didn't, I may be wrong."
+  },
+  {
+    "start": 1923.48,
+    "end": 1927.44,
+    "text": " I always like to have some limit so that my program can't"
+  },
+  {
+    "start": 1927.44,
+    "end": 1932.04,
+    "text": " spin off into the ether guessing forever."
+  },
+  {
+    "start": 1932.04,
+    "end": 1955.4,
+    "text": " OK, let's look at an example of that."
+  },
+  {
+    "start": 1955.4,
+    "end": 1961.4,
+    "text": " So here's a successive approximations to the square"
+  },
+  {
+    "start": 1961.4,
+    "end": 1962.8,
+    "text": " root."
+  },
+  {
+    "start": 1962.8,
+    "end": 1965.92,
+    "text": " I've called it square root bi."
+  },
+  {
+    "start": 1965.92,
+    "end": 1969.44,
+    "text": " The bi is not a reference to the sexual preferences of the"
+  },
+  {
+    "start": 1969.44,
+    "end": 1973.04,
+    "text": " function, but a reference to the fact that this is an"
+  },
+  {
+    "start": 1973.04,
+    "end": 1993.0,
+    "text": " example of what's called a bisection method."
+  },
+  {
+    "start": 1993.0,
+    "end": 1998.0,
+    "text": " The basic idea behind any bisection method is the same."
+  },
+  {
+    "start": 1998.0,
+    "end": 2001.64,
+    "text": " And we'll see lots of examples of this this semester, is that"
+  },
+  {
+    "start": 2001.64,
+    "end": 2007.56,
+    "text": " you have some linearly arranged space of possible answers."
+  },
+  {
+    "start": 2011.56,
+    "end": 2016.16,
+    "text": " And it has the property that if I take a guess somewhere, let's"
+  },
+  {
+    "start": 2016.16,
+    "end": 2021.92,
+    "text": " say there, I guess that's the answer to the question."
+  },
+  {
+    "start": 2021.92,
+    "end": 2026.12,
+    "text": " If it turns out that's not the answer, I can easily"
+  },
+  {
+    "start": 2026.12,
+    "end": 2031.2,
+    "text": " determine whether the answer lies to the left or the right of"
+  },
+  {
+    "start": 2031.2,
+    "end": 2033.68,
+    "text": " the guess."
+  },
+  {
+    "start": 2033.68,
+    "end": 2039.88,
+    "text": " So if I guess that 89.12 is the square root of a number, and"
+  },
+  {
+    "start": 2039.88,
+    "end": 2043.48,
+    "text": " turns out not to be the square root of the number, I have a"
+  },
+  {
+    "start": 2043.48,
+    "end": 2048.8,
+    "text": " way of saying is 89.12 too big or too small."
+  },
+  {
+    "start": 2048.8,
+    "end": 2052.0,
+    "text": " If it was too big, then I know I better guess some number"
+  },
+  {
+    "start": 2052.0,
+    "end": 2053.68,
+    "text": " over here."
+  },
+  {
+    "start": 2053.68,
+    "end": 2057.16,
+    "text": " If it was too small, then I better guess some number over"
+  },
+  {
+    "start": 2057.16,
+    "end": 2058.16,
+    "text": " here."
+  },
+  {
+    "start": 2059.16,
+    "end": 2063.84,
+    "text": " Why do I call it bisection?"
+  },
+  {
+    "start": 2063.84,
+    "end": 2066.4,
+    "text": " Because I'm dividing it in half."
+  },
+  {
+    "start": 2066.4,
+    "end": 2070.56,
+    "text": " And in general, as we'll see, when I know what my space of"
+  },
+  {
+    "start": 2070.56,
+    "end": 2076.04,
+    "text": " answers is, I always as my next guess choose something halfway"
+  },
+  {
+    "start": 2076.04,
+    "end": 2077.84,
+    "text": " along that line."
+  },
+  {
+    "start": 2077.84,
+    "end": 2081.28,
+    "text": " So I made a guess, and let's say it was too small."
+  },
+  {
+    "start": 2081.28,
+    "end": 2084.32,
+    "text": " And I know the answer is between here and here."
+  },
+  {
+    "start": 2084.32,
+    "end": 2085.92,
+    "text": " This was too small."
+  },
+  {
+    "start": 2085.92,
+    "end": 2089.68,
+    "text": " I now know that the answer is between here and here."
+  },
+  {
+    "start": 2089.68,
+    "end": 2093.24,
+    "text": " So my next guess will be in the middle."
+  },
+  {
+    "start": 2093.24,
+    "end": 2096.88,
+    "text": " The beauty of always guessing in the middle is that each"
+  },
+  {
+    "start": 2096.88,
+    "end": 2100.6,
+    "text": " guess, if it's wrong, I get to throw out half of the state"
+  },
+  {
+    "start": 2100.6,
+    "end": 2102.44,
+    "text": " space."
+  },
+  {
+    "start": 2102.44,
+    "end": 2105.96,
+    "text": " So I know how long it's going to take me to search the"
+  },
+  {
+    "start": 2105.96,
+    "end": 2109.24,
+    "text": " possibilities in some sense."
+  },
+  {
+    "start": 2109.24,
+    "end": 2113.08,
+    "text": " Because I'm getting logarithmically progress."
+  },
+  {
+    "start": 2116.48,
+    "end": 2121.24,
+    "text": " This is exactly what we saw when we looked at recursion in"
+  },
+  {
+    "start": 2121.24,
+    "end": 2125.88,
+    "text": " some sense, where we solved the problem by, at each step,"
+  },
+  {
+    "start": 2125.88,
+    "end": 2128.64,
+    "text": " solving a smaller problem."
+  },
+  {
+    "start": 2128.64,
+    "end": 2133.24,
+    "text": " The same problem, but on a smaller solution space."
+  },
+  {
+    "start": 2133.24,
+    "end": 2136.0,
+    "text": " Now, as it happens, I'm not using recursion in this"
+  },
+  {
+    "start": 2136.0,
+    "end": 2138.44,
+    "text": " implementation we have up on the screen."
+  },
+  {
+    "start": 2138.44,
+    "end": 2140.8,
+    "text": " I'm doing it iteratively."
+  },
+  {
+    "start": 2140.8,
+    "end": 2143.44,
+    "text": " But the idea is the same."
+  },
+  {
+    "start": 2143.44,
+    "end": 2146.68,
+    "text": " So we'll take a quick look at it now, then we'll quit, and"
+  },
+  {
+    "start": 2146.68,
+    "end": 2148.76,
+    "text": " we'll come back to it in the next lecture a little more"
+  },
+  {
+    "start": 2148.76,
+    "end": 2151.44,
+    "text": " thoroughly."
+  },
+  {
+    "start": 2151.44,
+    "end": 2154.04,
+    "text": " I'm going to warn you right now that there's a bug in this"
+  },
+  {
+    "start": 2154.04,
+    "end": 2157.52,
+    "text": " code, and in the next lecture we'll see if we can"
+  },
+  {
+    "start": 2157.52,
+    "end": 2160.56,
+    "text": " discover what that is."
+  },
+  {
+    "start": 2160.56,
+    "end": 2164.96,
+    "text": " So it takes two arguments, x, the number whose square root"
+  },
+  {
+    "start": 2164.96,
+    "end": 2169.96,
+    "text": " we're looking for, and epsilon, how close we need to get."
+  },
+  {
+    "start": 2169.96,
+    "end": 2175.88,
+    "text": " It assumes that x is non-negative, and that epsilon is"
+  },
+  {
+    "start": 2175.88,
+    "end": 2178.56,
+    "text": " greater than zero."
+  },
+  {
+    "start": 2178.56,
+    "end": 2182.04,
+    "text": " Why do we need to assume that epsilon is greater than zero?"
+  },
+  {
+    "start": 2182.04,
+    "end": 2184.68,
+    "text": " Well, if you made epsilon zero, and then say we're looking"
+  },
+  {
+    "start": 2184.68,
+    "end": 2189.88,
+    "text": " for the square root of two, we know we'll never get an answer."
+  },
+  {
+    "start": 2189.88,
+    "end": 2193.88,
+    "text": " So we want it to be positive."
+  },
+  {
+    "start": 2193.88,
+    "end": 2198.16,
+    "text": " And then it returns y such that y times y is within epsilon"
+  },
+  {
+    "start": 2198.16,
+    "end": 2199.44,
+    "text": " of x."
+  },
+  {
+    "start": 2199.44,
+    "end": 2204.4,
+    "text": " It's near to use the terminology we used before."
+  },
+  {
+    "start": 2204.4,
+    "end": 2207.4,
+    "text": " The next thing we see in the program is two"
+  },
+  {
+    "start": 2207.4,
+    "end": 2209.88,
+    "text": " assert statements."
+  },
+  {
+    "start": 2209.88,
+    "end": 2214.56,
+    "text": " This is because I never trust the people who call my"
+  },
+  {
+    "start": 2214.56,
+    "end": 2217.36,
+    "text": " functions to do the right thing."
+  },
+  {
+    "start": 2217.36,
+    "end": 2220.48,
+    "text": " Even though I've said I'm going to assume certain things"
+  },
+  {
+    "start": 2220.48,
+    "end": 2224.32,
+    "text": " about x and epsilon, I'm actually going to test it."
+  },
+  {
+    "start": 2224.32,
+    "end": 2228.08,
+    "text": " And so I'm going to assert that x is greater than or equal to"
+  },
+  {
+    "start": 2228.08,
+    "end": 2231.72,
+    "text": " zero, and that epsilon is greater than zero."
+  },
+  {
+    "start": 2231.72,
+    "end": 2236.76,
+    "text": " What assert does is it tests the predicate, say x greater"
+  },
+  {
+    "start": 2236.76,
+    "end": 2238.44,
+    "text": " than or equal to zero."
+  },
+  {
+    "start": 2238.44,
+    "end": 2241.24,
+    "text": " If it's true, it does nothing."
+  },
+  {
+    "start": 2241.24,
+    "end": 2243.2,
+    "text": " Just goes on to the next statement."
+  },
+  {
+    "start": 2243.2,
+    "end": 2248.44,
+    "text": " But if it's false, it prints a message, the string, which is"
+  },
+  {
+    "start": 2248.44,
+    "end": 2253.2,
+    "text": " my second argument here, and then the program just stops."
+  },
+  {
+    "start": 2253.2,
+    "end": 2255.64,
+    "text": " So rather than my function going off and doing something"
+  },
+  {
+    "start": 2255.64,
+    "end": 2259.44,
+    "text": " bizarre, for example, running forever, it just stops with"
+  },
+  {
+    "start": 2259.44,
+    "end": 2262.12,
+    "text": " the message saying, you called me with arguments you"
+  },
+  {
+    "start": 2262.12,
+    "end": 2263.36,
+    "text": " shouldn't have called me with."
+  },
+  {
+    "start": 2266.24,
+    "end": 2269.56,
+    "text": " So that's the specification, and then my"
+  },
+  {
+    "start": 2269.56,
+    "end": 2272.96,
+    "text": " check of the assumptions."
+  },
+  {
+    "start": 2272.96,
+    "end": 2279.84,
+    "text": " The next thing it does is it looks for a range such that I"
+  },
+  {
+    "start": 2279.84,
+    "end": 2284.28,
+    "text": " believe I'm assured that my answer lies between these"
+  },
+  {
+    "start": 2284.28,
+    "end": 2288.56,
+    "text": " values, and I'm going to say, well, my answer will be no"
+  },
+  {
+    "start": 2288.56,
+    "end": 2294.0,
+    "text": " smaller than zero and no bigger than x."
+  },
+  {
+    "start": 2294.0,
+    "end": 2296.04,
+    "text": " Now, is this the tightest possible range?"
+  },
+  {
+    "start": 2296.04,
+    "end": 2297.32,
+    "text": " Maybe not."
+  },
+  {
+    "start": 2297.32,
+    "end": 2299.28,
+    "text": " But I'm not too fussy about that."
+  },
+  {
+    "start": 2299.28,
+    "end": 2305.04,
+    "text": " I'm just trying to make sure that I cover the space."
+  },
+  {
+    "start": 2305.04,
+    "end": 2307.6,
+    "text": " Then I'll start with a guess."
+  },
+  {
+    "start": 2307.6,
+    "end": 2310.8,
+    "text": " And again, I'm not going to worry too much about the guess."
+  },
+  {
+    "start": 2310.8,
+    "end": 2315.24,
+    "text": " I'm going to take low plus high and divide it by 2."
+  },
+  {
+    "start": 2315.24,
+    "end": 2317.48,
+    "text": " That is to say, choose something in the middle of this"
+  },
+  {
+    "start": 2317.48,
+    "end": 2324.24,
+    "text": " space, and then essentially do what we've got here."
+  },
+  {
+    "start": 2324.24,
+    "end": 2326.28,
+    "text": " So it's a little bit more involved here."
+  },
+  {
+    "start": 2326.28,
+    "end": 2331.24,
+    "text": " I'm going to set my counter to 1 just to keep checking."
+  },
+  {
+    "start": 2331.24,
+    "end": 2335.12,
+    "text": " Then say, while the absolute value of the guess squared"
+  },
+  {
+    "start": 2335.12,
+    "end": 2338.52,
+    "text": " minus x is greater than epsilon, that is to say, while my"
+  },
+  {
+    "start": 2338.52,
+    "end": 2343.2,
+    "text": " guess is not yet good enough, and the counter is not greater"
+  },
+  {
+    "start": 2343.2,
+    "end": 2349.24,
+    "text": " than 100, I'll get the next guess."
+  },
+  {
+    "start": 2349.24,
+    "end": 2351.48,
+    "text": " Notice by the way, I have a print statement here, which"
+  },
+  {
+    "start": 2351.48,
+    "end": 2353.24,
+    "text": " I've commented out."
+  },
+  {
+    "start": 2353.24,
+    "end": 2356.64,
+    "text": " But I sort of figured that my program would not work"
+  },
+  {
+    "start": 2356.64,
+    "end": 2358.72,
+    "text": " correctly the first time."
+  },
+  {
+    "start": 2358.72,
+    "end": 2363.12,
+    "text": " And so when I first typed it, put in a print statement that"
+  },
+  {
+    "start": 2363.12,
+    "end": 2365.76,
+    "text": " would let me see what was happening each iteration"
+  },
+  {
+    "start": 2365.76,
+    "end": 2368.76,
+    "text": " through this loop, so that if it didn't work, I could get a"
+  },
+  {
+    "start": 2368.76,
+    "end": 2371.0,
+    "text": " sense of why not."
+  },
+  {
+    "start": 2371.0,
+    "end": 2373.8,
+    "text": " In the next lecture, when we look for the bug in this"
+  },
+  {
+    "start": 2373.8,
+    "end": 2376.88,
+    "text": " program, you will see me uncomment out that print"
+  },
+  {
+    "start": 2376.88,
+    "end": 2379.0,
+    "text": " statement."
+  },
+  {
+    "start": 2379.0,
+    "end": 2382.76,
+    "text": " But for now, we go to the next thing."
+  },
+  {
+    "start": 2382.76,
+    "end": 2386.0,
+    "text": " And we're here, we know the guess wasn't good enough."
+  },
+  {
+    "start": 2386.0,
+    "end": 2391.56,
+    "text": " So I now say, if the guess squared was less than x, then"
+  },
+  {
+    "start": 2391.56,
+    "end": 2398.36,
+    "text": " I will change the low bound to be the guess."
+  },
+  {
+    "start": 2398.36,
+    "end": 2403.12,
+    "text": " Otherwise, I'll change the high bound to be the guess."
+  },
+  {
+    "start": 2403.12,
+    "end": 2405.96,
+    "text": " So I move either the low bound or I move the high bound."
+  },
+  {
+    "start": 2405.96,
+    "end": 2410.56,
+    "text": " Either way, I'm cutting the search space in half each step."
+  },
+  {
+    "start": 2410.56,
+    "end": 2413.12,
+    "text": " I'll get my new guess."
+  },
+  {
+    "start": 2413.12,
+    "end": 2418.0,
+    "text": " I'll increment my counter, and off I go."
+  },
+  {
+    "start": 2418.04,
+    "end": 2420.2,
+    "text": " In the happy event that eventually I get a good"
+  },
+  {
+    "start": 2420.2,
+    "end": 2426.2,
+    "text": " enough guess, you'll see I'll exit the loop."
+  },
+  {
+    "start": 2426.2,
+    "end": 2430.2,
+    "text": " When I exit the loop, I check, did I exit it because I"
+  },
+  {
+    "start": 2430.2,
+    "end": 2433.08,
+    "text": " exceeded the counter, i.e. I didn't have a good enough"
+  },
+  {
+    "start": 2433.08,
+    "end": 2434.24,
+    "text": " guess."
+  },
+  {
+    "start": 2434.24,
+    "end": 2439.2,
+    "text": " If so, I'll print the message iteration count exceeded."
+  },
+  {
+    "start": 2439.2,
+    "end": 2446.36,
+    "text": " Otherwise, I'll print the result and return it."
+  },
+  {
+    "start": 2446.36,
+    "end": 2448.76,
+    "text": " Now again, if I were writing a square root function to be"
+  },
+  {
+    "start": 2448.76,
+    "end": 2451.6,
+    "text": " used in another program, I probably wouldn't bother"
+  },
+  {
+    "start": 2451.6,
+    "end": 2454.2,
+    "text": " printing the result and the number of iterations and all"
+  },
+  {
+    "start": 2454.2,
+    "end": 2455.28,
+    "text": " of that."
+  },
+  {
+    "start": 2455.28,
+    "end": 2458.2,
+    "text": " But again, I'm doing that here because we want to see"
+  },
+  {
+    "start": 2458.2,
+    "end": 2459.92,
+    "text": " what it's doing."
+  },
+  {
+    "start": 2459.92,
+    "end": 2462.4,
+    "text": " All right, we'll run it a couple times, and then I'll"
+  },
+  {
+    "start": 2462.4,
+    "end": 2466.44,
+    "text": " let you out for the day."
+  },
+  {
+    "start": 2466.44,
+    "end": 2467.76,
+    "text": " Let's go do this."
+  },
+  {
+    "start": 2477.04,
+    "end": 2483.32,
+    "text": " All right, we're here."
+  },
+  {
+    "start": 2483.32,
+    "end": 2485.36,
+    "text": " Notice when I run it, nothing happens."
+  },
+  {
+    "start": 2485.36,
+    "end": 2487.04,
+    "text": " Why did nothing happen?"
+  },
+  {
+    "start": 2487.04,
+    "end": 2489.8,
+    "text": " Well, nothing happens, it was just a function."
+  },
+  {
+    "start": 2489.8,
+    "end": 2493.08,
+    "text": " Functions don't do anything until I call them."
+  },
+  {
+    "start": 2493.08,
+    "end": 2494.36,
+    "text": " So let's call it."
+  },
+  {
+    "start": 2495.0,
+    "end": 2502.84,
+    "text": " Let's call square root by with 4.001."
+  },
+  {
+    "start": 2505.92,
+    "end": 2507.52,
+    "text": " Took only one iteration."
+  },
+  {
+    "start": 2507.52,
+    "end": 2508.92,
+    "text": " That was pretty fast."
+  },
+  {
+    "start": 2508.92,
+    "end": 2511.2,
+    "text": " Estimated two is an answer."
+  },
+  {
+    "start": 2511.2,
+    "end": 2513.72,
+    "text": " We're pretty happy with that answer."
+  },
+  {
+    "start": 2513.72,
+    "end": 2517.2,
+    "text": " Let's try another example."
+  },
+  {
+    "start": 2517.2,
+    "end": 2520.36,
+    "text": " Let's look at nine."
+  },
+  {
+    "start": 2520.36,
+    "end": 2523.36,
+    "text": " I always like to, by the way, write the answer."
+  },
+  {
+    "start": 2523.36,
+    "end": 2525.56,
+    "text": " I always like to, by the way, start with questions whose"
+  },
+  {
+    "start": 2525.56,
+    "end": 2528.84,
+    "text": " answer I know."
+  },
+  {
+    "start": 2528.84,
+    "end": 2531.2,
+    "text": " We'll try and get a little bit more precise."
+  },
+  {
+    "start": 2531.2,
+    "end": 2532.4,
+    "text": " Well, all right."
+  },
+  {
+    "start": 2532.4,
+    "end": 2536.64,
+    "text": " Here it took 18 iterations."
+  },
+  {
+    "start": 2536.64,
+    "end": 2540.4,
+    "text": " Didn't actually give me the answer 3, which we know happens"
+  },
+  {
+    "start": 2540.4,
+    "end": 2542.16,
+    "text": " to be the answer."
+  },
+  {
+    "start": 2542.16,
+    "end": 2546.12,
+    "text": " But it gave me something that was with an epsilon of 3."
+  },
+  {
+    "start": 2546.12,
+    "end": 2549.68,
+    "text": " So it meets the specification, so I should be"
+  },
+  {
+    "start": 2549.68,
+    "end": 2552.44,
+    "text": " perfectly happy."
+  },
+  {
+    "start": 2552.48,
+    "end": 2554.04,
+    "text": " Let's look at another example."
+  },
+  {
+    "start": 2558.72,
+    "end": 2560.08,
+    "text": " Try a bigger number here."
+  },
+  {
+    "start": 2567.0,
+    "end": 2570.0,
+    "text": " All right, so I've looked for the square root of 1,000."
+  },
+  {
+    "start": 2570.0,
+    "end": 2572.0,
+    "text": " Here it took 29 iterations."
+  },
+  {
+    "start": 2572.0,
+    "end": 2574.08,
+    "text": " We're kind of creeping up there."
+  },
+  {
+    "start": 2574.08,
+    "end": 2576.72,
+    "text": " Gave me an estimate."
+  },
+  {
+    "start": 2576.72,
+    "end": 2579.12,
+    "text": " Let's look at our infamous example of two."
+  },
+  {
+    "start": 2579.12,
+    "end": 2580.32,
+    "text": " See what it does here."
+  },
+  {
+    "start": 2582.44,
+    "end": 2594.08,
+    "text": " Worked around."
+  },
+  {
+    "start": 2594.08,
+    "end": 2600.0,
+    "text": " Now, we can see that it's actually working."
+  },
+  {
+    "start": 2600.0,
+    "end": 2602.92,
+    "text": " And I'm getting answers that we believe are good enough"
+  },
+  {
+    "start": 2602.92,
+    "end": 2605.32,
+    "text": " answers."
+  },
+  {
+    "start": 2605.32,
+    "end": 2608.24,
+    "text": " But we also see that the speed of what we talk about is"
+  },
+  {
+    "start": 2608.24,
+    "end": 2611.28,
+    "text": " convergence, how many iterations it takes, the"
+  },
+  {
+    "start": 2611.28,
+    "end": 2614.6,
+    "text": " number of iterations, is variable."
+  },
+  {
+    "start": 2614.6,
+    "end": 2617.88,
+    "text": " And it seems to be related to at least two things."
+  },
+  {
+    "start": 2617.88,
+    "end": 2620.52,
+    "text": " And we'll see more about this in the next lecture."
+  },
+  {
+    "start": 2620.52,
+    "end": 2624.32,
+    "text": " The size of the number of the square root we're looking for"
+  },
+  {
+    "start": 2624.32,
+    "end": 2629.28,
+    "text": " and the precision to which I want the answer."
+  },
+  {
+    "start": 2629.28,
+    "end": 2634.88,
+    "text": " Next lecture, we'll look at, A, what's wrong with this one."
+  },
+  {
+    "start": 2634.88,
+    "end": 2638.16,
+    "text": " And I would ask you to between now and the next lecture,"
+  },
+  {
+    "start": 2638.16,
+    "end": 2638.88,
+    "text": " think about it."
+  },
+  {
+    "start": 2638.88,
+    "end": 2641.76,
+    "text": " See if you can find the bug yourself."
+  },
+  {
+    "start": 2641.76,
+    "end": 2644.08,
+    "text": " We'll look first for the bug."
+  },
+  {
+    "start": 2644.08,
+    "end": 2647.04,
+    "text": " And then after that, we'll look at a better method of"
+  },
+  {
+    "start": 2647.04,
+    "end": 2648.84,
+    "text": " finding the answer."
+  },
+  {
+    "start": 2648.84,
+    "end": 2649.84,
+    "text": " Thank you."
   }
 ]

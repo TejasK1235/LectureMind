@@ -1,5 +1,5 @@
-from llm.llm_client import LLMClient
-from llm.prompt import build_tagging_prompt
+from tagging2.llm.llm_client import LLMClient
+from tagging2.llm.prompt import build_tagging_prompt
 
 _llm = LLMClient()
 

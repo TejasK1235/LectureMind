@@ -1,8 +1,8 @@
 from typing import List
 
-from schema import TranscriptSegment, TaggedSegment
-from rules.rule_based import apply_rules
-from llm.classify import classify_batch
+from tagging2.schema import TranscriptSegment, TaggedSegment
+from tagging2.rules.rule_based import apply_rules
+from tagging2.llm.classify import classify_batch
 
 
 BATCH_SIZE = 10

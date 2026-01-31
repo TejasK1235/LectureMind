@@ -1,1149 +1,4341 @@
 [
   {
-    "id": "seg_5a41dc3d",
+    "id": "seg_0b294a07",
     "start_time": 0.0,
-    "end_time": 7.0,
-    "text": "Hello friends, welcome to GatesMesh here. Today we are going to start with the very first lecture of DBMS, that is Database Management System.",
+    "end_time": 2.48,
+    "text": "The following content is provided under a Creative",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4ccfcf7b",
+    "start_time": 2.48,
+    "end_time": 3.88,
+    "text": "Commons license.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8a8e2780",
+    "start_time": 3.88,
+    "end_time": 6.92,
+    "text": "Your support will help MIT OpenCourseWare continue to",
     "tag": "OTHER_CHATTER"
   },
   {
-    "id": "seg_b289183c",
-    "start_time": 7.0,
-    "end_time": 14.0,
-    "text": "DBMS is a very important unit in terms of gate exam, UGC net exam and other competitive exam.",
+    "id": "seg_afef79e3",
+    "start_time": 6.92,
+    "end_time": 10.56,
+    "text": "offer high quality educational resources for free.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_3772b8cd",
+    "start_time": 10.56,
+    "end_time": 13.48,
+    "text": "To make a donation or view additional materials from",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a4da1be9",
+    "start_time": 13.48,
+    "end_time": 17.4,
+    "text": "hundreds of MIT courses, visit MIT OpenCourseWare at",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_28b545ad",
+    "start_time": 17.4,
+    "end_time": 18.68,
+    "text": "ocw.mit.edu.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f34e4b7c",
+    "start_time": 21.56,
+    "end_time": 24.24,
+    "text": "Good morning.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_ee67fca2",
+    "start_time": 24.24,
+    "end_time": 26.92,
+    "text": "We should start with a confession for those of you",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_4e886bdc",
+    "start_time": 26.92,
+    "end_time": 30.56,
+    "text": "looking at this in OpenCourseWare that I'm currently",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f07099f6",
+    "start_time": 30.56,
+    "end_time": 34.84,
+    "text": "lecturing to an empty auditorium.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_2db7ea7f",
+    "start_time": 34.84,
+    "end_time": 38.8,
+    "text": "The fifth lecture for 600 this term, we ran into some",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_690a9dc5",
+    "start_time": 38.8,
+    "end_time": 43.88,
+    "text": "technical difficulties, which left us with a recording we",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_3981ec10",
+    "start_time": 43.88,
+    "end_time": 46.0,
+    "text": "weren't very satisfied with.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_c630cd63",
+    "start_time": 46.0,
+    "end_time": 48.8,
+    "text": "So this is a redo.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a1674b9e",
+    "start_time": 48.8,
+    "end_time": 52.0,
+    "text": "And if you will hear no questions from the audience,",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_3cb111fe",
+    "start_time": 52.0,
+    "end_time": 54.52,
+    "text": "and that's because there is no audience.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_84e0d516",
+    "start_time": 54.52,
+    "end_time": 57.72,
+    "text": "Nevertheless, I will do my best to pretend.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a9bea99b",
+    "start_time": 57.72,
+    "end_time": 61.32,
+    "text": "I've been told this is a little bit like giving a speech in",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_52569d83",
+    "start_time": 61.32,
+    "end_time": 64.96,
+    "text": "the floor of the US Congress when C-SPAN is the only",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_9ed857fa",
+    "start_time": 64.96,
+    "end_time": 67.36,
+    "text": "thing watching.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_ac54745d",
+    "start_time": 67.36,
+    "end_time": 69.88,
+    "text": "OK.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_4b17a207",
+    "start_time": 69.88,
+    "end_time": 74.44,
+    "text": "Computers are supposed to be good for crunching numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1d02b424",
+    "start_time": 74.44,
+    "end_time": 78.24,
+    "text": "And we've looked a little bit at numbers this term.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2deb81b2",
+    "start_time": 78.24,
+    "end_time": 81.6,
+    "text": "But I now want to get into looking at them in more depth",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8731f4de",
+    "start_time": 81.6,
+    "end_time": 83.12,
+    "text": "than we've been doing.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5ec68f63",
+    "start_time": 83.12,
+    "end_time": 85.8,
+    "text": "Python has two different kinds of numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fb8c5cf9",
+    "start_time": 92.16,
+    "end_time": 95.4,
+    "text": "So far, the only con we've really paid any",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_06c330d5",
+    "start_time": 95.4,
+    "end_time": 97.6,
+    "text": "attention to is type int.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c9137bc7",
+    "start_time": 100.52,
+    "end_time": 105.48,
+    "text": "And those are intended to mirror the integers, as we all",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_655efe84",
+    "start_time": 105.48,
+    "end_time": 109.0,
+    "text": "learned about starting an elementary school.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_2aff5532",
+    "start_time": 109.0,
+    "end_time": 112.56,
+    "text": "And they're good for things that you can count.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1b3a89d9",
+    "start_time": 112.56,
+    "end_time": 115.64,
+    "text": "Any place you use hold numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_35c1f5d9",
+    "start_time": 115.64,
+    "end_time": 120.6,
+    "text": "Interestingly, Python, unlike some languages, has what are",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dad87608",
+    "start_time": 120.6,
+    "end_time": 122.88,
+    "text": "called arbitrary precision integers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ce753cc3",
+    "start_time": 129.56,
+    "end_time": 133.24,
+    "text": "By that, we mean you can make numbers as big as you want",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9f88ee23",
+    "start_time": 133.24,
+    "end_time": 134.44,
+    "text": "them to.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b1900e82",
+    "start_time": 134.44,
+    "end_time": 137.64,
+    "text": "Let's look at an example.",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_8db1b6fc",
-    "start_time": 14.0,
-    "end_time": 22.0,
-    "text": "Even if I say simple thing, today's time for a BTEC student or even BCA student, DBMS is a very important subject.",
+    "id": "seg_f37ee1dc",
+    "start_time": 137.64,
+    "end_time": 140.24,
+    "text": "We'll just take a for a variable name.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_bb338c60",
-    "start_time": 23.0,
-    "end_time": 27.0,
-    "text": "You can say that it is a very emerging subject.",
+    "id": "seg_c3a0d6bd",
+    "start_time": 140.24,
+    "end_time": 147.08,
+    "text": "And we'll set a to be 2 raised to the 1,000th power.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_8aa8814c",
-    "start_time": 27.0,
-    "end_time": 36.0,
-    "text": "Means if I talk about 6-7 years ago, then at that time the questions were asked less in interviews.",
+    "id": "seg_8c3e0d4f",
+    "start_time": 147.08,
+    "end_time": 151.48,
+    "text": "That, by the way, is a really big number.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_f81d6acc",
-    "start_time": 36.0,
-    "end_time": 40.0,
-    "text": "But at today's time the most questions are being asked on database.",
+    "id": "seg_02e3bf7e",
+    "start_time": 151.48,
+    "end_time": 154.96,
+    "text": "And now what happens if we try and display it?",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_f22ecb99",
-    "start_time": 40.0,
-    "end_time": 47.0,
-    "text": "The major reason for this is that all the top companies, the major MNC companies which are known as top 50,",
+    "id": "seg_44889f13",
+    "start_time": 154.96,
+    "end_time": 157.44,
+    "text": "We get a lot of digits.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_9aee3599",
-    "start_time": 48.0,
-    "end_time": 53.0,
-    "text": "Fortune companies in which you come are Facebook, Google, Amazon.",
+    "id": "seg_dbfe91f9",
+    "start_time": 157.44,
+    "end_time": 159.84,
+    "text": "You can see why I'm doing this on the screen instead of",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_f5b7d79b",
-    "start_time": 53.0,
-    "end_time": 59.0,
-    "text": "So all the major companies whose work is going on on database,",
+    "id": "seg_a896b030",
+    "start_time": 159.84,
+    "end_time": 161.32,
+    "text": "writing it on the blackboard.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_62d2482e",
-    "start_time": 59.0,
-    "end_time": 67.0,
-    "text": "All these companies whose work is going on database, then obviously they will ask the question from the database itself.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_819013a7",
-    "start_time": 67.0,
-    "end_time": 72.0,
-    "text": "So that's why the point of view of interviews is very important subject.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fed4eb94",
-    "start_time": 72.0,
-    "end_time": 77.0,
-    "text": "So we are starting this DBMS from the very initial level.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a754733e",
-    "start_time": 77.0,
-    "end_time": 80.0,
-    "text": "So the first term I have written here is Database System.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c927ea7f",
-    "start_time": 80.0,
-    "end_time": 85.0,
-    "text": "I am not talking about DBMS, the first term I am talking about is Database System.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e2b89eea",
-    "start_time": 85.0,
-    "end_time": 88.0,
-    "text": "What is Database System?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b546ea47",
-    "start_time": 88.0,
-    "end_time": 90.0,
-    "text": "As I have just told you, it is Facebook.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_07ebf38d",
-    "start_time": 90.0,
-    "end_time": 93.0,
-    "text": "Even if we talk about India, then Indian Railways.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_e0872a98",
-    "start_time": 93.0,
-    "end_time": 100.0,
-    "text": "If we talk about IRCTC, then what is the own database system of Indian Railway?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_93221b8f",
-    "start_time": 100.0,
-    "end_time": 103.0,
-    "text": "What is the own database system of Facebook?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3e23648d",
-    "start_time": 103.0,
-    "end_time": 106.0,
-    "text": "What is the own database system of Flipkart?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fa25afeb",
-    "start_time": 106.0,
-    "end_time": 112.0,
-    "text": "Now in that database system there are two terms, one is database and one is DBMS.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_87da840c",
-    "start_time": 112.0,
-    "end_time": 120.0,
-    "text": "Means database system is comprised of two things, one is a database and another one is DBMS.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5dadd83a",
-    "start_time": 120.0,
-    "end_time": 124.0,
-    "text": "Now if I talk about database, what is the database?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4a51f288",
-    "start_time": 124.0,
-    "end_time": 129.0,
-    "text": "Its very simple definition is database is a collection of related data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d7a2784f",
-    "start_time": 129.0,
-    "end_time": 138.0,
-    "text": "If I tell you in a very lame language, it is a collection of related data.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_5b599406",
-    "start_time": 138.0,
-    "end_time": 145.0,
-    "text": "From the name itself you can know that database means where a lot of data is collected.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c5d37fb5",
-    "start_time": 145.0,
-    "end_time": 150.0,
-    "text": "But related data means like we are talking about Indian Railway,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_94b30686",
-    "start_time": 150.0,
-    "end_time": 155.0,
-    "text": "IRCTC has its own database, it is a very big database.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_cd89c76d",
-    "start_time": 155.0,
-    "end_time": 158.0,
-    "text": "Now what will be in that database? What happens in it?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f85b2fb6",
-    "start_time": 158.0,
-    "end_time": 162.0,
-    "text": "When you log in, what happens? First of all, it is information of trains.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7a6f499a",
-    "start_time": 162.0,
-    "end_time": 166.0,
-    "text": "Means if you want to go anywhere, then you are finding information of trains.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c7640dce",
-    "start_time": 166.0,
-    "end_time": 170.0,
-    "text": "What will be the information of passengers other than that?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c2fc881c",
-    "start_time": 170.0,
-    "end_time": 177.0,
-    "text": "Which passengers who have travelled on trains or have logged in IRCTC account?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0cf46024",
-    "start_time": 177.0,
-    "end_time": 182.0,
-    "text": "Do they have the data of whole India? No.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_b7386d9a",
-    "start_time": 182.0,
-    "end_time": 187.0,
-    "text": "So what I am trying to tell you here is that database is a collection of related data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a425bc90",
-    "start_time": 187.0,
-    "end_time": 190.0,
-    "text": "We don't want to make any data a club.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_d2c9dc14",
-    "start_time": 190.0,
-    "end_time": 195.0,
-    "text": "Means with the data of Indian Railways, Indian Passport's data cannot be a club.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_49c6b49b",
-    "start_time": 195.0,
-    "end_time": 204.0,
-    "text": "Their own database, their own database, Indian Railways have their own database.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_36c5113d",
-    "start_time": 204.0,
-    "end_time": 206.0,
-    "text": "That's why it is a related data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_521b67c1",
-    "start_time": 206.0,
-    "end_time": 209.0,
-    "text": "Now here I have bifurcated it further.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_bd5d0c09",
-    "start_time": 209.0,
-    "end_time": 213.0,
-    "text": "The database is generally structured and it is called unstructured.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e4771c47",
-    "start_time": 213.0,
-    "end_time": 217.0,
-    "text": "By the way it is generally structured, semi-structured, unstructured.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c07de9a3",
-    "start_time": 217.0,
-    "end_time": 221.0,
-    "text": "But actually if we talk about our DBMS, then in such detail,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1828438d",
-    "start_time": 221.0,
-    "end_time": 224.0,
-    "text": "it doesn't come on today's time in GATE or UGC net.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_35dd5788",
-    "start_time": 224.0,
-    "end_time": 229.0,
-    "text": "But you should know about this that what structure data and unstructured data is?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3f198bb1",
-    "start_time": 229.0,
-    "end_time": 231.0,
-    "text": "What is structure data?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4f8433c7",
-    "start_time": 231.0,
-    "end_time": 239.0,
-    "text": "Such a database which can be stored in any particular shape or structure.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_edc4ebc0",
-    "start_time": 239.0,
-    "end_time": 244.0,
-    "text": "And unstructured means for which there is no particular structure.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9b18dd6a",
-    "start_time": 244.0,
-    "end_time": 249.0,
-    "text": "For example I have written here that the data of Indian Railways or University.",
+    "id": "seg_61a1224a",
+    "start_time": 163.8,
+    "end_time": 165.8,
+    "text": "I'm not going to ask you whether you believe this is the",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_4605e5c1",
-    "start_time": 249.0,
-    "end_time": 253.0,
-    "text": "Now why is the data of University or the data of Indian Railways structured?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0907f902",
-    "start_time": 253.0,
-    "end_time": 256.0,
-    "text": "Because for them this is a particular structure.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_96e0c726",
-    "start_time": 256.0,
-    "end_time": 265.0,
-    "text": "The most important structure used for structured database that is our DBMS.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3b570e03",
-    "start_time": 265.0,
-    "end_time": 269.0,
-    "text": "Relational database management system.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_2c18de1a",
-    "start_time": 269.0,
-    "end_time": 273.0,
-    "text": "Now I am coming here on this term database management system.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5a5f4f52",
-    "start_time": 273.0,
-    "end_time": 277.0,
-    "text": "Now we are talking that we saved the data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_697c317e",
-    "start_time": 277.0,
-    "end_time": 282.0,
-    "text": "Means I have a lot of data, I saved the data on hard drives, servers on back end.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3698e142",
-    "start_time": 282.0,
-    "end_time": 284.0,
-    "text": "Now what to do about that data?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fa01f7e1",
-    "start_time": 284.0,
-    "end_time": 289.0,
-    "text": "Obviously the user will fetch that data, the user wants to access the data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6fee5557",
-    "start_time": 289.0,
-    "end_time": 295.0,
-    "text": "Now they will update something in that data, insert some new data, delete some old data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_20345ea6",
-    "start_time": 295.0,
-    "end_time": 299.0,
-    "text": "Means what to perform on an average on that?",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_2b320c5a",
-    "start_time": 299.0,
-    "end_time": 305.0,
-    "text": "Insertion means to add some data, deletion, delete some data, update.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fea824b8",
-    "start_time": 305.0,
-    "end_time": 308.0,
-    "text": "Update means there is an old data like address,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1e957175",
-    "start_time": 308.0,
-    "end_time": 312.0,
-    "text": "some student's address was something else, it was updated, it was changed.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b441a5a1",
-    "start_time": 312.0,
-    "end_time": 318.0,
-    "text": "So what do we call these? Operations.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_bb829777",
-    "start_time": 318.0,
-    "end_time": 325.0,
-    "text": "Now to perform all these operations, I should have some system.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_bf7f77df",
-    "start_time": 325.0,
-    "end_time": 330.0,
-    "text": "So what do we call that system? Database management system.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_858bb90f",
-    "start_time": 330.0,
-    "end_time": 334.0,
-    "text": "So what is the collection of operations of database management system?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1a35030c",
-    "start_time": 334.0,
-    "end_time": 342.0,
-    "text": "The user provides easiness so that the user can easily perform operations in database.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_86f9118c",
-    "start_time": 342.0,
-    "end_time": 345.0,
-    "text": "Which operations? Insertion, deletion, update.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_811f5a85",
-    "start_time": 345.0,
-    "end_time": 347.0,
-    "text": "Now where can the data be read?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_054801f8",
-    "start_time": 347.0,
-    "end_time": 349.0,
-    "text": "Data can be present in remote area.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3101b735",
-    "start_time": 349.0,
-    "end_time": 355.0,
-    "text": "Means if I am in Delhi for example and it can be that my data is in Mumbai.",
+    "id": "seg_45433d3b",
+    "start_time": 165.8,
+    "end_time": 166.6,
+    "text": "right answer.",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_264ae87a",
-    "start_time": 355.0,
-    "end_time": 358.0,
-    "text": "So I don't have to take the data from location.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_88c0c88d",
-    "start_time": 358.0,
-    "end_time": 362.0,
-    "text": "I have to access the data and change something in that data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_45265089",
-    "start_time": 362.0,
-    "end_time": 367.0,
-    "text": "Means when we access IRCTC's data, we do some reservation of the train.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4ee2c209",
-    "start_time": 367.0,
-    "end_time": 369.0,
-    "text": "So we know where the data is stored.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5339f470",
-    "start_time": 369.0,
-    "end_time": 374.0,
-    "text": "No, because the user doesn't have to take these things, he has to perform only his operations.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_363dd1bb",
-    "start_time": 374.0,
-    "end_time": 379.0,
-    "text": "And to perform those operations, DBMS helps.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4c14d4b5",
-    "start_time": 379.0,
-    "end_time": 386.0,
-    "text": "Now DBMS also has a lot of different companies, they have made a database management system.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_89884fc7",
-    "start_time": 386.0,
-    "end_time": 391.0,
-    "text": "For example Microsoft Corporation has made a sequel server.",
+    "id": "seg_15ee6ccd",
+    "start_time": 166.6,
+    "end_time": 167.44,
+    "text": "Trust me.",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_4fe7ef21",
-    "start_time": 391.0,
-    "end_time": 393.0,
-    "text": "And the Rackles have made different versions.",
+    "id": "seg_5a3955fe",
+    "start_time": 167.44,
+    "end_time": 169.08,
+    "text": "Trust Python.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_097275e3",
-    "start_time": 393.0,
-    "end_time": 398.0,
-    "text": "There are also the sequel servers 2005, 2008, 2010, 2016.",
+    "id": "seg_01ff0cd6",
+    "start_time": 169.08,
+    "end_time": 172.12,
+    "text": "I would like you to notice that the very end of this is the",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_29d52d2f",
+    "start_time": 172.12,
+    "end_time": 178.36,
+    "text": "letter L. What does that mean?",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_4f4efd57",
-    "start_time": 398.0,
-    "end_time": 400.0,
-    "text": "There are a lot of different versions.",
+    "id": "seg_3ed2a9f0",
+    "start_time": 178.36,
+    "end_time": 179.92,
+    "text": "It means long.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_26975fb8",
-    "start_time": 400.0,
-    "end_time": 405.0,
-    "text": "There are 9, 11, 12, 16 of these Rackles.",
+    "id": "seg_333a7c80",
+    "start_time": 185.52,
+    "end_time": 190.96,
+    "text": "That's telling us that it's representing this particular",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_7260c693",
-    "start_time": 405.0,
-    "end_time": 409.0,
-    "text": "There are also the same MySQL and the Rackles and DB2.",
+    "id": "seg_1ca37300",
+    "start_time": 190.96,
+    "end_time": 195.56,
+    "text": "integer in what it calls its internal long format.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_0195ade0",
-    "start_time": 409.0,
-    "end_time": 415.0,
-    "text": "This is the own DBMS of IBM to manage the data.",
+    "id": "seg_b281ea2f",
+    "start_time": 196.0,
+    "end_time": 197.96,
+    "text": "You needn't worry about that.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_78c4856e",
-    "start_time": 415.0,
-    "end_time": 418.0,
-    "text": "Now we were talking about the structure data here.",
+    "id": "seg_b99a2db6",
+    "start_time": 197.96,
+    "end_time": 200.12,
+    "text": "The only thing to say about it is when you're dealing with",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f1684f01",
+    "start_time": 200.12,
+    "end_time": 203.24,
+    "text": "long integers, it's a lot less efficient than when you're",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_85bc17c5",
+    "start_time": 203.24,
+    "end_time": 205.84,
+    "text": "dealing with smaller numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0b6cb539",
+    "start_time": 205.84,
+    "end_time": 208.36,
+    "text": "And that's all it's kind of warning you by printing this",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_17ec9291",
+    "start_time": 208.36,
+    "end_time": 215.28,
+    "text": "L. About 2 billion is the magic number.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9a1ed9f3",
+    "start_time": 215.28,
+    "end_time": 218.2,
+    "text": "When you get over 2 billion, it's now going to deal with",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c4090e4b",
+    "start_time": 218.2,
+    "end_time": 219.12,
+    "text": "long integers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_66d18fef",
+    "start_time": 219.12,
+    "end_time": 222.32,
+    "text": "So if, for example, you're trying to deal with US",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_c46f73d7",
-    "start_time": 418.0,
-    "end_time": 422.0,
-    "text": "I am only focusing on the structure data from this whole.",
+    "id": "seg_60f7b7d9",
+    "start_time": 222.32,
+    "end_time": 230.2,
+    "text": "budget deficit, you will need integers of type L.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f556077a",
+    "start_time": 230.2,
+    "end_time": 232.2,
+    "text": "OK.",
     "tag": "OTHER_CHATTER"
   },
   {
-    "id": "seg_710e0a63",
-    "start_time": 422.0,
-    "end_time": 429.0,
-    "text": "Because structure data, what I told you, such data which has proper structure to store.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ccd73fc8",
-    "start_time": 429.0,
-    "end_time": 433.0,
-    "text": "And what is that structure? Relation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a794bb51",
-    "start_time": 435.0,
-    "end_time": 438.0,
-    "text": "Relation means table.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_93e05695",
-    "start_time": 439.0,
-    "end_time": 446.0,
-    "text": "Means we store structure data in which format in the format of table.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e50a60fd",
-    "start_time": 446.0,
-    "end_time": 450.0,
-    "text": "Table means if you don't know about it, there is no problem.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_68138a9f",
-    "start_time": 450.0,
-    "end_time": 453.0,
-    "text": "I am explaining it from a very simple point of view.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3e30eafa",
-    "start_time": 453.0,
-    "end_time": 458.0,
-    "text": "Means if you have an Excel file, then what happens in it?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_999f62f2",
-    "start_time": 458.0,
-    "end_time": 460.0,
-    "text": "Columns are there, rows are there.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c24d64bb",
-    "start_time": 460.0,
-    "end_time": 462.0,
-    "text": "You can compare it with it.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f59bde68",
-    "start_time": 462.0,
-    "end_time": 464.0,
-    "text": "Means what is a table?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f904b080",
-    "start_time": 464.0,
-    "end_time": 469.0,
-    "text": "In which there are some columns and what is there? Different rows.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_51620acd",
-    "start_time": 469.0,
-    "end_time": 473.0,
-    "text": "Now we call this table in technical form. Relation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_944e400e",
-    "start_time": 473.0,
-    "end_time": 481.0,
-    "text": "Now my point here is that how we store structure data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fd0b92ab",
-    "start_time": 481.0,
-    "end_time": 483.0,
-    "text": "It can be of different ways too.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4bfb5de0",
-    "start_time": 483.0,
-    "end_time": 487.0,
-    "text": "But the most usable method is relation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5c2a815a",
-    "start_time": 487.0,
-    "end_time": 491.0,
-    "text": "Means how to store data in the form of relation, in the form of table.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4c303d10",
-    "start_time": 491.0,
-    "end_time": 499.0,
-    "text": "Now when I am storing data in relation form, obviously I also need management system.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ebb2f4d0",
-    "start_time": 499.0,
-    "end_time": 505.0,
-    "text": "Means I need a platform which supports relation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_12bbd3c5",
-    "start_time": 505.0,
-    "end_time": 509.0,
-    "text": "Means whenever the user accesses data, I need relation show.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_113bd4f0",
-    "start_time": 509.0,
-    "end_time": 514.0,
-    "text": "Whenever I store the user data, I store the data in relation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d6fed980",
-    "start_time": 514.0,
-    "end_time": 516.0,
-    "text": "Like IRCTC.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_047f1e3a",
-    "start_time": 516.0,
-    "end_time": 520.0,
-    "text": "Now if you remember that you have logged in to IRCTC,",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_b74bf44b",
-    "start_time": 520.0,
-    "end_time": 524.0,
-    "text": "So if you check it first when you put source, destination etc.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_54711ff2",
-    "start_time": 524.0,
-    "end_time": 528.0,
-    "text": "Then you get all the information of trains and what format it comes in?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b84fe298",
-    "start_time": 528.0,
-    "end_time": 529.0,
-    "text": "The form of table.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4ebd3a08",
-    "start_time": 529.0,
-    "end_time": 536.0,
-    "text": "In which the first column is the train number, name of train and also different number of compartments,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0187c310",
-    "start_time": 536.0,
-    "end_time": 541.0,
-    "text": "type of seats, departure time, departure date, different, different.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_d8a93b37",
-    "start_time": 541.0,
-    "end_time": 544.0,
-    "text": "That is the column of different database.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8c5380b6",
-    "start_time": 544.0,
-    "end_time": 546.0,
-    "text": "Now we are not talking about that.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_5a9c1de0",
-    "start_time": 546.0,
-    "end_time": 548.0,
-    "text": "We are talking in simple form.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_a1bb6f18",
-    "start_time": 548.0,
-    "end_time": 555.0,
-    "text": "I am talking only about structure data because in BTECH we study in RDBMS,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_446399cd",
-    "start_time": 555.0,
-    "end_time": 557.0,
-    "text": "Relational Database Management System,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1bdf7a6d",
-    "start_time": 557.0,
-    "end_time": 561.0,
-    "text": "All the things we are focusing on on structure.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e35dd75a",
-    "start_time": 561.0,
-    "end_time": 564.0,
-    "text": "In gate also questions come on it.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_30dedfab",
-    "start_time": 564.0,
-    "end_time": 569.0,
-    "text": "Even in UGC net, all the questions coming in competitive exams are structure data.",
+    "id": "seg_33f12512",
+    "start_time": 232.2,
+    "end_time": 234.68,
+    "text": "Let's look at another interesting example.",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_51f93a97",
-    "start_time": 569.0,
-    "end_time": 572.0,
-    "text": "How do we store structure data in relation form?",
+    "id": "seg_a346e7b6",
+    "start_time": 234.68,
+    "end_time": 244.08,
+    "text": "Suppose I set B equal to 2 raised to the 999th power.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_48d6c721",
-    "start_time": 572.0,
-    "end_time": 578.0,
-    "text": "Now what do I need to store and access relations?",
+    "id": "seg_d73ae574",
+    "start_time": 244.08,
+    "end_time": 246.64,
+    "text": "I can display B.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_a028666d",
-    "start_time": 578.0,
-    "end_time": 579.0,
-    "text": "Management system.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_a49cc0cf",
-    "start_time": 579.0,
-    "end_time": 581.0,
-    "text": "So what is DBMMS?",
+    "id": "seg_a6f772fe",
+    "start_time": 246.64,
+    "end_time": 252.76,
+    "text": "And it's a different number, considerably smaller, but again",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_534852d9",
-    "start_time": 581.0,
-    "end_time": 583.0,
-    "text": "A management system but for whom?",
+    "id": "seg_63433f5c",
+    "start_time": 252.76,
+    "end_time": 254.48,
+    "text": "ending in an L.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_2034d5c8",
-    "start_time": 583.0,
-    "end_time": 584.0,
-    "text": "For relation.",
+    "id": "seg_7e12ba61",
+    "start_time": 254.48,
+    "end_time": 261.64,
+    "text": "And now, what do you think I'll get if we try A divided by B?",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_268d3c4f",
-    "start_time": 584.0,
-    "end_time": 588.0,
-    "text": "So that's why a new term came here, RDBMS.",
+    "id": "seg_f844e963",
+    "start_time": 261.64,
+    "end_time": 265.56,
+    "text": "And remember, we're now doing integer division.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_ff55b3c3",
-    "start_time": 588.0,
-    "end_time": 593.0,
-    "text": "That is Relational Database Management System.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8123c284",
-    "start_time": 594.0,
-    "end_time": 599.0,
-    "text": "So this is our subject that is Relational Database Management System.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3f7ce6fd",
-    "start_time": 599.0,
-    "end_time": 605.0,
-    "text": "Such a system where we can insert, delete, update, perform many operations.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_66d740af",
-    "start_time": 605.0,
-    "end_time": 609.0,
-    "text": "But on whom will we perform relations?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e55efc74",
-    "start_time": 609.0,
-    "end_time": 613.0,
-    "text": "So this is the basic introduction of the RDBMS.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e382d542",
-    "start_time": 613.0,
-    "end_time": 616.0,
-    "text": "I forgot to explain about the unstructured data actually.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7abbe8f2",
-    "start_time": 616.0,
-    "end_time": 622.0,
-    "text": "Unstructured data means such data which is not a particular structure to store.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ab248f99",
-    "start_time": 622.0,
-    "end_time": 626.0,
-    "text": "It means there is no predefined structure where I can store that data.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_91567dc2",
-    "start_time": 626.0,
-    "end_time": 627.0,
-    "text": "Why?",
+    "id": "seg_9c9a9107",
+    "start_time": 265.56,
+    "end_time": 267.84,
+    "text": "Well, let's see.",
     "tag": "OTHER_CHATTER"
   },
   {
-    "id": "seg_d9b63c36",
-    "start_time": 627.0,
-    "end_time": 633.0,
-    "text": "Because in unstructured data, majority of the data is photos, videos,",
+    "id": "seg_fc827bc4",
+    "start_time": 267.84,
+    "end_time": 271.16,
+    "text": "We get 2 L.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_bb9e7a34",
-    "start_time": 633.0,
-    "end_time": 635.0,
-    "text": "which have no particular format.",
+    "id": "seg_453255ad",
+    "start_time": 271.16,
+    "end_time": 273.2,
+    "text": "Well, you'd expect it to be 2.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_9cca043b",
-    "start_time": 635.0,
-    "end_time": 639.0,
-    "text": "Like if I talk about web page, what is in web page?",
+    "id": "seg_9b4da054",
+    "start_time": 273.24,
+    "end_time": 274.92,
+    "text": "Because if you think about the meaning of the",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_0741aad4",
-    "start_time": 639.0,
-    "end_time": 644.0,
-    "text": "Web page is a collection of photos, videos, chats.",
+    "id": "seg_5ab38721",
+    "start_time": 274.92,
+    "end_time": 278.68,
+    "text": "exponentiation, indeed, the difference between raising",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_9f57ab29",
-    "start_time": 644.0,
-    "end_time": 646.0,
-    "text": "They have no particular format.",
+    "id": "seg_d5984788",
+    "start_time": 278.68,
+    "end_time": 283.64,
+    "text": "something to the 999th power and to the 1,000th power",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_bd432dd5",
-    "start_time": 646.0,
-    "end_time": 648.0,
-    "text": "They can be in any format.",
+    "id": "seg_85c81a69",
+    "start_time": 283.64,
+    "end_time": 287.0,
+    "text": "should be, in this case, 2, since that's what we're",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_4bdb1d6a",
-    "start_time": 648.0,
-    "end_time": 654.0,
-    "text": "Maybe in web page, first there was a video, then your image, then there was text,",
+    "id": "seg_3c3fb816",
+    "start_time": 287.0,
+    "end_time": 289.28,
+    "text": "raising to a power.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_744b87d9",
-    "start_time": 654.0,
-    "end_time": 656.0,
-    "text": "or maybe some paragraph came first.",
+    "id": "seg_ba88dbff",
+    "start_time": 289.28,
+    "end_time": 292.4,
+    "text": "Why does it say 2 L?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_b4478577",
+    "start_time": 292.4,
+    "end_time": 295.68,
+    "text": "2 is considerably less than 2 billion.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_8806e9e6",
-    "start_time": 656.0,
-    "end_time": 660.0,
-    "text": "But what will be the structure data in a particular format?",
+    "id": "seg_156770dc",
+    "start_time": 295.68,
+    "end_time": 300.32,
+    "text": "And that's because once you get L, you stay L. Not",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_d2b244de",
-    "start_time": 660.0,
-    "end_time": 662.0,
-    "text": "And what is its format?",
+    "id": "seg_d33aea73",
+    "start_time": 300.36,
+    "end_time": 303.36,
+    "text": "particularly important, but kind of worth knowing.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_ee831325",
+    "start_time": 305.92,
+    "end_time": 309.04,
+    "text": "Why am I bothering you with this whole issue of how numbers",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_42223a0f",
-    "start_time": 662.0,
-    "end_time": 663.0,
-    "text": "Table.",
+    "id": "seg_9e060ec5",
+    "start_time": 309.04,
+    "end_time": 312.44,
+    "text": "are represented in the computer?",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_a199fb00",
-    "start_time": 663.0,
-    "end_time": 667.0,
-    "text": "So we are not talking about unstructured data here because our main topic,",
+    "id": "seg_011607f1",
+    "start_time": 312.44,
+    "end_time": 316.0,
+    "text": "In an ideal world, you would ignore this completely and",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_70343340",
-    "start_time": 667.0,
-    "end_time": 672.0,
-    "text": "our subject RDBMS is only working on structured data.",
+    "id": "seg_6fae744b",
+    "start_time": 316.0,
+    "end_time": 320.12,
+    "text": "just say, numbers do what numbers are supposed to do.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_b938dd0b",
-    "start_time": 672.0,
-    "end_time": 675.0,
-    "text": "This is just an extra thing I just want to explain to you.",
+    "id": "seg_0e235c91",
+    "start_time": 320.12,
+    "end_time": 324.0,
+    "text": "But as we're about to see, sometimes in Python, and in",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_33482d5f",
-    "start_time": 675.0,
-    "end_time": 679.0,
-    "text": "And another one point is, if I talk about today's time,",
+    "id": "seg_ea050cf7",
+    "start_time": 324.0,
+    "end_time": 328.92,
+    "text": "fact in every programming language, things behave",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_cc68cc67",
-    "start_time": 679.0,
-    "end_time": 685.0,
-    "text": "then 90% of the data on this earth is actually unstructured.",
+    "id": "seg_5c1a5171",
+    "start_time": 328.92,
+    "end_time": 332.48,
+    "text": "contrary to what your intuition suggests.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_579e75d0",
-    "start_time": 685.0,
-    "end_time": 688.0,
-    "text": "So all the technologies at today's time,",
+    "id": "seg_34143c9a",
+    "start_time": 332.48,
+    "end_time": 335.88,
+    "text": "And I want to spend a little time helping you understand",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_8f4c08f9",
-    "start_time": 688.0,
-    "end_time": 693.0,
-    "text": "the technology that is coming on most of the technologies is unstructured data.",
+    "id": "seg_1bdbf75e",
+    "start_time": 335.88,
+    "end_time": 338.56,
+    "text": "why this happens.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_92ab7e3f",
-    "start_time": 693.0,
-    "end_time": 696.0,
-    "text": "But this doesn't mean that structured data is closed.",
+    "id": "seg_4378ce7d",
+    "start_time": 338.56,
+    "end_time": 341.64,
+    "text": "So let's look at a different kind of number.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_066ddabf",
-    "start_time": 696.0,
-    "end_time": 699.0,
-    "text": "Structured data also exists, but on unstructured data,",
+    "id": "seg_9289d9b0",
+    "start_time": 341.64,
+    "end_time": 348.68,
+    "text": "And now we're going to look at what Python and almost every",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_a9792fd7",
-    "start_time": 699.0,
-    "end_time": 702.0,
-    "text": "there is more technology which is being used at today's time.",
+    "id": "seg_f6dad23c",
+    "start_time": 348.68,
+    "end_time": 354.04,
+    "text": "other programming language calls type float, which is",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_f86aa615",
-    "start_time": 702.0,
-    "end_time": 706.0,
-    "text": "For example, if I tell you a simple example, then if we talk about big data,",
+    "id": "seg_1405f3b4",
+    "start_time": 354.04,
+    "end_time": 355.64,
+    "text": "short for floating point.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ca7f5129",
+    "start_time": 363.28,
+    "end_time": 367.4,
+    "text": "And that's the way that programming languages typically",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3048c44c",
+    "start_time": 367.4,
+    "end_time": 372.64,
+    "text": "represent what we think of as real numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d0169969",
+    "start_time": 372.64,
+    "end_time": 375.08,
+    "text": "So let's look at an example.",
     "tag": "ADMINISTRATIVE"
   },
   {
-    "id": "seg_cde7ab9b",
-    "start_time": 706.0,
-    "end_time": 711.0,
-    "text": "or talk about the Hadoop, we use all these terms for unstructured data.",
+    "id": "seg_97814349",
+    "start_time": 375.08,
+    "end_time": 383.84,
+    "text": "I'm going to set the variable x to be 0.1, 1 tenth.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_f5a3af70",
-    "start_time": 711.0,
-    "end_time": 718.0,
-    "text": "But here I will only explain about structured data and RDBMS in further videos.",
+    "id": "seg_611c2cf1",
+    "start_time": 383.88,
+    "end_time": 385.96,
+    "text": "And now we're going to display x.",
     "tag": "LECTURE_CONTENT"
   },
   {
-    "id": "seg_95592d27",
-    "start_time": 718.0,
-    "end_time": 719.0,
+    "id": "seg_acafc35e",
+    "start_time": 389.84,
+    "end_time": 391.8,
+    "text": "Take a look at this.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_79000596",
+    "start_time": 391.8,
+    "end_time": 394.84,
+    "text": "Why isn't it 0.1?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_ffbd76c4",
+    "start_time": 394.84,
+    "end_time": 398.84,
+    "text": "Why is it 0.1, a whole bunch of zeros, and then this",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_70497fe5",
+    "start_time": 398.84,
+    "end_time": 403.16,
+    "text": "mysterious 1 appearing at the end?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f35b15f0",
+    "start_time": 403.16,
+    "end_time": 405.96,
+    "text": "Is it because Python just wants to be obnoxious and is",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_aee0efe1",
+    "start_time": 405.96,
+    "end_time": 408.04,
+    "text": "making life hard?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_facfe9ec",
+    "start_time": 408.04,
+    "end_time": 409.28,
+    "text": "No.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_29fb103f",
+    "start_time": 409.28,
+    "end_time": 412.72,
+    "text": "It has to do with the way the numbers are represented",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dc9d080d",
+    "start_time": 412.72,
+    "end_time": 414.4,
+    "text": "inside the computer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a9101565",
+    "start_time": 414.4,
+    "end_time": 419.84,
+    "text": "Python, like almost every modern programming language,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a99af13f",
+    "start_time": 419.84,
+    "end_time": 426.0,
+    "text": "represents numbers using the IEEE floating point standard.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8672b5e6",
+    "start_time": 430.36,
+    "end_time": 431.84,
+    "text": "And it's IEEE 754.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_95162aea",
+    "start_time": 431.84,
+    "end_time": 440.84,
+    "text": "IEEE 754.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b0ba7de8",
+    "start_time": 440.84,
+    "end_time": 443.76,
+    "text": "Never again will you have to remember that it's 754.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_03b979e7",
+    "start_time": 443.76,
+    "end_time": 447.48,
+    "text": "I promise not to ask you that question on a quiz.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_e27c6bcc",
+    "start_time": 447.48,
+    "end_time": 449.36,
+    "text": "But that's what they do.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_e28c19b1",
+    "start_time": 449.36,
+    "end_time": 453.4,
+    "text": "This is a variant of scientific notation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b2f993cd",
+    "start_time": 461.88,
+    "end_time": 465.8,
+    "text": "Something you probably learned about in high school, as a",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_0641a3f2",
+    "start_time": 465.8,
+    "end_time": 469.2,
+    "text": "way to represent very large numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fcd7446a",
+    "start_time": 469.2,
+    "end_time": 474.32,
+    "text": "Typically, the way we do that is we represent the numbers in",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_806015b3",
+    "start_time": 474.32,
+    "end_time": 482.76,
+    "text": "the form of a mantissa and an exponent.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_223aa5fd",
+    "start_time": 482.96,
+    "end_time": 489.72,
+    "text": "So we represent a floating point number as a pair of a",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_44fdcad2",
+    "start_time": 489.72,
+    "end_time": 493.96,
+    "text": "mantissa and an exponent.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_88b75259",
+    "start_time": 497.52,
+    "end_time": 502.72,
+    "text": "And because computers work in the binary system, it's",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_711e6da9",
+    "start_time": 502.72,
+    "end_time": 506.24,
+    "text": "unlike what you probably learned in high school, where we",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bbe78e5d",
+    "start_time": 506.24,
+    "end_time": 508.72,
+    "text": "raise 10 to some power.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9112e6ae",
+    "start_time": 508.72,
+    "end_time": 511.16,
+    "text": "Here we'll always be raised to 10.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e7ed90a3",
+    "start_time": 511.56,
+    "end_time": 515.72,
+    "text": "Here we'll always be raising 2 to some power.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9f0a8a0e",
+    "start_time": 515.72,
+    "end_time": 517.92,
+    "text": "Maybe a little later in the term, if we talk about",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_38d1c77e",
+    "start_time": 517.92,
+    "end_time": 520.56,
+    "text": "computer architecture, we'll get around to explaining why",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0acd4bbb",
+    "start_time": 520.56,
+    "end_time": 522.8,
+    "text": "computers work in binary.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b984e41f",
+    "start_time": 522.8,
+    "end_time": 527.0,
+    "text": "But for now, just assume that they do, and in fact, they",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_684ac838",
+    "start_time": 527.0,
+    "end_time": 529.72,
+    "text": "always have.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e23aab99",
+    "start_time": 529.72,
+    "end_time": 530.84,
+    "text": "All right.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a53f71e8",
+    "start_time": 530.84,
+    "end_time": 541.08,
+    "text": "Purists manage to refer to the mantissa as a significant hand.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b435bd09",
+    "start_time": 541.08,
+    "end_time": 545.44,
+    "text": "But I won't do that, because I'm an old guy, and it was a",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_de0dcb23",
+    "start_time": 545.44,
+    "end_time": 547.32,
+    "text": "mantissa when I first learned about it.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0b1427bf",
+    "start_time": 547.32,
+    "end_time": 551.52,
+    "text": "And I just can't break myself of the habit.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cfd34d32",
+    "start_time": 551.52,
+    "end_time": 553.12,
+    "text": "All right, so how does this work?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_555e10b8",
+    "start_time": 553.72,
+    "end_time": 561.44,
+    "text": "Well, when we recognize something, when we represent",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5a44d315",
+    "start_time": 561.44,
+    "end_time": 577.28,
+    "text": "something, the mantissa is between 1 and 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f10a0376",
+    "start_time": 577.28,
+    "end_time": 582.12,
+    "text": "Strictly less than 2, greater than or equal to 1.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6bc09d11",
+    "start_time": 582.12,
+    "end_time": 607.44,
+    "text": "The exponent is in the range minus 1022 to plus 1023.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2d1df931",
+    "start_time": 607.48,
+    "end_time": 613.36,
+    "text": "So this lets us represent numbers up to about 10 to the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3d35edf8",
+    "start_time": 613.36,
+    "end_time": 616.16,
+    "text": "300th or 8th plus or minus.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_98d12156",
+    "start_time": 616.16,
+    "end_time": 619.84,
+    "text": "10 to 308 plus or minus.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9cfea5f5",
+    "start_time": 619.84,
+    "end_time": 624.12,
+    "text": "So quite a large range of numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8b06287d",
+    "start_time": 624.12,
+    "end_time": 627.24,
+    "text": "Where did these magic things come from?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_3054200e",
+    "start_time": 627.24,
+    "end_time": 629.76,
+    "text": "Kind of a strange number to see here.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_0097e894",
+    "start_time": 629.76,
+    "end_time": 637.08,
+    "text": "Well, it has to do with the fact that computers typically",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0641830f",
+    "start_time": 637.08,
+    "end_time": 639.6,
+    "text": "have words in them.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_940fd50d",
+    "start_time": 639.6,
+    "end_time": 646.36,
+    "text": "And the words today in a modern computer are 64 bits.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_31ad2daa",
+    "start_time": 646.36,
+    "end_time": 649.28,
+    "text": "For many years, they were 32 bits.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7d6d148c",
+    "start_time": 649.28,
+    "end_time": 651.12,
+    "text": "Before that, they were 16 bits.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e60d9245",
+    "start_time": 651.12,
+    "end_time": 653.44,
+    "text": "Before that, they were 8 bits.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_60286428",
+    "start_time": 653.44,
+    "end_time": 655.6,
+    "text": "They continually grown.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c71214c0",
+    "start_time": 655.6,
+    "end_time": 658.76,
+    "text": "But we've been at 64 for a while, and I think we'll be",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_877b9dd3",
+    "start_time": 658.76,
+    "end_time": 662.32,
+    "text": "stuck at 64 for a while.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dc0336de",
+    "start_time": 662.32,
+    "end_time": 670.08,
+    "text": "So as we do this, what we do is we get one bit for the sign.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3524bf71",
+    "start_time": 670.08,
+    "end_time": 673.2,
+    "text": "Is it a positive or a negative number?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5d827596",
+    "start_time": 673.2,
+    "end_time": 677.68,
+    "text": "11 for the exponent.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_35e10ad1",
+    "start_time": 677.68,
+    "end_time": 688.24,
+    "text": "And that leaves 52 for the mantissa.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_680f38f8",
+    "start_time": 688.28,
+    "end_time": 692.4,
+    "text": "And that basically tells us how we're storing numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cd14d01b",
+    "start_time": 692.4,
+    "end_time": 694.92,
+    "text": "Hi, are you here for the 600 lecture?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f40f9b13",
+    "start_time": 694.92,
+    "end_time": 697.08,
+    "text": "There is none today, because we have a quiz this evening.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_304a58b7",
+    "start_time": 700.92,
+    "end_time": 703.16,
+    "text": "It's now the time that the lecture would normally have",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a60bde5e",
+    "start_time": 703.16,
+    "end_time": 706.48,
+    "text": "started, and a couple of students who forgot that we",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_56ef5c8c",
+    "start_time": 706.48,
+    "end_time": 709.24,
+    "text": "have a quiz this evening instead of a lecture just",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_00f303e8",
+    "start_time": 709.24,
+    "end_time": 713.8,
+    "text": "strolled in and now strolled out.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_51ea3585",
+    "start_time": 713.84,
+    "end_time": 720.28,
+    "text": "OK, you may never need to know these constants again, but",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d3986784",
+    "start_time": 720.28,
+    "end_time": 724.36,
+    "text": "it's worth knowing that they exist, and that basically",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_17666d3a",
+    "start_time": 724.36,
+    "end_time": 728.96,
+    "text": "this gives us about the equivalent of 17 decimal",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_be74c6c5",
+    "start_time": 728.96,
+    "end_time": 730.4,
+    "text": "digits of precision.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_adad7e1a",
+    "start_time": 733.24,
+    "end_time": 738.08,
+    "text": "So we can represent numbers up to 17 decimal digits long.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8020873a",
+    "start_time": 739.08,
+    "end_time": 744.08,
+    "text": "This is an important concept to understand that unlike the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_153b1617",
+    "start_time": 744.08,
+    "end_time": 747.56,
+    "text": "long ints where they can grow arbitrarily big, when we're",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f6701a5c",
+    "start_time": 747.56,
+    "end_time": 751.36,
+    "text": "dealing with floating points, if we need something more than",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b6ba3f39",
+    "start_time": 751.36,
+    "end_time": 755.68,
+    "text": "17 decimal digits, in Python at least, we won't be able to",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0b09e426",
+    "start_time": 755.68,
+    "end_time": 756.84,
+    "text": "get it.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6cfd9130",
+    "start_time": 756.84,
+    "end_time": 758.88,
+    "text": "And that's true in many languages.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_eb3570d8",
+    "start_time": 758.88,
+    "end_time": 762.64,
+    "text": "Now the good news, this is an enormous number, and it's",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7afac2ab",
+    "start_time": 762.64,
+    "end_time": 766.32,
+    "text": "highly unlikely that ever in your life, you'll be able to",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d03815fc",
+    "start_time": 766.32,
+    "end_time": 769.8,
+    "text": "see that ever in your life, you will need more precision than",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c19ac945",
+    "start_time": 769.8,
+    "end_time": 771.92,
+    "text": "that.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1f145afe",
+    "start_time": 771.92,
+    "end_time": 778.88,
+    "text": "All right, now let's go back to the 0.1 mystery that we",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_4f3a5c0d",
+    "start_time": 778.88,
+    "end_time": 785.0,
+    "text": "started at and ask ourselves why we have a problem",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_96a0bdec",
+    "start_time": 785.0,
+    "end_time": 788.88,
+    "text": "representing that number in the computer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9cfd7f29",
+    "start_time": 788.88,
+    "end_time": 791.12,
+    "text": "Hence, we get something funny out when we",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_46efbdba",
+    "start_time": 791.12,
+    "end_time": 794.76,
+    "text": "try and print it back.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_273bee97",
+    "start_time": 794.76,
+    "end_time": 798.24,
+    "text": "Well, let's look at an easier problem first.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b6a1103b",
+    "start_time": 798.24,
+    "end_time": 802.36,
+    "text": "Let's look at representing the fraction 1 eighth.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_548c237e",
+    "start_time": 806.4,
+    "end_time": 809.2,
+    "text": "That has a nice representation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3c10d95e",
+    "start_time": 809.2,
+    "end_time": 815.52,
+    "text": "That's equal in decimal to 0.125.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fa03e354",
+    "start_time": 815.52,
+    "end_time": 820.48,
+    "text": "And we can represent it conveniently in both base 10",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_964ecac8",
+    "start_time": 820.48,
+    "end_time": 823.0,
+    "text": "and base 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_86ad87fd",
+    "start_time": 823.04,
+    "end_time": 833.28,
+    "text": "So if we want to represent it in base 10, what is it?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_faf17f2d",
+    "start_time": 833.28,
+    "end_time": 836.16,
+    "text": "What is that equal to?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d2bc0414",
+    "start_time": 836.16,
+    "end_time": 842.04,
+    "text": "Well, we'll take a mantissa, 1.25, and now we need to",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8d72a025",
+    "start_time": 842.04,
+    "end_time": 849.6,
+    "text": "multiply it by something that we can represent nicely.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_56b0f255",
+    "start_time": 849.6,
+    "end_time": 854.48,
+    "text": "And in fact, that will be times 10 to the minus 1.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1384c364",
+    "start_time": 854.48,
+    "end_time": 857.92,
+    "text": "So the exponent would simply be minus 1, and we have a nice",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3ed8ee1e",
+    "start_time": 857.92,
+    "end_time": 860.76,
+    "text": "representation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_44e6fafa",
+    "start_time": 860.76,
+    "end_time": 869.36,
+    "text": "Suppose we want to represent it in base 2, what would it be?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c5ab3dde",
+    "start_time": 869.36,
+    "end_time": 877.28,
+    "text": "1.0 times anybody?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_5a9c1fb5",
+    "start_time": 877.28,
+    "end_time": 884.08,
+    "text": "Well, 2 to the minus 3.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0c056250",
+    "start_time": 884.08,
+    "end_time": 893.4,
+    "text": "So in binary notation, that would be written as 0.001.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_01250a78",
+    "start_time": 893.4,
+    "end_time": 896.16,
+    "text": "So you see, 1 eighth is kind of a nice number.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cc1c9266",
+    "start_time": 896.16,
+    "end_time": 901.92,
+    "text": "We can represent it nicely in either base 10 or base 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4b0b5453",
+    "start_time": 901.92,
+    "end_time": 915.04,
+    "text": "But how about that pesky fraction 1 over 10?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_26493e58",
+    "start_time": 915.04,
+    "end_time": 918.68,
+    "text": "Well, in base 10, we know how to represent.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ab058e6b",
+    "start_time": 918.68,
+    "end_time": 928.44,
+    "text": "It's 1 times 10 to the what?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bf686bb1",
+    "start_time": 928.44,
+    "end_time": 930.12,
+    "text": "10 to the 1?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f53a278f",
+    "start_time": 930.12,
+    "end_time": 932.88,
+    "text": "No.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9352161b",
+    "start_time": 932.88,
+    "end_time": 941.08,
+    "text": "But in base 2, it's a problem.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3e21f636",
+    "start_time": 941.08,
+    "end_time": 946.48,
+    "text": "There is no finite binary number that exactly",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9e4371a1",
+    "start_time": 946.52,
+    "end_time": 951.4,
+    "text": "represents this decimal fraction.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_66c2bedc",
+    "start_time": 951.4,
+    "end_time": 955.92,
+    "text": "In fact, if we try and find the binary number, what we find",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f5650911",
+    "start_time": 955.92,
+    "end_time": 959.64,
+    "text": "is we get an infinitely repeating series.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8de4aa15",
+    "start_time": 959.64,
+    "end_time": 969.96,
+    "text": "0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, and et cetera.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ba3725ee",
+    "start_time": 969.96,
+    "end_time": 974.52,
+    "text": "Stop at any finite number of bits, and you get only an",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_65bb688e",
+    "start_time": 974.56,
+    "end_time": 977.44,
+    "text": "approximation to the decimal fraction 1 tenth.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_65cc878e",
+    "start_time": 980.84,
+    "end_time": 987.28,
+    "text": "So on most computers, if you were to print the decimal",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d5841ba5",
+    "start_time": 987.28,
+    "end_time": 991.2,
+    "text": "value of the binary approximation, and that's",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_65dda554",
+    "start_time": 991.2,
+    "end_time": 994.96,
+    "text": "what we're printing here on the screen, we think in",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_890e0685",
+    "start_time": 994.96,
+    "end_time": 998.44,
+    "text": "decimal, so Python quite nicely for us is printing",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_87767075",
+    "start_time": 998.44,
+    "end_time": 1003.72,
+    "text": "things in decimal, it would have to display, well, I'm not",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_6c264fb3",
+    "start_time": 1003.72,
+    "end_time": 1004.88,
+    "text": "going to write it.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_515cded7",
+    "start_time": 1004.88,
+    "end_time": 1009.44,
+    "text": "It's a very long number, lots of digits.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5cf9dd99",
+    "start_time": 1009.44,
+    "end_time": 1017.12,
+    "text": "However, in Python, whenever we display something, it uses",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4e5a97b9",
+    "start_time": 1017.12,
+    "end_time": 1023.36,
+    "text": "the built-in function, R E P R, short for representation,",
+    "tag": "UNDECIDED"
+  },
+  {
+    "id": "seg_47771b53",
+    "start_time": 1023.36,
+    "end_time": 1027.6,
+    "text": "that converts the internal representation, in this case of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7ef9dd19",
+    "start_time": 1027.6,
+    "end_time": 1032.64,
+    "text": "a number, to a string, and then displays that string, in",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d565aea4",
+    "start_time": 1032.64,
+    "end_time": 1035.52,
+    "text": "this case, on the screen.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_84f8e6bf",
+    "start_time": 1035.52,
+    "end_time": 1044.08,
+    "text": "For floats, it rounds it to 17 digits.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6349bfe5",
+    "start_time": 1044.08,
+    "end_time": 1051.12,
+    "text": "There's that magic number 17 again.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_8a30be0f",
+    "start_time": 1051.12,
+    "end_time": 1057.32,
+    "text": "Hence, when it rounds it to 17 digits, we get exactly what",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6777b082",
+    "start_time": 1057.32,
+    "end_time": 1060.08,
+    "text": "you see in the bottom of the screen up there.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9148b8b9",
+    "start_time": 1064.16,
+    "end_time": 1069.24,
+    "text": "Answer to the mystery, why does it display this?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a397715b",
+    "start_time": 1069.24,
+    "end_time": 1072.56,
+    "text": "Now why should we care?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cf4a1d4b",
+    "start_time": 1072.56,
+    "end_time": 1074.92,
+    "text": "Well, it's not so much that we care about what gets",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9955f96f",
+    "start_time": 1074.92,
+    "end_time": 1079.12,
+    "text": "displayed, but we have to think about the implications, at",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_60f1424c",
+    "start_time": 1079.12,
+    "end_time": 1082.52,
+    "text": "least sometimes we have to think about the implications, of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2b56befb",
+    "start_time": 1082.52,
+    "end_time": 1087.0,
+    "text": "what this inexact representation of numbers means when we",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_920532a1",
+    "start_time": 1087.0,
+    "end_time": 1091.16,
+    "text": "start doing more or less complex computations on",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3c9a6d48",
+    "start_time": 1091.16,
+    "end_time": 1093.28,
+    "text": "those numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ec6feacb",
+    "start_time": 1093.28,
+    "end_time": 1097.04,
+    "text": "So let's look at a little example here.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_86a1cff1",
+    "start_time": 1097.04,
+    "end_time": 1101.32,
+    "text": "I'll start by setting the variable s to 0.0.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_273a0a83",
+    "start_time": 1101.32,
+    "end_time": 1104.36,
+    "text": "Notice I'm being careful to make it a float.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_56c37cd4",
+    "start_time": 1104.36,
+    "end_time": 1114.0,
+    "text": "And then for i in range, let's see, let's take 10, will",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8a30701c",
+    "start_time": 1114.0,
+    "end_time": 1124.76,
+    "text": "increase s by 0.1.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_186d621b",
+    "start_time": 1124.76,
+    "end_time": 1126.28,
+    "text": "All right, we've done that.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6a29635c",
+    "start_time": 1126.28,
+    "end_time": 1128.8,
+    "text": "And now, what happens when I print s?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8bbafe21",
+    "start_time": 1132.44,
+    "end_time": 1136.6,
+    "text": "Well, again, you don't get what your intuition says you",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1518c824",
+    "start_time": 1136.6,
+    "end_time": 1138.24,
+    "text": "should get.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_09d4c84b",
+    "start_time": 1138.24,
+    "end_time": 1145.48,
+    "text": "Notice the last two digits, which are 8 and 9.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4e35443b",
+    "start_time": 1145.48,
+    "end_time": 1147.04,
+    "text": "Well, what's happening here?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_02083067",
+    "start_time": 1149.8,
+    "end_time": 1153.68,
+    "text": "What's happened is the error has accumulated.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9f0ff26b",
+    "start_time": 1153.68,
+    "end_time": 1157.2,
+    "text": "I had a small error when I started, but every time I",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_467de796",
+    "start_time": 1157.2,
+    "end_time": 1162.56,
+    "text": "added it, the error got bigger and it accumulates.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_135c0a95",
+    "start_time": 1162.56,
+    "end_time": 1167.2,
+    "text": "Sometimes you can get in trouble in a computation",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_74e78819",
+    "start_time": 1167.2,
+    "end_time": 1170.44,
+    "text": "because of that.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2110fa84",
+    "start_time": 1170.44,
+    "end_time": 1172.96,
+    "text": "Now what happens, by the way, if I print s?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8c6742e0",
+    "start_time": 1172.96,
+    "end_time": 1176.16,
+    "text": "That's kind of an interesting question.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_9b0c6687",
+    "start_time": 1176.16,
+    "end_time": 1180.8,
+    "text": "Notice that it prints 1.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_939be699",
+    "start_time": 1180.8,
+    "end_time": 1182.6,
+    "text": "And why is that?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_145bf8a9",
+    "start_time": 1182.6,
+    "end_time": 1187.96,
+    "text": "It's because the print command has done a rounding here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e22770f2",
+    "start_time": 1187.96,
+    "end_time": 1190.4,
+    "text": "It automatically rounds.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7f71b95a",
+    "start_time": 1190.4,
+    "end_time": 1194.84,
+    "text": "And that's kind of good, but it's also kind of bad, because",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cf2d07a7",
+    "start_time": 1194.84,
+    "end_time": 1197.2,
+    "text": "that means when you're debugging your program, you can",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bc0bbe0c",
+    "start_time": 1197.2,
+    "end_time": 1199.04,
+    "text": "get very confused.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7a860f5f",
+    "start_time": 1199.04,
+    "end_time": 1201.36,
+    "text": "You say, it says it's 1.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e4b3efd0",
+    "start_time": 1201.36,
+    "end_time": 1203.44,
+    "text": "Why am I getting a different answer when I do the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6d00573e",
+    "start_time": 1203.44,
+    "end_time": 1204.92,
+    "text": "computation?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_14a77697",
+    "start_time": 1204.92,
+    "end_time": 1208.12,
+    "text": "And that's because it's not really 1 inside.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2884bdaa",
+    "start_time": 1208.12,
+    "end_time": 1210.76,
+    "text": "So you have to be careful.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ab2095fc",
+    "start_time": 1210.76,
+    "end_time": 1216.04,
+    "text": "Now, mostly, these round off errors balance each other out.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bf4b4b04",
+    "start_time": 1216.04,
+    "end_time": 1218.8,
+    "text": "Some floats are slightly higher than they're supposed to",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d93ac622",
+    "start_time": 1218.8,
+    "end_time": 1220.88,
+    "text": "be, some are slightly lower.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_db1ba9e5",
+    "start_time": 1220.88,
+    "end_time": 1223.92,
+    "text": "And in most computations, it all comes out in the wash and",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b96e4b75",
+    "start_time": 1223.92,
+    "end_time": 1225.88,
+    "text": "you get the right answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_15daa76c",
+    "start_time": 1225.88,
+    "end_time": 1230.44,
+    "text": "Truth be told, most of the time you can avoid worrying",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4aa56dab",
+    "start_time": 1230.44,
+    "end_time": 1232.24,
+    "text": "about these things.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1821fabd",
+    "start_time": 1232.24,
+    "end_time": 1237.48,
+    "text": "But as we say in Latin, caveat computor.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2f434f95",
+    "start_time": 1237.48,
+    "end_time": 1240.56,
+    "text": "Sometimes you have to worry a little bit.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2093ae8d",
+    "start_time": 1240.56,
+    "end_time": 1244.96,
+    "text": "Now there is one thing about floating points, about which",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b2d08f95",
+    "start_time": 1244.96,
+    "end_time": 1246.52,
+    "text": "you should always worry.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9628badf",
+    "start_time": 1249.84,
+    "end_time": 1253.44,
+    "text": "And that's really the point I want to drive home.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e09768de",
+    "start_time": 1253.44,
+    "end_time": 1255.88,
+    "text": "And that's about the meaning of double equal.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d5905532",
+    "start_time": 1268.32,
+    "end_time": 1269.84,
+    "text": "Let's look at an example of this.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_5ec5ef5b",
+    "start_time": 1273.04,
+    "end_time": 1276.36,
+    "text": "So we've before seen the use of import.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f2e54b98",
+    "start_time": 1276.36,
+    "end_time": 1278.64,
+    "text": "So I'm going to import math.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3964e46a",
+    "start_time": 1278.64,
+    "end_time": 1281.72,
+    "text": "Gives me some useful mathematical functions.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_955ffd71",
+    "start_time": 1281.72,
+    "end_time": 1285.28,
+    "text": "Then I'm going to set the variable a to the square root",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0bfbf08a",
+    "start_time": 1285.28,
+    "end_time": 1286.24,
+    "text": "of 2.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_1f9f33aa",
+    "start_time": 1291.64,
+    "end_time": 1293.12,
+    "text": "Why didn't this work?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_afeb88a1",
+    "start_time": 1293.12,
+    "end_time": 1297.88,
+    "text": "Because what I should have said is math.square root of 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d8b1b9ea",
+    "start_time": 1302.16,
+    "end_time": 1305.44,
+    "text": "Explaining to the interpreter that I want to get the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cdffdbcc",
+    "start_time": 1305.44,
+    "end_time": 1309.4,
+    "text": "function sqrt from the module math.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_44583d40",
+    "start_time": 1312.64,
+    "end_time": 1316.12,
+    "text": "So now I've got a here.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_2a64c4a3",
+    "start_time": 1316.12,
+    "end_time": 1319.48,
+    "text": "And I can look at what a is.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_dbcd7996",
+    "start_time": 1319.48,
+    "end_time": 1322.96,
+    "text": "Some approximation to the square root of 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2b94bc0e",
+    "start_time": 1322.96,
+    "end_time": 1324.56,
+    "text": "Now here's the interesting question.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_82eb708f",
+    "start_time": 1324.56,
+    "end_time": 1333.0,
+    "text": "Suppose I ask about the Boolean a times a equals equals 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fa15a95f",
+    "start_time": 1333.0,
+    "end_time": 1336.44,
+    "text": "Now in my heart, I think if I've taken this square root of",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_7ab54f19",
+    "start_time": 1336.44,
+    "end_time": 1340.16,
+    "text": "number and then I've multiplied it by itself, I should get",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d569a6a2",
+    "start_time": 1340.16,
+    "end_time": 1342.08,
+    "text": "the original number back.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_69636233",
+    "start_time": 1342.08,
+    "end_time": 1345.4,
+    "text": "After all, that's the meaning of square root.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6544b30a",
+    "start_time": 1345.4,
+    "end_time": 1348.48,
+    "text": "But by now, you won't be surprised at the answer of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a5d4fac3",
+    "start_time": 1348.48,
+    "end_time": 1350.88,
+    "text": "this is false.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4eba80dd",
+    "start_time": 1350.88,
+    "end_time": 1353.04,
+    "text": "Because we know what we've stored is only an",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2018659c",
+    "start_time": 1353.04,
+    "end_time": 1354.96,
+    "text": "approximation to the square root.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_53764245",
+    "start_time": 1357.64,
+    "end_time": 1359.04,
+    "text": "And that's kind of interesting.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_401d157a",
+    "start_time": 1359.04,
+    "end_time": 1364.64,
+    "text": "So we can see that by if I look at a times a, I'll get 2",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fab9d291",
+    "start_time": 1364.64,
+    "end_time": 1368.76,
+    "text": "point, a whole bunch of zeros, and then a 4 at the end.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4fac1e1c",
+    "start_time": 1368.76,
+    "end_time": 1373.2,
+    "text": "So this means if I've got a test in my program, in some",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a1f28874",
+    "start_time": 1373.2,
+    "end_time": 1375.64,
+    "text": "sense it will give me the unexpected answer false.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8029c4a1",
+    "start_time": 1378.92,
+    "end_time": 1384.6,
+    "text": "What this tells us is that it's very risky to ever use the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ab3b123a",
+    "start_time": 1384.6,
+    "end_time": 1388.72,
+    "text": "built-in double equals to compare floating points.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_355f51a4",
+    "start_time": 1388.72,
+    "end_time": 1393.04,
+    "text": "And in fact, you should never be testing for equality.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_19a820fa",
+    "start_time": 1393.04,
+    "end_time": 1396.2,
+    "text": "You should always be testing for close enough.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_24f9d1c5",
+    "start_time": 1398.76,
+    "end_time": 1402.84,
+    "text": "So typically what you want to do in your program is ask the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1c3f0695",
+    "start_time": 1402.84,
+    "end_time": 1404.64,
+    "text": "following question.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_766ed5e8",
+    "start_time": 1404.64,
+    "end_time": 1415.16,
+    "text": "Is the absolute value of a times a minus 2.0 less than",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0e3addae",
+    "start_time": 1415.16,
+    "end_time": 1416.84,
+    "text": "epsilon?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d96608ec",
+    "start_time": 1420.56,
+    "end_time": 1423.04,
+    "text": "If we could easily type Greek, we'd have written it that",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_c3ca103a",
+    "start_time": 1423.04,
+    "end_time": 1426.36,
+    "text": "way, but we can't.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f5a33f98",
+    "start_time": 1426.4,
+    "end_time": 1430.88,
+    "text": "So that's some small value chosen to be appropriate for",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_71bc334d",
+    "start_time": 1430.88,
+    "end_time": 1432.56,
+    "text": "the application.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fdbca70f",
+    "start_time": 1432.56,
+    "end_time": 1435.72,
+    "text": "Saying if these two things are with an epsilon of each",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_42480aff",
+    "start_time": 1435.72,
+    "end_time": 1440.92,
+    "text": "other, then I'm going to treat them as equal.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a19b3c45",
+    "start_time": 1440.92,
+    "end_time": 1444.04,
+    "text": "And so what I typically do when I'm writing a Python code",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_105d0c9c",
+    "start_time": 1444.04,
+    "end_time": 1447.04,
+    "text": "that's going to deal with floating point numbers, and I",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_96c849cd",
+    "start_time": 1447.04,
+    "end_time": 1452.08,
+    "text": "do this from time to time, is I introduce a function called",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e81c64f1",
+    "start_time": 1452.08,
+    "end_time": 1458.96,
+    "text": "almost equal, or near, or pick your favorite word, that does",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_48dd907d",
+    "start_time": 1458.96,
+    "end_time": 1460.12,
+    "text": "this for me.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c0eb51b2",
+    "start_time": 1460.12,
+    "end_time": 1463.36,
+    "text": "And wherever I would normally have written x double equals",
+    "tag": "UNDECIDED"
+  },
+  {
+    "id": "seg_4337ade0",
+    "start_time": 1463.36,
+    "end_time": 1468.76,
+    "text": "y, instead I write near x comma y, and it",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_08d79136",
+    "start_time": 1468.76,
+    "end_time": 1472.0,
+    "text": "computes it for me.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_aed33682",
+    "start_time": 1472.0,
+    "end_time": 1476.36,
+    "text": "Not a big deal, but keep this in mind, or as soon as you",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_cada46ed",
+    "start_time": 1476.36,
+    "end_time": 1479.52,
+    "text": "start dealing with numbers, you will get very frustrated in",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7aab8d42",
+    "start_time": 1479.52,
+    "end_time": 1483.4,
+    "text": "trying to understand what your program does.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4b6adaaa",
+    "start_time": 1483.4,
+    "end_time": 1487.44,
+    "text": "OK, enough of numbers for a while.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_e54d303f",
+    "start_time": 1487.44,
+    "end_time": 1489.44,
+    "text": "I'm sure some of you will find this a relief.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_204bd7c6",
+    "start_time": 1492.16,
+    "end_time": 1497.12,
+    "text": "I now want to get away from details of floating point",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_69081e59",
+    "start_time": 1497.12,
+    "end_time": 1501.76,
+    "text": "and talk about general methods, again returning to the real",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5548f93b",
+    "start_time": 1501.76,
+    "end_time": 1506.84,
+    "text": "theme of the course of solving problems using computers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1fd41bc3",
+    "start_time": 1506.84,
+    "end_time": 1511.12,
+    "text": "Last week, we looked at the rather silly problem of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_036bf392",
+    "start_time": 1511.12,
+    "end_time": 1515.88,
+    "text": "finding the square root of a perfect square.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_929e1049",
+    "start_time": 1515.88,
+    "end_time": 1519.08,
+    "text": "Well, that's not usually what you need.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9ca540c4",
+    "start_time": 1521.68,
+    "end_time": 1525.24,
+    "text": "Let's think about the more useful problem of finding the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ec430036",
+    "start_time": 1525.24,
+    "end_time": 1527.72,
+    "text": "square root of a real number.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f61d1373",
+    "start_time": 1527.72,
+    "end_time": 1529.64,
+    "text": "Well, you've just seen how you do that.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f001f92f",
+    "start_time": 1529.64,
+    "end_time": 1532.72,
+    "text": "You import math and you call SQRT.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5e5228d1",
+    "start_time": 1532.72,
+    "end_time": 1536.28,
+    "text": "Let's pretend that we didn't know that trick.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_72b76547",
+    "start_time": 1536.28,
+    "end_time": 1541.24,
+    "text": "Or let's pretend it's your job to implement rather math.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_cb6a5f62",
+    "start_time": 1541.24,
+    "end_time": 1546.28,
+    "text": "And so you need to figure out how to implement square root.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_848ccdb1",
+    "start_time": 1546.28,
+    "end_time": 1549.28,
+    "text": "Why might this be a challenge?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6933a3a0",
+    "start_time": 1549.28,
+    "end_time": 1552.24,
+    "text": "What are some of the issues?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_db5d0301",
+    "start_time": 1552.24,
+    "end_time": 1553.88,
+    "text": "And there are several.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_79aa8603",
+    "start_time": 1553.88,
+    "end_time": 1563.2,
+    "text": "One is what we've just seen might not be an exact answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_88246f47",
+    "start_time": 1567.28,
+    "end_time": 1572.6,
+    "text": "For example, the square root of 2.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_3e8ce53f",
+    "start_time": 1576.48,
+    "end_time": 1579.28,
+    "text": "So we need to worry about that.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a1c901a5",
+    "start_time": 1579.28,
+    "end_time": 1583.04,
+    "text": "And clearly, the way we're going to solve that, as we'll see,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a856daea",
+    "start_time": 1583.04,
+    "end_time": 1586.92,
+    "text": "is using a concept similar to epsilon.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1c6fabb1",
+    "start_time": 1586.92,
+    "end_time": 1588.44,
+    "text": "In fact, we'll even call it epsilon.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4395bcd6",
+    "start_time": 1589.44,
+    "end_time": 1597.0,
+    "text": "Another problem with the method we looked at last time is",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_df2879b3",
+    "start_time": 1597.0,
+    "end_time": 1600.12,
+    "text": "there we were doing exhaustive enumeration.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5e5f676f",
+    "start_time": 1600.12,
+    "end_time": 1603.96,
+    "text": "We were enumerating all the possible answers, checking",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d0a4a386",
+    "start_time": 1603.96,
+    "end_time": 1607.68,
+    "text": "each one, and if it was goods, stopping.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fd618acd",
+    "start_time": 1607.68,
+    "end_time": 1615.36,
+    "text": "Well, the problem with reels as opposed to integers is we",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_64ffe234",
+    "start_time": 1615.36,
+    "end_time": 1621.68,
+    "text": "can't enumerate all guesses.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_eeb23adb",
+    "start_time": 1626.44,
+    "end_time": 1629.68,
+    "text": "And that's because the reels are uncountable.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c8da13e8",
+    "start_time": 1634.56,
+    "end_time": 1639.32,
+    "text": "If I ask you to enumerate the positive integers, you'll say",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c4307076",
+    "start_time": 1639.32,
+    "end_time": 1647.88,
+    "text": "1, 2, 3, 4, 5, if I ask you to enumerate the reels, the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a022158c",
+    "start_time": 1647.88,
+    "end_time": 1649.96,
+    "text": "positive reels, where do you start?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_04946a07",
+    "start_time": 1649.96,
+    "end_time": 1652.96,
+    "text": "1 over a billion plus who knows?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_0885f111",
+    "start_time": 1652.96,
+    "end_time": 1657.64,
+    "text": "Now as we've just seen, in fact, since there's a limit to",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1c4e7ac1",
+    "start_time": 1657.64,
+    "end_time": 1661.52,
+    "text": "the precision in floating point, technically you could",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fb2b532d",
+    "start_time": 1661.52,
+    "end_time": 1665.0,
+    "text": "enumerate all the floating point numbers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2e9a81ec",
+    "start_time": 1665.0,
+    "end_time": 1668.36,
+    "text": "And I say technically, because if you tried to do that,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d824f825",
+    "start_time": 1668.4,
+    "end_time": 1673.68,
+    "text": "your computation would not terminate anytime soon.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_17154184",
+    "start_time": 1673.68,
+    "end_time": 1677.8,
+    "text": "So even though in principle you could enumerate them, in",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_50f3f33c",
+    "start_time": 1677.8,
+    "end_time": 1679.84,
+    "text": "fact, you really can't.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1ee94555",
+    "start_time": 1679.84,
+    "end_time": 1683.16,
+    "text": "And so we think of the floating points like the reels as",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fc06fd3d",
+    "start_time": 1683.16,
+    "end_time": 1687.32,
+    "text": "being innumerable, or not innumerable, as to say as being",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_eead917e",
+    "start_time": 1687.32,
+    "end_time": 1690.12,
+    "text": "uncountable.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7134a57d",
+    "start_time": 1690.12,
+    "end_time": 1691.44,
+    "text": "So we can't do that.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9b4685de",
+    "start_time": 1691.88,
+    "end_time": 1696.8,
+    "text": "So we have to find something clever, because we're now",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9762ad1f",
+    "start_time": 1696.8,
+    "end_time": 1702.12,
+    "text": "searching a very large space of possible answers, what",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e054177c",
+    "start_time": 1702.12,
+    "end_time": 1706.6,
+    "text": "technically we might call a large state space.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_07653514",
+    "start_time": 1706.6,
+    "end_time": 1710.32,
+    "text": "So we're going to take our previous method of guess and",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b20188d0",
+    "start_time": 1710.32,
+    "end_time": 1717.16,
+    "text": "check and replace it by something called guess check",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_aa3d1eac",
+    "start_time": 1718.16,
+    "end_time": 1719.16,
+    "text": "and improve.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_02bdca3b",
+    "start_time": 1721.68,
+    "end_time": 1727.68,
+    "text": "Previously, we just generated guesses in some systematic way,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_03a9bbd5",
+    "start_time": 1727.68,
+    "end_time": 1731.0,
+    "text": "but without knowing that we were getting closer to the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8e60eb78",
+    "start_time": 1731.0,
+    "end_time": 1732.32,
+    "text": "answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_66cd3d17",
+    "start_time": 1732.32,
+    "end_time": 1735.44,
+    "text": "Think of the original barnyard problem with the chickens and",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_39dba153",
+    "start_time": 1735.44,
+    "end_time": 1736.88,
+    "text": "the heads and the legs.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dd763978",
+    "start_time": 1736.88,
+    "end_time": 1739.88,
+    "text": "We just enumerated possibilities, but we didn't know",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_33627282",
+    "start_time": 1739.88,
+    "end_time": 1742.28,
+    "text": "that one guess was better than the previous guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dce64063",
+    "start_time": 1742.28,
+    "end_time": 1746.08,
+    "text": "Now we're going to find a way to do the enumeration where we",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_699c2fe0",
+    "start_time": 1746.08,
+    "end_time": 1753.36,
+    "text": "have good reason to believe, at least with high probability,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cdaa8a11",
+    "start_time": 1753.36,
+    "end_time": 1758.88,
+    "text": "that each guess is better than the previous guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b41ec1ce",
+    "start_time": 1758.88,
+    "end_time": 1760.96,
+    "text": "This is what's called successive approximation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fd517045",
+    "start_time": 1772.28,
+    "end_time": 1785.88,
+    "text": "And that's a very important concept.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2f86444b",
+    "start_time": 1785.88,
+    "end_time": 1790.2,
+    "text": "Many problems are solved computationally using",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4faae2e9",
+    "start_time": 1790.2,
+    "end_time": 1791.72,
+    "text": "successive approximation.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_123d6e2f",
+    "start_time": 1796.24,
+    "end_time": 1801.96,
+    "text": "Every successive approximation method has the same rough",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ebca2b46",
+    "start_time": 1801.96,
+    "end_time": 1803.68,
+    "text": "structure.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_44397b14",
+    "start_time": 1803.68,
+    "end_time": 1816.44,
+    "text": "You start with some guess, which will be the initial guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0f67d0e6",
+    "start_time": 1816.44,
+    "end_time": 1820.16,
+    "text": "You then iterate, and in a minute I'll tell you why I'm",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_1ff02228",
+    "start_time": 1820.16,
+    "end_time": 1823.52,
+    "text": "doing it this particular way, over some range.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_69fc1b54",
+    "start_time": 1824.52,
+    "end_time": 1833.52,
+    "text": "I've chosen 100, but it doesn't have to be 100, just some",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5e9004d6",
+    "start_time": 1833.52,
+    "end_time": 1838.32,
+    "text": "number there.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a1f1048f",
+    "start_time": 1838.32,
+    "end_time": 1847.88,
+    "text": "If f of x, that is to say some function of my, whoops, I",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8faa6e35",
+    "start_time": 1847.88,
+    "end_time": 1850.4,
+    "text": "shouldn't have said x.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c8515929",
+    "start_time": 1850.4,
+    "end_time": 1854.84,
+    "text": "My notes say x, but it's the wrong thing.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_570d1d5a",
+    "start_time": 1854.84,
+    "end_time": 1864.96,
+    "text": "If f of x, f of the guess is close enough, so for example,",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_400a6ff1",
+    "start_time": 1864.96,
+    "end_time": 1868.76,
+    "text": "if when I square a guess, I get close enough to the number",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ed7fb4af",
+    "start_time": 1868.76,
+    "end_time": 1873.76,
+    "text": "whose square root I'm looking for, then I'll return the guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6e469457",
+    "start_time": 1880.76,
+    "end_time": 1899.8,
+    "text": "If it's not close enough, I'll get a better guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5f20a8bb",
+    "start_time": 1899.8,
+    "end_time": 1906.4,
+    "text": "If I do my, in this case, 100 iterations, and I've not gotten",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f9812ca5",
+    "start_time": 1906.4,
+    "end_time": 1910.12,
+    "text": "the guess that it's good enough, I'm going to quit with",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_caa8a1dc",
+    "start_time": 1910.12,
+    "end_time": 1914.36,
+    "text": "some error.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e06ef6b4",
+    "start_time": 1914.36,
+    "end_time": 1918.28,
+    "text": "Saying, wow, I thought my method was good enough that",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_04e8d33f",
+    "start_time": 1918.28,
+    "end_time": 1920.72,
+    "text": "100 guesses should have gotten me there.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_b3146560",
+    "start_time": 1920.72,
+    "end_time": 1923.48,
+    "text": "If it didn't, I may be wrong.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_7be62007",
+    "start_time": 1923.48,
+    "end_time": 1927.44,
+    "text": "I always like to have some limit so that my program can't",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7900e30c",
+    "start_time": 1927.44,
+    "end_time": 1932.04,
+    "text": "spin off into the ether guessing forever.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f1eff454",
+    "start_time": 1932.04,
+    "end_time": 1955.4,
+    "text": "OK, let's look at an example of that.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_708e51d0",
+    "start_time": 1955.4,
+    "end_time": 1961.4,
+    "text": "So here's a successive approximations to the square",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7fa03861",
+    "start_time": 1961.4,
+    "end_time": 1962.8,
+    "text": "root.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_490d3bbd",
+    "start_time": 1962.8,
+    "end_time": 1965.92,
+    "text": "I've called it square root bi.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_87b93126",
+    "start_time": 1965.92,
+    "end_time": 1969.44,
+    "text": "The bi is not a reference to the sexual preferences of the",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f3cc0d27",
+    "start_time": 1969.44,
+    "end_time": 1973.04,
+    "text": "function, but a reference to the fact that this is an",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ebae57d7",
+    "start_time": 1973.04,
+    "end_time": 1993.0,
+    "text": "example of what's called a bisection method.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_d67408ae",
+    "start_time": 1993.0,
+    "end_time": 1998.0,
+    "text": "The basic idea behind any bisection method is the same.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6a69d0bd",
+    "start_time": 1998.0,
+    "end_time": 2001.64,
+    "text": "And we'll see lots of examples of this this semester, is that",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_742254fd",
+    "start_time": 2001.64,
+    "end_time": 2007.56,
+    "text": "you have some linearly arranged space of possible answers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_060463b8",
+    "start_time": 2011.56,
+    "end_time": 2016.16,
+    "text": "And it has the property that if I take a guess somewhere, let's",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8636718b",
+    "start_time": 2016.16,
+    "end_time": 2021.92,
+    "text": "say there, I guess that's the answer to the question.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7f948493",
+    "start_time": 2021.92,
+    "end_time": 2026.12,
+    "text": "If it turns out that's not the answer, I can easily",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_621ed5da",
+    "start_time": 2026.12,
+    "end_time": 2031.2,
+    "text": "determine whether the answer lies to the left or the right of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1e044c97",
+    "start_time": 2031.2,
+    "end_time": 2033.68,
+    "text": "the guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6cea4467",
+    "start_time": 2033.68,
+    "end_time": 2039.88,
+    "text": "So if I guess that 89.12 is the square root of a number, and",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dabedfa0",
+    "start_time": 2039.88,
+    "end_time": 2043.48,
+    "text": "turns out not to be the square root of the number, I have a",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0493659c",
+    "start_time": 2043.48,
+    "end_time": 2048.8,
+    "text": "way of saying is 89.12 too big or too small.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_374ed8b7",
+    "start_time": 2048.8,
+    "end_time": 2052.0,
+    "text": "If it was too big, then I know I better guess some number",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_09fb2d51",
+    "start_time": 2052.0,
+    "end_time": 2053.68,
+    "text": "over here.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_62515059",
+    "start_time": 2053.68,
+    "end_time": 2057.16,
+    "text": "If it was too small, then I better guess some number over",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_414ef3a8",
+    "start_time": 2057.16,
+    "end_time": 2058.16,
+    "text": "here.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_627d5a9a",
+    "start_time": 2059.16,
+    "end_time": 2063.84,
+    "text": "Why do I call it bisection?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_793dda81",
+    "start_time": 2063.84,
+    "end_time": 2066.4,
+    "text": "Because I'm dividing it in half.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a38d6650",
+    "start_time": 2066.4,
+    "end_time": 2070.56,
+    "text": "And in general, as we'll see, when I know what my space of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2f4d735c",
+    "start_time": 2070.56,
+    "end_time": 2076.04,
+    "text": "answers is, I always as my next guess choose something halfway",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_40fb46e6",
+    "start_time": 2076.04,
+    "end_time": 2077.84,
+    "text": "along that line.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b23a9414",
+    "start_time": 2077.84,
+    "end_time": 2081.28,
+    "text": "So I made a guess, and let's say it was too small.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cbec2c03",
+    "start_time": 2081.28,
+    "end_time": 2084.32,
+    "text": "And I know the answer is between here and here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_36965377",
+    "start_time": 2084.32,
+    "end_time": 2085.92,
+    "text": "This was too small.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_9a824e55",
+    "start_time": 2085.92,
+    "end_time": 2089.68,
+    "text": "I now know that the answer is between here and here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7e639f63",
+    "start_time": 2089.68,
+    "end_time": 2093.24,
+    "text": "So my next guess will be in the middle.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c034f624",
+    "start_time": 2093.24,
+    "end_time": 2096.88,
+    "text": "The beauty of always guessing in the middle is that each",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_732cde49",
+    "start_time": 2096.88,
+    "end_time": 2100.6,
+    "text": "guess, if it's wrong, I get to throw out half of the state",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_eaadb60b",
+    "start_time": 2100.6,
+    "end_time": 2102.44,
+    "text": "space.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ed5bfa1c",
+    "start_time": 2102.44,
+    "end_time": 2105.96,
+    "text": "So I know how long it's going to take me to search the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_eef35a8c",
+    "start_time": 2105.96,
+    "end_time": 2109.24,
+    "text": "possibilities in some sense.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_73d8fc09",
+    "start_time": 2109.24,
+    "end_time": 2113.08,
+    "text": "Because I'm getting logarithmically progress.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a33432c7",
+    "start_time": 2116.48,
+    "end_time": 2121.24,
+    "text": "This is exactly what we saw when we looked at recursion in",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_03ed18e6",
+    "start_time": 2121.24,
+    "end_time": 2125.88,
+    "text": "some sense, where we solved the problem by, at each step,",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_00e273d4",
+    "start_time": 2125.88,
+    "end_time": 2128.64,
+    "text": "solving a smaller problem.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_91679b2c",
+    "start_time": 2128.64,
+    "end_time": 2133.24,
+    "text": "The same problem, but on a smaller solution space.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_79323921",
+    "start_time": 2133.24,
+    "end_time": 2136.0,
+    "text": "Now, as it happens, I'm not using recursion in this",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_04cb8be6",
+    "start_time": 2136.0,
+    "end_time": 2138.44,
+    "text": "implementation we have up on the screen.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8b119c62",
+    "start_time": 2138.44,
+    "end_time": 2140.8,
+    "text": "I'm doing it iteratively.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7a98fb45",
+    "start_time": 2140.8,
+    "end_time": 2143.44,
+    "text": "But the idea is the same.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_b7876a96",
+    "start_time": 2143.44,
+    "end_time": 2146.68,
+    "text": "So we'll take a quick look at it now, then we'll quit, and",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_d78d6317",
+    "start_time": 2146.68,
+    "end_time": 2148.76,
+    "text": "we'll come back to it in the next lecture a little more",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3f69c9ba",
+    "start_time": 2148.76,
+    "end_time": 2151.44,
+    "text": "thoroughly.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_56888c75",
+    "start_time": 2151.44,
+    "end_time": 2154.04,
+    "text": "I'm going to warn you right now that there's a bug in this",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_31d65b81",
+    "start_time": 2154.04,
+    "end_time": 2157.52,
+    "text": "code, and in the next lecture we'll see if we can",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_adbf417d",
+    "start_time": 2157.52,
+    "end_time": 2160.56,
+    "text": "discover what that is.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d3fbf8e1",
+    "start_time": 2160.56,
+    "end_time": 2164.96,
+    "text": "So it takes two arguments, x, the number whose square root",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0cfd5b1b",
+    "start_time": 2164.96,
+    "end_time": 2169.96,
+    "text": "we're looking for, and epsilon, how close we need to get.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d1df8153",
+    "start_time": 2169.96,
+    "end_time": 2175.88,
+    "text": "It assumes that x is non-negative, and that epsilon is",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2a770592",
+    "start_time": 2175.88,
+    "end_time": 2178.56,
+    "text": "greater than zero.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fae1f673",
+    "start_time": 2178.56,
+    "end_time": 2182.04,
+    "text": "Why do we need to assume that epsilon is greater than zero?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_27d8da7e",
+    "start_time": 2182.04,
+    "end_time": 2184.68,
+    "text": "Well, if you made epsilon zero, and then say we're looking",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d864ad43",
+    "start_time": 2184.68,
+    "end_time": 2189.88,
+    "text": "for the square root of two, we know we'll never get an answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_92525011",
+    "start_time": 2189.88,
+    "end_time": 2193.88,
+    "text": "So we want it to be positive.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0d999079",
+    "start_time": 2193.88,
+    "end_time": 2198.16,
+    "text": "And then it returns y such that y times y is within epsilon",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_2b5b6e53",
+    "start_time": 2198.16,
+    "end_time": 2199.44,
+    "text": "of x.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6ad14aa8",
+    "start_time": 2199.44,
+    "end_time": 2204.4,
+    "text": "It's near to use the terminology we used before.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f79c2379",
+    "start_time": 2204.4,
+    "end_time": 2207.4,
+    "text": "The next thing we see in the program is two",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8f632460",
+    "start_time": 2207.4,
+    "end_time": 2209.88,
+    "text": "assert statements.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6e4f6652",
+    "start_time": 2209.88,
+    "end_time": 2214.56,
+    "text": "This is because I never trust the people who call my",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_c8fde3fa",
+    "start_time": 2214.56,
+    "end_time": 2217.36,
+    "text": "functions to do the right thing.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_882b3c86",
+    "start_time": 2217.36,
+    "end_time": 2220.48,
+    "text": "Even though I've said I'm going to assume certain things",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_dacec10d",
+    "start_time": 2220.48,
+    "end_time": 2224.32,
+    "text": "about x and epsilon, I'm actually going to test it.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_805e3baa",
+    "start_time": 2224.32,
+    "end_time": 2228.08,
+    "text": "And so I'm going to assert that x is greater than or equal to",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d98a3bc3",
+    "start_time": 2228.08,
+    "end_time": 2231.72,
+    "text": "zero, and that epsilon is greater than zero.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9e6366ca",
+    "start_time": 2231.72,
+    "end_time": 2236.76,
+    "text": "What assert does is it tests the predicate, say x greater",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3ce12708",
+    "start_time": 2236.76,
+    "end_time": 2238.44,
+    "text": "than or equal to zero.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4f35ff98",
+    "start_time": 2238.44,
+    "end_time": 2241.24,
+    "text": "If it's true, it does nothing.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_55621f0b",
+    "start_time": 2241.24,
+    "end_time": 2243.2,
+    "text": "Just goes on to the next statement.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d88d3dc6",
+    "start_time": 2243.2,
+    "end_time": 2248.44,
+    "text": "But if it's false, it prints a message, the string, which is",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6519e6aa",
+    "start_time": 2248.44,
+    "end_time": 2253.2,
+    "text": "my second argument here, and then the program just stops.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4efc67b8",
+    "start_time": 2253.2,
+    "end_time": 2255.64,
+    "text": "So rather than my function going off and doing something",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f72273f3",
+    "start_time": 2255.64,
+    "end_time": 2259.44,
+    "text": "bizarre, for example, running forever, it just stops with",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_8a73b1bb",
+    "start_time": 2259.44,
+    "end_time": 2262.12,
+    "text": "the message saying, you called me with arguments you",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_ac363b7f",
+    "start_time": 2262.12,
+    "end_time": 2263.36,
+    "text": "shouldn't have called me with.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_afe9aae9",
+    "start_time": 2266.24,
+    "end_time": 2269.56,
+    "text": "So that's the specification, and then my",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_31dd7e89",
+    "start_time": 2269.56,
+    "end_time": 2272.96,
+    "text": "check of the assumptions.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_83662dee",
+    "start_time": 2272.96,
+    "end_time": 2279.84,
+    "text": "The next thing it does is it looks for a range such that I",
+    "tag": "UNDECIDED"
+  },
+  {
+    "id": "seg_a94253c2",
+    "start_time": 2279.84,
+    "end_time": 2284.28,
+    "text": "believe I'm assured that my answer lies between these",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3f79e62b",
+    "start_time": 2284.28,
+    "end_time": 2288.56,
+    "text": "values, and I'm going to say, well, my answer will be no",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fd19f06c",
+    "start_time": 2288.56,
+    "end_time": 2294.0,
+    "text": "smaller than zero and no bigger than x.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0ff904b4",
+    "start_time": 2294.0,
+    "end_time": 2296.04,
+    "text": "Now, is this the tightest possible range?",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3648679c",
+    "start_time": 2296.04,
+    "end_time": 2297.32,
+    "text": "Maybe not.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_4fef8d21",
+    "start_time": 2297.32,
+    "end_time": 2299.28,
+    "text": "But I'm not too fussy about that.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_8f748451",
+    "start_time": 2299.28,
+    "end_time": 2305.04,
+    "text": "I'm just trying to make sure that I cover the space.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_9f54b115",
+    "start_time": 2305.04,
+    "end_time": 2307.6,
+    "text": "Then I'll start with a guess.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_dbaf43e2",
+    "start_time": 2307.6,
+    "end_time": 2310.8,
+    "text": "And again, I'm not going to worry too much about the guess.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_44f260ab",
+    "start_time": 2310.8,
+    "end_time": 2315.24,
+    "text": "I'm going to take low plus high and divide it by 2.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_7d33ac8f",
+    "start_time": 2315.24,
+    "end_time": 2317.48,
+    "text": "That is to say, choose something in the middle of this",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_73ba55d3",
+    "start_time": 2317.48,
+    "end_time": 2324.24,
+    "text": "space, and then essentially do what we've got here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f173518e",
+    "start_time": 2324.24,
+    "end_time": 2326.28,
+    "text": "So it's a little bit more involved here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8acd72d8",
+    "start_time": 2326.28,
+    "end_time": 2331.24,
+    "text": "I'm going to set my counter to 1 just to keep checking.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_adebaf5a",
+    "start_time": 2331.24,
+    "end_time": 2335.12,
+    "text": "Then say, while the absolute value of the guess squared",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_6a525ec5",
+    "start_time": 2335.12,
+    "end_time": 2338.52,
+    "text": "minus x is greater than epsilon, that is to say, while my",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3bce133e",
+    "start_time": 2338.52,
+    "end_time": 2343.2,
+    "text": "guess is not yet good enough, and the counter is not greater",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1dd19dcc",
+    "start_time": 2343.2,
+    "end_time": 2349.24,
+    "text": "than 100, I'll get the next guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ab38995f",
+    "start_time": 2349.24,
+    "end_time": 2351.48,
+    "text": "Notice by the way, I have a print statement here, which",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_721a024c",
+    "start_time": 2351.48,
+    "end_time": 2353.24,
+    "text": "I've commented out.",
+    "tag": "UNDECIDED"
+  },
+  {
+    "id": "seg_482c8e9a",
+    "start_time": 2353.24,
+    "end_time": 2356.64,
+    "text": "But I sort of figured that my program would not work",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5e3d2052",
+    "start_time": 2356.64,
+    "end_time": 2358.72,
+    "text": "correctly the first time.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bd93991b",
+    "start_time": 2358.72,
+    "end_time": 2363.12,
+    "text": "And so when I first typed it, put in a print statement that",
+    "tag": "UNDECIDED"
+  },
+  {
+    "id": "seg_f95653b9",
+    "start_time": 2363.12,
+    "end_time": 2365.76,
+    "text": "would let me see what was happening each iteration",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_76ead8ad",
+    "start_time": 2365.76,
+    "end_time": 2368.76,
+    "text": "through this loop, so that if it didn't work, I could get a",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c6d99c26",
+    "start_time": 2368.76,
+    "end_time": 2371.0,
+    "text": "sense of why not.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_3c645648",
+    "start_time": 2371.0,
+    "end_time": 2373.8,
+    "text": "In the next lecture, when we look for the bug in this",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_1f238398",
+    "start_time": 2373.8,
+    "end_time": 2376.88,
+    "text": "program, you will see me uncomment out that print",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9b724448",
+    "start_time": 2376.88,
+    "end_time": 2379.0,
+    "text": "statement.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_ace78989",
+    "start_time": 2379.0,
+    "end_time": 2382.76,
+    "text": "But for now, we go to the next thing.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_c2143633",
+    "start_time": 2382.76,
+    "end_time": 2386.0,
+    "text": "And we're here, we know the guess wasn't good enough.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_245de991",
+    "start_time": 2386.0,
+    "end_time": 2391.56,
+    "text": "So I now say, if the guess squared was less than x, then",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_da291264",
+    "start_time": 2391.56,
+    "end_time": 2398.36,
+    "text": "I will change the low bound to be the guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_0ff5835f",
+    "start_time": 2398.36,
+    "end_time": 2403.12,
+    "text": "Otherwise, I'll change the high bound to be the guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9c2fd8a8",
+    "start_time": 2403.12,
+    "end_time": 2405.96,
+    "text": "So I move either the low bound or I move the high bound.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3d120cd2",
+    "start_time": 2405.96,
+    "end_time": 2410.56,
+    "text": "Either way, I'm cutting the search space in half each step.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_9c9e1c8b",
+    "start_time": 2410.56,
+    "end_time": 2413.12,
+    "text": "I'll get my new guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f2c949ba",
+    "start_time": 2413.12,
+    "end_time": 2418.0,
+    "text": "I'll increment my counter, and off I go.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_c341085c",
+    "start_time": 2418.04,
+    "end_time": 2420.2,
+    "text": "In the happy event that eventually I get a good",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_790c2823",
+    "start_time": 2420.2,
+    "end_time": 2426.2,
+    "text": "enough guess, you'll see I'll exit the loop.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_38427fb9",
+    "start_time": 2426.2,
+    "end_time": 2430.2,
+    "text": "When I exit the loop, I check, did I exit it because I",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_052ab871",
+    "start_time": 2430.2,
+    "end_time": 2433.08,
+    "text": "exceeded the counter, i.e. I didn't have a good enough",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_babf8a9e",
+    "start_time": 2433.08,
+    "end_time": 2434.24,
+    "text": "guess.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_47322c52",
+    "start_time": 2434.24,
+    "end_time": 2439.2,
+    "text": "If so, I'll print the message iteration count exceeded.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8a298ef1",
+    "start_time": 2439.2,
+    "end_time": 2446.36,
+    "text": "Otherwise, I'll print the result and return it.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_bf302b5e",
+    "start_time": 2446.36,
+    "end_time": 2448.76,
+    "text": "Now again, if I were writing a square root function to be",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_072fcdc0",
+    "start_time": 2448.76,
+    "end_time": 2451.6,
+    "text": "used in another program, I probably wouldn't bother",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fe98ddfb",
+    "start_time": 2451.6,
+    "end_time": 2454.2,
+    "text": "printing the result and the number of iterations and all",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a0a707ff",
+    "start_time": 2454.2,
+    "end_time": 2455.28,
+    "text": "of that.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d45b694f",
+    "start_time": 2455.28,
+    "end_time": 2458.2,
+    "text": "But again, I'm doing that here because we want to see",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f0bdabf7",
+    "start_time": 2458.2,
+    "end_time": 2459.92,
+    "text": "what it's doing.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_9bca2edb",
+    "start_time": 2459.92,
+    "end_time": 2462.4,
+    "text": "All right, we'll run it a couple times, and then I'll",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_22246b94",
+    "start_time": 2462.4,
+    "end_time": 2466.44,
+    "text": "let you out for the day.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_75d434bc",
+    "start_time": 2466.44,
+    "end_time": 2467.76,
+    "text": "Let's go do this.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_a5e025a3",
+    "start_time": 2477.04,
+    "end_time": 2483.32,
+    "text": "All right, we're here.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_9fbd31f4",
+    "start_time": 2483.32,
+    "end_time": 2485.36,
+    "text": "Notice when I run it, nothing happens.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8f8e05aa",
+    "start_time": 2485.36,
+    "end_time": 2487.04,
+    "text": "Why did nothing happen?",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_168ffdf0",
+    "start_time": 2487.04,
+    "end_time": 2489.8,
+    "text": "Well, nothing happens, it was just a function.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_514cd755",
+    "start_time": 2489.8,
+    "end_time": 2493.08,
+    "text": "Functions don't do anything until I call them.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_38b276b8",
+    "start_time": 2493.08,
+    "end_time": 2494.36,
+    "text": "So let's call it.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_e6a6317b",
+    "start_time": 2495.0,
+    "end_time": 2502.84,
+    "text": "Let's call square root by with 4.001.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_717d97b3",
+    "start_time": 2505.92,
+    "end_time": 2507.52,
+    "text": "Took only one iteration.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3a2f79ef",
+    "start_time": 2507.52,
+    "end_time": 2508.92,
+    "text": "That was pretty fast.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_8a95c3ca",
+    "start_time": 2508.92,
+    "end_time": 2511.2,
+    "text": "Estimated two is an answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_8e9c4941",
+    "start_time": 2511.2,
+    "end_time": 2513.72,
+    "text": "We're pretty happy with that answer.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_4c7d384e",
+    "start_time": 2513.72,
+    "end_time": 2517.2,
+    "text": "Let's try another example.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_899717c1",
+    "start_time": 2517.2,
+    "end_time": 2520.36,
+    "text": "Let's look at nine.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_77fe5be6",
+    "start_time": 2520.36,
+    "end_time": 2523.36,
+    "text": "I always like to, by the way, write the answer.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_f6995944",
+    "start_time": 2523.36,
+    "end_time": 2525.56,
+    "text": "I always like to, by the way, start with questions whose",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_5b613945",
+    "start_time": 2525.56,
+    "end_time": 2528.84,
+    "text": "answer I know.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_65d7fb73",
+    "start_time": 2528.84,
+    "end_time": 2531.2,
+    "text": "We'll try and get a little bit more precise.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_42690f8a",
+    "start_time": 2531.2,
+    "end_time": 2532.4,
+    "text": "Well, all right.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_e2703323",
+    "start_time": 2532.4,
+    "end_time": 2536.64,
+    "text": "Here it took 18 iterations.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_157687e0",
+    "start_time": 2536.64,
+    "end_time": 2540.4,
+    "text": "Didn't actually give me the answer 3, which we know happens",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a4c66b9a",
+    "start_time": 2540.4,
+    "end_time": 2542.16,
+    "text": "to be the answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_a134e180",
+    "start_time": 2542.16,
+    "end_time": 2546.12,
+    "text": "But it gave me something that was with an epsilon of 3.",
+    "tag": "UNDECIDED"
+  },
+  {
+    "id": "seg_c55d6b2d",
+    "start_time": 2546.12,
+    "end_time": 2549.68,
+    "text": "So it meets the specification, so I should be",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_971856e5",
+    "start_time": 2549.68,
+    "end_time": 2552.44,
+    "text": "perfectly happy.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_73c462f0",
+    "start_time": 2552.48,
+    "end_time": 2554.04,
+    "text": "Let's look at another example.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_5efd501d",
+    "start_time": 2558.72,
+    "end_time": 2560.08,
+    "text": "Try a bigger number here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_62dfb4f2",
+    "start_time": 2567.0,
+    "end_time": 2570.0,
+    "text": "All right, so I've looked for the square root of 1,000.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5c4f08ce",
+    "start_time": 2570.0,
+    "end_time": 2572.0,
+    "text": "Here it took 29 iterations.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_377a67d5",
+    "start_time": 2572.0,
+    "end_time": 2574.08,
+    "text": "We're kind of creeping up there.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4f49f7ea",
+    "start_time": 2574.08,
+    "end_time": 2576.72,
+    "text": "Gave me an estimate.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_4ce33c81",
+    "start_time": 2576.72,
+    "end_time": 2579.12,
+    "text": "Let's look at our infamous example of two.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_64a4deed",
+    "start_time": 2579.12,
+    "end_time": 2580.32,
+    "text": "See what it does here.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_73ecaa62",
+    "start_time": 2582.44,
+    "end_time": 2594.08,
+    "text": "Worked around.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_2279a1f5",
+    "start_time": 2594.08,
+    "end_time": 2600.0,
+    "text": "Now, we can see that it's actually working.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f14a19cb",
+    "start_time": 2600.0,
+    "end_time": 2602.92,
+    "text": "And I'm getting answers that we believe are good enough",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_fc33c9f9",
+    "start_time": 2602.92,
+    "end_time": 2605.32,
+    "text": "answers.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_d9f1de68",
+    "start_time": 2605.32,
+    "end_time": 2608.24,
+    "text": "But we also see that the speed of what we talk about is",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4a0f2326",
+    "start_time": 2608.24,
+    "end_time": 2611.28,
+    "text": "convergence, how many iterations it takes, the",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_f4d2e8bd",
+    "start_time": 2611.28,
+    "end_time": 2614.6,
+    "text": "number of iterations, is variable.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_3cc6a8ad",
+    "start_time": 2614.6,
+    "end_time": 2617.88,
+    "text": "And it seems to be related to at least two things.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_20d72c3c",
+    "start_time": 2617.88,
+    "end_time": 2620.52,
+    "text": "And we'll see more about this in the next lecture.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_dacc2425",
+    "start_time": 2620.52,
+    "end_time": 2624.32,
+    "text": "The size of the number of the square root we're looking for",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_cfb7b68a",
+    "start_time": 2624.32,
+    "end_time": 2629.28,
+    "text": "and the precision to which I want the answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_52ddb654",
+    "start_time": 2629.28,
+    "end_time": 2634.88,
+    "text": "Next lecture, we'll look at, A, what's wrong with this one.",
+    "tag": "ADMINISTRATIVE"
+  },
+  {
+    "id": "seg_818127c6",
+    "start_time": 2634.88,
+    "end_time": 2638.16,
+    "text": "And I would ask you to between now and the next lecture,",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_8c00af12",
+    "start_time": 2638.16,
+    "end_time": 2638.88,
+    "text": "think about it.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_45533310",
+    "start_time": 2638.88,
+    "end_time": 2641.76,
+    "text": "See if you can find the bug yourself.",
+    "tag": "OTHER_CHATTER"
+  },
+  {
+    "id": "seg_04e33a63",
+    "start_time": 2641.76,
+    "end_time": 2644.08,
+    "text": "We'll look first for the bug.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_26371559",
+    "start_time": 2644.08,
+    "end_time": 2647.04,
+    "text": "And then after that, we'll look at a better method of",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_5058c786",
+    "start_time": 2647.04,
+    "end_time": 2648.84,
+    "text": "finding the answer.",
+    "tag": "LECTURE_CONTENT"
+  },
+  {
+    "id": "seg_4879f9e2",
+    "start_time": 2648.84,
+    "end_time": 2649.84,
     "text": "Thank you.",
     "tag": "OTHER_CHATTER"
   }

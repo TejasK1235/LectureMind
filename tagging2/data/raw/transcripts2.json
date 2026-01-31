@@ -1,0 +1,6372 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.48,
+    "text": " The following content is provided under a Creative"
+  },
+  {
+    "start": 2.48,
+    "end": 3.88,
+    "text": " Commons license."
+  },
+  {
+    "start": 3.88,
+    "end": 6.92,
+    "text": " Your support will help MIT OpenCourseWare continue to"
+  },
+  {
+    "start": 6.92,
+    "end": 10.56,
+    "text": " offer high quality educational resources for free."
+  },
+  {
+    "start": 10.56,
+    "end": 13.48,
+    "text": " To make a donation or view additional materials from"
+  },
+  {
+    "start": 13.48,
+    "end": 17.4,
+    "text": " hundreds of MIT courses, visit MIT OpenCourseWare at"
+  },
+  {
+    "start": 17.4,
+    "end": 18.76,
+    "text": " ocw.mit.edu."
+  },
+  {
+    "start": 21.64,
+    "end": 23.52,
+    "text": " Good morning."
+  },
+  {
+    "start": 23.52,
+    "end": 24.16,
+    "text": " Try it again."
+  },
+  {
+    "start": 24.16,
+    "end": 25.88,
+    "text": " Good morning."
+  },
+  {
+    "start": 25.88,
+    "end": 27.56,
+    "text": " Thank you."
+  },
+  {
+    "start": 27.56,
+    "end": 31.4,
+    "text": " This is 600, also known as Introduction to Computer"
+  },
+  {
+    "start": 31.4,
+    "end": 33.08,
+    "text": " Science and Programming."
+  },
+  {
+    "start": 33.08,
+    "end": 34.4,
+    "text": " My name is Eric Grimson."
+  },
+  {
+    "start": 34.4,
+    "end": 36.96,
+    "text": " Together with Professor John Guttag over here, we're going"
+  },
+  {
+    "start": 36.96,
+    "end": 39.4,
+    "text": " to be lecturing the course this term."
+  },
+  {
+    "start": 39.4,
+    "end": 40.64,
+    "text": " I want to give you a heads up."
+  },
+  {
+    "start": 40.64,
+    "end": 43.8,
+    "text": " You're getting some serious firepower this term."
+  },
+  {
+    "start": 43.8,
+    "end": 48.56,
+    "text": " John was department head for 10 years, felt like a century."
+  },
+  {
+    "start": 48.56,
+    "end": 50.48,
+    "text": " And in course six, I'm the current department head in"
+  },
+  {
+    "start": 50.48,
+    "end": 51.2,
+    "text": " course six."
+  },
+  {
+    "start": 51.2,
+    "end": 55.8,
+    "text": " John's been lecturing for 30 years, roughly."
+  },
+  {
+    "start": 55.8,
+    "end": 56.28,
+    "text": " All right."
+  },
+  {
+    "start": 56.28,
+    "end": 57.16,
+    "text": " I'm the young guy."
+  },
+  {
+    "start": 57.16,
+    "end": 59.92,
+    "text": " I've only been lecturing for 25 years."
+  },
+  {
+    "start": 59.92,
+    "end": 63.28,
+    "text": " You can tell I have less gray hair than he does."
+  },
+  {
+    "start": 63.28,
+    "end": 66.08,
+    "text": " What I'm trying to say to you is we take this course really"
+  },
+  {
+    "start": 66.08,
+    "end": 67.08,
+    "text": " seriously."
+  },
+  {
+    "start": 67.08,
+    "end": 68.56,
+    "text": " We hope you do as well."
+  },
+  {
+    "start": 68.56,
+    "end": 70.8,
+    "text": " But we think it's really important for the department"
+  },
+  {
+    "start": 70.8,
+    "end": 73.64,
+    "text": " to help everybody learn about computation."
+  },
+  {
+    "start": 73.64,
+    "end": 76.28,
+    "text": " And that's what this course is about."
+  },
+  {
+    "start": 76.28,
+    "end": 79.64,
+    "text": " What I want to do today is three things."
+  },
+  {
+    "start": 79.64,
+    "end": 81.68,
+    "text": " I'm going to start, actually I shouldn't say start."
+  },
+  {
+    "start": 81.68,
+    "end": 82.36,
+    "text": " I'm going to do it in the middle."
+  },
+  {
+    "start": 82.36,
+    "end": 83.6,
+    "text": " A little bit of administrative here."
+  },
+  {
+    "start": 83.6,
+    "end": 85.2,
+    "text": " The kinds of things you need to know about how we're going"
+  },
+  {
+    "start": 85.2,
+    "end": 86.84,
+    "text": " to run the course."
+  },
+  {
+    "start": 86.84,
+    "end": 89.72,
+    "text": " I want to talk about the goals of the course."
+  },
+  {
+    "start": 89.72,
+    "end": 92.56,
+    "text": " What it is you'll be able to do at the end of this course"
+  },
+  {
+    "start": 92.56,
+    "end": 94.12,
+    "text": " when you get through it."
+  },
+  {
+    "start": 94.12,
+    "end": 97.16,
+    "text": " And then I want to begin talking about the concepts and"
+  },
+  {
+    "start": 97.16,
+    "end": 100.24,
+    "text": " tools of computational thinking, which is what we're"
+  },
+  {
+    "start": 100.24,
+    "end": 101.6,
+    "text": " primarily going to focus on here."
+  },
+  {
+    "start": 101.6,
+    "end": 103.6,
+    "text": " We're going to try and help you learn how to think like a"
+  },
+  {
+    "start": 103.6,
+    "end": 104.44,
+    "text": " computer scientist."
+  },
+  {
+    "start": 104.44,
+    "end": 106.2,
+    "text": " And we're going to begin talking about that towards the"
+  },
+  {
+    "start": 106.2,
+    "end": 108.24,
+    "text": " end of this lecture and, of course, throughout the rest"
+  },
+  {
+    "start": 108.24,
+    "end": 110.72,
+    "text": " of the lectures that carry on."
+  },
+  {
+    "start": 110.72,
+    "end": 110.96,
+    "text": " All right."
+  },
+  {
+    "start": 110.96,
+    "end": 112.76,
+    "text": " Let's start with the goals."
+  },
+  {
+    "start": 112.76,
+    "end": 115.32,
+    "text": " And I'm going to give you goals in two levels."
+  },
+  {
+    "start": 115.32,
+    "end": 118.08,
+    "text": " The strategic goals are the following."
+  },
+  {
+    "start": 118.08,
+    "end": 121.6,
+    "text": " We want to help prepare freshmen and sophomores who are"
+  },
+  {
+    "start": 121.6,
+    "end": 125.0,
+    "text": " interested in majoring in course six to get an easy entry"
+  },
+  {
+    "start": 125.0,
+    "end": 127.16,
+    "text": " into the department, especially for those students who don't"
+  },
+  {
+    "start": 127.16,
+    "end": 129.76,
+    "text": " have a lot of prior programming experience."
+  },
+  {
+    "start": 129.76,
+    "end": 131.8,
+    "text": " If you're in that category, don't panic."
+  },
+  {
+    "start": 131.8,
+    "end": 132.8,
+    "text": " You're going to get it."
+  },
+  {
+    "start": 132.8,
+    "end": 134.96,
+    "text": " We're going to help you ramp in, and you'll certainly be able"
+  },
+  {
+    "start": 134.96,
+    "end": 137.84,
+    "text": " to start the course six curriculum and do just fine"
+  },
+  {
+    "start": 137.84,
+    "end": 140.24,
+    "text": " and still finish on target."
+  },
+  {
+    "start": 140.24,
+    "end": 142.72,
+    "text": " We don't expect everybody to be a course six major,"
+  },
+  {
+    "start": 142.72,
+    "end": 144.8,
+    "text": " contrary to popular opinion."
+  },
+  {
+    "start": 144.8,
+    "end": 147.12,
+    "text": " So for those of you not in that category, the second thing"
+  },
+  {
+    "start": 147.12,
+    "end": 149.12,
+    "text": " we want to do is we want to help students who don't plan to"
+  },
+  {
+    "start": 149.12,
+    "end": 153.12,
+    "text": " major in course six to feel justifiably confident in their"
+  },
+  {
+    "start": 153.12,
+    "end": 157.88,
+    "text": " ability to write and read small pieces of code."
+  },
+  {
+    "start": 157.88,
+    "end": 160.4,
+    "text": " For all students, what we want to do is we want to give you an"
+  },
+  {
+    "start": 160.4,
+    "end": 164.64,
+    "text": " understanding of the role computation can and cannot play"
+  },
+  {
+    "start": 164.64,
+    "end": 167.48,
+    "text": " in tackling technical problems."
+  },
+  {
+    "start": 167.48,
+    "end": 169.72,
+    "text": " So that you will come away with a sense of what you can do,"
+  },
+  {
+    "start": 169.72,
+    "end": 172.12,
+    "text": " what you can't do, and what kinds of things you should use"
+  },
+  {
+    "start": 172.12,
+    "end": 174.76,
+    "text": " to tackle complex problems."
+  },
+  {
+    "start": 174.76,
+    "end": 177.12,
+    "text": " And finally, we want to position all students so that you"
+  },
+  {
+    "start": 177.12,
+    "end": 180.8,
+    "text": " can easily, if you like, compete for things like"
+  },
+  {
+    "start": 180.8,
+    "end": 183.8,
+    "text": " UROPS and summer jobs, because you'll have an appropriate"
+  },
+  {
+    "start": 183.8,
+    "end": 186.4,
+    "text": " level of confidence and confidence in your ability to"
+  },
+  {
+    "start": 186.4,
+    "end": 188.68,
+    "text": " do computational problem solving."
+  },
+  {
+    "start": 188.68,
+    "end": 190.76,
+    "text": " Those are the strategic goals."
+  },
+  {
+    "start": 190.76,
+    "end": 195.6,
+    "text": " Now, this course is primarily aimed at students who have"
+  },
+  {
+    "start": 195.6,
+    "end": 199.28,
+    "text": " little or no prior programming experience."
+  },
+  {
+    "start": 199.28,
+    "end": 201.96,
+    "text": " As a consequence, we believe that no student here is"
+  },
+  {
+    "start": 201.96,
+    "end": 204.12,
+    "text": " underqualified for this course."
+  },
+  {
+    "start": 204.12,
+    "end": 205.08,
+    "text": " You're all MIT students."
+  },
+  {
+    "start": 205.08,
+    "end": 206.96,
+    "text": " You're all qualified to be here."
+  },
+  {
+    "start": 206.96,
+    "end": 209.16,
+    "text": " But we also hope that there aren't any students here who"
+  },
+  {
+    "start": 209.16,
+    "end": 212.04,
+    "text": " are overqualified for this course."
+  },
+  {
+    "start": 212.04,
+    "end": 212.88,
+    "text": " What do I mean by that?"
+  },
+  {
+    "start": 212.88,
+    "end": 217.32,
+    "text": " If you've done a lot of prior programming, this is probably"
+  },
+  {
+    "start": 217.32,
+    "end": 218.92,
+    "text": " not the best course for you."
+  },
+  {
+    "start": 218.92,
+    "end": 221.56,
+    "text": " And if you're in that category, I would please encourage you"
+  },
+  {
+    "start": 221.56,
+    "end": 224.72,
+    "text": " to talk to John or I after class about what your goals"
+  },
+  {
+    "start": 224.72,
+    "end": 227.64,
+    "text": " are, what kind of experience you have, and how we might find"
+  },
+  {
+    "start": 227.64,
+    "end": 231.36,
+    "text": " you a course that better meets your goals."
+  },
+  {
+    "start": 231.36,
+    "end": 234.12,
+    "text": " Second reason, we don't want overqualified students in the"
+  },
+  {
+    "start": 234.12,
+    "end": 234.44,
+    "text": " class."
+  },
+  {
+    "start": 234.44,
+    "end": 237.64,
+    "text": " It sounds a little nasty, but the second reason is an"
+  },
+  {
+    "start": 237.64,
+    "end": 239.84,
+    "text": " overqualified student, somebody who's, I don't know,"
+  },
+  {
+    "start": 239.84,
+    "end": 243.28,
+    "text": " programmed for Google for the last five years, is going to"
+  },
+  {
+    "start": 243.28,
+    "end": 244.44,
+    "text": " have an easy time in this course."
+  },
+  {
+    "start": 244.44,
+    "end": 246.96,
+    "text": " But we don't want such a student accidentally"
+  },
+  {
+    "start": 246.96,
+    "end": 248.84,
+    "text": " intimidating the rest of you."
+  },
+  {
+    "start": 248.84,
+    "end": 252.2,
+    "text": " We don't want you to feel inadequate when you're simply"
+  },
+  {
+    "start": 252.2,
+    "end": 253.56,
+    "text": " inexperienced."
+  },
+  {
+    "start": 253.56,
+    "end": 256.24,
+    "text": " And so it really is a course aimed at students with little"
+  },
+  {
+    "start": 256.24,
+    "end": 258.6,
+    "text": " or no prior programming experience."
+  },
+  {
+    "start": 258.6,
+    "end": 260.52,
+    "text": " And again, if you're not in that category, talk to John or"
+  },
+  {
+    "start": 260.52,
+    "end": 262.68,
+    "text": " I after class, and we'll help you figure out where you might"
+  },
+  {
+    "start": 262.68,
+    "end": 264.6,
+    "text": " want to go."
+  },
+  {
+    "start": 264.6,
+    "end": 266.68,
+    "text": " OK, those are the top level goals of the course."
+  },
+  {
+    "start": 266.68,
+    "end": 269.96,
+    "text": " Let's talk sort of at a more tactical level about what do"
+  },
+  {
+    "start": 269.96,
+    "end": 271.32,
+    "text": " we want you to know in this course."
+  },
+  {
+    "start": 271.32,
+    "end": 273.96,
+    "text": " What do we want you to be able to do by the time you leave"
+  },
+  {
+    "start": 273.96,
+    "end": 274.64,
+    "text": " this course?"
+  },
+  {
+    "start": 274.64,
+    "end": 278.44,
+    "text": " So here are the skills that we would like you to acquire."
+  },
+  {
+    "start": 281.44,
+    "end": 284.56,
+    "text": " The first skill we want you to acquire is we want you to be"
+  },
+  {
+    "start": 284.56,
+    "end": 287.6,
+    "text": " able to use the basic tools of computational thinking to write"
+  },
+  {
+    "start": 287.6,
+    "end": 289.72,
+    "text": " small scale programs."
+  },
+  {
+    "start": 289.76,
+    "end": 291.68,
+    "text": " We're going to keep coming back to that idea, but we're going"
+  },
+  {
+    "start": 291.68,
+    "end": 293.24,
+    "text": " to call it computational thinking."
+  },
+  {
+    "start": 297.64,
+    "end": 300.56,
+    "text": " And that's so you can write small pieces of code."
+  },
+  {
+    "start": 300.56,
+    "end": 302.56,
+    "text": " And small is not derogatory here, by the way."
+  },
+  {
+    "start": 302.56,
+    "end": 305.88,
+    "text": " It just says the size of things you're going to be able to do."
+  },
+  {
+    "start": 305.88,
+    "end": 308.32,
+    "text": " Second skill we want you to have at the end of this course is"
+  },
+  {
+    "start": 308.32,
+    "end": 311.8,
+    "text": " the ability to use a vocabulary of computational tools in"
+  },
+  {
+    "start": 311.8,
+    "end": 314.96,
+    "text": " order to be able to understand programs written by others."
+  },
+  {
+    "start": 314.96,
+    "end": 316.32,
+    "text": " So you're going to be able to write."
+  },
+  {
+    "start": 316.32,
+    "end": 317.56,
+    "text": " You're going to be able to read."
+  },
+  {
+    "start": 319.88,
+    "end": 324.64,
+    "text": " This latter skill, by the way, is incredibly valuable."
+  },
+  {
+    "start": 324.64,
+    "end": 326.48,
+    "text": " Because you don't want to do everything from scratch"
+  },
+  {
+    "start": 326.48,
+    "end": 326.92,
+    "text": " yourself."
+  },
+  {
+    "start": 326.92,
+    "end": 328.92,
+    "text": " You want to be able to look at what is being created by"
+  },
+  {
+    "start": 328.92,
+    "end": 331.52,
+    "text": " somebody else and understand what is inside of there,"
+  },
+  {
+    "start": 331.52,
+    "end": 334.28,
+    "text": " whether it works correctly, and how you can build on it."
+  },
+  {
+    "start": 334.28,
+    "end": 336.92,
+    "text": " This is one of the few places where plagiarism is an OK"
+  },
+  {
+    "start": 336.92,
+    "end": 337.84,
+    "text": " thing."
+  },
+  {
+    "start": 337.84,
+    "end": 340.56,
+    "text": " It's not bad to, if you like, learn from the skills of"
+  },
+  {
+    "start": 340.56,
+    "end": 342.76,
+    "text": " others in order to create something you want to write."
+  },
+  {
+    "start": 342.76,
+    "end": 344.36,
+    "text": " Although we'll come back to plagiarism as a bad"
+  },
+  {
+    "start": 344.36,
+    "end": 346.36,
+    "text": " thing later on."
+  },
+  {
+    "start": 346.36,
+    "end": 348.52,
+    "text": " Third thing we want you to do is to understand the"
+  },
+  {
+    "start": 348.52,
+    "end": 352.28,
+    "text": " fundamental both capabilities and limitations of"
+  },
+  {
+    "start": 352.28,
+    "end": 355.72,
+    "text": " computation and the costs associated with them."
+  },
+  {
+    "start": 355.72,
+    "end": 357.04,
+    "text": " And that latter statement sounds funny."
+  },
+  {
+    "start": 357.04,
+    "end": 359.8,
+    "text": " You don't think of computation having limits, but they do."
+  },
+  {
+    "start": 359.8,
+    "end": 361.36,
+    "text": " There are some things that cannot be computed."
+  },
+  {
+    "start": 361.36,
+    "end": 363.48,
+    "text": " We want you to understand where those limits are."
+  },
+  {
+    "start": 363.48,
+    "end": 365.88,
+    "text": " So you're going to be able to understand"
+  },
+  {
+    "start": 365.88,
+    "end": 367.28,
+    "text": " abilities and limits."
+  },
+  {
+    "start": 375.36,
+    "end": 378.04,
+    "text": " And then finally, the last practical skill that you're"
+  },
+  {
+    "start": 378.04,
+    "end": 379.68,
+    "text": " going to get out of this course is you're going to have the"
+  },
+  {
+    "start": 379.68,
+    "end": 383.0,
+    "text": " ability to map scientific problems into a"
+  },
+  {
+    "start": 383.0,
+    "end": 385.0,
+    "text": " computational framework."
+  },
+  {
+    "start": 385.0,
+    "end": 386.96,
+    "text": " So you're going to be able to take a description of a"
+  },
+  {
+    "start": 386.96,
+    "end": 392.6,
+    "text": " problem and map it into something computational."
+  },
+  {
+    "start": 397.32,
+    "end": 399.0,
+    "text": " Now if you think about it, boy, this"
+  },
+  {
+    "start": 399.0,
+    "end": 401.12,
+    "text": " sounds like grammar school."
+  },
+  {
+    "start": 401.12,
+    "end": 402.96,
+    "text": " We're going to teach you to read."
+  },
+  {
+    "start": 402.96,
+    "end": 404.92,
+    "text": " We're going to teach you to write."
+  },
+  {
+    "start": 404.92,
+    "end": 406.88,
+    "text": " We're going to teach you to understand what you can and"
+  },
+  {
+    "start": 406.88,
+    "end": 408.48,
+    "text": " cannot do."
+  },
+  {
+    "start": 408.48,
+    "end": 410.76,
+    "text": " And most importantly, we're going to try and give you the"
+  },
+  {
+    "start": 410.76,
+    "end": 413.72,
+    "text": " start of an ability to take a description of a problem from"
+  },
+  {
+    "start": 413.72,
+    "end": 416.76,
+    "text": " some other domain and figure out how to map it into that"
+  },
+  {
+    "start": 416.76,
+    "end": 419.2,
+    "text": " domain of computation so you can do the reading and writing"
+  },
+  {
+    "start": 419.2,
+    "end": 421.72,
+    "text": " that you want to do."
+  },
+  {
+    "start": 421.72,
+    "end": 423.6,
+    "text": " OK, in a few minutes we're going to start talking then about"
+  },
+  {
+    "start": 423.6,
+    "end": 424.52,
+    "text": " what is computation."
+  },
+  {
+    "start": 424.52,
+    "end": 426.0,
+    "text": " How are we going to start building those tools?"
+  },
+  {
+    "start": 426.0,
+    "end": 427.4,
+    "text": " But that's what you should take away."
+  },
+  {
+    "start": 427.4,
+    "end": 429.64,
+    "text": " That's what you're going to gain out of this course by the"
+  },
+  {
+    "start": 429.64,
+    "end": 431.8,
+    "text": " time you're done."
+  },
+  {
+    "start": 431.8,
+    "end": 434.52,
+    "text": " Now let me take a sidebar for about five minutes to talk"
+  },
+  {
+    "start": 434.52,
+    "end": 436.52,
+    "text": " about course administration."
+  },
+  {
+    "start": 436.52,
+    "end": 438.08,
+    "text": " The administration of you, things that we're going to do in"
+  },
+  {
+    "start": 438.08,
+    "end": 440.84,
+    "text": " the course just so you know what the rules are."
+  },
+  {
+    "start": 440.84,
+    "end": 444.68,
+    "text": " Right, so class is two hours a lecture a week."
+  },
+  {
+    "start": 444.68,
+    "end": 446.72,
+    "text": " You obviously know where and you know when because you're"
+  },
+  {
+    "start": 446.72,
+    "end": 449.8,
+    "text": " here, Tuesdays and Thursdays at 11."
+  },
+  {
+    "start": 449.8,
+    "end": 452.36,
+    "text": " One hour of recitation a week on Fridays."
+  },
+  {
+    "start": 452.36,
+    "end": 454.08,
+    "text": " We'll come back in a second to how you're going to get set up"
+  },
+  {
+    "start": 454.08,
+    "end": 454.96,
+    "text": " for that."
+  },
+  {
+    "start": 454.96,
+    "end": 458.32,
+    "text": " And nine hours a week of outside the class work."
+  },
+  {
+    "start": 458.32,
+    "end": 460.76,
+    "text": " Those nine hours are going to be primarily working on"
+  },
+  {
+    "start": 460.76,
+    "end": 461.6,
+    "text": " problem sets."
+  },
+  {
+    "start": 461.6,
+    "end": 464.44,
+    "text": " And all the problem sets are going to involve programming in"
+  },
+  {
+    "start": 464.44,
+    "end": 466.4,
+    "text": " Python, which is the language we're going to be using this"
+  },
+  {
+    "start": 466.4,
+    "end": 468.04,
+    "text": " term."
+  },
+  {
+    "start": 468.04,
+    "end": 470.2,
+    "text": " Now, one of the things you're going to see is the first"
+  },
+  {
+    "start": 470.2,
+    "end": 471.64,
+    "text": " problem sets are pretty easy."
+  },
+  {
+    "start": 471.64,
+    "end": 472.92,
+    "text": " Actually that's probably wrong, John, right?"
+  },
+  {
+    "start": 472.92,
+    "end": 474.2,
+    "text": " They're very easy."
+  },
+  {
+    "start": 474.2,
+    "end": 475.24,
+    "text": " And we're going to ramp up."
+  },
+  {
+    "start": 475.24,
+    "end": 477.12,
+    "text": " By the time we get to the end of the term, you're going to be"
+  },
+  {
+    "start": 477.12,
+    "end": 478.76,
+    "text": " dealing with some fairly complex things."
+  },
+  {
+    "start": 478.76,
+    "end": 480.84,
+    "text": " So one of the things you're going to see is we're going to"
+  },
+  {
+    "start": 480.84,
+    "end": 484.36,
+    "text": " make heavy use of libraries or code written by others."
+  },
+  {
+    "start": 484.36,
+    "end": 487.0,
+    "text": " It'll allow you to tackle interesting problems of having"
+  },
+  {
+    "start": 487.0,
+    "end": 488.0,
+    "text": " to write from scratch."
+  },
+  {
+    "start": 488.0,
+    "end": 492.76,
+    "text": " But it does mean that this skill here is going to be really"
+  },
+  {
+    "start": 492.76,
+    "end": 493.24,
+    "text": " valuable."
+  },
+  {
+    "start": 493.24,
+    "end": 495.4,
+    "text": " You need to be able to read that code and understand it as"
+  },
+  {
+    "start": 495.4,
+    "end": 498.08,
+    "text": " well as write your own."
+  },
+  {
+    "start": 498.08,
+    "end": 501.56,
+    "text": " OK, two quizzes during the term."
+  },
+  {
+    "start": 501.56,
+    "end": 503.2,
+    "text": " The dates have already been scheduled."
+  },
+  {
+    "start": 503.2,
+    "end": 504.44,
+    "text": " John, I forgot to look them up."
+  },
+  {
+    "start": 504.44,
+    "end": 507.36,
+    "text": " I think it's October 2nd and November 4th."
+  },
+  {
+    "start": 507.36,
+    "end": 509.28,
+    "text": " It'll be on the course website."
+  },
+  {
+    "start": 509.28,
+    "end": 511.84,
+    "text": " My point is go check the course website, which by the way"
+  },
+  {
+    "start": 511.84,
+    "end": 514.56,
+    "text": " is right there."
+  },
+  {
+    "start": 514.56,
+    "end": 517.68,
+    "text": " If you know you have a conflict with one of those quiz"
+  },
+  {
+    "start": 517.68,
+    "end": 520.52,
+    "text": " dates now, please see John or I right away."
+  },
+  {
+    "start": 520.52,
+    "end": 522.44,
+    "text": " We'll arrange something ahead of time."
+  },
+  {
+    "start": 522.44,
+    "end": 525.68,
+    "text": " But the reason I'm saying that is you know that you're"
+  },
+  {
+    "start": 525.68,
+    "end": 527.08,
+    "text": " getting married that day, for example."
+  },
+  {
+    "start": 527.08,
+    "end": 529.76,
+    "text": " We will excuse you from the quiz to get married."
+  },
+  {
+    "start": 529.76,
+    "end": 531.68,
+    "text": " We'll expect you to come right back to do the quiz, by the"
+  },
+  {
+    "start": 531.68,
+    "end": 534.6,
+    "text": " way, but boy, tough crowd."
+  },
+  {
+    "start": 534.6,
+    "end": 537.12,
+    "text": " All right."
+  },
+  {
+    "start": 537.12,
+    "end": 539.4,
+    "text": " If you have a conflict, please let us know."
+  },
+  {
+    "start": 539.4,
+    "end": 543.32,
+    "text": " Second thing is, if you have an MIT documented special need"
+  },
+  {
+    "start": 543.32,
+    "end": 547.28,
+    "text": " for taking quizzes, please see John or I well in advance,"
+  },
+  {
+    "start": 547.28,
+    "end": 548.8,
+    "text": " at least two weeks before the quiz."
+  },
+  {
+    "start": 548.8,
+    "end": 550.8,
+    "text": " Again, we'll arrange for this, but you need to give us"
+  },
+  {
+    "start": 550.8,
+    "end": 553.84,
+    "text": " enough warning so that we can deal with that."
+  },
+  {
+    "start": 553.84,
+    "end": 556.96,
+    "text": " OK, the quizzes are open book."
+  },
+  {
+    "start": 556.96,
+    "end": 560.36,
+    "text": " This course is not about memory."
+  },
+  {
+    "start": 560.36,
+    "end": 561.84,
+    "text": " It's not how well you can memorize facts."
+  },
+  {
+    "start": 561.84,
+    "end": 563.88,
+    "text": " In fact, I think both John and I are a little sensitive to"
+  },
+  {
+    "start": 563.88,
+    "end": 566.24,
+    "text": " memory tests given our age, right, John?"
+  },
+  {
+    "start": 566.24,
+    "end": 568.44,
+    "text": " This is not about how you memorize things, it's about"
+  },
+  {
+    "start": 568.44,
+    "end": 569.08,
+    "text": " how you think."
+  },
+  {
+    "start": 569.08,
+    "end": 570.76,
+    "text": " So they're open book."
+  },
+  {
+    "start": 570.76,
+    "end": 574.48,
+    "text": " And it's really going to test your ability to think."
+  },
+  {
+    "start": 574.48,
+    "end": 578.08,
+    "text": " The grades for the course will be assigned roughly, and I"
+  },
+  {
+    "start": 578.08,
+    "end": 580.16,
+    "text": " use the word roughly because we reserve the right to move"
+  },
+  {
+    "start": 580.16,
+    "end": 581.6,
+    "text": " these numbers around a little bit."
+  },
+  {
+    "start": 581.6,
+    "end": 584.28,
+    "text": " But basically, in the following percentages, 55% of your"
+  },
+  {
+    "start": 584.28,
+    "end": 586.72,
+    "text": " grade comes from the problem sets."
+  },
+  {
+    "start": 586.72,
+    "end": 588.76,
+    "text": " The other 45 come from the quizzes."
+  },
+  {
+    "start": 588.76,
+    "end": 590.84,
+    "text": " And I should have said there's two quizzes in a final exam."
+  },
+  {
+    "start": 590.84,
+    "end": 592.6,
+    "text": " I forgot about a final exam during final periods."
+  },
+  {
+    "start": 592.6,
+    "end": 596.68,
+    "text": " So the quiz percentages are 10, 15, and 20%, which makes up"
+  },
+  {
+    "start": 596.68,
+    "end": 599.04,
+    "text": " the other 45."
+  },
+  {
+    "start": 599.04,
+    "end": 602.4,
+    "text": " OK, other administration."
+  },
+  {
+    "start": 602.4,
+    "end": 605.16,
+    "text": " Let me just look through my list here."
+  },
+  {
+    "start": 605.16,
+    "end": 608.2,
+    "text": " First problem set, problem set zero has already been posted."
+  },
+  {
+    "start": 608.2,
+    "end": 609.56,
+    "text": " This is a really easy."
+  },
+  {
+    "start": 609.88,
+    "end": 611.64,
+    "text": " We intend it to be a really easy problem set."
+  },
+  {
+    "start": 611.64,
+    "end": 614.64,
+    "text": " It's basically to get you to load up Python on your machine"
+  },
+  {
+    "start": 614.64,
+    "end": 617.52,
+    "text": " and make sure you understand how to interact with it."
+  },
+  {
+    "start": 617.52,
+    "end": 619.4,
+    "text": " The first problem set will be posted shortly."
+  },
+  {
+    "start": 619.4,
+    "end": 622.44,
+    "text": " It's also pretty boring, somewhat like my lectures, but"
+  },
+  {
+    "start": 622.44,
+    "end": 623.72,
+    "text": " not John's."
+  },
+  {
+    "start": 623.72,
+    "end": 626.32,
+    "text": " And that means we want you just to get going on things."
+  },
+  {
+    "start": 626.32,
+    "end": 628.04,
+    "text": " Don't worry, we're going to make them more interesting as"
+  },
+  {
+    "start": 628.04,
+    "end": 629.0,
+    "text": " you go along."
+  },
+  {
+    "start": 629.0,
+    "end": 631.52,
+    "text": " Nonetheless, I want to stress that none of these problem"
+  },
+  {
+    "start": 631.52,
+    "end": 633.84,
+    "text": " sets are intended to be lethal."
+  },
+  {
+    "start": 633.84,
+    "end": 635.52,
+    "text": " We're not using them to weed you out."
+  },
+  {
+    "start": 635.52,
+    "end": 636.8,
+    "text": " We're using them to help you learn."
+  },
+  {
+    "start": 636.8,
+    "end": 641.72,
+    "text": " So if you run into a problem set that just you don't get,"
+  },
+  {
+    "start": 641.72,
+    "end": 643.32,
+    "text": " seek help."
+  },
+  {
+    "start": 643.32,
+    "end": 644.96,
+    "text": " Could be psychiatric help."
+  },
+  {
+    "start": 644.96,
+    "end": 646.12,
+    "text": " Could be a TA."
+  },
+  {
+    "start": 646.12,
+    "end": 647.84,
+    "text": " I recommend the TA."
+  },
+  {
+    "start": 647.84,
+    "end": 650.52,
+    "text": " My point being, please come and talk to somebody."
+  },
+  {
+    "start": 650.52,
+    "end": 653.52,
+    "text": " The problems are set up so that if you start down the right"
+  },
+  {
+    "start": 653.52,
+    "end": 655.84,
+    "text": " path, it should be pretty straightforward to work it"
+  },
+  {
+    "start": 655.84,
+    "end": 656.76,
+    "text": " through."
+  },
+  {
+    "start": 656.76,
+    "end": 660.16,
+    "text": " If you start down a plausible but incorrect path, you can"
+  },
+  {
+    "start": 660.16,
+    "end": 662.72,
+    "text": " sometimes find yourself stuck in the weeds somewhere."
+  },
+  {
+    "start": 662.72,
+    "end": 664.0,
+    "text": " And we want to bring you back in."
+  },
+  {
+    "start": 664.0,
+    "end": 667.12,
+    "text": " So part of the goal here is this should not be an"
+  },
+  {
+    "start": 667.12,
+    "end": 670.04,
+    "text": " engrouling, exhausting kind of test."
+  },
+  {
+    "start": 670.04,
+    "end": 671.92,
+    "text": " It's really something that should be helping you learn"
+  },
+  {
+    "start": 671.92,
+    "end": 672.76,
+    "text": " the material."
+  },
+  {
+    "start": 672.76,
+    "end": 675.04,
+    "text": " If you need help, ask John myself for the TAs."
+  },
+  {
+    "start": 675.04,
+    "end": 677.56,
+    "text": " That's what we're here for."
+  },
+  {
+    "start": 677.56,
+    "end": 681.84,
+    "text": " OK, we're going to run primarily a paperless subject."
+  },
+  {
+    "start": 681.84,
+    "end": 683.16,
+    "text": " That's why the website is there."
+  },
+  {
+    "start": 683.16,
+    "end": 683.88,
+    "text": " Please check it."
+  },
+  {
+    "start": 683.88,
+    "end": 685.52,
+    "text": " That's where everything's going to be posted in terms of"
+  },
+  {
+    "start": 685.52,
+    "end": 687.16,
+    "text": " things you need to know."
+  },
+  {
+    "start": 687.16,
+    "end": 689.68,
+    "text": " And in particular, please go to it today."
+  },
+  {
+    "start": 689.68,
+    "end": 691.88,
+    "text": " You will find a form there that you need to fill out to"
+  },
+  {
+    "start": 691.88,
+    "end": 695.88,
+    "text": " register for or sign up for, rather a recitation."
+  },
+  {
+    "start": 695.88,
+    "end": 697.16,
+    "text": " Recitations are on Friday."
+  },
+  {
+    "start": 697.16,
+    "end": 700.32,
+    "text": " Right now we have them scheduled at 9, 10, 11, 12, 1,"
+  },
+  {
+    "start": 700.32,
+    "end": 701.84,
+    "text": " and 2."
+  },
+  {
+    "start": 701.84,
+    "end": 705.4,
+    "text": " We may drop one of the recitations, just depending"
+  },
+  {
+    "start": 705.4,
+    "end": 706.64,
+    "text": " on course size."
+  },
+  {
+    "start": 706.64,
+    "end": 708.84,
+    "text": " So we reserve the right, unfortunately, to have to move"
+  },
+  {
+    "start": 708.84,
+    "end": 709.92,
+    "text": " you around."
+  },
+  {
+    "start": 709.92,
+    "end": 712.16,
+    "text": " My guess is that 9 is not going to be a tremendously"
+  },
+  {
+    "start": 712.16,
+    "end": 714.56,
+    "text": " popular time, but maybe you'll surprise me."
+  },
+  {
+    "start": 714.56,
+    "end": 716.04,
+    "text": " Nonetheless, please go in and sign up."
+  },
+  {
+    "start": 716.04,
+    "end": 718.56,
+    "text": " We will let you sign up for whichever recitation makes"
+  },
+  {
+    "start": 718.56,
+    "end": 719.8,
+    "text": " sense for you."
+  },
+  {
+    "start": 719.8,
+    "end": 722.24,
+    "text": " Again, we reserve the right to move people around if we have"
+  },
+  {
+    "start": 722.24,
+    "end": 724.4,
+    "text": " to just a balance load, but we want you to find something"
+  },
+  {
+    "start": 724.4,
+    "end": 728.4,
+    "text": " that fits your schedule rather than ours."
+  },
+  {
+    "start": 728.4,
+    "end": 731.0,
+    "text": " OK, other things."
+  },
+  {
+    "start": 731.0,
+    "end": 733.08,
+    "text": " There is no required text."
+  },
+  {
+    "start": 733.08,
+    "end": 737.4,
+    "text": " If you feel exposed without a textbook, and you really have"
+  },
+  {
+    "start": 737.4,
+    "end": 739.84,
+    "text": " to have a textbook, you'll find one recommended."
+  },
+  {
+    "start": 739.84,
+    "end": 741.52,
+    "text": " Actually, I'm going to reuse that word, John."
+  },
+  {
+    "start": 741.52,
+    "end": 744.08,
+    "text": " At least suggest it on the course website."
+  },
+  {
+    "start": 744.08,
+    "end": 746.12,
+    "text": " I don't think either of us are thrilled with the text."
+  },
+  {
+    "start": 746.12,
+    "end": 747.96,
+    "text": " It's the best we've probably found for Python."
+  },
+  {
+    "start": 747.96,
+    "end": 748.68,
+    "text": " It's OK."
+  },
+  {
+    "start": 748.68,
+    "end": 750.04,
+    "text": " If you need it, it's there."
+  },
+  {
+    "start": 750.04,
+    "end": 754.28,
+    "text": " But we're going to basically not rely on any specific text."
+  },
+  {
+    "start": 754.28,
+    "end": 758.6,
+    "text": " Related to that, attendance here is obviously not mandatory."
+  },
+  {
+    "start": 758.6,
+    "end": 760.36,
+    "text": " You ain't in high school anymore."
+  },
+  {
+    "start": 760.36,
+    "end": 762.92,
+    "text": " I think both of us would love to see your smiling faces, or"
+  },
+  {
+    "start": 762.92,
+    "end": 765.12,
+    "text": " at least your faces, even if you're not smiling at us"
+  },
+  {
+    "start": 765.12,
+    "end": 766.92,
+    "text": " every day."
+  },
+  {
+    "start": 766.92,
+    "end": 769.32,
+    "text": " Point I want to make about this, though, is that we are"
+  },
+  {
+    "start": 769.32,
+    "end": 772.08,
+    "text": " going to cover a lot of material that is not in the"
+  },
+  {
+    "start": 772.08,
+    "end": 772.8,
+    "text": " assigned readings."
+  },
+  {
+    "start": 772.8,
+    "end": 776.04,
+    "text": " And we do have assigned readings associated with each one of"
+  },
+  {
+    "start": 776.04,
+    "end": 777.8,
+    "text": " these lectures."
+  },
+  {
+    "start": 777.84,
+    "end": 780.32,
+    "text": " If you choose not to show up today, or sorry, no, that's a"
+  },
+  {
+    "start": 780.32,
+    "end": 781.84,
+    "text": " bad way, you did choose to show up today."
+  },
+  {
+    "start": 781.84,
+    "end": 784.52,
+    "text": " If you choose not to show up in future days, we'll"
+  },
+  {
+    "start": 784.52,
+    "end": 785.04,
+    "text": " understand."
+  },
+  {
+    "start": 785.04,
+    "end": 787.84,
+    "text": " But please also understand that the TAs won't have a lot of"
+  },
+  {
+    "start": 787.84,
+    "end": 790.08,
+    "text": " patience with you if you're asking a question about"
+  },
+  {
+    "start": 790.08,
+    "end": 792.48,
+    "text": " something that was either covered in the readings or"
+  },
+  {
+    "start": 792.48,
+    "end": 795.0,
+    "text": " covered in the lecture, and is pretty straightforward."
+  },
+  {
+    "start": 795.0,
+    "end": 797.24,
+    "text": " We expect you to behave responsibly, and we will as"
+  },
+  {
+    "start": 797.24,
+    "end": 798.96,
+    "text": " well."
+  },
+  {
+    "start": 798.96,
+    "end": 801.04,
+    "text": " All right."
+  },
+  {
+    "start": 801.04,
+    "end": 803.0,
+    "text": " I think the last thing I want to say is we will not be"
+  },
+  {
+    "start": 803.0,
+    "end": 806.16,
+    "text": " handing out class notes."
+  },
+  {
+    "start": 806.16,
+    "end": 808.0,
+    "text": " Now, this sounds like a draconian measure."
+  },
+  {
+    "start": 808.0,
+    "end": 809.12,
+    "text": " Let me tell you why."
+  },
+  {
+    "start": 809.12,
+    "end": 811.72,
+    "text": " Every study I know of, and I suspect everyone John knows,"
+  },
+  {
+    "start": 811.72,
+    "end": 815.6,
+    "text": " about learning stresses that students learn best when they"
+  },
+  {
+    "start": 815.6,
+    "end": 817.04,
+    "text": " take notes."
+  },
+  {
+    "start": 817.04,
+    "end": 822.12,
+    "text": " Ironically, even if they never look at them, the process"
+  },
+  {
+    "start": 822.12,
+    "end": 825.6,
+    "text": " of writing is exercising both halves of your brain, and it's"
+  },
+  {
+    "start": 825.6,
+    "end": 826.64,
+    "text": " actually helping you learn."
+  },
+  {
+    "start": 826.64,
+    "end": 828.64,
+    "text": " And so taking notes is a really valuable thing."
+  },
+  {
+    "start": 828.64,
+    "end": 830.92,
+    "text": " Therefore, we're not going to distribute notes."
+  },
+  {
+    "start": 830.92,
+    "end": 833.52,
+    "text": " What we will distribute for most lectures is a handout"
+  },
+  {
+    "start": 833.52,
+    "end": 835.88,
+    "text": " that's mostly code examples that we're going to do."
+  },
+  {
+    "start": 835.88,
+    "end": 837.4,
+    "text": " I don't happen to have one today because we're not going"
+  },
+  {
+    "start": 837.4,
+    "end": 838.48,
+    "text": " to do a lot of code."
+  },
+  {
+    "start": 838.48,
+    "end": 840.04,
+    "text": " We will in future."
+  },
+  {
+    "start": 840.04,
+    "end": 843.04,
+    "text": " Those notes are going to make no sense, I'm guessing,"
+  },
+  {
+    "start": 843.04,
+    "end": 844.92,
+    "text": " outside of the lecture."
+  },
+  {
+    "start": 844.92,
+    "end": 848.0,
+    "text": " So it's not just you can swing by at 11.04 and grab a"
+  },
+  {
+    "start": 848.0,
+    "end": 850.24,
+    "text": " copy and go off and catch some more sleep."
+  },
+  {
+    "start": 850.24,
+    "end": 853.2,
+    "text": " What we recommend is you use those notes to take your own"
+  },
+  {
+    "start": 853.2,
+    "end": 856.0,
+    "text": " annotations to help you understand what's going on."
+  },
+  {
+    "start": 856.0,
+    "end": 857.88,
+    "text": " But we're not going to provide class notes."
+  },
+  {
+    "start": 857.88,
+    "end": 860.76,
+    "text": " We want you to take your own notes to help you, if you"
+  },
+  {
+    "start": 860.76,
+    "end": 863.96,
+    "text": " like, spur your own learning process."
+  },
+  {
+    "start": 863.96,
+    "end": 867.72,
+    "text": " All right, and then finally, I want to stress that John,"
+  },
+  {
+    "start": 867.72,
+    "end": 872.16,
+    "text": " myself, all of the staff, our job is to help you learn."
+  },
+  {
+    "start": 872.16,
+    "end": 872.96,
+    "text": " That's what we're here for."
+  },
+  {
+    "start": 872.96,
+    "end": 875.04,
+    "text": " It's what we get excited about."
+  },
+  {
+    "start": 875.04,
+    "end": 878.12,
+    "text": " If you're stuck, if you're struggling, if you're not"
+  },
+  {
+    "start": 878.12,
+    "end": 881.0,
+    "text": " certain about something, please ask."
+  },
+  {
+    "start": 881.0,
+    "end": 882.0,
+    "text": " We're not mind readers."
+  },
+  {
+    "start": 882.0,
+    "end": 884.04,
+    "text": " We can't tell when you're struggling, other than sort"
+  },
+  {
+    "start": 884.04,
+    "end": 886.2,
+    "text": " of seeing the expression on your face."
+  },
+  {
+    "start": 886.2,
+    "end": 888.2,
+    "text": " We need your help in identifying that."
+  },
+  {
+    "start": 888.2,
+    "end": 890.12,
+    "text": " But all of the TAs, many of whom are sitting down in the"
+  },
+  {
+    "start": 890.12,
+    "end": 892.08,
+    "text": " front row over here, are here to help."
+  },
+  {
+    "start": 892.08,
+    "end": 893.76,
+    "text": " So come and ask."
+  },
+  {
+    "start": 893.76,
+    "end": 897.0,
+    "text": " At the same time, remember that they're students too."
+  },
+  {
+    "start": 897.0,
+    "end": 899.08,
+    "text": " And if you come and ask a question that you could have"
+  },
+  {
+    "start": 899.08,
+    "end": 902.48,
+    "text": " easily answered by doing the reading, coming to lecture,"
+  },
+  {
+    "start": 902.48,
+    "end": 905.6,
+    "text": " or using Google, they're going to have less patience."
+  },
+  {
+    "start": 905.6,
+    "end": 907.48,
+    "text": " But helping you understand things that really are"
+  },
+  {
+    "start": 907.48,
+    "end": 909.72,
+    "text": " conceptual difficulties, what we're there, what they're"
+  },
+  {
+    "start": 909.72,
+    "end": 911.32,
+    "text": " here for, and what we're here for."
+  },
+  {
+    "start": 911.32,
+    "end": 914.12,
+    "text": " So please come and talk to us."
+  },
+  {
+    "start": 914.12,
+    "end": 917.64,
+    "text": " OK, that takes care of the administrative preamble."
+  },
+  {
+    "start": 917.64,
+    "end": 918.96,
+    "text": " John, things we add."
+  },
+  {
+    "start": 919.92,
+    "end": 922.4,
+    "text": " Two more quick things."
+  },
+  {
+    "start": 922.4,
+    "end": 926.24,
+    "text": " This semester, the class is being videotaped for open"
+  },
+  {
+    "start": 926.24,
+    "end": 927.72,
+    "text": " courseware."
+  },
+  {
+    "start": 927.72,
+    "end": 932.8,
+    "text": " If any of you don't want your image recorded and posted on"
+  },
+  {
+    "start": 932.8,
+    "end": 935.6,
+    "text": " the web, you're supposed to sit in the back three rows."
+  },
+  {
+    "start": 935.6,
+    "end": 936.36,
+    "text": " Thank you, I forgot."
+  },
+  {
+    "start": 936.36,
+    "end": 939.52,
+    "text": " If it's a camera made hand, I think you're all very good"
+  },
+  {
+    "start": 939.52,
+    "end": 941.88,
+    "text": " looking and give MIT a good image."
+  },
+  {
+    "start": 941.88,
+    "end": 944.24,
+    "text": " So please feel free to be filled."
+  },
+  {
+    "start": 944.24,
+    "end": 944.88,
+    "text": " I'll turn around."
+  },
+  {
+    "start": 944.88,
+    "end": 948.08,
+    "text": " So if you want to move to the back, I won't see who moves."
+  },
+  {
+    "start": 948.08,
+    "end": 948.6,
+    "text": " All right, great."
+  },
+  {
+    "start": 948.64,
+    "end": 950.12,
+    "text": " Thank you, John."
+  },
+  {
+    "start": 950.12,
+    "end": 953.16,
+    "text": " The other thing I want to mention is recitations are"
+  },
+  {
+    "start": 953.16,
+    "end": 954.84,
+    "text": " also very important."
+  },
+  {
+    "start": 954.84,
+    "end": 957.8,
+    "text": " We will be covering material and recitations that are not in"
+  },
+  {
+    "start": 957.8,
+    "end": 960.16,
+    "text": " the lectures, not in the reading."
+  },
+  {
+    "start": 960.16,
+    "end": 963.64,
+    "text": " And we do expect you to attend the recitations."
+  },
+  {
+    "start": 963.64,
+    "end": 966.24,
+    "text": " Great, thanks, John."
+  },
+  {
+    "start": 966.24,
+    "end": 968.12,
+    "text": " Any questions about the administrative?"
+  },
+  {
+    "start": 968.12,
+    "end": 970.32,
+    "text": " I know it's boring, but we need to do it so you know what"
+  },
+  {
+    "start": 970.32,
+    "end": 972.84,
+    "text": " the ground rules are."
+  },
+  {
+    "start": 972.84,
+    "end": 973.44,
+    "text": " Good."
+  },
+  {
+    "start": 973.44,
+    "end": 977.0,
+    "text": " OK, let's talk about computation."
+  },
+  {
+    "start": 977.0,
+    "end": 979.92,
+    "text": " As I said, our strategic goal, our tactical goals are to"
+  },
+  {
+    "start": 979.92,
+    "end": 983.0,
+    "text": " help you think like a computer scientist."
+  },
+  {
+    "start": 983.0,
+    "end": 984.8,
+    "text": " Another way of saying it is we want to give you the skills"
+  },
+  {
+    "start": 984.8,
+    "end": 987.32,
+    "text": " so that you can make the computer do what you want it to"
+  },
+  {
+    "start": 987.32,
+    "end": 988.28,
+    "text": " do."
+  },
+  {
+    "start": 988.28,
+    "end": 990.6,
+    "text": " And we hope that at the end of the class, every time you're"
+  },
+  {
+    "start": 990.6,
+    "end": 992.68,
+    "text": " confronted with some technical problem, one of your"
+  },
+  {
+    "start": 992.68,
+    "end": 995.16,
+    "text": " first instincts is going to be, how do I write a piece of"
+  },
+  {
+    "start": 995.16,
+    "end": 997.72,
+    "text": " code that's going to help me solve that?"
+  },
+  {
+    "start": 997.72,
+    "end": 1000.8,
+    "text": " So we want to help you think like a computer scientist."
+  },
+  {
+    "start": 1000.8,
+    "end": 1006.0,
+    "text": " All right, and that is an interesting statement."
+  },
+  {
+    "start": 1006.0,
+    "end": 1008.12,
+    "text": " What does that mean to think like a computer scientist?"
+  },
+  {
+    "start": 1015.8,
+    "end": 1019.12,
+    "text": " Well, let's see."
+  },
+  {
+    "start": 1019.12,
+    "end": 1020.72,
+    "text": " Primary knowledge you're going to take away from this course"
+  },
+  {
+    "start": 1020.72,
+    "end": 1022.68,
+    "text": " is this notion of computational problem solving,"
+  },
+  {
+    "start": 1022.68,
+    "end": 1027.64,
+    "text": " this ability to think in computational modes of thought."
+  },
+  {
+    "start": 1027.64,
+    "end": 1030.88,
+    "text": " And unlike in a lot of introductory courses, it's"
+  },
+  {
+    "start": 1030.88,
+    "end": 1032.88,
+    "text": " a consequence having the ability to memorize is not"
+  },
+  {
+    "start": 1032.88,
+    "end": 1033.48,
+    "text": " going to help you."
+  },
+  {
+    "start": 1033.48,
+    "end": 1036.2,
+    "text": " It's really learning those notions of the tools that"
+  },
+  {
+    "start": 1036.2,
+    "end": 1038.16,
+    "text": " you want to use."
+  },
+  {
+    "start": 1038.16,
+    "end": 1040.12,
+    "text": " What in the world does it mean to say computational mode"
+  },
+  {
+    "start": 1040.12,
+    "end": 1040.44,
+    "text": " of thought?"
+  },
+  {
+    "start": 1040.44,
+    "end": 1042.32,
+    "text": " It sounds like a highfalutin phrase you use when you're"
+  },
+  {
+    "start": 1042.32,
+    "end": 1045.36,
+    "text": " trying to persuade a VC to fund you."
+  },
+  {
+    "start": 1045.36,
+    "end": 1047.52,
+    "text": " So to answer this, we really have to ask a different"
+  },
+  {
+    "start": 1047.52,
+    "end": 1051.48,
+    "text": " question, or related question, and say, what's computation?"
+  },
+  {
+    "start": 1051.48,
+    "end": 1052.68,
+    "text": " It's not like a strange statement, right?"
+  },
+  {
+    "start": 1052.68,
+    "end": 1055.36,
+    "text": " What is computation?"
+  },
+  {
+    "start": 1055.36,
+    "end": 1059.2,
+    "text": " Part of the reason for putting it up is that I wanted it as"
+  },
+  {
+    "start": 1059.2,
+    "end": 1062.4,
+    "text": " much as possible to answer that question by separating out"
+  },
+  {
+    "start": 1062.4,
+    "end": 1065.64,
+    "text": " the mechanism, which is the computer, from"
+  },
+  {
+    "start": 1065.64,
+    "end": 1067.6,
+    "text": " computational thinking."
+  },
+  {
+    "start": 1067.6,
+    "end": 1069.56,
+    "text": " The artifact should not be what's driving this."
+  },
+  {
+    "start": 1069.56,
+    "end": 1071.12,
+    "text": " It should be the notion of what does it mean to do"
+  },
+  {
+    "start": 1071.12,
+    "end": 1073.24,
+    "text": " computation?"
+  },
+  {
+    "start": 1073.24,
+    "end": 1076.08,
+    "text": " Now to answer that, I'm going to back up one more level."
+  },
+  {
+    "start": 1076.08,
+    "end": 1077.92,
+    "text": " And I'm going to pose what sounds like a philosophy"
+  },
+  {
+    "start": 1077.92,
+    "end": 1080.6,
+    "text": " question, which is what is knowledge?"
+  },
+  {
+    "start": 1080.6,
+    "end": 1082.12,
+    "text": " You'll see in about two minutes what I'm going to do is,"
+  },
+  {
+    "start": 1082.12,
+    "end": 1084.64,
+    "text": " but I want to suggest that I can divide knowledge into at"
+  },
+  {
+    "start": 1084.64,
+    "end": 1087.28,
+    "text": " least two categories."
+  },
+  {
+    "start": 1087.28,
+    "end": 1088.36,
+    "text": " What is knowledge?"
+  },
+  {
+    "start": 1088.36,
+    "end": 1092.28,
+    "text": " In the two categories I'm going to divide them into, or"
+  },
+  {
+    "start": 1092.28,
+    "end": 1100.16,
+    "text": " declarative and imperative knowledge."
+  },
+  {
+    "start": 1100.16,
+    "end": 1103.4,
+    "text": " When the world is declarative knowledge, think of it as"
+  },
+  {
+    "start": 1103.4,
+    "end": 1105.12,
+    "text": " statements of fact."
+  },
+  {
+    "start": 1105.12,
+    "end": 1107.6,
+    "text": " It's assertions of truth."
+  },
+  {
+    "start": 1107.6,
+    "end": 1109.76,
+    "text": " Boy, in this political season, that's a really dangerous"
+  },
+  {
+    "start": 1109.76,
+    "end": 1110.64,
+    "text": " phrase to use, right?"
+  },
+  {
+    "start": 1110.64,
+    "end": 1112.96,
+    "text": " But it's a statement of fact."
+  },
+  {
+    "start": 1112.96,
+    "end": 1114.36,
+    "text": " I'll stay away from the political comments."
+  },
+  {
+    "start": 1114.36,
+    "end": 1116.16,
+    "text": " Let me give you an example of this."
+  },
+  {
+    "start": 1116.16,
+    "end": 1119.32,
+    "text": " Here's a declarative statement."
+  },
+  {
+    "start": 1119.36,
+    "end": 1127.2,
+    "text": " Square root of x is that y such that y squared equals x, y"
+  },
+  {
+    "start": 1127.2,
+    "end": 1128.92,
+    "text": " is positive."
+  },
+  {
+    "start": 1128.92,
+    "end": 1130.88,
+    "text": " You all know that."
+  },
+  {
+    "start": 1130.88,
+    "end": 1133.44,
+    "text": " But what I want you to see here is that's a statement of"
+  },
+  {
+    "start": 1133.44,
+    "end": 1134.48,
+    "text": " fact."
+  },
+  {
+    "start": 1134.48,
+    "end": 1135.2,
+    "text": " It's a definition."
+  },
+  {
+    "start": 1135.2,
+    "end": 1137.52,
+    "text": " It's an axiom."
+  },
+  {
+    "start": 1137.52,
+    "end": 1140.68,
+    "text": " Doesn't help you find square roots."
+  },
+  {
+    "start": 1140.68,
+    "end": 1142.96,
+    "text": " If I say x is 2, I want to know what's the square root of"
+  },
+  {
+    "start": 1142.96,
+    "end": 1143.2,
+    "text": " 2."
+  },
+  {
+    "start": 1143.2,
+    "end": 1146.36,
+    "text": " Well, if you're enough of a geek, you'll say 1.41529 or"
+  },
+  {
+    "start": 1146.36,
+    "end": 1147.96,
+    "text": " whatever the heck it is."
+  },
+  {
+    "start": 1148.0,
+    "end": 1152.68,
+    "text": " But in general, this doesn't help you find square root."
+  },
+  {
+    "start": 1152.68,
+    "end": 1155.6,
+    "text": " The closest it does is it would let you test."
+  },
+  {
+    "start": 1155.6,
+    "end": 1157.32,
+    "text": " If you're wandering through Harvard Square and you see an"
+  },
+  {
+    "start": 1157.32,
+    "end": 1159.72,
+    "text": " out-of-work Harvard grad, they're handing out examples of"
+  },
+  {
+    "start": 1159.72,
+    "end": 1160.24,
+    "text": " square roots."
+  },
+  {
+    "start": 1160.24,
+    "end": 1163.08,
+    "text": " They'll give you an example, and you can test it to see is"
+  },
+  {
+    "start": 1163.08,
+    "end": 1167.08,
+    "text": " the square root of 2.1.41529 or whatever."
+  },
+  {
+    "start": 1167.08,
+    "end": 1168.68,
+    "text": " I don't even get laughs at Harvard jokes, John."
+  },
+  {
+    "start": 1168.68,
+    "end": 1171.56,
+    "text": " I'm going to stop in a second here, right?"
+  },
+  {
+    "start": 1171.56,
+    "end": 1173.44,
+    "text": " All right, so what am I trying to say here?"
+  },
+  {
+    "start": 1173.44,
+    "end": 1175.92,
+    "text": " It doesn't."
+  },
+  {
+    "start": 1175.92,
+    "end": 1176.56,
+    "text": " Yeah, exactly."
+  },
+  {
+    "start": 1176.56,
+    "end": 1178.6,
+    "text": " We're staying away from that really quickly, especially"
+  },
+  {
+    "start": 1178.6,
+    "end": 1179.88,
+    "text": " with the cameras rolling."
+  },
+  {
+    "start": 1179.88,
+    "end": 1181.28,
+    "text": " All right, what am I trying to say?"
+  },
+  {
+    "start": 1181.28,
+    "end": 1184.12,
+    "text": " It tells you how you might test something, but it doesn't"
+  },
+  {
+    "start": 1184.12,
+    "end": 1186.4,
+    "text": " tell you how to."
+  },
+  {
+    "start": 1186.4,
+    "end": 1188.36,
+    "text": " And that's what imperative knowledge is."
+  },
+  {
+    "start": 1188.36,
+    "end": 1191.64,
+    "text": " Imperative knowledge is a description of how to"
+  },
+  {
+    "start": 1191.64,
+    "end": 1193.48,
+    "text": " deduce something."
+  },
+  {
+    "start": 1193.48,
+    "end": 1194.88,
+    "text": " So let me give you an example of a piece of"
+  },
+  {
+    "start": 1194.88,
+    "end": 1196.84,
+    "text": " imperative knowledge."
+  },
+  {
+    "start": 1196.84,
+    "end": 1199.24,
+    "text": " This is actually a very old piece of imperative knowledge"
+  },
+  {
+    "start": 1199.24,
+    "end": 1200.12,
+    "text": " for computing square roots."
+  },
+  {
+    "start": 1200.12,
+    "end": 1203.56,
+    "text": " It's attributed to Heron of Alexandria, although I believe"
+  },
+  {
+    "start": 1203.56,
+    "end": 1206.08,
+    "text": " that the Babylonians are suspected of knowing it"
+  },
+  {
+    "start": 1206.08,
+    "end": 1207.12,
+    "text": " beforehand."
+  },
+  {
+    "start": 1207.12,
+    "end": 1210.84,
+    "text": " But here is a piece of imperative knowledge."
+  },
+  {
+    "start": 1210.84,
+    "end": 1214.8,
+    "text": " I'm going to start with a guess."
+  },
+  {
+    "start": 1214.8,
+    "end": 1217.56,
+    "text": " I'm going to call it g."
+  },
+  {
+    "start": 1217.56,
+    "end": 1226.88,
+    "text": " And then I'm going to say, if g squared is close to x, stop."
+  },
+  {
+    "start": 1226.88,
+    "end": 1228.52,
+    "text": " And return g."
+  },
+  {
+    "start": 1228.52,
+    "end": 1230.56,
+    "text": " That's a good enough answer."
+  },
+  {
+    "start": 1230.56,
+    "end": 1238.84,
+    "text": " Otherwise, I'm going to get a new guess by taking g, x over"
+  },
+  {
+    "start": 1238.84,
+    "end": 1242.88,
+    "text": " g, adding them, dividing by 2."
+  },
+  {
+    "start": 1242.88,
+    "end": 1244.6,
+    "text": " I'm going to take the average of g and x over g."
+  },
+  {
+    "start": 1244.6,
+    "end": 1245.72,
+    "text": " Don't worry about how it came about."
+  },
+  {
+    "start": 1245.72,
+    "end": 1247.12,
+    "text": " Heron found this out."
+  },
+  {
+    "start": 1247.12,
+    "end": 1250.28,
+    "text": " But that gives me a new guess."
+  },
+  {
+    "start": 1250.28,
+    "end": 1256.2,
+    "text": " And then I'm going to repeat."
+  },
+  {
+    "start": 1256.2,
+    "end": 1258.68,
+    "text": " That's a recipe."
+  },
+  {
+    "start": 1258.72,
+    "end": 1261.8,
+    "text": " That's a description of a set of steps."
+  },
+  {
+    "start": 1261.8,
+    "end": 1262.76,
+    "text": " And notice what it has."
+  },
+  {
+    "start": 1262.76,
+    "end": 1265.24,
+    "text": " It has a bunch of nice things that we want to use."
+  },
+  {
+    "start": 1265.24,
+    "end": 1269.56,
+    "text": " It's a sequence of specific instructions that I do in"
+  },
+  {
+    "start": 1269.56,
+    "end": 1270.8,
+    "text": " order."
+  },
+  {
+    "start": 1270.8,
+    "end": 1272.8,
+    "text": " Along the way, I have some tests."
+  },
+  {
+    "start": 1272.8,
+    "end": 1276.12,
+    "text": " And depending on the value of that test, I may change where"
+  },
+  {
+    "start": 1276.12,
+    "end": 1278.56,
+    "text": " I am in that sequence of instructions."
+  },
+  {
+    "start": 1278.56,
+    "end": 1280.44,
+    "text": " And it has an end test, something that tells me when"
+  },
+  {
+    "start": 1280.44,
+    "end": 1282.32,
+    "text": " I'm done and what the answer is."
+  },
+  {
+    "start": 1282.32,
+    "end": 1284.48,
+    "text": " This tells you how to find square roots."
+  },
+  {
+    "start": 1284.48,
+    "end": 1285.44,
+    "text": " It's how to knowledge."
+  },
+  {
+    "start": 1285.44,
+    "end": 1287.8,
+    "text": " It's imperative knowledge."
+  },
+  {
+    "start": 1287.8,
+    "end": 1291.12,
+    "text": " That's what computation basically is about."
+  },
+  {
+    "start": 1291.12,
+    "end": 1295.92,
+    "text": " We want to have ways of capturing this process."
+  },
+  {
+    "start": 1295.92,
+    "end": 1297.8,
+    "text": " OK, that leads now to an interesting question, which"
+  },
+  {
+    "start": 1297.8,
+    "end": 1303.28,
+    "text": " would be how do I build a mechanical process to capture"
+  },
+  {
+    "start": 1303.28,
+    "end": 1305.4,
+    "text": " that set of computations?"
+  },
+  {
+    "start": 1305.4,
+    "end": 1310.0,
+    "text": " So I'm going to suggest that there's an easy way to do it."
+  },
+  {
+    "start": 1310.0,
+    "end": 1313.24,
+    "text": " I realized I did the boards in the wrong order here."
+  },
+  {
+    "start": 1313.24,
+    "end": 1315.48,
+    "text": " One of the ways I could do it is you could imagine building a"
+  },
+  {
+    "start": 1315.48,
+    "end": 1317.64,
+    "text": " little circuit to do this."
+  },
+  {
+    "start": 1317.64,
+    "end": 1319.88,
+    "text": " If I had a couple of elements that stored values in it, I"
+  },
+  {
+    "start": 1319.88,
+    "end": 1322.08,
+    "text": " had some wires to move things around, I had a little thing"
+  },
+  {
+    "start": 1322.08,
+    "end": 1324.92,
+    "text": " to do addition, a little thing to do division, and"
+  },
+  {
+    "start": 1324.92,
+    "end": 1327.16,
+    "text": " something to do the testing, I could build a little circuit"
+  },
+  {
+    "start": 1327.16,
+    "end": 1331.88,
+    "text": " that would actually do this computation."
+  },
+  {
+    "start": 1331.88,
+    "end": 1335.4,
+    "text": " That, strange as it sounds, is actually an example of the"
+  },
+  {
+    "start": 1335.4,
+    "end": 1336.52,
+    "text": " earliest computers."
+  },
+  {
+    "start": 1336.52,
+    "end": 1342.56,
+    "text": " Because the earliest computers were what we call"
+  },
+  {
+    "start": 1342.6,
+    "end": 1351.0,
+    "text": " fixed-program computers."
+  },
+  {
+    "start": 1351.0,
+    "end": 1354.12,
+    "text": " Meaning that they had a piece of circuitry designed to do a"
+  },
+  {
+    "start": 1354.12,
+    "end": 1355.88,
+    "text": " specific computation."
+  },
+  {
+    "start": 1355.88,
+    "end": 1357.2,
+    "text": " And that's what they would do."
+  },
+  {
+    "start": 1357.2,
+    "end": 1360.0,
+    "text": " They would do that specific computation."
+  },
+  {
+    "start": 1360.0,
+    "end": 1361.32,
+    "text": " You've seen these a lot, right?"
+  },
+  {
+    "start": 1361.32,
+    "end": 1367.48,
+    "text": " A good example of this calculator."
+  },
+  {
+    "start": 1367.48,
+    "end": 1371.6,
+    "text": " It's basically an example of a fixed-program computer."
+  },
+  {
+    "start": 1371.64,
+    "end": 1373.48,
+    "text": " That was arithmetic."
+  },
+  {
+    "start": 1373.48,
+    "end": 1376.04,
+    "text": " If you want to play video games on it, good luck."
+  },
+  {
+    "start": 1376.04,
+    "end": 1378.2,
+    "text": " If you want to do word processing on it, good luck."
+  },
+  {
+    "start": 1378.2,
+    "end": 1380.64,
+    "text": " It's designed to do a specific thing."
+  },
+  {
+    "start": 1380.64,
+    "end": 1383.4,
+    "text": " It's a fixed-program computer."
+  },
+  {
+    "start": 1383.4,
+    "end": 1385.92,
+    "text": " In fact, a lot of the other really interesting early ones"
+  },
+  {
+    "start": 1385.92,
+    "end": 1387.2,
+    "text": " similarly have this flavor."
+  },
+  {
+    "start": 1387.2,
+    "end": 1390.56,
+    "text": " Just to give you an example, I never know how to pronounce"
+  },
+  {
+    "start": 1390.56,
+    "end": 1393.52,
+    "text": " this into an ASSOF."
+  },
+  {
+    "start": 1393.52,
+    "end": 1396.32,
+    "text": " 1941, one of the earliest computational things was a"
+  },
+  {
+    "start": 1396.32,
+    "end": 1398.24,
+    "text": " thing designed by a guy named Adam Assoff."
+  },
+  {
+    "start": 1398.28,
+    "end": 1402.72,
+    "text": " It basically solved linear equations."
+  },
+  {
+    "start": 1402.72,
+    "end": 1405.56,
+    "text": " Handy thing to do if you're doing 18.01, right?"
+  },
+  {
+    "start": 1405.56,
+    "end": 1409.32,
+    "text": " Or 18.06 or whatever you want to do those things in."
+  },
+  {
+    "start": 1409.32,
+    "end": 1411.84,
+    "text": " All it could do, though, was solve those equations."
+  },
+  {
+    "start": 1411.84,
+    "end": 1416.2,
+    "text": " One of my favorite examples of an early computer was done by"
+  },
+  {
+    "start": 1416.2,
+    "end": 1419.28,
+    "text": " Alan Turing, one of the great computer scientists of all"
+  },
+  {
+    "start": 1419.28,
+    "end": 1423.52,
+    "text": " time called the BOMB, which was designed to break codes."
+  },
+  {
+    "start": 1423.52,
+    "end": 1425.4,
+    "text": " It's actually used during World War II to break German"
+  },
+  {
+    "start": 1425.4,
+    "end": 1426.04,
+    "text": " enigma codes."
+  },
+  {
+    "start": 1426.04,
+    "end": 1428.52,
+    "text": " And what it was designed to do was to solve"
+  },
+  {
+    "start": 1428.52,
+    "end": 1430.96,
+    "text": " that specific problem."
+  },
+  {
+    "start": 1430.96,
+    "end": 1433.12,
+    "text": " The point I'm trying to make is fixed-program computers is"
+  },
+  {
+    "start": 1433.12,
+    "end": 1435.2,
+    "text": " where we started, but it doesn't really get us to where"
+  },
+  {
+    "start": 1435.2,
+    "end": 1435.68,
+    "text": " we'd like to be."
+  },
+  {
+    "start": 1435.68,
+    "end": 1438.44,
+    "text": " We want to capture this idea of problem solving."
+  },
+  {
+    "start": 1438.44,
+    "end": 1441.24,
+    "text": " So let's see how we'd get there."
+  },
+  {
+    "start": 1441.24,
+    "end": 1445.36,
+    "text": " So even within this framework, I've given a description of"
+  },
+  {
+    "start": 1445.36,
+    "end": 1448.24,
+    "text": " computations as a set of steps and the idea that I could"
+  },
+  {
+    "start": 1448.24,
+    "end": 1449.16,
+    "text": " build a circuit to do it."
+  },
+  {
+    "start": 1449.16,
+    "end": 1450.48,
+    "text": " Let me suggest for you what would be a"
+  },
+  {
+    "start": 1450.48,
+    "end": 1453.32,
+    "text": " wonderful circuit to build."
+  },
+  {
+    "start": 1453.32,
+    "end": 1455.08,
+    "text": " Suppose you could build a circuit with the following"
+  },
+  {
+    "start": 1455.08,
+    "end": 1458.56,
+    "text": " property, the input to this circuit would be any other"
+  },
+  {
+    "start": 1458.56,
+    "end": 1460.36,
+    "text": " circuit diagram."
+  },
+  {
+    "start": 1460.36,
+    "end": 1462.12,
+    "text": " Give it a circuit diagram for some computation."
+  },
+  {
+    "start": 1462.12,
+    "end": 1464.04,
+    "text": " You give it to this circuit."
+  },
+  {
+    "start": 1464.04,
+    "end": 1467.0,
+    "text": " And that circuit would wonderfully reconfigure"
+  },
+  {
+    "start": 1467.0,
+    "end": 1471.32,
+    "text": " itself to act like the circuit diagram, which would"
+  },
+  {
+    "start": 1471.32,
+    "end": 1473.0,
+    "text": " mean it could act like a calculator."
+  },
+  {
+    "start": 1473.0,
+    "end": 1475.12,
+    "text": " Or it could act like Turing's BOMB."
+  },
+  {
+    "start": 1475.12,
+    "end": 1478.04,
+    "text": " Or it could act like a square root machine."
+  },
+  {
+    "start": 1478.04,
+    "end": 1480.36,
+    "text": " So what would that circuit look like?"
+  },
+  {
+    "start": 1480.36,
+    "end": 1482.52,
+    "text": " You can imagine these tiny little robots wandering around,"
+  },
+  {
+    "start": 1482.52,
+    "end": 1484.76,
+    "text": " right, pulling wires and pulling out components and"
+  },
+  {
+    "start": 1484.76,
+    "end": 1485.68,
+    "text": " stacking them together."
+  },
+  {
+    "start": 1485.68,
+    "end": 1487.96,
+    "text": " How would you build a circuit that could take a circuit"
+  },
+  {
+    "start": 1487.96,
+    "end": 1493.0,
+    "text": " diagram in and make the machine act like that circuit?"
+  },
+  {
+    "start": 1493.0,
+    "end": 1495.16,
+    "text": " Sounds like a neat challenge."
+  },
+  {
+    "start": 1495.16,
+    "end": 1499.0,
+    "text": " Let me change the game slightly."
+  },
+  {
+    "start": 1499.0,
+    "end": 1503.84,
+    "text": " Suppose instead I want a machine that can take a recipe, a"
+  },
+  {
+    "start": 1503.84,
+    "end": 1506.64,
+    "text": " description of a sequence of steps."
+  },
+  {
+    "start": 1506.64,
+    "end": 1511.16,
+    "text": " Take that as its input, and then that machine will now act"
+  },
+  {
+    "start": 1511.16,
+    "end": 1515.24,
+    "text": " like what is described in that recipe."
+  },
+  {
+    "start": 1515.24,
+    "end": 1516.8,
+    "text": " Reconfigure itself, emulate it."
+  },
+  {
+    "start": 1516.8,
+    "end": 1517.96,
+    "text": " However you want to use the words."
+  },
+  {
+    "start": 1517.96,
+    "end": 1521.92,
+    "text": " It's going to change how it does the computation."
+  },
+  {
+    "start": 1521.92,
+    "end": 1523.84,
+    "text": " That would be cool."
+  },
+  {
+    "start": 1523.84,
+    "end": 1524.92,
+    "text": " And that exists."
+  },
+  {
+    "start": 1524.92,
+    "end": 1526.28,
+    "text": " It's called an interpreter."
+  },
+  {
+    "start": 1526.28,
+    "end": 1529.48,
+    "text": " It is the basic heart of every computer."
+  },
+  {
+    "start": 1529.48,
+    "end": 1533.36,
+    "text": " What it is doing is saying, change the game."
+  },
+  {
+    "start": 1533.36,
+    "end": 1537.2,
+    "text": " This is now an example of a stored program computer."
+  },
+  {
+    "start": 1537.2,
+    "end": 1549.0,
+    "text": " And what that means, in a stored program computer, is"
+  },
+  {
+    "start": 1549.0,
+    "end": 1551.92,
+    "text": " that I can provide to the computer a sequence of"
+  },
+  {
+    "start": 1551.92,
+    "end": 1555.52,
+    "text": " instructions describing the process I want it to execute."
+  },
+  {
+    "start": 1555.52,
+    "end": 1558.16,
+    "text": " And inside of the machine, and things we'll talk about, there"
+  },
+  {
+    "start": 1558.16,
+    "end": 1562.4,
+    "text": " is a process that will allow that sequence to be executed as"
+  },
+  {
+    "start": 1562.4,
+    "end": 1563.32,
+    "text": " described in that recipe."
+  },
+  {
+    "start": 1563.32,
+    "end": 1567.44,
+    "text": " So it can behave like anything that I can describe in one of"
+  },
+  {
+    "start": 1567.44,
+    "end": 1570.76,
+    "text": " those recipes."
+  },
+  {
+    "start": 1570.76,
+    "end": 1574.0,
+    "text": " That actually seems like a really nice thing to have."
+  },
+  {
+    "start": 1574.0,
+    "end": 1579.16,
+    "text": " So let me show you what that would basically look like."
+  },
+  {
+    "start": 1579.16,
+    "end": 1583.0,
+    "text": " Inside of a stored program computer, we would have the"
+  },
+  {
+    "start": 1583.0,
+    "end": 1584.96,
+    "text": " following."
+  },
+  {
+    "start": 1584.96,
+    "end": 1587.16,
+    "text": " We have a memory."
+  },
+  {
+    "start": 1587.16,
+    "end": 1591.64,
+    "text": " It's connected to two things."
+  },
+  {
+    "start": 1591.64,
+    "end": 1596.52,
+    "text": " Control unit, and what's called an ALU, an"
+  },
+  {
+    "start": 1596.52,
+    "end": 1599.56,
+    "text": " arithmetic logic unit."
+  },
+  {
+    "start": 1599.56,
+    "end": 1602.92,
+    "text": " This can take in input and spit out output."
+  },
+  {
+    "start": 1606.48,
+    "end": 1610.08,
+    "text": " And inside this stored program computer, excuse me, you have"
+  },
+  {
+    "start": 1610.08,
+    "end": 1611.48,
+    "text": " the following."
+  },
+  {
+    "start": 1613.48,
+    "end": 1614.92,
+    "text": " You have a sequence of instructions."
+  },
+  {
+    "start": 1615.92,
+    "end": 1623.72,
+    "text": " And these all get stored in there."
+  },
+  {
+    "start": 1623.72,
+    "end": 1625.2,
+    "text": " Notice the difference."
+  },
+  {
+    "start": 1625.2,
+    "end": 1627.8,
+    "text": " The recipe, the sequence of instructions is actually getting"
+  },
+  {
+    "start": 1627.8,
+    "end": 1630.04,
+    "text": " read in and is treated just like data."
+  },
+  {
+    "start": 1630.04,
+    "end": 1632.76,
+    "text": " It's inside the memory of the machine, which means we have"
+  },
+  {
+    "start": 1632.76,
+    "end": 1633.48,
+    "text": " access to it."
+  },
+  {
+    "start": 1633.48,
+    "end": 1634.48,
+    "text": " We can change it."
+  },
+  {
+    "start": 1634.48,
+    "end": 1637.16,
+    "text": " We can use it to build new pieces of code, as well as we"
+  },
+  {
+    "start": 1637.16,
+    "end": 1639.2,
+    "text": " can interpret it."
+  },
+  {
+    "start": 1639.2,
+    "end": 1641.72,
+    "text": " One other piece that goes into this computer, I never"
+  },
+  {
+    "start": 1641.72,
+    "end": 1643.24,
+    "text": " remember where to put the PC, John."
+  },
+  {
+    "start": 1643.24,
+    "end": 1646.48,
+    "text": " Control ALU separate."
+  },
+  {
+    "start": 1646.48,
+    "end": 1649.04,
+    "text": " I'll put it separate."
+  },
+  {
+    "start": 1649.04,
+    "end": 1651.36,
+    "text": " We have a thing called a program counter."
+  },
+  {
+    "start": 1651.36,
+    "end": 1654.4,
+    "text": " And here's the basis of the computation."
+  },
+  {
+    "start": 1654.4,
+    "end": 1658.4,
+    "text": " That program counter points to some location in memory,"
+  },
+  {
+    "start": 1658.4,
+    "end": 1663.08,
+    "text": " typically to the first instruction in the sequence."
+  },
+  {
+    "start": 1663.08,
+    "end": 1665.2,
+    "text": " And those instructions, by the way, are very simple."
+  },
+  {
+    "start": 1665.2,
+    "end": 1668.12,
+    "text": " They're things like take the value out of two places in"
+  },
+  {
+    "start": 1668.12,
+    "end": 1671.2,
+    "text": " memory, and run them through the multiplier in here, a"
+  },
+  {
+    "start": 1671.2,
+    "end": 1673.56,
+    "text": " little piece of circuitry, and stick them back into some"
+  },
+  {
+    "start": 1673.56,
+    "end": 1674.88,
+    "text": " place in memory."
+  },
+  {
+    "start": 1674.88,
+    "end": 1677.48,
+    "text": " Or take this value out of memory, run it through some"
+  },
+  {
+    "start": 1677.48,
+    "end": 1680.56,
+    "text": " other simple operation, stick it back in memory."
+  },
+  {
+    "start": 1680.56,
+    "end": 1683.04,
+    "text": " Having executed this instruction, that counter"
+  },
+  {
+    "start": 1683.04,
+    "end": 1685.56,
+    "text": " goes up by one, and we move to the next one."
+  },
+  {
+    "start": 1685.56,
+    "end": 1686.84,
+    "text": " We execute that instruction."
+  },
+  {
+    "start": 1686.84,
+    "end": 1688.68,
+    "text": " We move to the next one."
+  },
+  {
+    "start": 1688.68,
+    "end": 1693.96,
+    "text": " Oh, yeah, it looks a whole lot like that."
+  },
+  {
+    "start": 1693.96,
+    "end": 1696.64,
+    "text": " Some of those instructions will involve tests."
+  },
+  {
+    "start": 1696.64,
+    "end": 1698.92,
+    "text": " They'll say, is something true?"
+  },
+  {
+    "start": 1698.96,
+    "end": 1702.16,
+    "text": " And if the test is true, it will change the value of this"
+  },
+  {
+    "start": 1702.16,
+    "end": 1706.04,
+    "text": " program counter to point to some other place in the memory,"
+  },
+  {
+    "start": 1706.04,
+    "end": 1708.36,
+    "text": " some other point in that sequence of instructions, and"
+  },
+  {
+    "start": 1708.36,
+    "end": 1710.08,
+    "text": " you'll keep processing."
+  },
+  {
+    "start": 1710.08,
+    "end": 1713.08,
+    "text": " Eventually, you hopefully stop, and a value gets spit out,"
+  },
+  {
+    "start": 1713.08,
+    "end": 1714.48,
+    "text": " and you're done."
+  },
+  {
+    "start": 1714.48,
+    "end": 1715.56,
+    "text": " That's the heart of a computer."
+  },
+  {
+    "start": 1715.56,
+    "end": 1717.16,
+    "text": " Now, that's a slight misstatement."
+  },
+  {
+    "start": 1717.16,
+    "end": 1719.52,
+    "text": " The process to control it is intriguing and interesting,"
+  },
+  {
+    "start": 1719.52,
+    "end": 1722.76,
+    "text": " but the heart of the computer is simply this notion that we"
+  },
+  {
+    "start": 1722.76,
+    "end": 1726.32,
+    "text": " build our descriptions, our recipes on a sequence of"
+  },
+  {
+    "start": 1726.32,
+    "end": 1727.92,
+    "text": " primitive instructions."
+  },
+  {
+    "start": 1727.92,
+    "end": 1730.08,
+    "text": " And then we have a flow of control."
+  },
+  {
+    "start": 1730.08,
+    "end": 1731.88,
+    "text": " And that flow of control is what I just described, is"
+  },
+  {
+    "start": 1731.88,
+    "end": 1734.0,
+    "text": " moving through a sequence of instructions, occasionally"
+  },
+  {
+    "start": 1734.0,
+    "end": 1737.84,
+    "text": " changing where we are as we move around."
+  },
+  {
+    "start": 1737.84,
+    "end": 1739.56,
+    "text": " OK."
+  },
+  {
+    "start": 1739.56,
+    "end": 1742.2,
+    "text": " The thing I want you to take away from this, then, is to"
+  },
+  {
+    "start": 1742.2,
+    "end": 1746.88,
+    "text": " think of this as, this is if you like a recipe."
+  },
+  {
+    "start": 1746.88,
+    "end": 1748.36,
+    "text": " And that's really what a program is."
+  },
+  {
+    "start": 1758.88,
+    "end": 1761.92,
+    "text": " It's a sequence of instructions."
+  },
+  {
+    "start": 1761.92,
+    "end": 1763.68,
+    "text": " Now, one of the things I left hanging is, I said, OK, you"
+  },
+  {
+    "start": 1763.68,
+    "end": 1764.52,
+    "text": " build it out of primitives."
+  },
+  {
+    "start": 1764.52,
+    "end": 1765.96,
+    "text": " So one of the questions is, well, what are the right"
+  },
+  {
+    "start": 1765.96,
+    "end": 1768.12,
+    "text": " primitives to use?"
+  },
+  {
+    "start": 1768.12,
+    "end": 1771.12,
+    "text": " And one of the things that was useful here is that we"
+  },
+  {
+    "start": 1771.12,
+    "end": 1773.12,
+    "text": " actually know that the set of primitives that you want to"
+  },
+  {
+    "start": 1773.12,
+    "end": 1777.52,
+    "text": " use is very straightforward."
+  },
+  {
+    "start": 1777.52,
+    "end": 1779.52,
+    "text": " But before I do that, let me drive home this idea of why"
+  },
+  {
+    "start": 1779.52,
+    "end": 1782.08,
+    "text": " this is a recipe."
+  },
+  {
+    "start": 1782.08,
+    "end": 1784.36,
+    "text": " Assuming I have a set of primitive instructions that I"
+  },
+  {
+    "start": 1784.36,
+    "end": 1787.16,
+    "text": " can describe everything on, I want to know what can I build."
+  },
+  {
+    "start": 1787.16,
+    "end": 1789.76,
+    "text": " Well, I'm going to do the same analogy to a real recipe."
+  },
+  {
+    "start": 1789.76,
+    "end": 1791.88,
+    "text": " It's a real recipe."
+  },
+  {
+    "start": 1791.88,
+    "end": 1794.24,
+    "text": " Separate six eggs."
+  },
+  {
+    "start": 1794.24,
+    "end": 1795.6,
+    "text": " Do something."
+  },
+  {
+    "start": 1795.6,
+    "end": 1799.24,
+    "text": " Beat the whites until they're stiff."
+  },
+  {
+    "start": 1799.24,
+    "end": 1802.12,
+    "text": " Do something until an end test is true."
+  },
+  {
+    "start": 1802.12,
+    "end": 1805.08,
+    "text": " Take the yolks and mix them in with sugar and water, no,"
+  },
+  {
+    "start": 1805.08,
+    "end": 1806.72,
+    "text": " sugar and flour, I guess is probably what I want."
+  },
+  {
+    "start": 1806.72,
+    "end": 1808.32,
+    "text": " Sugar and water is not going to do anything interesting for"
+  },
+  {
+    "start": 1808.32,
+    "end": 1809.64,
+    "text": " me here."
+  },
+  {
+    "start": 1809.64,
+    "end": 1811.0,
+    "text": " Mix them into something else."
+  },
+  {
+    "start": 1811.0,
+    "end": 1813.32,
+    "text": " Do a sequence of things."
+  },
+  {
+    "start": 1813.32,
+    "end": 1817.36,
+    "text": " A traditional recipe actually is based on a small set of"
+  },
+  {
+    "start": 1817.36,
+    "end": 1821.44,
+    "text": " primitives and a good chef with or a good cook, I should say,"
+  },
+  {
+    "start": 1821.44,
+    "end": 1823.88,
+    "text": " with that set of primitives can create an unbounded number of"
+  },
+  {
+    "start": 1823.88,
+    "end": 1826.04,
+    "text": " great dishes."
+  },
+  {
+    "start": 1826.04,
+    "end": 1829.0,
+    "text": " Same thing holds true in programming."
+  },
+  {
+    "start": 1829.0,
+    "end": 1839.12,
+    "text": " Given a fixed set of primitives, a good programmer"
+  },
+  {
+    "start": 1839.24,
+    "end": 1840.16,
+    "text": " can program anything."
+  },
+  {
+    "start": 1843.68,
+    "end": 1845.8,
+    "text": " And by that, I mean anything that can be described in one of"
+  },
+  {
+    "start": 1845.8,
+    "end": 1849.6,
+    "text": " these processes you can capture in that set of primitives."
+  },
+  {
+    "start": 1849.6,
+    "end": 1851.56,
+    "text": " All right, the question is, as I started to say, is what are"
+  },
+  {
+    "start": 1851.56,
+    "end": 1853.12,
+    "text": " the right primitives?"
+  },
+  {
+    "start": 1853.12,
+    "end": 1855.84,
+    "text": " So there's a little piece of history here, if you like."
+  },
+  {
+    "start": 1855.84,
+    "end": 1861.88,
+    "text": " In 1936, that same guy, Alan Turing, showed that with six"
+  },
+  {
+    "start": 1861.88,
+    "end": 1865.84,
+    "text": " simple primitives, anything that could be described in a"
+  },
+  {
+    "start": 1865.84,
+    "end": 1869.0,
+    "text": " mechanical process, essentially algorithmically, could be"
+  },
+  {
+    "start": 1869.0,
+    "end": 1873.0,
+    "text": " programmed just using those six primitives."
+  },
+  {
+    "start": 1873.0,
+    "end": 1874.76,
+    "text": " Think about that for a second."
+  },
+  {
+    "start": 1874.76,
+    "end": 1877.12,
+    "text": " That's an incredible statement."
+  },
+  {
+    "start": 1877.12,
+    "end": 1880.12,
+    "text": " It says, with six primitives, I can rule the world."
+  },
+  {
+    "start": 1880.12,
+    "end": 1883.44,
+    "text": " With six primitives, I can program anything."
+  },
+  {
+    "start": 1883.44,
+    "end": 1885.6,
+    "text": " A couple of really interesting consequences of that, by the"
+  },
+  {
+    "start": 1885.6,
+    "end": 1886.56,
+    "text": " way."
+  },
+  {
+    "start": 1886.56,
+    "end": 1889.76,
+    "text": " One of them is, it says, anything you can do in one"
+  },
+  {
+    "start": 1889.76,
+    "end": 1892.68,
+    "text": " programming language, you can do in another programming"
+  },
+  {
+    "start": 1892.68,
+    "end": 1894.08,
+    "text": " language."
+  },
+  {
+    "start": 1894.08,
+    "end": 1896.28,
+    "text": " There is no programming language that is better."
+  },
+  {
+    "start": 1896.28,
+    "end": 1897.2,
+    "text": " Well, actually, it's not quite true."
+  },
+  {
+    "start": 1897.2,
+    "end": 1899.08,
+    "text": " There are some better at doing certain kinds of things, but"
+  },
+  {
+    "start": 1899.08,
+    "end": 1901.64,
+    "text": " there's nothing that you can do and see that you can't do in"
+  },
+  {
+    "start": 1901.64,
+    "end": 1903.32,
+    "text": " Fortran."
+  },
+  {
+    "start": 1903.32,
+    "end": 1905.24,
+    "text": " It's called Turing compatibility."
+  },
+  {
+    "start": 1905.24,
+    "end": 1906.76,
+    "text": " Anything you can do with one, you can do with another."
+  },
+  {
+    "start": 1906.76,
+    "end": 1910.4,
+    "text": " It's based on that fundamental result."
+  },
+  {
+    "start": 1910.4,
+    "end": 1913.36,
+    "text": " Now, fortunately, we're not going to start with Turing's"
+  },
+  {
+    "start": 1913.36,
+    "end": 1914.28,
+    "text": " six primitives."
+  },
+  {
+    "start": 1914.28,
+    "end": 1916.6,
+    "text": " This would be really painful programming."
+  },
+  {
+    "start": 1916.6,
+    "end": 1919.76,
+    "text": " Because they're down at the level of take this value and"
+  },
+  {
+    "start": 1919.76,
+    "end": 1920.84,
+    "text": " write it onto this tape."
+  },
+  {
+    "start": 1920.84,
+    "end": 1923.24,
+    "text": " First of all, we don't have tapes anymore in computers."
+  },
+  {
+    "start": 1923.24,
+    "end": 1924.68,
+    "text": " And even if we did, you don't want to be"
+  },
+  {
+    "start": 1924.68,
+    "end": 1925.6,
+    "text": " programming at that level."
+  },
+  {
+    "start": 1925.6,
+    "end": 1927.4,
+    "text": " What we're going to see with programming languages is that"
+  },
+  {
+    "start": 1927.4,
+    "end": 1930.44,
+    "text": " we're going to use higher level abstracts, a broader set of"
+  },
+  {
+    "start": 1930.44,
+    "end": 1932.84,
+    "text": " primitives, but nonetheless, the same fundamental thing"
+  },
+  {
+    "start": 1932.84,
+    "end": 1933.16,
+    "text": " holds."
+  },
+  {
+    "start": 1933.16,
+    "end": 1936.56,
+    "text": " With those six primitives, you can do it."
+  },
+  {
+    "start": 1936.56,
+    "end": 1938.08,
+    "text": " OK."
+  },
+  {
+    "start": 1938.08,
+    "end": 1939.96,
+    "text": " So where are we here?"
+  },
+  {
+    "start": 1939.96,
+    "end": 1942.4,
+    "text": " What we're saying is, in order to do computation, we want to"
+  },
+  {
+    "start": 1942.4,
+    "end": 1943.32,
+    "text": " describe recipes."
+  },
+  {
+    "start": 1943.32,
+    "end": 1946.24,
+    "text": " We want to describe this sequence of steps built on"
+  },
+  {
+    "start": 1946.24,
+    "end": 1947.64,
+    "text": " some primitives."
+  },
+  {
+    "start": 1947.64,
+    "end": 1950.08,
+    "text": " And we want to describe the flow of control that goes"
+  },
+  {
+    "start": 1950.08,
+    "end": 1953.2,
+    "text": " through those sequence of steps as we carry on."
+  },
+  {
+    "start": 1953.2,
+    "end": 1955.04,
+    "text": " So the last thing we need, before we can start talking"
+  },
+  {
+    "start": 1955.04,
+    "end": 1957.56,
+    "text": " about real programming, is we need to describe those"
+  },
+  {
+    "start": 1957.56,
+    "end": 1959.28,
+    "text": " recipes."
+  },
+  {
+    "start": 1959.28,
+    "end": 1963.0,
+    "text": " And to describe the recipes, we're going to want a language."
+  },
+  {
+    "start": 1974.16,
+    "end": 1977.84,
+    "text": " We need to know not only what are the primitives, but how do"
+  },
+  {
+    "start": 1977.84,
+    "end": 1981.88,
+    "text": " we make things meaningful in that language?"
+  },
+  {
+    "start": 1981.88,
+    "end": 1983.0,
+    "text": " Language."
+  },
+  {
+    "start": 1983.0,
+    "end": 1985.6,
+    "text": " There we go."
+  },
+  {
+    "start": 1985.6,
+    "end": 1987.44,
+    "text": " All right."
+  },
+  {
+    "start": 1987.44,
+    "end": 1989.76,
+    "text": " Now, turns out there are, I don't know, John, hundreds,"
+  },
+  {
+    "start": 1989.76,
+    "end": 1992.12,
+    "text": " thousands of programming languages, at least hundreds of"
+  },
+  {
+    "start": 1992.12,
+    "end": 1995.68,
+    "text": " programming languages around."
+  },
+  {
+    "start": 1995.68,
+    "end": 1996.24,
+    "text": " True."
+  },
+  {
+    "start": 1996.24,
+    "end": 1998.92,
+    "text": " Thank you."
+  },
+  {
+    "start": 1998.92,
+    "end": 2001.24,
+    "text": " They all have their pluses and minuses."
+  },
+  {
+    "start": 2001.24,
+    "end": 2003.88,
+    "text": " I have to admit, in my career here, I think I've taught in"
+  },
+  {
+    "start": 2003.88,
+    "end": 2005.0,
+    "text": " at least three languages."
+  },
+  {
+    "start": 2005.0,
+    "end": 2007.52,
+    "text": " I suspect you've taught more, five or six, John."
+  },
+  {
+    "start": 2007.56,
+    "end": 2009.6,
+    "text": " Both of us are probably programmed in more than those"
+  },
+  {
+    "start": 2009.6,
+    "end": 2011.6,
+    "text": " number of languages, at least programmed in that many, since"
+  },
+  {
+    "start": 2011.6,
+    "end": 2013.84,
+    "text": " we taught in those languages."
+  },
+  {
+    "start": 2013.84,
+    "end": 2016.4,
+    "text": " One of the things you want to realize is there is no best"
+  },
+  {
+    "start": 2016.4,
+    "end": 2016.92,
+    "text": " language."
+  },
+  {
+    "start": 2016.92,
+    "end": 2018.6,
+    "text": " At least I would argue that I think John would agree."
+  },
+  {
+    "start": 2018.6,
+    "end": 2020.84,
+    "text": " We might both agree we have our own nominees for worst"
+  },
+  {
+    "start": 2020.84,
+    "end": 2021.84,
+    "text": " language."
+  },
+  {
+    "start": 2021.84,
+    "end": 2023.12,
+    "text": " There are some of those."
+  },
+  {
+    "start": 2023.12,
+    "end": 2024.96,
+    "text": " There is no best language."
+  },
+  {
+    "start": 2024.96,
+    "end": 2026.4,
+    "text": " They all are describing different things."
+  },
+  {
+    "start": 2026.4,
+    "end": 2028.84,
+    "text": " Having said that, some of them are better suited for some"
+  },
+  {
+    "start": 2028.84,
+    "end": 2031.4,
+    "text": " things than others."
+  },
+  {
+    "start": 2031.4,
+    "end": 2034.12,
+    "text": " Anybody here heard of MATLAB?"
+  },
+  {
+    "start": 2034.12,
+    "end": 2035.96,
+    "text": " Maybe programmed in MATLAB."
+  },
+  {
+    "start": 2036.0,
+    "end": 2038.24,
+    "text": " It's great for doing things with vectors and matrices and"
+  },
+  {
+    "start": 2038.24,
+    "end": 2041.64,
+    "text": " things that are easily captured in that framework."
+  },
+  {
+    "start": 2041.64,
+    "end": 2043.28,
+    "text": " But there are some things that are a real pain to do in"
+  },
+  {
+    "start": 2043.28,
+    "end": 2044.04,
+    "text": " MATLAB."
+  },
+  {
+    "start": 2044.04,
+    "end": 2045.68,
+    "text": " So MATLAB's great for that kind of thing."
+  },
+  {
+    "start": 2045.68,
+    "end": 2048.56,
+    "text": " C is a great language for programming things that control"
+  },
+  {
+    "start": 2048.56,
+    "end": 2050.64,
+    "text": " data networks, for example."
+  },
+  {
+    "start": 2050.64,
+    "end": 2053.32,
+    "text": " I happen to be, and John teases me about this regularly,"
+  },
+  {
+    "start": 2053.32,
+    "end": 2054.8,
+    "text": " I'm an old-time list programmer."
+  },
+  {
+    "start": 2054.8,
+    "end": 2056.72,
+    "text": " That's how I was trained."
+  },
+  {
+    "start": 2056.72,
+    "end": 2058.24,
+    "text": " And I happen to like list and scheme."
+  },
+  {
+    "start": 2058.24,
+    "end": 2060.16,
+    "text": " It's a great language when you're trying to deal with"
+  },
+  {
+    "start": 2060.16,
+    "end": 2062.88,
+    "text": " problems where you have arbitrarily structured data"
+  },
+  {
+    "start": 2062.88,
+    "end": 2063.4,
+    "text": " sets."
+  },
+  {
+    "start": 2063.4,
+    "end": 2065.56,
+    "text": " It's particularly good at that."
+  },
+  {
+    "start": 2065.56,
+    "end": 2067.84,
+    "text": " So the point I want to make here is that there's no"
+  },
+  {
+    "start": 2067.84,
+    "end": 2070.44,
+    "text": " particularly best language."
+  },
+  {
+    "start": 2070.44,
+    "end": 2072.4,
+    "text": " What we're going to do is simply use a language that"
+  },
+  {
+    "start": 2072.4,
+    "end": 2073.08,
+    "text": " helps us understand."
+  },
+  {
+    "start": 2073.08,
+    "end": 2076.24,
+    "text": " So in this course, the language we're going to use is"
+  },
+  {
+    "start": 2076.24,
+    "end": 2078.08,
+    "text": " Python."
+  },
+  {
+    "start": 2078.08,
+    "end": 2079.08,
+    "text": " It's a pretty new language."
+  },
+  {
+    "start": 2079.08,
+    "end": 2080.96,
+    "text": " It's growing in popularity."
+  },
+  {
+    "start": 2080.96,
+    "end": 2083.36,
+    "text": " It has a lot of the elements of some other languages because"
+  },
+  {
+    "start": 2083.36,
+    "end": 2084.0,
+    "text": " it's more recent."
+  },
+  {
+    "start": 2084.0,
+    "end": 2088.4,
+    "text": " It inherits things from its pregenitors, if you like."
+  },
+  {
+    "start": 2088.4,
+    "end": 2091.08,
+    "text": " But one of the things I want to stress is this course is not"
+  },
+  {
+    "start": 2091.08,
+    "end": 2094.36,
+    "text": " about Python."
+  },
+  {
+    "start": 2094.36,
+    "end": 2095.04,
+    "text": " Strange statement."
+  },
+  {
+    "start": 2095.52,
+    "end": 2097.12,
+    "text": " You do need to know how to use it."
+  },
+  {
+    "start": 2097.12,
+    "end": 2098.92,
+    "text": " But it's not about the details of where do the"
+  },
+  {
+    "start": 2098.92,
+    "end": 2102.48,
+    "text": " semicolons go in Python."
+  },
+  {
+    "start": 2102.48,
+    "end": 2104.12,
+    "text": " It's about using it to think."
+  },
+  {
+    "start": 2104.12,
+    "end": 2106.6,
+    "text": " And what you should take away from this course is having"
+  },
+  {
+    "start": 2106.6,
+    "end": 2110.52,
+    "text": " learned how to design recipes, how to structure recipes, how"
+  },
+  {
+    "start": 2110.52,
+    "end": 2114.84,
+    "text": " to do things in modes in Python, those same tools easily"
+  },
+  {
+    "start": 2114.84,
+    "end": 2116.84,
+    "text": " transfer to any other language."
+  },
+  {
+    "start": 2116.84,
+    "end": 2118.32,
+    "text": " You can pick up another language in a week, a"
+  },
+  {
+    "start": 2118.32,
+    "end": 2122.72,
+    "text": " couple of weeks at most, once you know how to do Python."
+  },
+  {
+    "start": 2123.28,
+    "end": 2125.76,
+    "text": " In order to talk about Python and languages, I want to do one"
+  },
+  {
+    "start": 2125.76,
+    "end": 2128.64,
+    "text": " last thing to set the stage for what we're going to do here."
+  },
+  {
+    "start": 2128.64,
+    "end": 2130.68,
+    "text": " And that's to talk about the different dimensions of a"
+  },
+  {
+    "start": 2130.68,
+    "end": 2131.64,
+    "text": " language."
+  },
+  {
+    "start": 2131.64,
+    "end": 2133.6,
+    "text": " And there are three I want to deal with."
+  },
+  {
+    "start": 2133.6,
+    "end": 2136.24,
+    "text": " The first one is whether this is a high level or low level"
+  },
+  {
+    "start": 2136.24,
+    "end": 2137.24,
+    "text": " language."
+  },
+  {
+    "start": 2141.16,
+    "end": 2143.4,
+    "text": " That basically says how close are you to the guts of the"
+  },
+  {
+    "start": 2143.4,
+    "end": 2143.8,
+    "text": " machine?"
+  },
+  {
+    "start": 2143.8,
+    "end": 2145.96,
+    "text": " A low level language, you used to call this assembly"
+  },
+  {
+    "start": 2145.96,
+    "end": 2148.4,
+    "text": " programming, you're down at the level of your primitives are"
+  },
+  {
+    "start": 2148.4,
+    "end": 2151.64,
+    "text": " literally moving pieces of data from one location in memory"
+  },
+  {
+    "start": 2151.64,
+    "end": 2154.12,
+    "text": " to another through a very simple operation."
+  },
+  {
+    "start": 2154.12,
+    "end": 2157.16,
+    "text": " A high level language, the designer has created a much"
+  },
+  {
+    "start": 2157.16,
+    "end": 2159.56,
+    "text": " richer set of primitive things."
+  },
+  {
+    "start": 2159.56,
+    "end": 2162.24,
+    "text": " In a high level language, square root might simply be a"
+  },
+  {
+    "start": 2162.24,
+    "end": 2164.24,
+    "text": " primitive that you can use, rather than you having to go"
+  },
+  {
+    "start": 2164.24,
+    "end": 2166.04,
+    "text": " over and code it."
+  },
+  {
+    "start": 2166.04,
+    "end": 2168.56,
+    "text": " And there are trade-offs between both."
+  },
+  {
+    "start": 2168.56,
+    "end": 2172.72,
+    "text": " Second dimension is whether this is a general versus a"
+  },
+  {
+    "start": 2172.72,
+    "end": 2176.04,
+    "text": " targeted language."
+  },
+  {
+    "start": 2176.04,
+    "end": 2178.88,
+    "text": " And by that I mean, do the set of primitives support a broad"
+  },
+  {
+    "start": 2178.88,
+    "end": 2182.12,
+    "text": " range of applications, or is it really aimed at a very"
+  },
+  {
+    "start": 2182.12,
+    "end": 2183.4,
+    "text": " specific set of applications?"
+  },
+  {
+    "start": 2183.4,
+    "end": 2185.76,
+    "text": " I'd argue that MATLAB is basically a targeted language."
+  },
+  {
+    "start": 2185.76,
+    "end": 2189.44,
+    "text": " It's targeted at matrices and vectors and things like that."
+  },
+  {
+    "start": 2189.44,
+    "end": 2191.64,
+    "text": " And the third one I want to point out is whether this is an"
+  },
+  {
+    "start": 2191.64,
+    "end": 2194.92,
+    "text": " interpreted versus a compiled language."
+  },
+  {
+    "start": 2201.84,
+    "end": 2204.24,
+    "text": " What that basically says is the following."
+  },
+  {
+    "start": 2204.24,
+    "end": 2206.2,
+    "text": " In an interpreted language, you take what's called the"
+  },
+  {
+    "start": 2206.2,
+    "end": 2208.16,
+    "text": " source code, the thing you write."
+  },
+  {
+    "start": 2208.2,
+    "end": 2210.76,
+    "text": " It may go through a simple checker, but it basically goes"
+  },
+  {
+    "start": 2210.76,
+    "end": 2212.8,
+    "text": " to the interpreter, that thing inside the machine that's"
+  },
+  {
+    "start": 2212.8,
+    "end": 2214.88,
+    "text": " going to control the flow of going through each one of the"
+  },
+  {
+    "start": 2214.88,
+    "end": 2217.44,
+    "text": " instructions, and give you an output."
+  },
+  {
+    "start": 2217.44,
+    "end": 2220.44,
+    "text": " So the interpreter is simply operating directly on your"
+  },
+  {
+    "start": 2220.44,
+    "end": 2222.44,
+    "text": " code at runtime."
+  },
+  {
+    "start": 2222.44,
+    "end": 2225.04,
+    "text": " In a compiled language, you have an intermediate step in"
+  },
+  {
+    "start": 2225.04,
+    "end": 2227.4,
+    "text": " which you take the source code, it runs through what's"
+  },
+  {
+    "start": 2227.4,
+    "end": 2230.24,
+    "text": " called a checker or a compiler, or both, and it creates what's"
+  },
+  {
+    "start": 2230.24,
+    "end": 2231.92,
+    "text": " called object code."
+  },
+  {
+    "start": 2231.92,
+    "end": 2233.2,
+    "text": " And that does two things."
+  },
+  {
+    "start": 2233.2,
+    "end": 2237.16,
+    "text": " One, it helps catch bugs in your code."
+  },
+  {
+    "start": 2237.16,
+    "end": 2239.76,
+    "text": " And secondly, it often converts it into a more efficient"
+  },
+  {
+    "start": 2239.76,
+    "end": 2242.84,
+    "text": " sequence of instructions before you actually go off and run"
+  },
+  {
+    "start": 2242.84,
+    "end": 2244.16,
+    "text": " it."
+  },
+  {
+    "start": 2244.16,
+    "end": 2245.4,
+    "text": " And there's trade-offs between both."
+  },
+  {
+    "start": 2245.4,
+    "end": 2247.52,
+    "text": " I mean, an interpreted language is often easier to"
+  },
+  {
+    "start": 2247.52,
+    "end": 2250.28,
+    "text": " debug, because you can still see your raw code there, but"
+  },
+  {
+    "start": 2250.28,
+    "end": 2251.48,
+    "text": " it's not always as fast."
+  },
+  {
+    "start": 2251.48,
+    "end": 2253.72,
+    "text": " Compiled language is usually much faster in terms of its"
+  },
+  {
+    "start": 2253.72,
+    "end": 2254.76,
+    "text": " execution."
+  },
+  {
+    "start": 2254.76,
+    "end": 2258.04,
+    "text": " And it's one of the things that you may want to trade off."
+  },
+  {
+    "start": 2258.04,
+    "end": 2263.32,
+    "text": " In the case of Python, it's a high-level language."
+  },
+  {
+    "start": 2263.32,
+    "end": 2265.68,
+    "text": " I would argue, I think John would agree with me, it's"
+  },
+  {
+    "start": 2265.68,
+    "end": 2267.2,
+    "text": " basically a general-purpose language."
+  },
+  {
+    "start": 2267.2,
+    "end": 2269.92,
+    "text": " It happens to be better suited for manipulating strings"
+  },
+  {
+    "start": 2269.92,
+    "end": 2270.84,
+    "text": " than numbers, for example."
+  },
+  {
+    "start": 2270.84,
+    "end": 2273.52,
+    "text": " But it's really a general-purpose language."
+  },
+  {
+    "start": 2273.52,
+    "end": 2276.64,
+    "text": " And it's primarily, I shouldn't say primary, it is an"
+  },
+  {
+    "start": 2276.64,
+    "end": 2279.6,
+    "text": " interpreted language."
+  },
+  {
+    "start": 2279.6,
+    "end": 2283.0,
+    "text": " As a consequence, it's not as good at helping debug, but it"
+  },
+  {
+    "start": 2283.0,
+    "end": 2284.4,
+    "text": " does let you, sorry, it's the wrong way of saying it, it's"
+  },
+  {
+    "start": 2284.4,
+    "end": 2287.2,
+    "text": " not as good at catching some things before you run them."
+  },
+  {
+    "start": 2287.2,
+    "end": 2289.28,
+    "text": " It is easier sometimes in debugging as you go along on"
+  },
+  {
+    "start": 2289.28,
+    "end": 2291.48,
+    "text": " the fly."
+  },
+  {
+    "start": 2291.48,
+    "end": 2293.4,
+    "text": " OK, so what does Python look like?"
+  },
+  {
+    "start": 2293.44,
+    "end": 2297.28,
+    "text": " In order to talk about Python, actually, I'm going to do it"
+  },
+  {
+    "start": 2297.28,
+    "end": 2298.52,
+    "text": " this way."
+  },
+  {
+    "start": 2301.24,
+    "end": 2303.0,
+    "text": " We need to talk about how to write things in Python."
+  },
+  {
+    "start": 2303.0,
+    "end": 2306.12,
+    "text": " Again, let me back up slightly and set the stage."
+  },
+  {
+    "start": 2306.12,
+    "end": 2308.84,
+    "text": " Our goal is to build recipes."
+  },
+  {
+    "start": 2308.84,
+    "end": 2310.28,
+    "text": " They're all going to be great chefs by the time you're"
+  },
+  {
+    "start": 2310.28,
+    "end": 2312.16,
+    "text": " done here."
+  },
+  {
+    "start": 2312.16,
+    "end": 2315.6,
+    "text": " Our goal is to take problems and break them down into these"
+  },
+  {
+    "start": 2315.6,
+    "end": 2318.0,
+    "text": " computational steps, these sequence of instructions that"
+  },
+  {
+    "start": 2318.0,
+    "end": 2320.48,
+    "text": " allow us to capture that process."
+  },
+  {
+    "start": 2320.48,
+    "end": 2322.8,
+    "text": " To do that, we need to describe not only what are the"
+  },
+  {
+    "start": 2322.8,
+    "end": 2325.64,
+    "text": " primitives, but how do we capture things legally in that"
+  },
+  {
+    "start": 2325.64,
+    "end": 2327.48,
+    "text": " language and interact with the computer?"
+  },
+  {
+    "start": 2327.48,
+    "end": 2329.48,
+    "text": " And so for that, we need a language."
+  },
+  {
+    "start": 2329.48,
+    "end": 2330.72,
+    "text": " We're about to start talking about the"
+  },
+  {
+    "start": 2330.72,
+    "end": 2331.6,
+    "text": " elements of the language."
+  },
+  {
+    "start": 2331.6,
+    "end": 2334.6,
+    "text": " But to do that, we also need to separate out one last piece"
+  },
+  {
+    "start": 2334.6,
+    "end": 2338.32,
+    "text": " of distinction."
+  },
+  {
+    "start": 2338.32,
+    "end": 2339.8,
+    "text": " Just like with a natural language, we're going to"
+  },
+  {
+    "start": 2339.8,
+    "end": 2342.96,
+    "text": " separate out syntax versus semantics."
+  },
+  {
+    "start": 2342.96,
+    "end": 2343.84,
+    "text": " So what's syntax?"
+  },
+  {
+    "start": 2343.84,
+    "end": 2349.76,
+    "text": " Syntax basically says, what are the legal expressions in"
+  },
+  {
+    "start": 2349.76,
+    "end": 2350.88,
+    "text": " this language?"
+  },
+  {
+    "start": 2352.8,
+    "end": 2362.92,
+    "text": " What are my handwriting's atrocious, isn't it?"
+  },
+  {
+    "start": 2362.92,
+    "end": 2365.92,
+    "text": " There's an English sequence of words."
+  },
+  {
+    "start": 2365.92,
+    "end": 2367.8,
+    "text": " It's not syntactically correct, right?"
+  },
+  {
+    "start": 2367.8,
+    "end": 2368.92,
+    "text": " It's not a sentence."
+  },
+  {
+    "start": 2368.92,
+    "end": 2370.12,
+    "text": " There's no verb in there anywhere."
+  },
+  {
+    "start": 2370.12,
+    "end": 2371.4,
+    "text": " It's just a sequence of nouns."
+  },
+  {
+    "start": 2371.4,
+    "end": 2372.96,
+    "text": " Same thing in our languages."
+  },
+  {
+    "start": 2372.96,
+    "end": 2376.68,
+    "text": " We have to describe how do you put together legally formed"
+  },
+  {
+    "start": 2376.68,
+    "end": 2379.12,
+    "text": " expressions."
+  },
+  {
+    "start": 2379.12,
+    "end": 2381.28,
+    "text": " And as we add constructs to the language, we're going to talk"
+  },
+  {
+    "start": 2381.28,
+    "end": 2382.8,
+    "text": " about that."
+  },
+  {
+    "start": 2382.8,
+    "end": 2385.56,
+    "text": " Second thing we want to talk about very briefly as we go"
+  },
+  {
+    "start": 2385.56,
+    "end": 2388.68,
+    "text": " along is the semantics of the language."
+  },
+  {
+    "start": 2388.68,
+    "end": 2390.6,
+    "text": " And here we're going to break out two pieces, static"
+  },
+  {
+    "start": 2390.6,
+    "end": 2393.24,
+    "text": " semantics and full semantics."
+  },
+  {
+    "start": 2393.24,
+    "end": 2401.92,
+    "text": " Static semantics basically says which programs are"
+  },
+  {
+    "start": 2401.92,
+    "end": 2405.84,
+    "text": " meaningful."
+  },
+  {
+    "start": 2405.84,
+    "end": 2409.04,
+    "text": " Which expressions make sense?"
+  },
+  {
+    "start": 2409.08,
+    "end": 2417.72,
+    "text": " Here's an English sentence."
+  },
+  {
+    "start": 2417.72,
+    "end": 2420.36,
+    "text": " It's syntactically correct."
+  },
+  {
+    "start": 2420.36,
+    "end": 2423.12,
+    "text": " Noun phrase, verb, noun phrase."
+  },
+  {
+    "start": 2423.12,
+    "end": 2425.54,
+    "text": " I'm not certain it's meaningful unless you are in the"
+  },
+  {
+    "start": 2425.54,
+    "end": 2429.6,
+    "text": " habit of giving your furniture personal names."
+  },
+  {
+    "start": 2429.6,
+    "end": 2430.24,
+    "text": " What's the point?"
+  },
+  {
+    "start": 2430.24,
+    "end": 2432.92,
+    "text": " Again, you can have things that are syntactically legal but"
+  },
+  {
+    "start": 2432.92,
+    "end": 2435.12,
+    "text": " not semantically meaningful."
+  },
+  {
+    "start": 2435.12,
+    "end": 2437.6,
+    "text": " And static semantics is going to be a way of helping us"
+  },
+  {
+    "start": 2437.6,
+    "end": 2441.12,
+    "text": " decide what expressions, what pieces of code actually have"
+  },
+  {
+    "start": 2441.12,
+    "end": 2443.56,
+    "text": " real meaning to it."
+  },
+  {
+    "start": 2443.56,
+    "end": 2447.16,
+    "text": " The last piece of it is, in addition to having static"
+  },
+  {
+    "start": 2447.16,
+    "end": 2453.88,
+    "text": " semantics, we have sort of full semantics."
+  },
+  {
+    "start": 2453.88,
+    "end": 2458.16,
+    "text": " What does the program mean?"
+  },
+  {
+    "start": 2458.16,
+    "end": 2459.44,
+    "text": " Or set a different way."
+  },
+  {
+    "start": 2459.44,
+    "end": 2461.36,
+    "text": " What's going to happen when I run it?"
+  },
+  {
+    "start": 2468.6,
+    "end": 2469.76,
+    "text": " That's the meaning of the expression."
+  },
+  {
+    "start": 2469.76,
+    "end": 2470.8,
+    "text": " That's what you want."
+  },
+  {
+    "start": 2470.8,
+    "end": 2473.08,
+    "text": " You want to know what's the meaning of this piece of code."
+  },
+  {
+    "start": 2473.08,
+    "end": 2474.48,
+    "text": " When I run it, what's going to happen?"
+  },
+  {
+    "start": 2474.48,
+    "end": 2476.36,
+    "text": " That's what I want to build."
+  },
+  {
+    "start": 2476.36,
+    "end": 2479.28,
+    "text": " The reason for pulling this out is what you're going to see"
+  },
+  {
+    "start": 2479.28,
+    "end": 2484.88,
+    "text": " is that in most languages and certainly in Python, we get"
+  },
+  {
+    "start": 2484.88,
+    "end": 2488.28,
+    "text": " lots of health here."
+  },
+  {
+    "start": 2488.28,
+    "end": 2492.36,
+    "text": " Python comes built in with something that will check your"
+  },
+  {
+    "start": 2492.36,
+    "end": 2494.32,
+    "text": " syntax for you."
+  },
+  {
+    "start": 2494.36,
+    "end": 2497.92,
+    "text": " And in fact, as a sidebar, if you turn in a problem set that"
+  },
+  {
+    "start": 2497.92,
+    "end": 2500.56,
+    "text": " is not syntactically correct, there's a simple button that"
+  },
+  {
+    "start": 2500.56,
+    "end": 2502.68,
+    "text": " you push that will check your syntax."
+  },
+  {
+    "start": 2502.68,
+    "end": 2504.72,
+    "text": " If you turn a program that's not syntactically correct, the"
+  },
+  {
+    "start": 2504.72,
+    "end": 2506.44,
+    "text": " TAs give you a zero."
+  },
+  {
+    "start": 2506.44,
+    "end": 2508.24,
+    "text": " Because it said you didn't even take the time to make sure"
+  },
+  {
+    "start": 2508.24,
+    "end": 2509.08,
+    "text": " the syntax is correct."
+  },
+  {
+    "start": 2509.08,
+    "end": 2510.92,
+    "text": " The system will help you find it."
+  },
+  {
+    "start": 2510.92,
+    "end": 2513.68,
+    "text": " In Python, it'll find it, I think, one bug at a time."
+  },
+  {
+    "start": 2513.68,
+    "end": 2515.04,
+    "text": " John, it finds one syntax error at a time."
+  },
+  {
+    "start": 2515.04,
+    "end": 2516.56,
+    "text": " So you have to be a little patient to do it, but you"
+  },
+  {
+    "start": 2516.56,
+    "end": 2519.72,
+    "text": " can check that the syntax is right."
+  },
+  {
+    "start": 2519.72,
+    "end": 2526.08,
+    "text": " You're going to see that we get some help here on the"
+  },
+  {
+    "start": 2526.08,
+    "end": 2527.0,
+    "text": " static semantics."
+  },
+  {
+    "start": 2527.0,
+    "end": 2529.4,
+    "text": " And I'm going to do an example in a second."
+  },
+  {
+    "start": 2529.4,
+    "end": 2532.32,
+    "text": " Meaning that the system, some languages are better than"
+  },
+  {
+    "start": 2532.32,
+    "end": 2536.6,
+    "text": " others on it, but it will try and help you catch some things"
+  },
+  {
+    "start": 2536.6,
+    "end": 2541.4,
+    "text": " that are not semantically correct statically."
+  },
+  {
+    "start": 2541.4,
+    "end": 2543.96,
+    "text": " In the case of Python, it does it, I think, all at runtime."
+  },
+  {
+    "start": 2543.96,
+    "end": 2544.88,
+    "text": " I'm looking at you again, John."
+  },
+  {
+    "start": 2544.88,
+    "end": 2548.68,
+    "text": " I think there's no pre-time checks."
+  },
+  {
+    "start": 2548.68,
+    "end": 2548.96,
+    "text": " Sorry?"
+  },
+  {
+    "start": 2549.6,
+    "end": 2551.32,
+    "text": " There is some."
+  },
+  {
+    "start": 2551.32,
+    "end": 2552.96,
+    "text": " OK."
+  },
+  {
+    "start": 2552.96,
+    "end": 2554.96,
+    "text": " Most of them, I think, though, are primarily caught at"
+  },
+  {
+    "start": 2554.96,
+    "end": 2555.44,
+    "text": " runtime."
+  },
+  {
+    "start": 2555.44,
+    "end": 2557.28,
+    "text": " And that's a little bit of a pain, because you don't see it"
+  },
+  {
+    "start": 2557.28,
+    "end": 2558.36,
+    "text": " until you go and run the code."
+  },
+  {
+    "start": 2558.36,
+    "end": 2560.0,
+    "text": " There are some I'm actually going to see an example, I"
+  },
+  {
+    "start": 2560.0,
+    "end": 2561.28,
+    "text": " think, in a second where you find it."
+  },
+  {
+    "start": 2561.28,
+    "end": 2563.84,
+    "text": " But you do get some help there."
+  },
+  {
+    "start": 2563.84,
+    "end": 2567.76,
+    "text": " The problem is, things that you catch here are actually the"
+  },
+  {
+    "start": 2567.76,
+    "end": 2569.84,
+    "text": " least worrisome bugs."
+  },
+  {
+    "start": 2569.84,
+    "end": 2571.2,
+    "text": " They're easy to spot."
+  },
+  {
+    "start": 2571.2,
+    "end": 2573.52,
+    "text": " You can't run the program with them there, so you're not"
+  },
+  {
+    "start": 2573.52,
+    "end": 2575.8,
+    "text": " going to get weird answers."
+  },
+  {
+    "start": 2575.84,
+    "end": 2579.12,
+    "text": " Not everything is going to get caught in static semantics"
+  },
+  {
+    "start": 2579.12,
+    "end": 2579.44,
+    "text": " checking."
+  },
+  {
+    "start": 2579.44,
+    "end": 2580.68,
+    "text": " Some things are going to slide through."
+  },
+  {
+    "start": 2580.68,
+    "end": 2583.08,
+    "text": " And that's actually a problem."
+  },
+  {
+    "start": 2583.08,
+    "end": 2584.12,
+    "text": " It's a problem."
+  },
+  {
+    "start": 2584.12,
+    "end": 2587.36,
+    "text": " Because it says, your program will still give you a value,"
+  },
+  {
+    "start": 2587.36,
+    "end": 2589.24,
+    "text": " but it may not be what you intended."
+  },
+  {
+    "start": 2589.24,
+    "end": 2590.32,
+    "text": " And you can't always tell."
+  },
+  {
+    "start": 2590.32,
+    "end": 2592.6,
+    "text": " And that may propagate its way down through a whole bunch of"
+  },
+  {
+    "start": 2592.6,
+    "end": 2595.32,
+    "text": " other computation before it causes some catastrophic"
+  },
+  {
+    "start": 2595.32,
+    "end": 2596.48,
+    "text": " favor."
+  },
+  {
+    "start": 2596.48,
+    "end": 2599.12,
+    "text": " So actually, the problem with static semantics is you'd"
+  },
+  {
+    "start": 2599.12,
+    "end": 2600.04,
+    "text": " like it to catch everything."
+  },
+  {
+    "start": 2600.04,
+    "end": 2601.96,
+    "text": " You don't always get it."
+  },
+  {
+    "start": 2601.96,
+    "end": 2605.08,
+    "text": " Sadly, we don't get much help here, which is where we'd"
+  },
+  {
+    "start": 2605.08,
+    "end": 2605.44,
+    "text": " like it."
+  },
+  {
+    "start": 2605.44,
+    "end": 2607.88,
+    "text": " But that's part of your job."
+  },
+  {
+    "start": 2607.88,
+    "end": 2610.32,
+    "text": " What happens if you actually have something that's both"
+  },
+  {
+    "start": 2610.32,
+    "end": 2612.6,
+    "text": " syntactically correct and appears to have correct"
+  },
+  {
+    "start": 2612.6,
+    "end": 2615.24,
+    "text": " static semantics and you run it?"
+  },
+  {
+    "start": 2615.24,
+    "end": 2617.36,
+    "text": " Could run and give you the right answer?"
+  },
+  {
+    "start": 2617.36,
+    "end": 2619.12,
+    "text": " Could crash?"
+  },
+  {
+    "start": 2619.12,
+    "end": 2621.0,
+    "text": " Could loop forever?"
+  },
+  {
+    "start": 2621.0,
+    "end": 2625.36,
+    "text": " It could run and apparently give you the right answer."
+  },
+  {
+    "start": 2625.36,
+    "end": 2627.56,
+    "text": " And you're not always going to be able to tell."
+  },
+  {
+    "start": 2627.56,
+    "end": 2628.68,
+    "text": " Well, you'll know when it crashes."
+  },
+  {
+    "start": 2628.68,
+    "end": 2630.08,
+    "text": " It doesn't help you very much."
+  },
+  {
+    "start": 2630.08,
+    "end": 2631.84,
+    "text": " But you can't always tell whether something's stuck in an"
+  },
+  {
+    "start": 2631.84,
+    "end": 2634.0,
+    "text": " infinite loop or whether it's simply taking a long time to"
+  },
+  {
+    "start": 2634.0,
+    "end": 2635.0,
+    "text": " compute."
+  },
+  {
+    "start": 2635.0,
+    "end": 2637.28,
+    "text": " You'd love to have a system that spots that for you, but"
+  },
+  {
+    "start": 2637.28,
+    "end": 2638.84,
+    "text": " it's not possible."
+  },
+  {
+    "start": 2638.84,
+    "end": 2642.52,
+    "text": " And so to deal with this last one, you need to develop style."
+  },
+  {
+    "start": 2646.24,
+    "end": 2649.04,
+    "text": " Meaning we're going to try and help you with how to"
+  },
+  {
+    "start": 2649.04,
+    "end": 2650.68,
+    "text": " develop good programming style."
+  },
+  {
+    "start": 2650.68,
+    "end": 2653.34,
+    "text": " But you need to write in a way in which it is going to be"
+  },
+  {
+    "start": 2653.34,
+    "end": 2656.4,
+    "text": " easy for you to spot the places that cause those"
+  },
+  {
+    "start": 2656.4,
+    "end": 2660.04,
+    "text": " semantic bugs to occur."
+  },
+  {
+    "start": 2660.04,
+    "end": 2661.96,
+    "text": " All right."
+  },
+  {
+    "start": 2661.96,
+    "end": 2663.64,
+    "text": " Sounds like a really long preamble it is."
+  },
+  {
+    "start": 2663.64,
+    "end": 2664.88,
+    "text": " Let's start with Python."
+  },
+  {
+    "start": 2664.88,
+    "end": 2668.32,
+    "text": " But again, my goal here is to let you see what computation's"
+  },
+  {
+    "start": 2668.32,
+    "end": 2669.44,
+    "text": " about, why we need to do it."
+  },
+  {
+    "start": 2669.44,
+    "end": 2670.72,
+    "text": " I'm going to remind you one last time."
+  },
+  {
+    "start": 2670.72,
+    "end": 2673.52,
+    "text": " Our goal is to be able to have a set of primitives that we"
+  },
+  {
+    "start": 2673.52,
+    "end": 2676.32,
+    "text": " combine into complex expressions, which we can then"
+  },
+  {
+    "start": 2676.32,
+    "end": 2678.64,
+    "text": " abstract to treat as primitives."
+  },
+  {
+    "start": 2678.64,
+    "end": 2680.88,
+    "text": " And we want to use that sequence of instructions in"
+  },
+  {
+    "start": 2680.88,
+    "end": 2686.72,
+    "text": " this flow of control computing in order to deduce new"
+  },
+  {
+    "start": 2686.72,
+    "end": 2689.24,
+    "text": " information, that imperative knowledge that we talked about"
+  },
+  {
+    "start": 2689.24,
+    "end": 2690.6,
+    "text": " right there."
+  },
+  {
+    "start": 2690.6,
+    "end": 2691.64,
+    "text": " So I'm going to start today."
+  },
+  {
+    "start": 2691.64,
+    "end": 2693.36,
+    "text": " We have about five or 10 minutes left."
+  },
+  {
+    "start": 2694.08,
+    "end": 2696.52,
+    "text": " Five minutes left in order to do this with some beginnings of"
+  },
+  {
+    "start": 2696.52,
+    "end": 2697.24,
+    "text": " Python."
+  },
+  {
+    "start": 2697.24,
+    "end": 2699.16,
+    "text": " And we're going to really pick this up obviously next time."
+  },
+  {
+    "start": 2699.16,
+    "end": 2702.68,
+    "text": " So simple parts of Python."
+  },
+  {
+    "start": 2702.68,
+    "end": 2704.72,
+    "text": " In order to create any kinds of expressions, we're going to"
+  },
+  {
+    "start": 2704.72,
+    "end": 2706.64,
+    "text": " need values."
+  },
+  {
+    "start": 2706.64,
+    "end": 2707.76,
+    "text": " Primitive data elements."
+  },
+  {
+    "start": 2707.76,
+    "end": 2711.0,
+    "text": " And in Python, we have two to start with."
+  },
+  {
+    "start": 2711.0,
+    "end": 2713.48,
+    "text": " We have numbers."
+  },
+  {
+    "start": 2713.48,
+    "end": 2716.56,
+    "text": " And we have strings."
+  },
+  {
+    "start": 2716.56,
+    "end": 2718.72,
+    "text": " Numbers is what you'd expect."
+  },
+  {
+    "start": 2718.72,
+    "end": 2721.2,
+    "text": " There's a number."
+  },
+  {
+    "start": 2721.24,
+    "end": 2724.04,
+    "text": " There's another number."
+  },
+  {
+    "start": 2724.04,
+    "end": 2728.4,
+    "text": " Strings are captured in Python with an open quote and some"
+  },
+  {
+    "start": 2728.4,
+    "end": 2733.08,
+    "text": " sequence of characters, followed by a close quote."
+  },
+  {
+    "start": 2733.08,
+    "end": 2737.48,
+    "text": " Associated with every data type in Python is a type, which"
+  },
+  {
+    "start": 2737.48,
+    "end": 2740.08,
+    "text": " identifies the kind of thing it is."
+  },
+  {
+    "start": 2740.08,
+    "end": 2741.4,
+    "text": " Some of these are obvious."
+  },
+  {
+    "start": 2741.4,
+    "end": 2744.96,
+    "text": " Strings are just a type on their own."
+  },
+  {
+    "start": 2744.96,
+    "end": 2748.0,
+    "text": " But for numbers, for example, we can have a variety of types."
+  },
+  {
+    "start": 2748.04,
+    "end": 2750.84,
+    "text": " So this is something that we would call an integer, or an"
+  },
+  {
+    "start": 2750.84,
+    "end": 2753.0,
+    "text": " int."
+  },
+  {
+    "start": 2753.0,
+    "end": 2755.36,
+    "text": " And this is something we would call a floating point, or a"
+  },
+  {
+    "start": 2755.36,
+    "end": 2757.16,
+    "text": " float."
+  },
+  {
+    "start": 2757.16,
+    "end": 2759.52,
+    "text": " Or if you want to think of it as a real number."
+  },
+  {
+    "start": 2759.52,
+    "end": 2761.76,
+    "text": " And there's some others that we can see."
+  },
+  {
+    "start": 2761.76,
+    "end": 2764.2,
+    "text": " We're going to build up this taxonomy, if you like."
+  },
+  {
+    "start": 2764.2,
+    "end": 2767.2,
+    "text": " But the reason it's relevant is associated with each one of"
+  },
+  {
+    "start": 2767.2,
+    "end": 2771.16,
+    "text": " those types is a set of operators that expect certain"
+  },
+  {
+    "start": 2771.16,
+    "end": 2773.36,
+    "text": " types of input in order to do their job."
+  },
+  {
+    "start": 2773.36,
+    "end": 2776.52,
+    "text": " And given those types of input, we'll give back output."
+  },
+  {
+    "start": 2777.08,
+    "end": 2779.64,
+    "text": " In order to deal with this, let me show you an example."
+  },
+  {
+    "start": 2779.64,
+    "end": 2780.64,
+    "text": " I'm going to hope that comes up."
+  },
+  {
+    "start": 2780.64,
+    "end": 2781.92,
+    "text": " Great."
+  },
+  {
+    "start": 2781.92,
+    "end": 2784.8,
+    "text": " What I have here is a Python shell."
+  },
+  {
+    "start": 2784.8,
+    "end": 2786.84,
+    "text": " And I'm going to just show you some simple examples of how"
+  },
+  {
+    "start": 2786.84,
+    "end": 2788.76,
+    "text": " we start building expressions."
+  },
+  {
+    "start": 2788.76,
+    "end": 2790.56,
+    "text": " And this will lead into what you're going to see next time,"
+  },
+  {
+    "start": 2790.56,
+    "end": 2792.72,
+    "text": " as well as what you're going to do tomorrow."
+  },
+  {
+    "start": 2792.72,
+    "end": 2797.52,
+    "text": " So starting with this shell, I can type in expressions."
+  },
+  {
+    "start": 2797.52,
+    "end": 2798.72,
+    "text": " Actually, let me back up and do this."
+  },
+  {
+    "start": 2798.72,
+    "end": 2800.68,
+    "text": " I can type in a number."
+  },
+  {
+    "start": 2800.68,
+    "end": 2802.0,
+    "text": " I get out the number."
+  },
+  {
+    "start": 2802.0,
+    "end": 2803.4,
+    "text": " I can type in a string."
+  },
+  {
+    "start": 2803.4,
+    "end": 2807.04,
+    "text": " I get back the string."
+  },
+  {
+    "start": 2807.04,
+    "end": 2809.72,
+    "text": " Strings, by the way, can have spaces in them that can have"
+  },
+  {
+    "start": 2809.72,
+    "end": 2810.24,
+    "text": " other characters."
+  },
+  {
+    "start": 2810.24,
+    "end": 2812.28,
+    "text": " It's simply a sequence of things."
+  },
+  {
+    "start": 2812.28,
+    "end": 2819.92,
+    "text": " And notice, by the way, that the string 5, sorry, the"
+  },
+  {
+    "start": 2819.92,
+    "end": 2823.96,
+    "text": " string digit 5, digit 2 is different than the number 52."
+  },
+  {
+    "start": 2823.96,
+    "end": 2825.72,
+    "text": " The quotes are around them to make that distinction."
+  },
+  {
+    "start": 2825.72,
+    "end": 2827.92,
+    "text": " We're going to see why in a second."
+  },
+  {
+    "start": 2827.92,
+    "end": 2829.88,
+    "text": " What I'm doing, by the way, here is I'm simply typing in"
+  },
+  {
+    "start": 2829.88,
+    "end": 2831.32,
+    "text": " expressions to that interpreter."
+  },
+  {
+    "start": 2831.32,
+    "end": 2833.88,
+    "text": " It's using its set of rules to deduce the value and print"
+  },
+  {
+    "start": 2833.88,
+    "end": 2835.6,
+    "text": " them back out."
+  },
+  {
+    "start": 2835.6,
+    "end": 2837.32,
+    "text": " Things I might like to do in here is I might like to do"
+  },
+  {
+    "start": 2837.32,
+    "end": 2839.28,
+    "text": " combinations of things with these."
+  },
+  {
+    "start": 2839.28,
+    "end": 2843.64,
+    "text": " So we have associated with simple things,"
+  },
+  {
+    "start": 2843.64,
+    "end": 2844.84,
+    "text": " set of operations."
+  },
+  {
+    "start": 2847.36,
+    "end": 2852.52,
+    "text": " So for numbers, we have the things you'd expect, the"
+  },
+  {
+    "start": 2852.52,
+    "end": 2854.24,
+    "text": " arithmetic."
+  },
+  {
+    "start": 2854.24,
+    "end": 2857.0,
+    "text": " And let me show you some examples of that."
+  },
+  {
+    "start": 2857.0,
+    "end": 2858.48,
+    "text": " Actually, I'm going to do one other distinction here."
+  },
+  {
+    "start": 2858.48,
+    "end": 2860.4,
+    "text": " What I've typed in, things like, well,"
+  },
+  {
+    "start": 2860.4,
+    "end": 2862.8,
+    "text": " let me start this way."
+  },
+  {
+    "start": 2862.8,
+    "end": 2864.92,
+    "text": " There's an expression."
+  },
+  {
+    "start": 2864.92,
+    "end": 2868.68,
+    "text": " And in Python, the expression is operand, operator,"
+  },
+  {
+    "start": 2868.68,
+    "end": 2871.2,
+    "text": " operand, when we're doing simple expressions like this."
+  },
+  {
+    "start": 2871.2,
+    "end": 2873.88,
+    "text": " And if I give it to the interpreter, it gives me back"
+  },
+  {
+    "start": 2873.88,
+    "end": 2877.36,
+    "text": " exactly what you'd expect, which is that value."
+  },
+  {
+    "start": 2877.36,
+    "end": 2879.76,
+    "text": " The distinction I'm going to make is that's an expression."
+  },
+  {
+    "start": 2879.76,
+    "end": 2881.52,
+    "text": " Interpreter is going to get a value for it."
+  },
+  {
+    "start": 2881.52,
+    "end": 2883.56,
+    "text": " When we start building up code, we're going to use"
+  },
+  {
+    "start": 2883.56,
+    "end": 2886.76,
+    "text": " commands or statements, which are actually things that take"
+  },
+  {
+    "start": 2886.76,
+    "end": 2889.84,
+    "text": " an value and ask the computer to do something with it."
+  },
+  {
+    "start": 2889.84,
+    "end": 2894.04,
+    "text": " So I can similarly do this, which is going to look strange,"
+  },
+  {
+    "start": 2894.04,
+    "end": 2896.08,
+    "text": " because it's going to give me the same value back out."
+  },
+  {
+    "start": 2896.08,
+    "end": 2897.68,
+    "text": " But it actually did a slightly different thing."
+  },
+  {
+    "start": 2897.68,
+    "end": 2899.84,
+    "text": " And notice, by the way, when I typed it, how print showed"
+  },
+  {
+    "start": 2899.84,
+    "end": 2901.44,
+    "text": " up in a different color."
+  },
+  {
+    "start": 2901.44,
+    "end": 2903.76,
+    "text": " That's the Python saying that is a command."
+  },
+  {
+    "start": 2903.76,
+    "end": 2906.24,
+    "text": " That is a specific command to get the value of the expression"
+  },
+  {
+    "start": 2906.24,
+    "end": 2907.84,
+    "text": " and print it back out."
+  },
+  {
+    "start": 2907.84,
+    "end": 2909.52,
+    "text": " When we start writing code, you're going to see that"
+  },
+  {
+    "start": 2909.52,
+    "end": 2909.84,
+    "text": " difference."
+  },
+  {
+    "start": 2909.84,
+    "end": 2910.88,
+    "text": " So for now, don't worry about it."
+  },
+  {
+    "start": 2910.88,
+    "end": 2913.08,
+    "text": " I just want to plant that idea."
+  },
+  {
+    "start": 2913.08,
+    "end": 2915.4,
+    "text": " OK, once we've got that, we can certainly, though, do"
+  },
+  {
+    "start": 2915.4,
+    "end": 2919.04,
+    "text": " things like this."
+  },
+  {
+    "start": 2919.04,
+    "end": 2922.24,
+    "text": " Notice the quotes around it."
+  },
+  {
+    "start": 2922.24,
+    "end": 2923.48,
+    "text": " And it treats it as a string."
+  },
+  {
+    "start": 2923.48,
+    "end": 2926.12,
+    "text": " It's simply getting me back the value of that string, 52"
+  },
+  {
+    "start": 2926.12,
+    "end": 2929.84,
+    "text": " times 7, rather than the value of it."
+  },
+  {
+    "start": 2929.84,
+    "end": 2932.04,
+    "text": " Now, once we've got that, we can start doing things."
+  },
+  {
+    "start": 2932.04,
+    "end": 2934.04,
+    "text": " And I'm going to use print here if I could type in order to"
+  },
+  {
+    "start": 2934.04,
+    "end": 2935.48,
+    "text": " just get into the can't type."
+  },
+  {
+    "start": 2935.48,
+    "end": 2935.96,
+    "text": " Here we go."
+  },
+  {
+    "start": 2935.96,
+    "end": 2938.28,
+    "text": " In order to get into the habit, I'm going to print out a"
+  },
+  {
+    "start": 2938.28,
+    "end": 2940.56,
+    "text": " string."
+  },
+  {
+    "start": 2940.56,
+    "end": 2947.04,
+    "text": " I can print out."
+  },
+  {
+    "start": 2947.04,
+    "end": 2949.24,
+    "text": " Ah!"
+  },
+  {
+    "start": 2949.24,
+    "end": 2951.68,
+    "text": " Here's the first example of something that caught one of my"
+  },
+  {
+    "start": 2951.68,
+    "end": 2951.96,
+    "text": " things."
+  },
+  {
+    "start": 2951.96,
+    "end": 2955.08,
+    "text": " This is a static semantic error."
+  },
+  {
+    "start": 2955.08,
+    "end": 2956.16,
+    "text": " So what went on here?"
+  },
+  {
+    "start": 2956.16,
+    "end": 2958.76,
+    "text": " I gave it an expression that had an operator in there."
+  },
+  {
+    "start": 2958.76,
+    "end": 2961.36,
+    "text": " It expected arithmetic types."
+  },
+  {
+    "start": 2961.36,
+    "end": 2963.84,
+    "text": " But I gave it two strings."
+  },
+  {
+    "start": 2963.84,
+    "end": 2966.08,
+    "text": " And so it's complaining at me, saying, you can't do this."
+  },
+  {
+    "start": 2966.08,
+    "end": 2967.92,
+    "text": " I don't know how to take two strings and"
+  },
+  {
+    "start": 2967.92,
+    "end": 2970.08,
+    "text": " multiply them together."
+  },
+  {
+    "start": 2970.12,
+    "end": 2972.48,
+    "text": " Unfortunately, Adran, you may disagree with me on this one."
+  },
+  {
+    "start": 2972.48,
+    "end": 2976.72,
+    "text": " Unfortunately, in Python, you can, however, do things like"
+  },
+  {
+    "start": 2976.72,
+    "end": 2977.64,
+    "text": " this."
+  },
+  {
+    "start": 2977.64,
+    "end": 2980.0,
+    "text": " What do you figure that's going to do?"
+  },
+  {
+    "start": 2980.0,
+    "end": 2981.44,
+    "text": " Book legal?"
+  },
+  {
+    "start": 2981.44,
+    "end": 2985.12,
+    "text": " The string three times the number three?"
+  },
+  {
+    "start": 2985.12,
+    "end": 2989.88,
+    "text": " Well, it happens to give me three threes in a row."
+  },
+  {
+    "start": 2989.88,
+    "end": 2990.44,
+    "text": " I hate this."
+  },
+  {
+    "start": 2990.44,
+    "end": 2991.0,
+    "text": " I'm sorry, John."
+  },
+  {
+    "start": 2991.0,
+    "end": 2991.52,
+    "text": " I hate this."
+  },
+  {
+    "start": 2991.52,
+    "end": 2995.12,
+    "text": " Because this is overloading that multiplication operator"
+  },
+  {
+    "start": 2995.12,
+    "end": 2996.4,
+    "text": " with two different tasks."
+  },
+  {
+    "start": 2996.4,
+    "end": 2998.0,
+    "text": " It's saying, if you give me two numbers, I'll do the right"
+  },
+  {
+    "start": 2998.0,
+    "end": 2998.48,
+    "text": " thing."
+  },
+  {
+    "start": 2998.48,
+    "end": 3000.44,
+    "text": " If you give me a number and a string, I'm going to"
+  },
+  {
+    "start": 3000.44,
+    "end": 3001.44,
+    "text": " concatenate them together."
+  },
+  {
+    "start": 3001.44,
+    "end": 3003.04,
+    "text": " It's really different operations."
+  },
+  {
+    "start": 3003.04,
+    "end": 3005.4,
+    "text": " But nonetheless, it's what it's going to do."
+  },
+  {
+    "start": 3005.4,
+    "end": 3009.56,
+    "text": " And I'm going to say this is the biggest difference between"
+  },
+  {
+    "start": 3009.56,
+    "end": 3010.56,
+    "text": " errors in myself."
+  },
+  {
+    "start": 3010.56,
+    "end": 3012.64,
+    "text": " There you go."
+  },
+  {
+    "start": 3012.64,
+    "end": 3014.72,
+    "text": " You know, there will be a rebuttal phase a little later"
+  },
+  {
+    "start": 3014.72,
+    "end": 3016.16,
+    "text": " on, just like with the political debates."
+  },
+  {
+    "start": 3016.16,
+    "end": 3017.24,
+    "text": " And he likes it as a feature."
+  },
+  {
+    "start": 3017.24,
+    "end": 3017.8,
+    "text": " I don't like it."
+  },
+  {
+    "start": 3017.8,
+    "end": 3020.8,
+    "text": " You can tell he's not as this programmer than I am."
+  },
+  {
+    "start": 3020.8,
+    "end": 3022.72,
+    "text": " All right, I want to do just a couple of more quick examples."
+  },
+  {
+    "start": 3022.72,
+    "end": 3025.04,
+    "text": " Here's another one."
+  },
+  {
+    "start": 3025.04,
+    "end": 3028.24,
+    "text": " Aha, an example of a syntax error."
+  },
+  {
+    "start": 3028.28,
+    "end": 3031.16,
+    "text": " Because 5 2 a doesn't make sense."
+  },
+  {
+    "start": 3031.16,
+    "end": 3031.8,
+    "text": " And you might say, wait a minute."
+  },
+  {
+    "start": 3031.8,
+    "end": 3032.44,
+    "text": " Isn't that a string?"
+  },
+  {
+    "start": 3032.44,
+    "end": 3033.12,
+    "text": " And the answer is no."
+  },
+  {
+    "start": 3033.12,
+    "end": 3036.0,
+    "text": " I didn't say it's a string by putting quotes around."
+  },
+  {
+    "start": 3036.0,
+    "end": 3038.48,
+    "text": " And notice how the machine responds differently to it."
+  },
+  {
+    "start": 3038.48,
+    "end": 3041.12,
+    "text": " In this case, it says this is a syntax error."
+  },
+  {
+    "start": 3041.12,
+    "end": 3042.92,
+    "text": " And it's actually highlighting where it came from so I"
+  },
+  {
+    "start": 3042.92,
+    "end": 3045.0,
+    "text": " could go back and fix it."
+  },
+  {
+    "start": 3045.0,
+    "end": 3049.24,
+    "text": " All right, let's do a couple of other simple examples."
+  },
+  {
+    "start": 3049.24,
+    "end": 3050.72,
+    "text": " I can do multiplication."
+  },
+  {
+    "start": 3050.72,
+    "end": 3051.36,
+    "text": " I've already seen that."
+  },
+  {
+    "start": 3051.36,
+    "end": 3054.52,
+    "text": " I can do addition 3 plus 5."
+  },
+  {
+    "start": 3054.52,
+    "end": 3057.64,
+    "text": " I can take something to a power, double star."
+  },
+  {
+    "start": 3057.68,
+    "end": 3060.0,
+    "text": " Just take 3 to the fifth power."
+  },
+  {
+    "start": 3060.0,
+    "end": 3063.44,
+    "text": " I can do division, right?"
+  },
+  {
+    "start": 3063.44,
+    "end": 3065.48,
+    "text": " Whoa, right?"
+  },
+  {
+    "start": 3065.48,
+    "end": 3068.16,
+    "text": " 3 divided by 5 is 0?"
+  },
+  {
+    "start": 3068.16,
+    "end": 3069.08,
+    "text": " Maybe in Bush I can know it."
+  },
+  {
+    "start": 3069.08,
+    "end": 3070.64,
+    "text": " I'm not going to do any political comments today."
+  },
+  {
+    "start": 3070.64,
+    "end": 3072.4,
+    "text": " I will not say that, all right?"
+  },
+  {
+    "start": 3072.4,
+    "end": 3074.16,
+    "text": " What happened?"
+  },
+  {
+    "start": 3074.16,
+    "end": 3076.56,
+    "text": " Well, this is one of the places where you have to be careful."
+  },
+  {
+    "start": 3076.56,
+    "end": 3079.12,
+    "text": " It's doing integer division."
+  },
+  {
+    "start": 3079.12,
+    "end": 3083.16,
+    "text": " So 3 divided by 5 is 0 with a remainder of 3."
+  },
+  {
+    "start": 3083.16,
+    "end": 3084.16,
+    "text": " So this is the correct answer."
+  },
+  {
+    "start": 3084.16,
+    "end": 3088.28,
+    "text": " If I wanted to get full real division, I should make one of"
+  },
+  {
+    "start": 3088.28,
+    "end": 3090.88,
+    "text": " them a float."
+  },
+  {
+    "start": 3090.88,
+    "end": 3092.52,
+    "text": " And yes, you can look at them and say, well, is that right?"
+  },
+  {
+    "start": 3092.52,
+    "end": 3094.24,
+    "text": " Well, up to some level of accuracy."
+  },
+  {
+    "start": 3094.24,
+    "end": 3097.32,
+    "text": " Yeah, that's 0.6, which is what I'd like to get out."
+  },
+  {
+    "start": 3097.32,
+    "end": 3100.68,
+    "text": " All right, I can do other things."
+  },
+  {
+    "start": 3100.68,
+    "end": 3106.76,
+    "text": " In particular, I have similar operations on strings."
+  },
+  {
+    "start": 3106.76,
+    "end": 3108.96,
+    "text": " I could certainly print out strings, but I can actually add"
+  },
+  {
+    "start": 3108.96,
+    "end": 3109.68,
+    "text": " strings together."
+  },
+  {
+    "start": 3109.68,
+    "end": 3111.6,
+    "text": " And if it's just as you saw, I can multiply strings."
+  },
+  {
+    "start": 3111.6,
+    "end": 3113.72,
+    "text": " You can kind of guess what this is going to do."
+  },
+  {
+    "start": 3113.76,
+    "end": 3119.0,
+    "text": " It is going to merge them together into one thing."
+  },
+  {
+    "start": 3119.0,
+    "end": 3120.4,
+    "text": " I know I'm running you slightly over."
+  },
+  {
+    "start": 3120.4,
+    "end": 3121.72,
+    "text": " I want to do one last example."
+  },
+  {
+    "start": 3121.72,
+    "end": 3125.28,
+    "text": " I also want to be able to have variables to store things."
+  },
+  {
+    "start": 3128.28,
+    "end": 3131.64,
+    "text": " And to do that, this says if I have a value, I want to keep"
+  },
+  {
+    "start": 3131.64,
+    "end": 3132.08,
+    "text": " it around."
+  },
+  {
+    "start": 3132.08,
+    "end": 3135.28,
+    "text": " To do that, I can do things like this."
+  },
+  {
+    "start": 3140.6,
+    "end": 3141.44,
+    "text": " What does that statement do?"
+  },
+  {
+    "start": 3141.44,
+    "end": 3143.68,
+    "text": " It says, create a name for a variable."
+  },
+  {
+    "start": 3143.68,
+    "end": 3144.32,
+    "text": " Which I just did there."
+  },
+  {
+    "start": 3144.32,
+    "end": 3146.24,
+    "text": " In fact, let me type it in."
+  },
+  {
+    "start": 3146.24,
+    "end": 3150.84,
+    "text": " My string with an equal sign, which is saying assign or bind"
+  },
+  {
+    "start": 3150.84,
+    "end": 3155.44,
+    "text": " to that name the value of the following expression."
+  },
+  {
+    "start": 3155.44,
+    "end": 3160.0,
+    "text": " As a consequence, I can now refer to that just by its name."
+  },
+  {
+    "start": 3160.0,
+    "end": 3162.8,
+    "text": " If I get the value of my string, there it is."
+  },
+  {
+    "start": 3162.8,
+    "end": 3168.32,
+    "text": " Or if I say take my string and add to it the string my last"
+  },
+  {
+    "start": 3168.32,
+    "end": 3172.12,
+    "text": " name, I print it back out."
+  },
+  {
+    "start": 3172.12,
+    "end": 3173.64,
+    "text": " So this is the first start of this."
+  },
+  {
+    "start": 3173.64,
+    "end": 3175.0,
+    "text": " What have we done?"
+  },
+  {
+    "start": 3175.0,
+    "end": 3177.92,
+    "text": " We've got values, numbers, and strings."
+  },
+  {
+    "start": 3177.92,
+    "end": 3179.64,
+    "text": " We have operations associated with them."
+  },
+  {
+    "start": 3179.64,
+    "end": 3180.8,
+    "text": " I just threw a couple up here."
+  },
+  {
+    "start": 3180.8,
+    "end": 3182.12,
+    "text": " You're going to get a chance to explore them."
+  },
+  {
+    "start": 3182.12,
+    "end": 3184.36,
+    "text": " And you'll see not only are there the standard numerics,"
+  },
+  {
+    "start": 3184.36,
+    "end": 3186.68,
+    "text": " for strings there are things like length or plus or other"
+  },
+  {
+    "start": 3186.68,
+    "end": 3188.2,
+    "text": " things you can do with them."
+  },
+  {
+    "start": 3188.2,
+    "end": 3190.4,
+    "text": " And once I have values, I want to get a hold of them so I"
+  },
+  {
+    "start": 3190.4,
+    "end": 3191.36,
+    "text": " can give them names."
+  },
+  {
+    "start": 3191.36,
+    "end": 3192.88,
+    "text": " And that's what I just did when I bound that."
+  },
+  {
+    "start": 3192.88,
+    "end": 3196.72,
+    "text": " I said use the name my string to be bound to or have the"
+  },
+  {
+    "start": 3196.72,
+    "end": 3199.52,
+    "text": " value of Eric so I can refer to it anywhere else that I"
+  },
+  {
+    "start": 3199.52,
+    "end": 3200.88,
+    "text": " want to use it."
+  },
+  {
+    "start": 3200.92,
+    "end": 3202.32,
+    "text": " And I apologize for taking you over."
+  },
+  {
+    "start": 3202.32,
+    "end": 3203.84,
+    "text": " We'll come back to this next time."
+  },
+  {
+    "start": 3203.84,
+    "end": 3205.0,
+    "text": " Please go to the website."
+  },
+  {
+    "start": 3205.0,
+    "end": 3206.6,
+    "text": " Sign up for a recitation for tomorrow."
+  }
+]

@@ -1,7 +1,7 @@
 # pipeline/segment.py
 import uuid
 from typing import List
-from schema import TranscriptSegment
+from tagging2.schema import TranscriptSegment
 
 
 def segment_transcript(raw_segments: List[dict]) -> List[TranscriptSegment]:
