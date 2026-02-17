@@ -12,14 +12,22 @@ Allowed tags (choose exactly one per segment):
 - OTHER_CHATTER
 
 Definitions:
+
 LECTURE_CONTENT:
-Academic explanations, definitions, concepts, examples, derivations.
+ONLY sentences that directly teach subject knowledge,
+including explanations, definitions, formulas, derivations,
+worked examples, or conceptual reasoning.
 
 ADMINISTRATIVE:
-Exams, marks, assignments, syllabus, deadlines.
+Any sentence talking about the lecture rather than teaching content.
+Includes exam hints, importance statements, reminders,
+instructions, pacing comments, syllabus discussion,
+or guidance like "this is important" or "remember this".
 
 OTHER_CHATTER:
-Greetings, casual talk, jokes, classroom management, attendance.
+Greetings, motivation, jokes, technical interruptions,
+casual conversation, or non-academic speech.
+
 
 Rules:
 - One tag per segment
