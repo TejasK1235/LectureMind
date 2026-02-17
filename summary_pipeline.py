@@ -24,5 +24,14 @@ if __name__ == "__main__":
     summary = run_lecturemind_pipeline(transcripts)
 
 
-    print("\n===== FINAL SUMMARY =====\n")
-    print(summary)
+    # print("\n===== FINAL SUMMARY =====\n")
+    # print(summary)
+
+    output_path = "summary.txt"
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(summary)
+
+    print(f"\nSummary saved to {output_path}\n")
+
+
