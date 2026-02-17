@@ -1,6 +1,20 @@
 # rules/rule_based.py
 from typing import Optional
 
+# old ones
+# ADMIN_STRONG_PHRASES = [
+#     "important for exam",
+#     "will come in exam",
+#     "asked in exam",
+#     "marks distribution",
+#     "attendance will be taken",
+#     "assignment submission",
+#     "internal marks",
+#     "external marks",
+#     "question paper",
+#     "syllabus"
+# ]
+
 ADMIN_STRONG_PHRASES = [
     "important for exam",
     "will come in exam",
@@ -11,8 +25,31 @@ ADMIN_STRONG_PHRASES = [
     "internal marks",
     "external marks",
     "question paper",
-    "syllabus"
+    "syllabus",
+
+    # NEW — emphasis / meta teaching
+    "remember this",
+    "note this",
+    "very important",
+    "focus on this",
+    "you should know",
+    "this topic is important",
+    "pay attention",
+    "exam point of view",
+    "from exam perspective"
 ]
+
+
+# old ones
+# ADMIN_STRONG_KEYWORDS = [
+#     "exam",
+#     "attendance",
+#     "assignment",
+#     "marks",
+#     "grading",
+#     "submission",
+#     "deadline"
+# ]
 
 ADMIN_STRONG_KEYWORDS = [
     "exam",
@@ -21,8 +58,14 @@ ADMIN_STRONG_KEYWORDS = [
     "marks",
     "grading",
     "submission",
-    "deadline"
+    "deadline",
+    "important",
+    "remember",
+    "note",
+    "focus"
 ]
+
+
 
 CHATTER_PHRASES = [
     "good morning",
@@ -67,10 +110,17 @@ def apply_rules(text: str) -> Optional[str]:
         if phrase in t:
             return "OTHER_CHATTER"
 
-    # LECTURE_CONTENT (very conservative)
-    for verb in LECTURE_VERBS:
-        if verb in t:
+    # LECTURE_CONTENT (very conservative) (old)
+    # for verb in LECTURE_VERBS:
+    #     if verb in t:
+    #         return "LECTURE_CONTENT"
+    
+    # LECTURE_CONTENT (fallback only if academic wording exists)
+    if any(verb in t for verb in LECTURE_VERBS):
+        # avoid meta sentences slipping through
+        if "exam" not in t and "important" not in t:
             return "LECTURE_CONTENT"
+
 
     return None
     
