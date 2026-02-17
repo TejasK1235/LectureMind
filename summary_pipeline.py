@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # print("\n===== FINAL SUMMARY =====\n")
     # print(summary)
 
-    output_path = "summary.txt"
+    output_path = "summary.md"
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(summary)
