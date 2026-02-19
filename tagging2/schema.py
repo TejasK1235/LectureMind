@@ -1,5 +1,5 @@
 # schema.py
-from typing import TypedDict, Optional
+from typing import TypedDict, List, Optional
 
 
 class TranscriptSegment(TypedDict):
@@ -11,3 +11,13 @@ class TranscriptSegment(TypedDict):
 
 class TaggedSegment(TranscriptSegment):
     tag: str
+    emphasis: bool
+
+
+class Concept(TypedDict):
+    concept_id: str
+    segments: List[TaggedSegment]
+    text: str           # all segment texts joined with space
+    word_count: int
+    emphasis_count: int
+    score: float        # filled in by concept scorer, 0.0 until then

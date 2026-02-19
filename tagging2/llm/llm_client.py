@@ -1,5 +1,6 @@
 import os
 from groq import Groq
+from tagging2.config import GROQ_MODEL_TAGGING
 
 
 class LLMClient:
@@ -9,7 +10,7 @@ class LLMClient:
             raise RuntimeError("GROQ_API_KEY not set in environment")
 
         self.client = Groq(api_key=api_key)
-        self.model = "llama-3.1-8b-instant"
+        self.model = GROQ_MODEL_TAGGING
 
     def call(self, prompt: str) -> str:
         response = self.client.chat.completions.create(
