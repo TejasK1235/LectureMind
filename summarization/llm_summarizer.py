@@ -1,5 +1,6 @@
 from groq import Groq
 from summarization.prompt import build_summary_prompt
+from tagging2.config import GROQ_MODEL_SUMMARIZATION
 
 
 client = Groq()
@@ -11,7 +12,7 @@ def summarize_with_llm(segments):
     prompt = build_summary_prompt(combined_text)
 
     response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
+        model=GROQ_MODEL_SUMMARIZATION,
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3
     )
