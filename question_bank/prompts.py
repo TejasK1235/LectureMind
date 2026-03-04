@@ -1,0 +1,84 @@
+# question_bank/prompts.py
+
+from typing import Optional
+
+BLOOM_DESCRIPTIONS = {
+    "Remember":   "recall facts, definitions, and basic concepts directly stated in the text",
+    "Understand": "explain ideas or concepts in your own words, interpret meaning",
+    "Apply":      "use the concept in a new or practical situation",
+    "Analyze":    "break down the concept, examine relationships, identify causes or structure",
+    "Evaluate":   "make a judgment, critique, or justify a position based on the concept",
+    "Create":     "propose, design, or formulate something new based on the concept"
+}
+
+BLOOM_STARTERS = {
+    "Remember":   ["What is...", "Define...", "List...", "State...", "Name..."],
+    "Understand": ["Explain why...", "Describe how...", "What does ... mean?", "Summarize..."],
+    "Apply":      ["How would you use ... in a situation where...", "Given that ..., calculate/determine...", "Illustrate how ... applies when..."],
+    "Analyze":    ["What are the differences between ... and ...?", "Why does ... cause ...?", "Break down the relationship between...", "What are the implications of..."],
+    "Evaluate":   ["To what extent is ... true?", "Assess the validity of...", "Critique the claim that...", "Is ... an appropriate approach? Why?", "Justify why..."],
+    "Create":     ["Design a ... that...", "Propose a method to...", "Formulate a hypothesis about...", "How would you construct..."]
+}
+
+MAX_CONCEPT_WORDS = 200
+MAX_SLIDE_WORDS = 150    # slide text is usually denser so slightly shorter cap
+
+
+def build_question_prompt(
+    concept_text: str,
+    bloom_level: str,
+    num_questions: int,
+    slide_text: Optional[str] = None    # NEW parameter, None = no slide content
+) -> str:
+
+    bloom_desc = BLOOM_DESCRIPTIONS.get(bloom_level, "think critically about the concept")
+    starters = BLOOM_STARTERS.get(bloom_level, [])
+    starters_text = ", ".join(f'"{s}"' for s in starters)
+
+    # Trim transcript text
+    words = concept_text.split()
+    if len(words) > MAX_CONCEPT_WORDS:
+        concept_text = " ".join(words[:MAX_CONCEPT_WORDS]) + "..."
+
+    # Build the content section depending on whether slide text is available
+    if slide_text:
+        # Trim slide text
+        slide_words = slide_text.split()
+        if len(slide_words) > MAX_SLIDE_WORDS:
+            slide_text = " ".join(slide_words[:MAX_SLIDE_WORDS]) + "..."
+
+        content_section = f"""Lecture Transcript (what the instructor said):
+{concept_text}
+
+Slide Content (what was shown on screen during this section):
+{slide_text}
+
+Generate questions that draw from both sources above where relevant."""
+
+    else:
+        content_section = f"""Lecture Content:
+{concept_text}"""
+
+    return f"""You are an academic question generator for university students.
+
+Your task is to generate exactly {num_questions} exam question(s) based ONLY on the content provided below.
+
+Bloom's Taxonomy Level: {bloom_level}
+What this means: Questions must require students to {bloom_desc}.
+
+To achieve the correct Bloom level, prefer question starters like: {starters_text}
+Vary the starters across questions — do not use the same opener more than once.
+
+Rules:
+- Use ONLY information present in the provided content. Do not add outside knowledge.
+- Each question must genuinely be at the {bloom_level} level — not easier, not harder.
+- Questions must be descriptive or short-answer style. No MCQs.
+- Each question must be a complete, clearly worded sentence.
+- Output ONLY a JSON array of strings. No explanation, no numbering, no extra text.
+
+Example output format:
+["Question one here?", "Question two here?"]
+
+{content_section}
+
+JSON Output:"""
