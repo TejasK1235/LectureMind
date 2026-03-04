@@ -1,7 +1,6 @@
 # rules/rule_based.py
 from typing import Optional
 
-# old ones
 # ADMIN_STRONG_PHRASES = [
 #     "important for exam",
 #     "will come in exam",
@@ -12,7 +11,18 @@ from typing import Optional
 #     "internal marks",
 #     "external marks",
 #     "question paper",
-#     "syllabus"
+#     "syllabus",
+
+#     # NEW — emphasis / meta teaching
+#     "remember this",
+#     "note this",
+#     "very important",
+#     "focus on this",
+#     "you should know",
+#     "this topic is important",
+#     "pay attention",
+#     "exam point of view",
+#     "from exam perspective"
 # ]
 
 ADMIN_STRONG_PHRASES = [
@@ -28,19 +38,12 @@ ADMIN_STRONG_PHRASES = [
     "syllabus",
 
     # NEW — emphasis / meta teaching
-    "remember this",
-    "note this",
-    "very important",
-    "focus on this",
-    "you should know",
-    "this topic is important",
-    "pay attention",
     "exam point of view",
     "from exam perspective"
 ]
 
 
-# old ones
+
 # ADMIN_STRONG_KEYWORDS = [
 #     "exam",
 #     "attendance",
@@ -48,9 +51,12 @@ ADMIN_STRONG_PHRASES = [
 #     "marks",
 #     "grading",
 #     "submission",
-#     "deadline"
+#     "deadline",
+#     "important",
+#     "remember",
+#     "note",
+#     "focus"
 # ]
-
 ADMIN_STRONG_KEYWORDS = [
     "exam",
     "attendance",
@@ -58,12 +64,9 @@ ADMIN_STRONG_KEYWORDS = [
     "marks",
     "grading",
     "submission",
-    "deadline",
-    "important",
-    "remember",
-    "note",
-    "focus"
+    "deadline"
 ]
+
 
 
 
