@@ -21,3 +21,4 @@ class Concept(TypedDict):
     word_count: int
     emphasis_count: int
     score: float        # filled in by concept scorer, 0.0 until then
+    slide_text: Optional[str]
