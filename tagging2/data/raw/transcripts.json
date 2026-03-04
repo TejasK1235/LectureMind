@@ -1,3102 +1,1742 @@
 [
   {
     "start": 0.0,
-    "end": 2.48,
-    "text": " The following content is provided under a Creative"
+    "end": 9.88,
+    "text": " In this lecture, we will understand how virtual memory and paging works in XV6."
   },
   {
-    "start": 2.48,
-    "end": 3.88,
-    "text": " Commons license."
+    "start": 9.88,
+    "end": 17.92,
+    "text": " Please refer to this URL for information about the complete series of lectures."
   },
   {
-    "start": 3.88,
-    "end": 6.92,
-    "text": " Your support will help MIT OpenCourseWare continue to"
+    "start": 17.92,
+    "end": 23.44,
+    "text": " So let us understand how the virtual address space of the process looks in XV6."
   },
   {
-    "start": 6.92,
-    "end": 10.56,
-    "text": " offer high quality educational resources for free."
+    "start": 23.44,
+    "end": 27.84,
+    "text": " So XV6, the version of code that we are reading is a 32-bit operating system."
   },
   {
-    "start": 10.56,
-    "end": 13.48,
-    "text": " To make a donation or view additional materials from"
+    "start": 27.84,
+    "end": 35.96,
+    "text": " So you have 2 to the 32, that is 4 gigabytes of virtual address space for every process."
   },
   {
-    "start": 13.48,
-    "end": 17.4,
-    "text": " hundreds of MIT courses, visit MIT OpenCourseWare at"
+    "start": 35.96,
+    "end": 40.8,
+    "text": " So we have seen this concept of a virtual address space before in the earlier lectures."
   },
   {
-    "start": 17.4,
-    "end": 18.68,
-    "text": " ocw.mit.edu."
+    "start": 40.8,
+    "end": 46.04,
+    "text": " So the virtual address space of a process is divided into pages, multiple pages, say"
   },
   {
-    "start": 21.56,
-    "end": 24.24,
-    "text": " Good morning."
+    "start": 46.04,
+    "end": 48.64,
+    "text": " 4KB pages."
   },
   {
-    "start": 24.24,
-    "end": 26.92,
-    "text": " We should start with a confession for those of you"
+    "start": 48.64,
+    "end": 55.96,
+    "text": " And each of these pages, each of these valid logical pages is mapped to a physical frame"
   },
   {
-    "start": 26.92,
-    "end": 30.56,
-    "text": " looking at this in OpenCourseWare that I'm currently"
+    "start": 55.96,
+    "end": 60.4,
+    "text": " by the operating system."
   },
   {
-    "start": 30.56,
-    "end": 34.84,
-    "text": " lecturing to an empty auditorium."
+    "start": 60.4,
+    "end": 66.48,
+    "text": " So the address space, which has a bunch of pages, each of these pages is mapped to a"
   },
   {
-    "start": 34.84,
-    "end": 38.8,
-    "text": " The fifth lecture for 600 this term, we ran into some"
+    "start": 66.48,
+    "end": 68.64,
+    "text": " physical frame by the operating system."
   },
   {
-    "start": 38.8,
-    "end": 43.88,
-    "text": " technical difficulties, which left us with a recording we"
+    "start": 68.64,
+    "end": 75.4,
+    "text": " And every process has a data structure called the page table that keeps track of this mappings"
   },
   {
-    "start": 43.88,
-    "end": 46.0,
-    "text": " weren't very satisfied with."
+    "start": 75.4,
+    "end": 80.04,
+    "text": " from virtual addresses to physical addresses."
   },
   {
-    "start": 46.0,
-    "end": 48.8,
-    "text": " So this is a redo."
+    "start": 80.04,
+    "end": 88.36,
+    "text": " Every process has a page table and there is one page table entry for every page."
   },
   {
-    "start": 48.8,
-    "end": 52.0,
-    "text": " And if you will hear no questions from the audience,"
+    "start": 88.36,
+    "end": 93.84,
+    "text": " If you have n pages, you will have n page table entries in the page table of the process."
   },
   {
-    "start": 52.0,
-    "end": 54.52,
-    "text": " and that's because there is no audience."
+    "start": 93.84,
+    "end": 100.36,
+    "text": " And each page table entry contains the physical frame number to which that particular logical"
   },
   {
-    "start": 54.52,
-    "end": 57.72,
-    "text": " Nevertheless, I will do my best to pretend."
+    "start": 100.36,
+    "end": 105.6,
+    "text": " page is mapped by the operating system."
   },
   {
-    "start": 57.72,
-    "end": 61.32,
-    "text": " I've been told this is a little bit like giving a speech in"
+    "start": 105.6,
+    "end": 113.16,
+    "text": " So this is the basic concept of paging that we've seen in previous lectures."
   },
   {
-    "start": 61.32,
-    "end": 64.96,
-    "text": " the floor of the US Congress when C-SPAN is the only"
+    "start": 113.16,
+    "end": 121.48,
+    "text": " Now getting into more details about how this page table is organized in Xv6, as we've seen"
   },
   {
-    "start": 64.96,
-    "end": 67.36,
-    "text": " thing watching."
+    "start": 121.48,
+    "end": 126.52,
+    "text": " your virtual address space is 2 to the 32 bytes, your page size is 2 to the 12 bytes,"
   },
   {
-    "start": 67.36,
-    "end": 69.88,
-    "text": " OK."
+    "start": 126.52,
+    "end": 127.52,
+    "text": " which is 4KB."
   },
   {
-    "start": 69.88,
-    "end": 74.44,
-    "text": " Computers are supposed to be good for crunching numbers."
+    "start": 127.52,
+    "end": 132.68,
+    "text": " Therefore, you can have up to 2 to the 20 pages per process."
   },
   {
-    "start": 74.44,
-    "end": 78.24,
-    "text": " And we've looked a little bit at numbers this term."
+    "start": 132.68,
+    "end": 137.04,
+    "text": " And therefore, you will have 2 to the 20 page table entries."
   },
   {
-    "start": 78.24,
-    "end": 81.6,
-    "text": " But I now want to get into looking at them in more depth"
+    "start": 137.04,
+    "end": 142.92,
+    "text": " So a page table is nothing but you can think of it as logically an array with these 2 to"
   },
   {
-    "start": 81.6,
-    "end": 83.12,
-    "text": " than we've been doing."
+    "start": 142.92,
+    "end": 145.8,
+    "text": " the 20 page table entries."
   },
   {
-    "start": 83.12,
-    "end": 85.8,
-    "text": " Python has two different kinds of numbers."
+    "start": 145.8,
+    "end": 149.92,
+    "text": " So there are 2 to the 20 page table entries in a page table."
   },
   {
-    "start": 92.16,
-    "end": 95.4,
-    "text": " So far, the only con we've really paid any"
+    "start": 149.92,
+    "end": 155.48,
+    "text": " You can think of it like they're arranged in an array."
   },
   {
-    "start": 95.4,
-    "end": 97.6,
-    "text": " attention to is type int."
-  },
-  {
-    "start": 100.52,
-    "end": 105.48,
-    "text": " And those are intended to mirror the integers, as we all"
-  },
-  {
-    "start": 105.48,
-    "end": 109.0,
-    "text": " learned about starting an elementary school."
-  },
-  {
-    "start": 109.0,
-    "end": 112.56,
-    "text": " And they're good for things that you can count."
-  },
-  {
-    "start": 112.56,
-    "end": 115.64,
-    "text": " Any place you use hold numbers."
-  },
-  {
-    "start": 115.64,
-    "end": 120.6,
-    "text": " Interestingly, Python, unlike some languages, has what are"
-  },
-  {
-    "start": 120.6,
-    "end": 122.88,
-    "text": " called arbitrary precision integers."
-  },
-  {
-    "start": 129.56,
-    "end": 133.24,
-    "text": " By that, we mean you can make numbers as big as you want"
-  },
-  {
-    "start": 133.24,
-    "end": 134.44,
-    "text": " them to."
-  },
-  {
-    "start": 134.44,
-    "end": 137.64,
-    "text": " Let's look at an example."
-  },
-  {
-    "start": 137.64,
-    "end": 140.24,
-    "text": " We'll just take a for a variable name."
-  },
-  {
-    "start": 140.24,
-    "end": 147.08,
-    "text": " And we'll set a to be 2 raised to the 1,000th power."
-  },
-  {
-    "start": 147.08,
-    "end": 151.48,
-    "text": " That, by the way, is a really big number."
-  },
-  {
-    "start": 151.48,
-    "end": 154.96,
-    "text": " And now what happens if we try and display it?"
-  },
-  {
-    "start": 154.96,
-    "end": 157.44,
-    "text": " We get a lot of digits."
-  },
-  {
-    "start": 157.44,
-    "end": 159.84,
-    "text": " You can see why I'm doing this on the screen instead of"
-  },
-  {
-    "start": 159.84,
+    "start": 155.48,
     "end": 161.32,
-    "text": " writing it on the blackboard."
+    "text": " So you look at your virtual address, your 32 bit virtual address, look at the top 20"
   },
   {
-    "start": 163.8,
-    "end": 165.8,
-    "text": " I'm not going to ask you whether you believe this is the"
+    "start": 162.08,
+    "end": 167.32,
+    "text": " bits, that will give you the page number and use these 20 bits to index into the page"
   },
   {
-    "start": 165.8,
-    "end": 166.6,
-    "text": " right answer."
+    "start": 167.32,
+    "end": 175.12,
+    "text": " table to find the suitable page table entry corresponding to that particular page."
   },
   {
-    "start": 166.6,
-    "end": 167.44,
-    "text": " Trust me."
+    "start": 175.12,
+    "end": 180.6,
+    "text": " Look at the page number index into the page table using the page number to locate the"
   },
   {
-    "start": 167.44,
-    "end": 169.08,
-    "text": " Trust Python."
+    "start": 180.6,
+    "end": 184.52,
+    "text": " page table entry of a particular page."
   },
   {
-    "start": 169.08,
-    "end": 172.12,
-    "text": " I would like you to notice that the very end of this is the"
+    "start": 184.52,
+    "end": 188.12,
+    "text": " So if you look inside this page table entry, what will it have?"
   },
   {
-    "start": 172.12,
-    "end": 178.36,
-    "text": " letter L. What does that mean?"
+    "start": 188.12,
+    "end": 193.2,
+    "text": " This page table entry will have a physical frame number and it will have some flags."
   },
   {
-    "start": 178.36,
-    "end": 179.92,
-    "text": " It means long."
+    "start": 193.2,
+    "end": 198.2,
+    "text": " In essence, a page table entry is simply a pointer to the actual physical frame that"
   },
   {
-    "start": 185.52,
-    "end": 190.96,
-    "text": " That's telling us that it's representing this particular"
+    "start": 198.2,
+    "end": 200.24,
+    "text": " has the contents of that page."
   },
   {
-    "start": 190.96,
-    "end": 195.56,
-    "text": " integer in what it calls its internal long format."
+    "start": 200.24,
+    "end": 203.92,
+    "text": " So if you look inside the page table entry, what will you find?"
   },
   {
-    "start": 196.0,
-    "end": 197.96,
-    "text": " You needn't worry about that."
+    "start": 203.92,
+    "end": 210.96,
+    "text": " You will find a physical frame number and you're going to find some flags."
   },
   {
-    "start": 197.96,
-    "end": 200.12,
-    "text": " The only thing to say about it is when you're dealing with"
+    "start": 210.96,
+    "end": 216.36,
+    "text": " We'll come to what these flags are in a little bit."
   },
   {
-    "start": 200.12,
-    "end": 203.24,
-    "text": " long integers, it's a lot less efficient than when you're"
+    "start": 216.4,
+    "end": 218.4,
+    "text": " How do you translate an address?"
   },
   {
-    "start": 203.24,
-    "end": 205.84,
-    "text": " dealing with smaller numbers."
+    "start": 218.4,
+    "end": 225.48,
+    "text": " You are given this virtual address, which is a 20 bit page number along with a 12 bit"
   },
   {
-    "start": 205.84,
-    "end": 208.36,
-    "text": " And that's all it's kind of warning you by printing this"
+    "start": 225.48,
+    "end": 226.68,
+    "text": " offset."
   },
   {
-    "start": 208.36,
-    "end": 215.28,
-    "text": " L. About 2 billion is the magic number."
+    "start": 226.68,
+    "end": 231.6,
+    "text": " So you index into the page table, locate the page table entry, find the physical frame"
   },
   {
-    "start": 215.28,
-    "end": 218.2,
-    "text": " When you get over 2 billion, it's now going to deal with"
+    "start": 231.6,
+    "end": 237.68,
+    "text": " number and then this physical frame number plus the 12 bit offset."
   },
   {
-    "start": 218.2,
-    "end": 219.12,
-    "text": " long integers."
+    "start": 237.68,
+    "end": 244.36,
+    "text": " If you add, that will give you the physical address that you need corresponding to this"
   },
   {
-    "start": 219.12,
-    "end": 222.32,
-    "text": " So if, for example, you're trying to deal with US"
+    "start": 244.36,
+    "end": 246.72,
+    "text": " virtual address."
   },
   {
-    "start": 222.32,
-    "end": 230.2,
-    "text": " budget deficit, you will need integers of type L."
+    "start": 246.72,
+    "end": 248.64,
+    "text": " So now what are these flags?"
   },
   {
-    "start": 230.2,
-    "end": 232.2,
-    "text": " OK."
+    "start": 248.64,
+    "end": 249.64,
+    "text": " There are many flags."
   },
   {
-    "start": 232.2,
-    "end": 234.68,
-    "text": " Let's look at another interesting example."
+    "start": 249.64,
+    "end": 251.76,
+    "text": " The important ones are indicated here."
   },
   {
-    "start": 234.68,
-    "end": 244.08,
-    "text": " Suppose I set B equal to 2 raised to the 999th power."
+    "start": 251.76,
+    "end": 256.04,
+    "text": " There is one flag indicating if a page is present or not."
   },
   {
-    "start": 244.08,
-    "end": 246.64,
-    "text": " I can display B."
+    "start": 256.04,
+    "end": 259.8,
+    "text": " Note that every process need not use all the two to the 20 pages."
   },
   {
-    "start": 246.64,
-    "end": 252.76,
-    "text": " And it's a different number, considerably smaller, but again"
+    "start": 259.8,
+    "end": 262.08,
+    "text": " It may not have that much memory to store."
   },
   {
-    "start": 252.76,
-    "end": 254.48,
-    "text": " ending in an L."
+    "start": 262.08,
+    "end": 266.64,
+    "text": " So this flag indicates if a page table entry, if the page corresponding to that page table"
   },
   {
-    "start": 254.48,
-    "end": 261.64,
-    "text": " And now, what do you think I'll get if we try A divided by B?"
+    "start": 266.64,
+    "end": 271.56,
+    "text": " entry is present or not, if it is not present and the program tries to access it, it will"
   },
   {
-    "start": 261.64,
-    "end": 265.56,
-    "text": " And remember, we're now doing integer division."
+    "start": 271.56,
+    "end": 273.52,
+    "text": " cause a page fault."
   },
   {
-    "start": 265.56,
-    "end": 267.84,
-    "text": " Well, let's see."
+    "start": 273.52,
+    "end": 276.96,
+    "text": " Another flag indicates if the page is writable or not."
   },
   {
-    "start": 267.84,
-    "end": 271.16,
-    "text": " We get 2 L."
+    "start": 276.96,
+    "end": 282.56,
+    "text": " If it is not writable, you can only read and if a process tries to write to it, once again,"
   },
   {
-    "start": 271.16,
-    "end": 273.2,
-    "text": " Well, you'd expect it to be 2."
+    "start": 282.56,
+    "end": 284.96,
+    "text": " it will trap into the operating system."
   },
   {
-    "start": 273.24,
-    "end": 274.92,
-    "text": " Because if you think about the meaning of the"
+    "start": 284.96,
+    "end": 287.8,
+    "text": " And another flag indicates if it's a user page or not."
   },
   {
-    "start": 274.92,
-    "end": 278.68,
-    "text": " exponentiation, indeed, the difference between raising"
+    "start": 287.8,
+    "end": 294.32,
+    "text": " If this flag is set, then it is a user page and if it is not a user page, then only the"
   },
   {
-    "start": 278.68,
-    "end": 283.64,
-    "text": " something to the 999th power and to the 1,000th power"
+    "start": 294.32,
+    "end": 296.8,
+    "text": " kernel can access that page."
   },
   {
-    "start": 283.64,
-    "end": 287.0,
-    "text": " should be, in this case, 2, since that's what we're"
+    "start": 296.8,
+    "end": 303.64,
+    "text": " So in all the pages of a process, for all the valid pages, all of these permission bits,"
   },
   {
-    "start": 287.0,
-    "end": 289.28,
-    "text": " raising to a power."
+    "start": 303.64,
+    "end": 306.48,
+    "text": " everything are set."
   },
   {
-    "start": 289.28,
-    "end": 292.4,
-    "text": " Why does it say 2 L?"
+    "start": 306.48,
+    "end": 308.72,
+    "text": " And we've already seen how address translation happens."
   },
   {
-    "start": 292.4,
-    "end": 295.68,
-    "text": " 2 is considerably less than 2 billion."
+    "start": 308.72,
+    "end": 314.16,
+    "text": " You look at the virtual address, get the page number, map it to the physical frame number"
   },
   {
-    "start": 295.68,
-    "end": 300.32,
-    "text": " And that's because once you get L, you stay L. Not"
+    "start": 314.16,
+    "end": 317.8,
+    "text": " at the offset that will give you the physical address."
   },
   {
-    "start": 300.36,
-    "end": 303.36,
-    "text": " particularly important, but kind of worth knowing."
+    "start": 317.8,
+    "end": 324.44,
+    "text": " And this address translation is what is done by the memory management unit."
   },
   {
-    "start": 305.92,
-    "end": 309.04,
-    "text": " Why am I bothering you with this whole issue of how numbers"
+    "start": 324.44,
+    "end": 329.8,
+    "text": " Now, the actual page table is actually not a logical array, a big array like that."
   },
   {
-    "start": 309.04,
-    "end": 312.44,
-    "text": " are represented in the computer?"
+    "start": 329.8,
+    "end": 333.72,
+    "text": " All these two to the 20 page table entries cannot be stored continuously."
   },
   {
-    "start": 312.44,
-    "end": 316.0,
-    "text": " In an ideal world, you would ignore this completely and"
+    "start": 333.72,
+    "end": 336.76,
+    "text": " Therefore, your page table will have two levels."
   },
   {
-    "start": 316.0,
-    "end": 320.12,
-    "text": " just say, numbers do what numbers are supposed to do."
+    "start": 336.76,
+    "end": 341.04,
+    "text": " In XV6, it is a two level page table because it's a 32-bit operating system."
   },
   {
-    "start": 320.12,
-    "end": 324.0,
-    "text": " But as we're about to see, sometimes in Python, and in"
+    "start": 341.04,
+    "end": 345.4,
+    "text": " In 64-bit operating systems, you can have many more levels in the page table."
   },
   {
-    "start": 324.0,
-    "end": 328.92,
-    "text": " fact in every programming language, things behave"
+    "start": 345.4,
+    "end": 346.68,
+    "text": " So what are these two levels?"
   },
   {
-    "start": 328.92,
-    "end": 332.48,
-    "text": " contrary to what your intuition suggests."
+    "start": 346.68,
+    "end": 356.56,
+    "text": " You first have two to the 10 inner page table pages, each of which stores two to the 10"
   },
   {
-    "start": 332.48,
-    "end": 335.88,
-    "text": " And I want to spend a little time helping you understand"
+    "start": 356.56,
+    "end": 358.4,
+    "text": " page table entries each."
   },
   {
-    "start": 335.88,
-    "end": 338.56,
-    "text": " why this happens."
+    "start": 358.4,
+    "end": 363.76,
+    "text": " So you have a bunch of inner page tables which store the page table entries, that is, which"
   },
   {
-    "start": 338.56,
-    "end": 341.64,
-    "text": " So let's look at a different kind of number."
+    "start": 363.76,
+    "end": 368.72,
+    "text": " actually point to the physical frame numbers."
   },
   {
-    "start": 341.64,
-    "end": 348.68,
-    "text": " And now we're going to look at what Python and almost every"
+    "start": 368.72,
+    "end": 374.56,
+    "text": " So you have two to the 10 such inner page table pages, each with two to the 10 page"
   },
   {
-    "start": 348.68,
-    "end": 354.04,
-    "text": " other programming language calls type float, which is"
+    "start": 374.56,
+    "end": 381.32,
+    "text": " table entries, so that all of these total two to the 20 page table entries can be accommodated."
   },
   {
-    "start": 354.04,
-    "end": 355.64,
-    "text": " short for floating point."
+    "start": 381.32,
+    "end": 390.32,
+    "text": " And then you have an outer page directory which in turn stores pointers to all of these"
   },
   {
-    "start": 363.28,
-    "end": 367.4,
-    "text": " And that's the way that programming languages typically"
+    "start": 390.32,
+    "end": 392.48,
+    "text": " inner page tables."
   },
   {
-    "start": 367.4,
-    "end": 372.64,
-    "text": " represent what we think of as real numbers."
+    "start": 392.48,
+    "end": 398.16,
+    "text": " It also stores PT-like references to these inner page tables."
   },
   {
-    "start": 372.64,
-    "end": 375.08,
-    "text": " So let's look at an example."
+    "start": 398.16,
+    "end": 402.48,
+    "text": " So this is called the outer page directory."
   },
   {
-    "start": 375.08,
-    "end": 383.84,
-    "text": " I'm going to set the variable x to be 0.1, 1 tenth."
+    "start": 403.44,
+    "end": 404.44,
+    "text": " Okay."
   },
   {
-    "start": 383.88,
-    "end": 385.96,
-    "text": " And now we're going to display x."
+    "start": 404.44,
+    "end": 413.2,
+    "text": " And the address of this page directory is what is stored in the CR3 register of your CPU."
   },
   {
-    "start": 389.84,
-    "end": 391.8,
-    "text": " Take a look at this."
+    "start": 413.2,
+    "end": 418.32,
+    "text": " And this is what is used by the MMU during address translation."
   },
   {
-    "start": 391.8,
-    "end": 394.84,
-    "text": " Why isn't it 0.1?"
+    "start": 418.32,
+    "end": 420.92,
+    "text": " So how does the MMU translate an address?"
   },
   {
-    "start": 394.84,
-    "end": 398.84,
-    "text": " Why is it 0.1, a whole bunch of zeros, and then this"
+    "start": 420.92,
+    "end": 424.0,
+    "text": " It will start with a 32-bit virtual address."
   },
   {
-    "start": 398.84,
-    "end": 403.16,
-    "text": " mysterious 1 appearing at the end?"
+    "start": 424.0,
+    "end": 430.44,
+    "text": " It will extract the first 10 bits of that virtual address that will be used to index"
   },
   {
-    "start": 403.16,
-    "end": 405.96,
-    "text": " Is it because Python just wants to be obnoxious and is"
+    "start": 430.44,
+    "end": 433.04,
+    "text": " into the page directory."
   },
   {
-    "start": 405.96,
-    "end": 408.04,
-    "text": " making life hard?"
+    "start": 433.04,
+    "end": 440.4,
+    "text": " Then the next 10 bits will be used to index into the inner page table."
   },
   {
-    "start": 408.04,
-    "end": 409.28,
-    "text": " No."
+    "start": 440.4,
+    "end": 442.6,
+    "text": " And from that, you will get the physical frame number."
   },
   {
-    "start": 409.28,
-    "end": 412.72,
-    "text": " It has to do with the way the numbers are represented"
+    "start": 442.6,
+    "end": 447.16,
+    "text": " You will add that to the offset and that will give you the final physical address."
   },
   {
-    "start": 412.72,
-    "end": 414.4,
-    "text": " inside the computer."
+    "start": 447.16,
+    "end": 453.04,
+    "text": " So this translation is done by the MMU using these page tables which are set up by the"
   },
   {
-    "start": 414.4,
-    "end": 419.84,
-    "text": " Python, like almost every modern programming language,"
+    "start": 453.04,
+    "end": 455.2,
+    "text": " operating system."
   },
   {
-    "start": 419.84,
-    "end": 426.0,
-    "text": " represents numbers using the IEEE floating point standard."
+    "start": 455.2,
+    "end": 462.4,
+    "text": " So Xv6 code defines a lot of macros like this that will help you extract the various indices"
   },
   {
-    "start": 430.36,
-    "end": 431.84,
-    "text": " And it's IEEE 754."
+    "start": 462.4,
+    "end": 468.48,
+    "text": " into the page directory and the inner page tables."
   },
   {
-    "start": 431.84,
-    "end": 440.84,
-    "text": " IEEE 754."
+    "start": 468.48,
+    "end": 474.44,
+    "text": " So now that we've understood how a page table works, let us look at how the virtual address"
   },
   {
-    "start": 440.84,
-    "end": 443.76,
-    "text": " Never again will you have to remember that it's 754."
+    "start": 474.44,
+    "end": 477.88,
+    "text": " space of a process is set up in Xv6."
   },
   {
-    "start": 443.76,
-    "end": 447.48,
-    "text": " I promise not to ask you that question on a quiz."
+    "start": 477.88,
+    "end": 482.8,
+    "text": " So the memory image of a process, the address space of a process starting at zero has the"
   },
   {
-    "start": 447.48,
-    "end": 449.36,
-    "text": " But that's what they do."
+    "start": 482.8,
+    "end": 484.76,
+    "text": " following things."
   },
   {
-    "start": 449.36,
-    "end": 453.4,
-    "text": " This is a variant of scientific notation."
+    "start": 484.76,
+    "end": 491.36,
+    "text": " So starting at zero, you have this address space that has a bunch of things."
   },
   {
-    "start": 461.88,
-    "end": 465.8,
-    "text": " Something you probably learned about in high school, as a"
+    "start": 491.36,
+    "end": 496.16,
+    "text": " At the beginning, you have the code data from the executable."
   },
   {
-    "start": 465.8,
-    "end": 469.2,
-    "text": " way to represent very large numbers."
+    "start": 496.16,
+    "end": 499.48,
+    "text": " And then in Xv6, you have a fixed size stack."
   },
   {
-    "start": 469.2,
-    "end": 474.32,
-    "text": " Typically, the way we do that is we represent the numbers in"
+    "start": 499.48,
+    "end": 503.0,
+    "text": " The stack is not variable sized like in real operating systems."
   },
   {
-    "start": 474.32,
-    "end": 482.76,
-    "text": " the form of a mantissa and an exponent."
+    "start": 503.0,
+    "end": 505.72,
+    "text": " You have a fixed size stack."
   },
   {
-    "start": 482.96,
-    "end": 489.72,
-    "text": " So we represent a floating point number as a pair of a"
+    "start": 505.72,
+    "end": 514.04,
+    "text": " And the stack also has a guard page so that it doesn't overflow into other pages that"
   },
   {
-    "start": 489.72,
-    "end": 493.96,
-    "text": " mantissa and an exponent."
+    "start": 514.04,
+    "end": 516.4,
+    "text": " have useful information."
   },
   {
-    "start": 497.52,
-    "end": 502.72,
-    "text": " And because computers work in the binary system, it's"
+    "start": 516.4,
+    "end": 518.68,
+    "text": " And then finally, you have a heap."
   },
   {
-    "start": 502.72,
-    "end": 506.24,
-    "text": " unlike what you probably learned in high school, where we"
+    "start": 518.68,
+    "end": 523.44,
+    "text": " So this heap initially it's not allocated but as and when memory is required, this heap"
   },
   {
-    "start": 506.24,
-    "end": 508.72,
-    "text": " raise 10 to some power."
+    "start": 523.44,
+    "end": 526.28,
+    "text": " can expand to whatever says."
   },
   {
-    "start": 508.72,
-    "end": 511.16,
-    "text": " Here we'll always be raised to 10."
+    "start": 526.28,
+    "end": 531.92,
+    "text": " So this is how the user part of the memory is organized in the virtual address space"
   },
   {
-    "start": 511.56,
-    "end": 515.72,
-    "text": " Here we'll always be raising 2 to some power."
+    "start": 531.92,
+    "end": 534.04,
+    "text": " of a process."
   },
   {
-    "start": 515.72,
-    "end": 517.92,
-    "text": " Maybe a little later in the term, if we talk about"
+    "start": 534.04,
+    "end": 540.28,
+    "text": " Now in addition to all this code data stack and heap, the virtual address space of a process"
   },
   {
-    "start": 517.92,
-    "end": 520.56,
-    "text": " computer architecture, we'll get around to explaining why"
+    "start": 540.28,
+    "end": 549.16,
+    "text": " beginning at address 2GB also has the kernel code and data mapped into it."
   },
   {
-    "start": 520.56,
-    "end": 522.8,
-    "text": " computers work in binary."
+    "start": 549.16,
+    "end": 554.32,
+    "text": " So if you look into the page table of the process into the virtual address space of"
   },
   {
-    "start": 522.8,
-    "end": 527.0,
-    "text": " But for now, just assume that they do, and in fact, they"
+    "start": 554.32,
+    "end": 561.24,
+    "text": " a process, you will have the OS code and data also mapped into the virtual address space"
   },
   {
-    "start": 527.0,
-    "end": 529.72,
-    "text": " always have."
+    "start": 561.24,
+    "end": 568.32,
+    "text": " of a process starting from this variable defined as Kern base, which is equal to 2GB."
   },
   {
-    "start": 529.72,
-    "end": 530.84,
-    "text": " All right."
+    "start": 568.32,
+    "end": 575.8,
+    "text": " So high virtual addresses in a process, they will map to actual OS code and data stored"
   },
   {
-    "start": 530.84,
-    "end": 541.08,
-    "text": " Purists manage to refer to the mantissa as a significant hand."
+    "start": 575.8,
+    "end": 578.52,
+    "text": " in RAM."
   },
   {
-    "start": 541.08,
-    "end": 545.44,
-    "text": " But I won't do that, because I'm an old guy, and it was a"
+    "start": 578.52,
+    "end": 582.84,
+    "text": " So the page table of a process basically has two sets of page table entries."
   },
   {
-    "start": 545.44,
-    "end": 547.32,
-    "text": " mantissa when I first learned about it."
+    "start": 582.84,
+    "end": 588.44,
+    "text": " One set of page table entries have mapping to the user code data stack heap and so on."
   },
   {
-    "start": 547.32,
-    "end": 551.52,
-    "text": " And I just can't break myself of the habit."
+    "start": 588.44,
+    "end": 595.88,
+    "text": " And the other set of page table entries contain mapping to the kernel code and other data structures"
   },
   {
-    "start": 551.52,
-    "end": 553.12,
-    "text": " All right, so how does this work?"
+    "start": 595.88,
+    "end": 597.28,
+    "text": " of the kernel."
   },
   {
-    "start": 553.72,
-    "end": 561.44,
-    "text": " Well, when we recognize something, when we represent"
+    "start": 597.28,
+    "end": 603.68,
+    "text": " So these kernel entries will map high virtual addresses and the user entries will map low"
   },
   {
-    "start": 561.44,
-    "end": 577.28,
-    "text": " something, the mantissa is between 1 and 2."
+    "start": 603.68,
+    "end": 605.64,
+    "text": " virtual addresses."
   },
   {
-    "start": 577.28,
-    "end": 582.12,
-    "text": " Strictly less than 2, greater than or equal to 1."
+    "start": 605.64,
+    "end": 610.32,
+    "text": " And note that a process can only access the memory that is mapped by its page table."
   },
   {
-    "start": 582.12,
-    "end": 607.44,
-    "text": " The exponent is in the range minus 1022 to plus 1023."
+    "start": 610.32,
+    "end": 613.72,
+    "text": " A process can only access this virtual address space that it sees."
   },
   {
-    "start": 607.48,
-    "end": 613.36,
-    "text": " So this lets us represent numbers up to about 10 to the"
+    "start": 613.72,
+    "end": 618.84,
+    "text": " It can access its own code and data and it can access some OS code and data, but it cannot"
   },
   {
-    "start": 613.36,
-    "end": 616.16,
-    "text": " 300th or 8th plus or minus."
+    "start": 618.84,
+    "end": 621.92,
+    "text": " go and access the memory of other processes and so on."
   },
   {
-    "start": 616.16,
-    "end": 619.84,
-    "text": " 10 to 308 plus or minus."
+    "start": 621.92,
+    "end": 627.72,
+    "text": " So the page table, whatever is mapped in the page table, only that a process can access."
   },
   {
-    "start": 619.84,
-    "end": 624.12,
-    "text": " So quite a large range of numbers."
+    "start": 627.72,
+    "end": 632.8,
+    "text": " And you have different page tables for different processes and the page table has to be switched."
   },
   {
-    "start": 624.12,
-    "end": 627.24,
-    "text": " Where did these magic things come from?"
+    "start": 632.8,
+    "end": 636.8,
+    "text": " For example, when you do a context switch, you will have to update the page table of"
   },
   {
-    "start": 627.24,
-    "end": 629.76,
-    "text": " Kind of a strange number to see here."
+    "start": 636.8,
+    "end": 638.8,
+    "text": " a process."
   },
   {
-    "start": 629.76,
-    "end": 637.08,
-    "text": " Well, it has to do with the fact that computers typically"
+    "start": 638.8,
+    "end": 642.64,
+    "text": " So this is the virtual address space of a process in Xv6."
   },
   {
-    "start": 637.08,
-    "end": 639.6,
-    "text": " have words in them."
+    "start": 642.64,
+    "end": 646.76,
+    "text": " We'll understand this in a little bit more detail in the coming slides."
   },
   {
-    "start": 639.6,
-    "end": 646.36,
-    "text": " And the words today in a modern computer are 64 bits."
+    "start": 646.76,
+    "end": 651.36,
+    "text": " So first thing is why is the OS mapped into the address space of every process?"
   },
   {
-    "start": 646.36,
-    "end": 649.28,
-    "text": " For many years, they were 32 bits."
+    "start": 651.36,
+    "end": 653.28,
+    "text": " What is this that's happening?"
   },
   {
-    "start": 649.28,
-    "end": 651.12,
-    "text": " Before that, they were 16 bits."
+    "start": 653.28,
+    "end": 655.76,
+    "text": " Let us understand that in some detail."
   },
   {
-    "start": 651.12,
-    "end": 653.44,
-    "text": " Before that, they were 8 bits."
+    "start": 655.76,
+    "end": 663.44,
+    "text": " So the OS code and data structures is part of the virtual address space of every process."
   },
   {
-    "start": 653.44,
-    "end": 655.6,
-    "text": " They continually grown."
+    "start": 663.44,
+    "end": 664.92,
+    "text": " So what does that mean?"
   },
   {
-    "start": 655.6,
-    "end": 658.76,
-    "text": " But we've been at 64 for a while, and I think we'll be"
+    "start": 664.92,
+    "end": 666.44,
+    "text": " Here you have your process."
   },
   {
-    "start": 658.76,
-    "end": 662.32,
-    "text": " stuck at 64 for a while."
+    "start": 666.44,
+    "end": 669.16,
+    "text": " Here you have the virtual address space of a process."
   },
   {
-    "start": 662.32,
-    "end": 670.08,
-    "text": " So as we do this, what we do is we get one bit for the sign."
+    "start": 669.16,
+    "end": 680.76,
+    "text": " So beginning from 2GB to 2GB plus a five stop, whatever variable is called five stop"
   },
   {
-    "start": 670.08,
-    "end": 673.2,
-    "text": " Is it a positive or a negative number?"
+    "start": 680.84,
+    "end": 682.84,
+    "text": " is defined in Xv6."
   },
   {
-    "start": 673.2,
-    "end": 677.68,
-    "text": " 11 for the exponent."
+    "start": 682.84,
+    "end": 691.72,
+    "text": " This virtual addresses map to the actual OS code and data structures and everything"
   },
   {
-    "start": 677.68,
-    "end": 688.24,
-    "text": " And that leaves 52 for the mantissa."
+    "start": 691.72,
+    "end": 697.88,
+    "text": " located in RAM at addresses 0 to five stop."
   },
   {
-    "start": 688.28,
-    "end": 692.4,
-    "text": " And that basically tells us how we're storing numbers."
+    "start": 697.88,
+    "end": 698.88,
+    "text": " Okay."
   },
   {
-    "start": 692.4,
-    "end": 694.92,
-    "text": " Hi, are you here for the 600 lecture?"
+    "start": 698.88,
+    "end": 705.12,
+    "text": " So at boot up the OS code and data and everything is copied into RAM and starting from address"
   },
   {
-    "start": 694.92,
-    "end": 697.08,
-    "text": " There is none today, because we have a quiz this evening."
+    "start": 705.12,
+    "end": 706.12,
+    "text": " zero."
   },
   {
-    "start": 700.92,
-    "end": 703.16,
-    "text": " It's now the time that the lecture would normally have"
+    "start": 706.24,
+    "end": 711.28,
+    "text": " It's not exactly starting at zero, but let's assume for now somewhere starting close to"
   },
   {
-    "start": 703.16,
-    "end": 706.48,
-    "text": " started, and a couple of students who forgot that we"
+    "start": 711.28,
+    "end": 712.28,
+    "text": " zero."
   },
   {
-    "start": 706.48,
-    "end": 709.24,
-    "text": " have a quiz this evening instead of a lecture just"
+    "start": 712.28,
+    "end": 718.88,
+    "text": " So the OS code and data resides here and these physical addresses are added to the page table"
   },
   {
-    "start": 709.24,
-    "end": 713.8,
-    "text": " strolled in and now strolled out."
+    "start": 718.88,
+    "end": 722.28,
+    "text": " at virtual addresses starting at 2GB."
   },
   {
-    "start": 713.84,
-    "end": 720.28,
-    "text": " OK, you may never need to know these constants again, but"
+    "start": 722.28,
+    "end": 727.52,
+    "text": " So the page table entries will map 2GB to 2GB plus five stop."
   },
   {
-    "start": 720.28,
-    "end": 724.36,
-    "text": " it's worth knowing that they exist, and that basically"
+    "start": 727.52,
+    "end": 732.88,
+    "text": " This range of virtual addresses to zero to five stop these physical addresses."
   },
   {
-    "start": 724.36,
-    "end": 728.96,
-    "text": " this gives us about the equivalent of 17 decimal"
+    "start": 732.88,
+    "end": 733.88,
+    "text": " Okay."
   },
   {
-    "start": 728.96,
-    "end": 730.4,
-    "text": " digits of precision."
+    "start": 734.44,
+    "end": 742.52,
+    "text": " Note that there's only one copy of the OS code in memory and another process also, it's"
   },
   {
-    "start": 733.24,
-    "end": 738.08,
-    "text": " So we can represent numbers up to 17 decimal digits long."
+    "start": 742.52,
+    "end": 747.44,
+    "text": " high virtual addresses also will map to the same physical addresses."
   },
   {
-    "start": 739.08,
-    "end": 744.08,
-    "text": " This is an important concept to understand that unlike the"
+    "start": 747.44,
+    "end": 748.44,
+    "text": " Right."
   },
   {
-    "start": 744.08,
-    "end": 747.56,
-    "text": " long ints where they can grow arbitrarily big, when we're"
+    "start": 748.44,
+    "end": 750.32,
+    "text": " So this is process P1."
   },
   {
-    "start": 747.56,
-    "end": 751.36,
-    "text": " dealing with floating points, if we need something more than"
+    "start": 750.32,
+    "end": 752.12,
+    "text": " This is process P2."
   },
   {
-    "start": 751.36,
-    "end": 755.68,
-    "text": " 17 decimal digits, in Python at least, we won't be able to"
+    "start": 752.12,
+    "end": 758.52,
+    "text": " Both of them, their page tables will map to the same physical memory that has the OS code"
   },
   {
-    "start": 755.68,
-    "end": 756.84,
-    "text": " get it."
+    "start": 758.52,
+    "end": 759.52,
+    "text": " and data."
   },
   {
-    "start": 756.84,
-    "end": 758.88,
-    "text": " And that's true in many languages."
+    "start": 759.52,
+    "end": 760.52,
+    "text": " Right."
   },
   {
-    "start": 758.88,
-    "end": 762.64,
-    "text": " Now the good news, this is an enormous number, and it's"
+    "start": 760.52,
+    "end": 762.52,
+    "text": " You don't have multiple copies of the operating system."
   },
   {
-    "start": 762.64,
-    "end": 766.32,
-    "text": " highly unlikely that ever in your life, you'll be able to"
+    "start": 763.16,
+    "end": 768.2,
+    "text": " The same physical memory is mapped into the address space into the page table of every"
   },
   {
-    "start": 766.32,
-    "end": 769.8,
-    "text": " see that ever in your life, you will need more precision than"
+    "start": 768.2,
+    "end": 770.0,
+    "text": " process in Xv6."
   },
   {
-    "start": 769.8,
-    "end": 771.92,
-    "text": " that."
+    "start": 770.0,
+    "end": 772.2,
+    "text": " And these kernel mappings are of course identical."
   },
   {
-    "start": 771.92,
-    "end": 778.88,
-    "text": " All right, now let's go back to the 0.1 mystery that we"
+    "start": 772.2,
+    "end": 775.2,
+    "text": " This page table entries are identical across all processes."
   },
   {
-    "start": 778.88,
-    "end": 785.0,
-    "text": " started at and ask ourselves why we have a problem"
+    "start": 775.2,
+    "end": 776.2,
+    "text": " Okay."
   },
   {
-    "start": 785.0,
-    "end": 788.88,
-    "text": " representing that number in the computer."
+    "start": 776.2,
+    "end": 778.28,
+    "text": " So the question comes up, why are you doing this?"
   },
   {
-    "start": 788.88,
-    "end": 791.12,
-    "text": " Hence, we get something funny out when we"
+    "start": 778.28,
+    "end": 782.08,
+    "text": " Why are you adding the OS code into the page table of every process?"
   },
   {
-    "start": 791.12,
-    "end": 794.76,
-    "text": " try and print it back."
+    "start": 782.08,
+    "end": 786.04,
+    "text": " If you know where the OS code is located in memory, can't you just directly access it?"
   },
   {
-    "start": 794.76,
-    "end": 798.24,
-    "text": " Well, let's look at an easier problem first."
+    "start": 786.04,
+    "end": 788.2,
+    "text": " Why add it to the page table?"
   },
   {
-    "start": 798.24,
-    "end": 802.36,
-    "text": " Let's look at representing the fraction 1 eighth."
+    "start": 788.2,
+    "end": 792.76,
+    "text": " You need to add it to the page table because once MMU is turned on, once paging is turned"
   },
   {
-    "start": 806.4,
-    "end": 809.2,
-    "text": " That has a nice representation."
+    "start": 792.76,
+    "end": 798.0,
+    "text": " on physical memory can only be accessed by assigning a virtual address to it by mapping"
   },
   {
-    "start": 809.2,
-    "end": 815.52,
-    "text": " That's equal in decimal to 0.125."
+    "start": 798.0,
+    "end": 799.92,
+    "text": " it into some page table."
   },
   {
-    "start": 815.52,
-    "end": 820.48,
-    "text": " And we can represent it conveniently in both base 10"
+    "start": 799.92,
+    "end": 800.92,
+    "text": " Okay."
   },
   {
-    "start": 820.48,
-    "end": 823.0,
-    "text": " and base 2."
+    "start": 800.92,
+    "end": 807.16,
+    "text": " So if you want to access a certain OS code or data structure, you have to assign a virtual"
   },
   {
-    "start": 823.04,
-    "end": 833.28,
-    "text": " So if we want to represent it in base 10, what is it?"
+    "start": 807.16,
+    "end": 812.28,
+    "text": " address to it and you have to use this virtual address to access that physical memory."
   },
   {
-    "start": 833.28,
-    "end": 836.16,
-    "text": " What is that equal to?"
+    "start": 812.28,
+    "end": 813.28,
+    "text": " Right."
   },
   {
-    "start": 836.16,
-    "end": 842.04,
-    "text": " Well, we'll take a mantissa, 1.25, and now we need to"
+    "start": 813.28,
+    "end": 815.4,
+    "text": " You cannot directly jump to this physical memory."
   },
   {
-    "start": 842.04,
-    "end": 849.6,
-    "text": " multiply it by something that we can represent nicely."
+    "start": 815.4,
+    "end": 821.96,
+    "text": " So in order to access the OS code, you will map it to some virtual address and then use"
   },
   {
-    "start": 849.6,
-    "end": 854.48,
-    "text": " And in fact, that will be times 10 to the minus 1."
+    "start": 821.96,
+    "end": 825.52,
+    "text": " this virtual address to access the OS code and data."
   },
   {
-    "start": 854.48,
-    "end": 857.92,
-    "text": " So the exponent would simply be minus 1, and we have a nice"
+    "start": 825.52,
+    "end": 826.52,
+    "text": " Okay."
   },
   {
-    "start": 857.92,
-    "end": 860.76,
-    "text": " representation."
+    "start": 826.52,
+    "end": 832.04,
+    "text": " So the convenience of having the OS code and data mapped into the same page table as"
   },
   {
-    "start": 860.76,
-    "end": 869.36,
-    "text": " Suppose we want to represent it in base 2, what would it be?"
+    "start": 832.04,
+    "end": 838.48,
+    "text": " that of the process is that when a trap occurs, you can simply easily jump to the OS code"
   },
   {
-    "start": 869.36,
-    "end": 877.28,
-    "text": " 1.0 times anybody?"
+    "start": 838.48,
+    "end": 839.48,
+    "text": " and data."
   },
   {
-    "start": 877.28,
-    "end": 884.08,
-    "text": " Well, 2 to the minus 3."
+    "start": 839.48,
+    "end": 840.92,
+    "text": " The same page table has all the mapping."
   },
   {
-    "start": 884.08,
-    "end": 893.4,
-    "text": " So in binary notation, that would be written as 0.001."
+    "start": 840.92,
+    "end": 843.48,
+    "text": " So you don't have to switch a page table or anything."
   },
   {
-    "start": 893.4,
-    "end": 896.16,
-    "text": " So you see, 1 eighth is kind of a nice number."
+    "start": 843.48,
+    "end": 848.2,
+    "text": " The same page table can be used to access all the kernel code and data during a trap."
   },
   {
-    "start": 896.16,
-    "end": 901.92,
-    "text": " We can represent it nicely in either base 10 or base 2."
+    "start": 848.2,
+    "end": 849.2,
+    "text": " Okay."
   },
   {
-    "start": 901.92,
-    "end": 915.04,
-    "text": " But how about that pesky fraction 1 over 10?"
+    "start": 849.2,
+    "end": 852.44,
+    "text": " So the OS were not part of the virtual address list and you would have to use a different"
   },
   {
-    "start": 915.04,
-    "end": 918.68,
-    "text": " Well, in base 10, we know how to represent."
+    "start": 852.44,
+    "end": 854.4,
+    "text": " page table or something like that."
   },
   {
-    "start": 918.68,
-    "end": 928.44,
-    "text": " It's 1 times 10 to the what?"
+    "start": 854.4,
+    "end": 855.4,
+    "text": " Right."
   },
   {
-    "start": 928.44,
-    "end": 930.12,
-    "text": " 10 to the 1?"
+    "start": 855.4,
+    "end": 860.68,
+    "text": " So having the OS mapped into your page table of every process, let's the process easily"
   },
   {
-    "start": 930.12,
+    "start": 860.68,
+    "end": 867.28,
+    "text": " access the OS code and data during the trap."
+  },
+  {
+    "start": 867.28,
+    "end": 871.72,
+    "text": " So a little bit more about the OS page table mappings."
+  },
+  {
+    "start": 871.72,
+    "end": 883.8,
+    "text": " So as we have seen, let us draw that figure again starting at 2 GB to 2 GB plus five stop."
+  },
+  {
+    "start": 883.8,
+    "end": 893.68,
+    "text": " These virtual addresses in every process are mapped to these physical addresses 0 to 5"
+  },
+  {
+    "start": 893.68,
+    "end": 896.2,
+    "text": " stop."
+  },
+  {
+    "start": 896.2,
+    "end": 899.16,
+    "text": " Okay."
+  },
+  {
+    "start": 899.16,
+    "end": 905.52,
+    "text": " And this portion 0 to 5 stop has the kernel code data, some memory reserved for IO devices"
+  },
+  {
+    "start": 905.52,
+    "end": 907.52,
+    "text": " and it has a lot of free pages."
+  },
+  {
+    "start": 907.52,
+    "end": 909.88,
+    "text": " So the OS will not occupy all of it."
+  },
+  {
+    "start": 909.88,
+    "end": 913.16,
+    "text": " Most of it is free pages and these free pages."
+  },
+  {
+    "start": 913.16,
+    "end": 918.52,
+    "text": " So some part of it is taken up by the OS and some part of it is free pages."
+  },
+  {
+    "start": 918.52,
+    "end": 919.52,
+    "text": " Okay."
+  },
+  {
+    "start": 919.52,
+    "end": 922.8,
+    "text": " Now, within these free pages, what happens to these free pages?"
+  },
+  {
+    "start": 922.8,
+    "end": 924.76,
+    "text": " These free pages are assigned to user processes."
+  },
+  {
+    "start": 924.76,
+    "end": 930.24,
+    "text": " Whenever a user process wants a memory to store its code, data, stack, heap, whatever,"
+  },
+  {
+    "start": 930.24,
+    "end": 931.88,
+    "text": " these free pages are assigned."
+  },
+  {
+    "start": 931.88,
     "end": 932.88,
-    "text": " No."
+    "text": " Okay."
   },
   {
     "start": 932.88,
-    "end": 941.08,
-    "text": " But in base 2, it's a problem."
+    "end": 937.04,
+    "text": " So let us understand how this free pages are managed."
   },
   {
-    "start": 941.08,
-    "end": 946.48,
-    "text": " There is no finite binary number that exactly"
+    "start": 937.04,
+    "end": 943.68,
+    "text": " So suppose there is a frame, a physical frame at address P. Okay."
   },
   {
-    "start": 946.52,
-    "end": 951.4,
-    "text": " represents this decimal fraction."
+    "start": 943.68,
+    "end": 951.92,
+    "text": " So this physical frame, this physical memory can be accessed by virtual address V by the"
   },
   {
-    "start": 951.4,
-    "end": 955.92,
-    "text": " In fact, if we try and find the binary number, what we find"
+    "start": 951.92,
+    "end": 952.92,
+    "text": " kernel."
   },
   {
-    "start": 955.92,
-    "end": 959.64,
-    "text": " is we get an infinitely repeating series."
+    "start": 952.92,
+    "end": 953.92,
+    "text": " Okay."
   },
   {
-    "start": 959.64,
-    "end": 969.96,
-    "text": " 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, and et cetera."
+    "start": 953.92,
+    "end": 959.16,
+    "text": " Where this V is nothing but P plus 2 GB, right?"
   },
   {
-    "start": 969.96,
-    "end": 974.52,
-    "text": " Stop at any finite number of bits, and you get only an"
+    "start": 959.16,
+    "end": 962.0,
+    "text": " Everything is just offset by Kern base 2 GB here."
   },
   {
-    "start": 974.56,
-    "end": 977.44,
-    "text": " approximation to the decimal fraction 1 tenth."
+    "start": 962.0,
+    "end": 967.2,
+    "text": " So a certain physical memory location P can be accessed by the kernel at a virtual address"
   },
   {
-    "start": 980.84,
-    "end": 987.28,
-    "text": " So on most computers, if you were to print the decimal"
+    "start": 967.2,
+    "end": 968.2,
+    "text": " V."
   },
   {
-    "start": 987.28,
-    "end": 991.2,
-    "text": " value of the binary approximation, and that's"
+    "start": 968.2,
+    "end": 976.96,
+    "text": " Now, this free page can now, this piece of memory can now be assigned to a user process."
   },
   {
-    "start": 991.2,
-    "end": 994.96,
-    "text": " what we're printing here on the screen, we think in"
+    "start": 976.96,
+    "end": 982.72,
+    "text": " And the user process, when it asks for memory, the kernel will return a pointer to this physical"
   },
   {
-    "start": 994.96,
-    "end": 998.44,
-    "text": " decimal, so Python quite nicely for us is printing"
+    "start": 983.52,
+    "end": 984.52,
+    "text": " memory frame."
   },
   {
-    "start": 998.44,
-    "end": 1003.72,
-    "text": " things in decimal, it would have to display, well, I'm not"
+    "start": 984.52,
+    "end": 990.64,
+    "text": " And the user process will map this physical memory frame at address U. Right?"
   },
   {
-    "start": 1003.72,
-    "end": 1004.88,
-    "text": " going to write it."
+    "start": 990.64,
+    "end": 993.88,
+    "text": " It cannot use the same address V to access that physical memory frame."
   },
   {
-    "start": 1004.88,
-    "end": 1009.44,
-    "text": " It's a very long number, lots of digits."
+    "start": 993.88,
+    "end": 994.88,
+    "text": " Why?"
   },
   {
-    "start": 1009.44,
-    "end": 1017.12,
-    "text": " However, in Python, whenever we display something, it uses"
+    "start": 994.88,
+    "end": 997.16,
+    "text": " Because this high virtual addresses are kernel virtual addresses."
   },
   {
-    "start": 1017.12,
-    "end": 1023.36,
-    "text": " the built-in function, R E P R, short for representation,"
+    "start": 997.16,
+    "end": 1000.64,
+    "text": " These page table mappings are not accessible to a user process."
   },
   {
-    "start": 1023.36,
-    "end": 1027.6,
-    "text": " that converts the internal representation, in this case of"
+    "start": 1000.64,
+    "end": 1006.44,
+    "text": " Therefore, the user process will use another virtual address in the range 0 to 2 GB."
   },
   {
-    "start": 1027.6,
-    "end": 1032.64,
-    "text": " a number, to a string, and then displays that string, in"
+    "start": 1006.44,
+    "end": 1013.32,
+    "text": " Say let's call that address U to access the same physical frame P. Right?"
   },
   {
-    "start": 1032.64,
-    "end": 1035.52,
-    "text": " this case, on the screen."
+    "start": 1013.32,
+    "end": 1014.8,
+    "text": " So what do you have in the page table?"
   },
   {
-    "start": 1035.52,
-    "end": 1044.08,
-    "text": " For floats, it rounds it to 17 digits."
+    "start": 1014.8,
+    "end": 1021.28,
+    "text": " You have the page table maps address U to P. It also maps address V to P. Right?"
   },
   {
-    "start": 1044.08,
-    "end": 1051.12,
-    "text": " There's that magic number 17 again."
+    "start": 1021.28,
+    "end": 1025.32,
+    "text": " Both these mappings are present in the page table of the process."
   },
   {
-    "start": 1051.12,
-    "end": 1057.32,
-    "text": " Hence, when it rounds it to 17 digits, we get exactly what"
+    "start": 1025.32,
+    "end": 1031.56,
+    "text": " The same frame P is mapped twice into the page table at different virtual addresses."
   },
   {
-    "start": 1057.32,
-    "end": 1060.08,
-    "text": " you see in the bottom of the screen up there."
+    "start": 1031.56,
+    "end": 1032.56,
+    "text": " Okay."
   },
   {
-    "start": 1064.16,
-    "end": 1069.24,
-    "text": " Answer to the mystery, why does it display this?"
+    "start": 1032.56,
+    "end": 1037.28,
+    "text": " When the user process is accessing this memory, suppose the user process has stored its code"
   },
   {
-    "start": 1069.24,
-    "end": 1072.56,
-    "text": " Now why should we care?"
+    "start": 1037.28,
+    "end": 1041.88,
+    "text": " here and it's accessing this code to run it, then it will use these virtual addresses"
   },
   {
-    "start": 1072.56,
-    "end": 1074.92,
-    "text": " Well, it's not so much that we care about what gets"
+    "start": 1041.88,
+    "end": 1044.4,
+    "text": " starting at U to access that memory."
   },
   {
-    "start": 1074.92,
-    "end": 1079.12,
-    "text": " displayed, but we have to think about the implications, at"
+    "start": 1044.4,
+    "end": 1048.52,
+    "text": " When the kernel wants to access that page, suppose it wants to zero out that page or"
   },
   {
-    "start": 1079.12,
-    "end": 1082.52,
-    "text": " least sometimes we have to think about the implications, of"
+    "start": 1048.52,
+    "end": 1051.56,
+    "text": " store the code in that page from the disk, whatever."
   },
   {
-    "start": 1082.52,
-    "end": 1087.0,
-    "text": " what this inexact representation of numbers means when we"
+    "start": 1051.56,
+    "end": 1057.64,
+    "text": " When the kernel is accessing that page, it will use the high virtual address V. Okay?"
   },
   {
-    "start": 1087.0,
-    "end": 1091.16,
-    "text": " start doing more or less complex computations on"
+    "start": 1057.64,
+    "end": 1064.6,
+    "text": " So in this way, most of the RAM is accessible to the kernel at high virtual addresses and"
   },
   {
-    "start": 1091.16,
-    "end": 1093.28,
-    "text": " those numbers."
+    "start": 1064.6,
+    "end": 1065.72,
+    "text": " it's also accessible."
   },
   {
-    "start": 1093.28,
-    "end": 1097.04,
-    "text": " So let's look at a little example here."
+    "start": 1065.72,
+    "end": 1070.2,
+    "text": " The free pages are accessible to user processes at low virtual addresses."
   },
   {
-    "start": 1097.04,
-    "end": 1101.32,
-    "text": " I'll start by setting the variable s to 0.0."
+    "start": 1070.2,
+    "end": 1072.72,
+    "text": " One, what is the result of this?"
   },
   {
-    "start": 1101.32,
-    "end": 1104.36,
-    "text": " Notice I'm being careful to make it a float."
+    "start": 1072.72,
+    "end": 1077.68,
+    "text": " Every byte of RAM actually consumes two bytes in the virtual address space."
   },
   {
-    "start": 1104.36,
-    "end": 1114.0,
-    "text": " And then for i in range, let's see, let's take 10, will"
+    "start": 1077.68,
+    "end": 1081.44,
+    "text": " One byte of RAM eats up two bytes in the virtual address space."
   },
   {
-    "start": 1114.0,
-    "end": 1124.76,
-    "text": " increase s by 0.1."
+    "start": 1081.44,
+    "end": 1088.32,
+    "text": " So therefore, because you have 32-bit virtual address space, XV6 can only access up to two"
   },
   {
-    "start": 1124.76,
-    "end": 1126.28,
-    "text": " All right, we've done that."
+    "start": 1088.32,
+    "end": 1089.32,
+    "text": " GB of RAM."
   },
   {
-    "start": 1126.28,
-    "end": 1128.8,
-    "text": " And now, what happens when I print s?"
+    "start": 1089.32,
+    "end": 1090.32,
+    "text": " Right?"
   },
   {
-    "start": 1132.44,
-    "end": 1136.6,
-    "text": " Well, again, you don't get what your intuition says you"
+    "start": 1090.32,
+    "end": 1095.0,
+    "text": " This two GB of RAM has eaten up four GB of virtual address space."
   },
   {
-    "start": 1136.6,
-    "end": 1138.24,
-    "text": " should get."
+    "start": 1095.0,
+    "end": 1100.64,
+    "text": " And therefore, if your system that is running XV6 has more than two GB of RAM, XV6 will"
   },
   {
-    "start": 1138.24,
-    "end": 1145.48,
-    "text": " Notice the last two digits, which are 8 and 9."
+    "start": 1100.64,
+    "end": 1104.76,
+    "text": " not be able to use it because there is not enough virtual addresses to assign to all that"
   },
   {
-    "start": 1145.48,
-    "end": 1147.04,
-    "text": " Well, what's happening here?"
+    "start": 1104.76,
+    "end": 1105.76,
+    "text": " memory."
   },
   {
-    "start": 1149.8,
-    "end": 1153.68,
-    "text": " What's happened is the error has accumulated."
+    "start": 1105.76,
+    "end": 1109.6,
+    "text": " And if you don't assign virtual addresses, if something is not mapped in your page table,"
   },
   {
-    "start": 1153.68,
-    "end": 1157.2,
-    "text": " I had a small error when I started, but every time I"
+    "start": 1109.6,
+    "end": 1111.88,
+    "text": " you cannot access it."
   },
   {
-    "start": 1157.2,
-    "end": 1162.56,
-    "text": " added it, the error got bigger and it accumulates."
+    "start": 1111.88,
+    "end": 1113.64,
+    "text": " So then what about real operating systems?"
   },
   {
-    "start": 1162.56,
-    "end": 1167.2,
-    "text": " Sometimes you can get in trouble in a computation"
+    "start": 1113.64,
+    "end": 1115.92,
+    "text": " So real operating systems deal with it much better."
   },
   {
-    "start": 1167.2,
-    "end": 1170.44,
-    "text": " because of that."
+    "start": 1115.92,
+    "end": 1116.92,
+    "text": " Right?"
   },
   {
-    "start": 1170.44,
-    "end": 1172.96,
-    "text": " Now what happens, by the way, if I print s?"
+    "start": 1116.92,
+    "end": 1120.88,
+    "text": " So for example, when a free page is assigned to a user process, the kernel's page table"
   },
   {
-    "start": 1172.96,
-    "end": 1176.16,
-    "text": " That's kind of an interesting question."
+    "start": 1120.88,
+    "end": 1122.28,
+    "text": " entry can be deleted."
   },
   {
-    "start": 1176.16,
-    "end": 1180.8,
-    "text": " Notice that it prints 1."
+    "start": 1122.28,
+    "end": 1125.6,
+    "text": " There's no reason for both of them to keep a pointer to it."
   },
   {
-    "start": 1180.8,
-    "end": 1182.6,
-    "text": " And why is that?"
+    "start": 1125.6,
+    "end": 1128.96,
+    "text": " Either the user is using the page or the kernel is using the page."
   },
   {
-    "start": 1182.6,
-    "end": 1187.96,
-    "text": " It's because the print command has done a rounding here."
+    "start": 1128.96,
+    "end": 1129.96,
+    "text": " Right?"
   },
   {
-    "start": 1187.96,
-    "end": 1190.4,
-    "text": " It automatically rounds."
+    "start": 1129.96,
+    "end": 1134.0,
+    "text": " So some such optimizations are done by real operating systems because obviously modern"
   },
   {
-    "start": 1190.4,
-    "end": 1194.84,
-    "text": " And that's kind of good, but it's also kind of bad, because"
+    "start": 1134.0,
+    "end": 1137.28,
+    "text": " systems use more than two GB of RAM."
   },
   {
-    "start": 1194.84,
-    "end": 1197.2,
-    "text": " that means when you're debugging your program, you can"
+    "start": 1137.28,
+    "end": 1144.72,
+    "text": " But this is a limitation of XV6, which is why XV6 cannot use more than two GB of RAM."
   },
   {
-    "start": 1197.2,
-    "end": 1199.04,
-    "text": " get very confused."
+    "start": 1144.72,
+    "end": 1146.04,
+    "text": " Okay."
   },
   {
-    "start": 1199.04,
-    "end": 1201.36,
-    "text": " You say, it says it's 1."
+    "start": 1146.04,
+    "end": 1154.08,
+    "text": " So now we've seen that after boot up, the RAM contains OS code and data and a lot of"
   },
   {
-    "start": 1201.36,
-    "end": 1203.44,
-    "text": " Why am I getting a different answer when I do the"
+    "start": 1154.08,
+    "end": 1155.08,
+    "text": " the RAM is free."
   },
   {
-    "start": 1203.44,
-    "end": 1204.92,
-    "text": " computation?"
+    "start": 1155.08,
+    "end": 1156.8,
+    "text": " It just contains free pages."
   },
   {
-    "start": 1204.92,
-    "end": 1208.12,
-    "text": " And that's because it's not really 1 inside."
+    "start": 1156.8,
+    "end": 1160.12,
+    "text": " And these three pages we've just seen are allotted to user processes."
   },
   {
-    "start": 1208.12,
-    "end": 1210.76,
-    "text": " So you have to be careful."
+    "start": 1160.12,
+    "end": 1161.12,
+    "text": " Right?"
   },
   {
-    "start": 1210.76,
-    "end": 1216.04,
-    "text": " Now, mostly, these round off errors balance each other out."
+    "start": 1161.12,
+    "end": 1166.64,
+    "text": " They are mapped into the user part of the virtual address space at different virtual addresses."
   },
   {
-    "start": 1216.04,
-    "end": 1218.8,
-    "text": " Some floats are slightly higher than they're supposed to"
+    "start": 1166.64,
+    "end": 1169.8,
+    "text": " So how does the OS maintain all of these three pages?"
   },
   {
-    "start": 1218.8,
-    "end": 1220.88,
-    "text": " be, some are slightly lower."
+    "start": 1169.8,
+    "end": 1174.88,
+    "text": " It maintains them in some sort of a linked list like structure called the free list."
   },
   {
-    "start": 1220.88,
-    "end": 1223.92,
-    "text": " And in most computations, it all comes out in the wash and"
+    "start": 1174.88,
+    "end": 1175.88,
+    "text": " Okay."
   },
   {
-    "start": 1223.92,
-    "end": 1225.88,
-    "text": " you get the right answer."
+    "start": 1175.88,
+    "end": 1177.88,
+    "text": " So it is defined here."
   },
   {
-    "start": 1225.88,
-    "end": 1230.44,
-    "text": " Truth be told, most of the time you can avoid worrying"
+    "start": 1177.88,
+    "end": 1179.96,
+    "text": " There is a free list."
   },
   {
-    "start": 1230.44,
-    "end": 1232.24,
-    "text": " about these things."
+    "start": 1179.96,
+    "end": 1184.0,
+    "text": " This is nothing but a pointer to a structure called run."
   },
   {
-    "start": 1232.24,
-    "end": 1237.48,
-    "text": " But as we say in Latin, caveat computor."
+    "start": 1184.0,
+    "end": 1185.0,
+    "text": " Okay."
   },
   {
-    "start": 1237.48,
-    "end": 1240.56,
-    "text": " Sometimes you have to worry a little bit."
+    "start": 1185.0,
+    "end": 1192.52,
+    "text": " So the way it is organized is these are all the free pages and the pointers across this"
   },
   {
-    "start": 1240.56,
-    "end": 1244.96,
-    "text": " Now there is one thing about floating points, about which"
+    "start": 1192.52,
+    "end": 1195.0,
+    "text": " linked list are stored within the page itself."
   },
   {
-    "start": 1244.96,
+    "start": 1195.0,
+    "end": 1196.0,
+    "text": " So the page is empty."
+  },
+  {
+    "start": 1196.0,
+    "end": 1197.4,
+    "text": " It has nothing inside it."
+  },
+  {
+    "start": 1197.4,
+    "end": 1202.48,
+    "text": " Therefore, the address of the next free page is stored in the previous free page."
+  },
+  {
+    "start": 1202.48,
+    "end": 1206.64,
+    "text": " The address of the next page is stored in the previous page."
+  },
+  {
+    "start": 1206.64,
+    "end": 1212.8,
+    "text": " In this way, within the page itself, you will write a small structure, this run structure,"
+  },
+  {
+    "start": 1212.8,
+    "end": 1213.8,
+    "text": " which is nothing."
+  },
+  {
+    "start": 1213.8,
+    "end": 1216.28,
+    "text": " It just has a pointer to the next page."
+  },
+  {
+    "start": 1216.28,
+    "end": 1221.16,
+    "text": " It just has a pointer to the next run structure, which has a pointer to the next run structure"
+  },
+  {
+    "start": 1221.16,
+    "end": 1222.16,
+    "text": " and so on."
+  },
+  {
+    "start": 1222.16,
+    "end": 1223.16,
+    "text": " Right?"
+  },
+  {
+    "start": 1224.16,
+    "end": 1231.96,
+    "text": " A free page has and the kernel will simply maintain a pointer to this KMM.free list."
+  },
+  {
+    "start": 1231.96,
+    "end": 1235.0,
+    "text": " Simply maintains a pointer to the first free page."
+  },
+  {
+    "start": 1235.0,
+    "end": 1238.96,
+    "text": " And from then on, you follow these pointers to get the entire free list."
+  },
+  {
+    "start": 1238.96,
+    "end": 1239.96,
+    "text": " Right?"
+  },
+  {
+    "start": 1239.96,
+    "end": 1245.52,
+    "text": " It is a linked list and the pointer to the first page is maintained by the kernel."
+  },
+  {
+    "start": 1245.52,
     "end": 1246.52,
-    "text": " you should always worry."
+    "text": " Okay."
   },
   {
-    "start": 1249.84,
-    "end": 1253.44,
-    "text": " And that's really the point I want to drive home."
+    "start": 1246.52,
+    "end": 1251.8,
+    "text": " And whenever a process wants free pages, it is assigned from this list."
   },
   {
-    "start": 1253.44,
-    "end": 1255.88,
-    "text": " And that's about the meaning of double equal."
+    "start": 1251.8,
+    "end": 1258.48,
+    "text": " And whenever a process frees up memory, it is sent back to this list."
   },
   {
-    "start": 1268.32,
-    "end": 1269.84,
-    "text": " Let's look at an example of this."
+    "start": 1258.48,
+    "end": 1265.16,
+    "text": " So these functions, KLOC and K-free by the kernel are responsible for allocating and"
   },
   {
-    "start": 1273.04,
-    "end": 1276.36,
-    "text": " So we've before seen the use of import."
+    "start": 1265.16,
+    "end": 1271.28,
+    "text": " freeing memory from this list of free pages."
   },
   {
-    "start": 1276.36,
-    "end": 1278.64,
-    "text": " So I'm going to import math."
+    "start": 1271.28,
+    "end": 1273.72,
+    "text": " So what does KLOC do?"
   },
   {
-    "start": 1278.64,
-    "end": 1281.72,
-    "text": " Gives me some useful mathematical functions."
+    "start": 1273.72,
+    "end": 1283.76,
+    "text": " So you have your free list pointer, this KMM.free list is pointing to some free page,"
   },
   {
-    "start": 1281.72,
-    "end": 1285.28,
-    "text": " Then I'm going to set the variable a to the square root"
+    "start": 1283.76,
+    "end": 1286.36,
+    "text": " which is pointing to the next free page and so on."
   },
   {
-    "start": 1285.28,
-    "end": 1286.24,
-    "text": " of 2."
+    "start": 1286.36,
+    "end": 1287.36,
+    "text": " So what do you do?"
   },
   {
-    "start": 1291.64,
-    "end": 1293.12,
-    "text": " Why didn't this work?"
+    "start": 1287.36,
+    "end": 1297.64,
+    "text": " You first take a pointer to this first free page and then you shift this KMM to the next"
   },
   {
-    "start": 1293.12,
-    "end": 1297.88,
-    "text": " Because what I should have said is math.square root of 2."
+    "start": 1297.64,
+    "end": 1298.64,
+    "text": " pointer."
   },
   {
-    "start": 1302.16,
-    "end": 1305.44,
-    "text": " Explaining to the interpreter that I want to get the"
+    "start": 1298.64,
+    "end": 1303.36,
+    "text": " Now KMM will go to the next variable of R. Right?"
   },
   {
-    "start": 1305.44,
-    "end": 1309.4,
-    "text": " function sqrt from the module math."
+    "start": 1303.36,
+    "end": 1309.08,
+    "text": " So your KMM has been updated and this value of R is what you will return."
   },
   {
-    "start": 1312.64,
-    "end": 1316.12,
-    "text": " So now I've got a here."
+    "start": 1309.08,
+    "end": 1316.8,
+    "text": " When somebody asks for a free page, you will return the first page in this list and KMM.free"
   },
   {
-    "start": 1316.12,
-    "end": 1319.48,
-    "text": " And I can look at what a is."
+    "start": 1316.8,
+    "end": 1319.16,
+    "text": " list will point to the next page."
   },
   {
-    "start": 1319.48,
-    "end": 1322.96,
-    "text": " Some approximation to the square root of 2."
+    "start": 1319.16,
+    "end": 1324.04,
+    "text": " Similarly, when somebody frees up memory also, it is similar."
   },
   {
-    "start": 1322.96,
-    "end": 1324.56,
-    "text": " Now here's the interesting question."
+    "start": 1324.04,
+    "end": 1334.52,
+    "text": " So your KMM is .free list is pointing to some page, some free page and then a new page has"
   },
   {
-    "start": 1324.56,
-    "end": 1333.0,
-    "text": " Suppose I ask about the Boolean a times a equals equals 2."
+    "start": 1334.52,
+    "end": 1335.64,
+    "text": " come in."
   },
   {
-    "start": 1333.0,
-    "end": 1336.44,
-    "text": " Now in my heart, I think if I've taken this square root of"
+    "start": 1335.64,
+    "end": 1337.12,
+    "text": " You put the run structure, right?"
   },
   {
-    "start": 1336.44,
-    "end": 1340.16,
-    "text": " number and then I've multiplied it by itself, I should get"
+    "start": 1337.12,
+    "end": 1346.96,
+    "text": " The run structure into that new page and this page R. Then you set its next pointer to KMM.free"
   },
   {
-    "start": 1340.16,
-    "end": 1342.08,
-    "text": " the original number back."
+    "start": 1346.96,
+    "end": 1353.12,
+    "text": " list and then you update KMM.free list to .2R."
   },
   {
-    "start": 1342.08,
-    "end": 1345.4,
-    "text": " After all, that's the meaning of square root."
+    "start": 1353.2,
+    "end": 1359.76,
+    "text": " In this way, freed up page is added to the head of the free list and the free list pointer"
   },
   {
-    "start": 1345.4,
-    "end": 1348.48,
-    "text": " But by now, you won't be surprised at the answer of"
+    "start": 1359.76,
+    "end": 1360.76,
+    "text": " is updated."
   },
   {
-    "start": 1348.48,
-    "end": 1350.88,
-    "text": " this is false."
+    "start": 1360.76,
+    "end": 1361.76,
+    "text": " Right?"
   },
   {
-    "start": 1350.88,
-    "end": 1353.04,
-    "text": " Because we know what we've stored is only an"
+    "start": 1361.76,
+    "end": 1367.2,
+    "text": " So the kernel has a list of free pages and user processes or any other system call or"
   },
   {
-    "start": 1353.04,
-    "end": 1354.96,
-    "text": " approximation to the square root."
+    "start": 1367.2,
+    "end": 1373.04,
+    "text": " any other piece of code can allocate and free up these free pages."
   },
   {
-    "start": 1357.64,
-    "end": 1359.04,
-    "text": " And that's kind of interesting."
+    "start": 1373.04,
+    "end": 1377.52,
+    "text": " So this is the summary of what we've studied in this lecture."
   },
   {
-    "start": 1359.04,
-    "end": 1364.64,
-    "text": " So we can see that by if I look at a times a, I'll get 2"
+    "start": 1377.52,
+    "end": 1382.08,
+    "text": " We've studied how virtual address spaces are built in XV6."
   },
   {
-    "start": 1364.64,
-    "end": 1368.76,
-    "text": " point, a whole bunch of zeros, and then a 4 at the end."
+    "start": 1382.08,
+    "end": 1384.52,
+    "text": " There's a 4GB virtual address space for each process."
   },
   {
-    "start": 1368.76,
-    "end": 1373.2,
-    "text": " So this means if I've got a test in my program, in some"
+    "start": 1384.52,
+    "end": 1388.68,
+    "text": " Note that XV6 does not have demand paging."
   },
   {
-    "start": 1373.2,
-    "end": 1375.64,
-    "text": " sense it will give me the unexpected answer false."
+    "start": 1388.68,
+    "end": 1393.68,
+    "text": " Whatever virtual address space is created, it is assigned a physical field."
   },
   {
-    "start": 1378.92,
-    "end": 1384.6,
-    "text": " What this tells us is that it's very risky to ever use the"
+    "start": 1393.68,
+    "end": 1395.92,
+    "text": " And we've seen that there is a 2-tier page table."
   },
   {
-    "start": 1384.6,
-    "end": 1388.72,
-    "text": " built-in double equals to compare floating points."
+    "start": 1395.92,
+    "end": 1401.08,
+    "text": " There's an outer page directory and a bunch of inner page tables."
   },
   {
-    "start": 1388.72,
-    "end": 1393.04,
-    "text": " And in fact, you should never be testing for equality."
+    "start": 1401.08,
+    "end": 1408.44,
+    "text": " And the process address space has user memory mapped at low virtual addresses and the kernel"
   },
   {
-    "start": 1393.04,
-    "end": 1396.2,
-    "text": " You should always be testing for close enough."
+    "start": 1408.44,
+    "end": 1413.96,
+    "text": " code and data is mapped at high virtual addresses beyond 2GB."
   },
   {
-    "start": 1398.76,
-    "end": 1402.84,
-    "text": " So typically what you want to do in your program is ask the"
+    "start": 1413.96,
+    "end": 1420.24,
+    "text": " And in this part of the kernel code and data that is mapped at high virtual addresses,"
   },
   {
-    "start": 1402.84,
-    "end": 1404.64,
-    "text": " following question."
+    "start": 1420.24,
+    "end": 1425.28,
+    "text": " there is the operating system image itself and its data structures and some small amount"
   },
   {
-    "start": 1404.64,
-    "end": 1415.16,
-    "text": " Is the absolute value of a times a minus 2.0 less than"
+    "start": 1425.28,
+    "end": 1427.0,
+    "text": " of memory for IO devices."
   },
   {
-    "start": 1415.16,
-    "end": 1416.84,
-    "text": " epsilon?"
+    "start": 1427.0,
+    "end": 1433.32,
+    "text": " And most of it is free pages, which are available to be assigned to user processes."
   },
   {
-    "start": 1420.56,
-    "end": 1423.04,
-    "text": " If we could easily type Greek, we'd have written it that"
+    "start": 1433.32,
+    "end": 1438.08,
+    "text": " So I have omitted in this discussion how this free page list is constructed during boot"
   },
   {
-    "start": 1423.04,
-    "end": 1426.36,
-    "text": " way, but we can't."
+    "start": 1438.08,
+    "end": 1445.96,
+    "text": " up and how the available RAM is added into this free page list by the operating system."
   },
   {
-    "start": 1426.4,
-    "end": 1430.88,
-    "text": " So that's some small value chosen to be appropriate for"
+    "start": 1445.96,
+    "end": 1450.08,
+    "text": " So I've omitted those details for the sake of simplicity, but please go back and refer"
   },
   {
-    "start": 1430.88,
-    "end": 1432.56,
-    "text": " the application."
+    "start": 1450.08,
+    "end": 1454.8,
+    "text": " to the XV6 code in the XV6 book to understand them in more detail."
   },
   {
-    "start": 1432.56,
-    "end": 1435.72,
-    "text": " Saying if these two things are with an epsilon of each"
+    "start": 1454.8,
+    "end": 1459.4,
+    "text": " So in the next lecture, we are going to see how memory is allocated to user processes"
   },
   {
-    "start": 1435.72,
-    "end": 1440.92,
-    "text": " other, then I'm going to treat them as equal."
+    "start": 1459.4,
+    "end": 1464.6,
+    "text": " in various system calls from this list of free pages and how the page tables are built"
   },
   {
-    "start": 1440.92,
-    "end": 1444.04,
-    "text": " And so what I typically do when I'm writing a Python code"
-  },
-  {
-    "start": 1444.04,
-    "end": 1447.04,
-    "text": " that's going to deal with floating point numbers, and I"
-  },
-  {
-    "start": 1447.04,
-    "end": 1452.08,
-    "text": " do this from time to time, is I introduce a function called"
-  },
-  {
-    "start": 1452.08,
-    "end": 1458.96,
-    "text": " almost equal, or near, or pick your favorite word, that does"
-  },
-  {
-    "start": 1458.96,
-    "end": 1460.12,
-    "text": " this for me."
-  },
-  {
-    "start": 1460.12,
-    "end": 1463.36,
-    "text": " And wherever I would normally have written x double equals"
-  },
-  {
-    "start": 1463.36,
-    "end": 1468.76,
-    "text": " y, instead I write near x comma y, and it"
-  },
-  {
-    "start": 1468.76,
-    "end": 1472.0,
-    "text": " computes it for me."
-  },
-  {
-    "start": 1472.0,
-    "end": 1476.36,
-    "text": " Not a big deal, but keep this in mind, or as soon as you"
-  },
-  {
-    "start": 1476.36,
-    "end": 1479.52,
-    "text": " start dealing with numbers, you will get very frustrated in"
-  },
-  {
-    "start": 1479.52,
-    "end": 1483.4,
-    "text": " trying to understand what your program does."
-  },
-  {
-    "start": 1483.4,
-    "end": 1487.44,
-    "text": " OK, enough of numbers for a while."
-  },
-  {
-    "start": 1487.44,
-    "end": 1489.44,
-    "text": " I'm sure some of you will find this a relief."
-  },
-  {
-    "start": 1492.16,
-    "end": 1497.12,
-    "text": " I now want to get away from details of floating point"
-  },
-  {
-    "start": 1497.12,
-    "end": 1501.76,
-    "text": " and talk about general methods, again returning to the real"
-  },
-  {
-    "start": 1501.76,
-    "end": 1506.84,
-    "text": " theme of the course of solving problems using computers."
-  },
-  {
-    "start": 1506.84,
-    "end": 1511.12,
-    "text": " Last week, we looked at the rather silly problem of"
-  },
-  {
-    "start": 1511.12,
-    "end": 1515.88,
-    "text": " finding the square root of a perfect square."
-  },
-  {
-    "start": 1515.88,
-    "end": 1519.08,
-    "text": " Well, that's not usually what you need."
-  },
-  {
-    "start": 1521.68,
-    "end": 1525.24,
-    "text": " Let's think about the more useful problem of finding the"
-  },
-  {
-    "start": 1525.24,
-    "end": 1527.72,
-    "text": " square root of a real number."
-  },
-  {
-    "start": 1527.72,
-    "end": 1529.64,
-    "text": " Well, you've just seen how you do that."
-  },
-  {
-    "start": 1529.64,
-    "end": 1532.72,
-    "text": " You import math and you call SQRT."
-  },
-  {
-    "start": 1532.72,
-    "end": 1536.28,
-    "text": " Let's pretend that we didn't know that trick."
-  },
-  {
-    "start": 1536.28,
-    "end": 1541.24,
-    "text": " Or let's pretend it's your job to implement rather math."
-  },
-  {
-    "start": 1541.24,
-    "end": 1546.28,
-    "text": " And so you need to figure out how to implement square root."
-  },
-  {
-    "start": 1546.28,
-    "end": 1549.28,
-    "text": " Why might this be a challenge?"
-  },
-  {
-    "start": 1549.28,
-    "end": 1552.24,
-    "text": " What are some of the issues?"
-  },
-  {
-    "start": 1552.24,
-    "end": 1553.88,
-    "text": " And there are several."
-  },
-  {
-    "start": 1553.88,
-    "end": 1563.2,
-    "text": " One is what we've just seen might not be an exact answer."
-  },
-  {
-    "start": 1567.28,
-    "end": 1572.6,
-    "text": " For example, the square root of 2."
-  },
-  {
-    "start": 1576.48,
-    "end": 1579.28,
-    "text": " So we need to worry about that."
-  },
-  {
-    "start": 1579.28,
-    "end": 1583.04,
-    "text": " And clearly, the way we're going to solve that, as we'll see,"
-  },
-  {
-    "start": 1583.04,
-    "end": 1586.92,
-    "text": " is using a concept similar to epsilon."
-  },
-  {
-    "start": 1586.92,
-    "end": 1588.44,
-    "text": " In fact, we'll even call it epsilon."
-  },
-  {
-    "start": 1589.44,
-    "end": 1597.0,
-    "text": " Another problem with the method we looked at last time is"
-  },
-  {
-    "start": 1597.0,
-    "end": 1600.12,
-    "text": " there we were doing exhaustive enumeration."
-  },
-  {
-    "start": 1600.12,
-    "end": 1603.96,
-    "text": " We were enumerating all the possible answers, checking"
-  },
-  {
-    "start": 1603.96,
-    "end": 1607.68,
-    "text": " each one, and if it was goods, stopping."
-  },
-  {
-    "start": 1607.68,
-    "end": 1615.36,
-    "text": " Well, the problem with reels as opposed to integers is we"
-  },
-  {
-    "start": 1615.36,
-    "end": 1621.68,
-    "text": " can't enumerate all guesses."
-  },
-  {
-    "start": 1626.44,
-    "end": 1629.68,
-    "text": " And that's because the reels are uncountable."
-  },
-  {
-    "start": 1634.56,
-    "end": 1639.32,
-    "text": " If I ask you to enumerate the positive integers, you'll say"
-  },
-  {
-    "start": 1639.32,
-    "end": 1647.88,
-    "text": " 1, 2, 3, 4, 5, if I ask you to enumerate the reels, the"
-  },
-  {
-    "start": 1647.88,
-    "end": 1649.96,
-    "text": " positive reels, where do you start?"
-  },
-  {
-    "start": 1649.96,
-    "end": 1652.96,
-    "text": " 1 over a billion plus who knows?"
-  },
-  {
-    "start": 1652.96,
-    "end": 1657.64,
-    "text": " Now as we've just seen, in fact, since there's a limit to"
-  },
-  {
-    "start": 1657.64,
-    "end": 1661.52,
-    "text": " the precision in floating point, technically you could"
-  },
-  {
-    "start": 1661.52,
-    "end": 1665.0,
-    "text": " enumerate all the floating point numbers."
-  },
-  {
-    "start": 1665.0,
-    "end": 1668.36,
-    "text": " And I say technically, because if you tried to do that,"
-  },
-  {
-    "start": 1668.4,
-    "end": 1673.68,
-    "text": " your computation would not terminate anytime soon."
-  },
-  {
-    "start": 1673.68,
-    "end": 1677.8,
-    "text": " So even though in principle you could enumerate them, in"
-  },
-  {
-    "start": 1677.8,
-    "end": 1679.84,
-    "text": " fact, you really can't."
-  },
-  {
-    "start": 1679.84,
-    "end": 1683.16,
-    "text": " And so we think of the floating points like the reels as"
-  },
-  {
-    "start": 1683.16,
-    "end": 1687.32,
-    "text": " being innumerable, or not innumerable, as to say as being"
-  },
-  {
-    "start": 1687.32,
-    "end": 1690.12,
-    "text": " uncountable."
-  },
-  {
-    "start": 1690.12,
-    "end": 1691.44,
-    "text": " So we can't do that."
-  },
-  {
-    "start": 1691.88,
-    "end": 1696.8,
-    "text": " So we have to find something clever, because we're now"
-  },
-  {
-    "start": 1696.8,
-    "end": 1702.12,
-    "text": " searching a very large space of possible answers, what"
-  },
-  {
-    "start": 1702.12,
-    "end": 1706.6,
-    "text": " technically we might call a large state space."
-  },
-  {
-    "start": 1706.6,
-    "end": 1710.32,
-    "text": " So we're going to take our previous method of guess and"
-  },
-  {
-    "start": 1710.32,
-    "end": 1717.16,
-    "text": " check and replace it by something called guess check"
-  },
-  {
-    "start": 1718.16,
-    "end": 1719.16,
-    "text": " and improve."
-  },
-  {
-    "start": 1721.68,
-    "end": 1727.68,
-    "text": " Previously, we just generated guesses in some systematic way,"
-  },
-  {
-    "start": 1727.68,
-    "end": 1731.0,
-    "text": " but without knowing that we were getting closer to the"
-  },
-  {
-    "start": 1731.0,
-    "end": 1732.32,
-    "text": " answer."
-  },
-  {
-    "start": 1732.32,
-    "end": 1735.44,
-    "text": " Think of the original barnyard problem with the chickens and"
-  },
-  {
-    "start": 1735.44,
-    "end": 1736.88,
-    "text": " the heads and the legs."
-  },
-  {
-    "start": 1736.88,
-    "end": 1739.88,
-    "text": " We just enumerated possibilities, but we didn't know"
-  },
-  {
-    "start": 1739.88,
-    "end": 1742.28,
-    "text": " that one guess was better than the previous guess."
-  },
-  {
-    "start": 1742.28,
-    "end": 1746.08,
-    "text": " Now we're going to find a way to do the enumeration where we"
-  },
-  {
-    "start": 1746.08,
-    "end": 1753.36,
-    "text": " have good reason to believe, at least with high probability,"
-  },
-  {
-    "start": 1753.36,
-    "end": 1758.88,
-    "text": " that each guess is better than the previous guess."
-  },
-  {
-    "start": 1758.88,
-    "end": 1760.96,
-    "text": " This is what's called successive approximation."
-  },
-  {
-    "start": 1772.28,
-    "end": 1785.88,
-    "text": " And that's a very important concept."
-  },
-  {
-    "start": 1785.88,
-    "end": 1790.2,
-    "text": " Many problems are solved computationally using"
-  },
-  {
-    "start": 1790.2,
-    "end": 1791.72,
-    "text": " successive approximation."
-  },
-  {
-    "start": 1796.24,
-    "end": 1801.96,
-    "text": " Every successive approximation method has the same rough"
-  },
-  {
-    "start": 1801.96,
-    "end": 1803.68,
-    "text": " structure."
-  },
-  {
-    "start": 1803.68,
-    "end": 1816.44,
-    "text": " You start with some guess, which will be the initial guess."
-  },
-  {
-    "start": 1816.44,
-    "end": 1820.16,
-    "text": " You then iterate, and in a minute I'll tell you why I'm"
-  },
-  {
-    "start": 1820.16,
-    "end": 1823.52,
-    "text": " doing it this particular way, over some range."
-  },
-  {
-    "start": 1824.52,
-    "end": 1833.52,
-    "text": " I've chosen 100, but it doesn't have to be 100, just some"
-  },
-  {
-    "start": 1833.52,
-    "end": 1838.32,
-    "text": " number there."
-  },
-  {
-    "start": 1838.32,
-    "end": 1847.88,
-    "text": " If f of x, that is to say some function of my, whoops, I"
-  },
-  {
-    "start": 1847.88,
-    "end": 1850.4,
-    "text": " shouldn't have said x."
-  },
-  {
-    "start": 1850.4,
-    "end": 1854.84,
-    "text": " My notes say x, but it's the wrong thing."
-  },
-  {
-    "start": 1854.84,
-    "end": 1864.96,
-    "text": " If f of x, f of the guess is close enough, so for example,"
-  },
-  {
-    "start": 1864.96,
-    "end": 1868.76,
-    "text": " if when I square a guess, I get close enough to the number"
-  },
-  {
-    "start": 1868.76,
-    "end": 1873.76,
-    "text": " whose square root I'm looking for, then I'll return the guess."
-  },
-  {
-    "start": 1880.76,
-    "end": 1899.8,
-    "text": " If it's not close enough, I'll get a better guess."
-  },
-  {
-    "start": 1899.8,
-    "end": 1906.4,
-    "text": " If I do my, in this case, 100 iterations, and I've not gotten"
-  },
-  {
-    "start": 1906.4,
-    "end": 1910.12,
-    "text": " the guess that it's good enough, I'm going to quit with"
-  },
-  {
-    "start": 1910.12,
-    "end": 1914.36,
-    "text": " some error."
-  },
-  {
-    "start": 1914.36,
-    "end": 1918.28,
-    "text": " Saying, wow, I thought my method was good enough that"
-  },
-  {
-    "start": 1918.28,
-    "end": 1920.72,
-    "text": " 100 guesses should have gotten me there."
-  },
-  {
-    "start": 1920.72,
-    "end": 1923.48,
-    "text": " If it didn't, I may be wrong."
-  },
-  {
-    "start": 1923.48,
-    "end": 1927.44,
-    "text": " I always like to have some limit so that my program can't"
-  },
-  {
-    "start": 1927.44,
-    "end": 1932.04,
-    "text": " spin off into the ether guessing forever."
-  },
-  {
-    "start": 1932.04,
-    "end": 1955.4,
-    "text": " OK, let's look at an example of that."
-  },
-  {
-    "start": 1955.4,
-    "end": 1961.4,
-    "text": " So here's a successive approximations to the square"
-  },
-  {
-    "start": 1961.4,
-    "end": 1962.8,
-    "text": " root."
-  },
-  {
-    "start": 1962.8,
-    "end": 1965.92,
-    "text": " I've called it square root bi."
-  },
-  {
-    "start": 1965.92,
-    "end": 1969.44,
-    "text": " The bi is not a reference to the sexual preferences of the"
-  },
-  {
-    "start": 1969.44,
-    "end": 1973.04,
-    "text": " function, but a reference to the fact that this is an"
-  },
-  {
-    "start": 1973.04,
-    "end": 1993.0,
-    "text": " example of what's called a bisection method."
-  },
-  {
-    "start": 1993.0,
-    "end": 1998.0,
-    "text": " The basic idea behind any bisection method is the same."
-  },
-  {
-    "start": 1998.0,
-    "end": 2001.64,
-    "text": " And we'll see lots of examples of this this semester, is that"
-  },
-  {
-    "start": 2001.64,
-    "end": 2007.56,
-    "text": " you have some linearly arranged space of possible answers."
-  },
-  {
-    "start": 2011.56,
-    "end": 2016.16,
-    "text": " And it has the property that if I take a guess somewhere, let's"
-  },
-  {
-    "start": 2016.16,
-    "end": 2021.92,
-    "text": " say there, I guess that's the answer to the question."
-  },
-  {
-    "start": 2021.92,
-    "end": 2026.12,
-    "text": " If it turns out that's not the answer, I can easily"
-  },
-  {
-    "start": 2026.12,
-    "end": 2031.2,
-    "text": " determine whether the answer lies to the left or the right of"
-  },
-  {
-    "start": 2031.2,
-    "end": 2033.68,
-    "text": " the guess."
-  },
-  {
-    "start": 2033.68,
-    "end": 2039.88,
-    "text": " So if I guess that 89.12 is the square root of a number, and"
-  },
-  {
-    "start": 2039.88,
-    "end": 2043.48,
-    "text": " turns out not to be the square root of the number, I have a"
-  },
-  {
-    "start": 2043.48,
-    "end": 2048.8,
-    "text": " way of saying is 89.12 too big or too small."
-  },
-  {
-    "start": 2048.8,
-    "end": 2052.0,
-    "text": " If it was too big, then I know I better guess some number"
-  },
-  {
-    "start": 2052.0,
-    "end": 2053.68,
-    "text": " over here."
-  },
-  {
-    "start": 2053.68,
-    "end": 2057.16,
-    "text": " If it was too small, then I better guess some number over"
-  },
-  {
-    "start": 2057.16,
-    "end": 2058.16,
-    "text": " here."
-  },
-  {
-    "start": 2059.16,
-    "end": 2063.84,
-    "text": " Why do I call it bisection?"
-  },
-  {
-    "start": 2063.84,
-    "end": 2066.4,
-    "text": " Because I'm dividing it in half."
-  },
-  {
-    "start": 2066.4,
-    "end": 2070.56,
-    "text": " And in general, as we'll see, when I know what my space of"
-  },
-  {
-    "start": 2070.56,
-    "end": 2076.04,
-    "text": " answers is, I always as my next guess choose something halfway"
-  },
-  {
-    "start": 2076.04,
-    "end": 2077.84,
-    "text": " along that line."
-  },
-  {
-    "start": 2077.84,
-    "end": 2081.28,
-    "text": " So I made a guess, and let's say it was too small."
-  },
-  {
-    "start": 2081.28,
-    "end": 2084.32,
-    "text": " And I know the answer is between here and here."
-  },
-  {
-    "start": 2084.32,
-    "end": 2085.92,
-    "text": " This was too small."
-  },
-  {
-    "start": 2085.92,
-    "end": 2089.68,
-    "text": " I now know that the answer is between here and here."
-  },
-  {
-    "start": 2089.68,
-    "end": 2093.24,
-    "text": " So my next guess will be in the middle."
-  },
-  {
-    "start": 2093.24,
-    "end": 2096.88,
-    "text": " The beauty of always guessing in the middle is that each"
-  },
-  {
-    "start": 2096.88,
-    "end": 2100.6,
-    "text": " guess, if it's wrong, I get to throw out half of the state"
-  },
-  {
-    "start": 2100.6,
-    "end": 2102.44,
-    "text": " space."
-  },
-  {
-    "start": 2102.44,
-    "end": 2105.96,
-    "text": " So I know how long it's going to take me to search the"
-  },
-  {
-    "start": 2105.96,
-    "end": 2109.24,
-    "text": " possibilities in some sense."
-  },
-  {
-    "start": 2109.24,
-    "end": 2113.08,
-    "text": " Because I'm getting logarithmically progress."
-  },
-  {
-    "start": 2116.48,
-    "end": 2121.24,
-    "text": " This is exactly what we saw when we looked at recursion in"
-  },
-  {
-    "start": 2121.24,
-    "end": 2125.88,
-    "text": " some sense, where we solved the problem by, at each step,"
-  },
-  {
-    "start": 2125.88,
-    "end": 2128.64,
-    "text": " solving a smaller problem."
-  },
-  {
-    "start": 2128.64,
-    "end": 2133.24,
-    "text": " The same problem, but on a smaller solution space."
-  },
-  {
-    "start": 2133.24,
-    "end": 2136.0,
-    "text": " Now, as it happens, I'm not using recursion in this"
-  },
-  {
-    "start": 2136.0,
-    "end": 2138.44,
-    "text": " implementation we have up on the screen."
-  },
-  {
-    "start": 2138.44,
-    "end": 2140.8,
-    "text": " I'm doing it iteratively."
-  },
-  {
-    "start": 2140.8,
-    "end": 2143.44,
-    "text": " But the idea is the same."
-  },
-  {
-    "start": 2143.44,
-    "end": 2146.68,
-    "text": " So we'll take a quick look at it now, then we'll quit, and"
-  },
-  {
-    "start": 2146.68,
-    "end": 2148.76,
-    "text": " we'll come back to it in the next lecture a little more"
-  },
-  {
-    "start": 2148.76,
-    "end": 2151.44,
-    "text": " thoroughly."
-  },
-  {
-    "start": 2151.44,
-    "end": 2154.04,
-    "text": " I'm going to warn you right now that there's a bug in this"
-  },
-  {
-    "start": 2154.04,
-    "end": 2157.52,
-    "text": " code, and in the next lecture we'll see if we can"
-  },
-  {
-    "start": 2157.52,
-    "end": 2160.56,
-    "text": " discover what that is."
-  },
-  {
-    "start": 2160.56,
-    "end": 2164.96,
-    "text": " So it takes two arguments, x, the number whose square root"
-  },
-  {
-    "start": 2164.96,
-    "end": 2169.96,
-    "text": " we're looking for, and epsilon, how close we need to get."
-  },
-  {
-    "start": 2169.96,
-    "end": 2175.88,
-    "text": " It assumes that x is non-negative, and that epsilon is"
-  },
-  {
-    "start": 2175.88,
-    "end": 2178.56,
-    "text": " greater than zero."
-  },
-  {
-    "start": 2178.56,
-    "end": 2182.04,
-    "text": " Why do we need to assume that epsilon is greater than zero?"
-  },
-  {
-    "start": 2182.04,
-    "end": 2184.68,
-    "text": " Well, if you made epsilon zero, and then say we're looking"
-  },
-  {
-    "start": 2184.68,
-    "end": 2189.88,
-    "text": " for the square root of two, we know we'll never get an answer."
-  },
-  {
-    "start": 2189.88,
-    "end": 2193.88,
-    "text": " So we want it to be positive."
-  },
-  {
-    "start": 2193.88,
-    "end": 2198.16,
-    "text": " And then it returns y such that y times y is within epsilon"
-  },
-  {
-    "start": 2198.16,
-    "end": 2199.44,
-    "text": " of x."
-  },
-  {
-    "start": 2199.44,
-    "end": 2204.4,
-    "text": " It's near to use the terminology we used before."
-  },
-  {
-    "start": 2204.4,
-    "end": 2207.4,
-    "text": " The next thing we see in the program is two"
-  },
-  {
-    "start": 2207.4,
-    "end": 2209.88,
-    "text": " assert statements."
-  },
-  {
-    "start": 2209.88,
-    "end": 2214.56,
-    "text": " This is because I never trust the people who call my"
-  },
-  {
-    "start": 2214.56,
-    "end": 2217.36,
-    "text": " functions to do the right thing."
-  },
-  {
-    "start": 2217.36,
-    "end": 2220.48,
-    "text": " Even though I've said I'm going to assume certain things"
-  },
-  {
-    "start": 2220.48,
-    "end": 2224.32,
-    "text": " about x and epsilon, I'm actually going to test it."
-  },
-  {
-    "start": 2224.32,
-    "end": 2228.08,
-    "text": " And so I'm going to assert that x is greater than or equal to"
-  },
-  {
-    "start": 2228.08,
-    "end": 2231.72,
-    "text": " zero, and that epsilon is greater than zero."
-  },
-  {
-    "start": 2231.72,
-    "end": 2236.76,
-    "text": " What assert does is it tests the predicate, say x greater"
-  },
-  {
-    "start": 2236.76,
-    "end": 2238.44,
-    "text": " than or equal to zero."
-  },
-  {
-    "start": 2238.44,
-    "end": 2241.24,
-    "text": " If it's true, it does nothing."
-  },
-  {
-    "start": 2241.24,
-    "end": 2243.2,
-    "text": " Just goes on to the next statement."
-  },
-  {
-    "start": 2243.2,
-    "end": 2248.44,
-    "text": " But if it's false, it prints a message, the string, which is"
-  },
-  {
-    "start": 2248.44,
-    "end": 2253.2,
-    "text": " my second argument here, and then the program just stops."
-  },
-  {
-    "start": 2253.2,
-    "end": 2255.64,
-    "text": " So rather than my function going off and doing something"
-  },
-  {
-    "start": 2255.64,
-    "end": 2259.44,
-    "text": " bizarre, for example, running forever, it just stops with"
-  },
-  {
-    "start": 2259.44,
-    "end": 2262.12,
-    "text": " the message saying, you called me with arguments you"
-  },
-  {
-    "start": 2262.12,
-    "end": 2263.36,
-    "text": " shouldn't have called me with."
-  },
-  {
-    "start": 2266.24,
-    "end": 2269.56,
-    "text": " So that's the specification, and then my"
-  },
-  {
-    "start": 2269.56,
-    "end": 2272.96,
-    "text": " check of the assumptions."
-  },
-  {
-    "start": 2272.96,
-    "end": 2279.84,
-    "text": " The next thing it does is it looks for a range such that I"
-  },
-  {
-    "start": 2279.84,
-    "end": 2284.28,
-    "text": " believe I'm assured that my answer lies between these"
-  },
-  {
-    "start": 2284.28,
-    "end": 2288.56,
-    "text": " values, and I'm going to say, well, my answer will be no"
-  },
-  {
-    "start": 2288.56,
-    "end": 2294.0,
-    "text": " smaller than zero and no bigger than x."
-  },
-  {
-    "start": 2294.0,
-    "end": 2296.04,
-    "text": " Now, is this the tightest possible range?"
-  },
-  {
-    "start": 2296.04,
-    "end": 2297.32,
-    "text": " Maybe not."
-  },
-  {
-    "start": 2297.32,
-    "end": 2299.28,
-    "text": " But I'm not too fussy about that."
-  },
-  {
-    "start": 2299.28,
-    "end": 2305.04,
-    "text": " I'm just trying to make sure that I cover the space."
-  },
-  {
-    "start": 2305.04,
-    "end": 2307.6,
-    "text": " Then I'll start with a guess."
-  },
-  {
-    "start": 2307.6,
-    "end": 2310.8,
-    "text": " And again, I'm not going to worry too much about the guess."
-  },
-  {
-    "start": 2310.8,
-    "end": 2315.24,
-    "text": " I'm going to take low plus high and divide it by 2."
-  },
-  {
-    "start": 2315.24,
-    "end": 2317.48,
-    "text": " That is to say, choose something in the middle of this"
-  },
-  {
-    "start": 2317.48,
-    "end": 2324.24,
-    "text": " space, and then essentially do what we've got here."
-  },
-  {
-    "start": 2324.24,
-    "end": 2326.28,
-    "text": " So it's a little bit more involved here."
-  },
-  {
-    "start": 2326.28,
-    "end": 2331.24,
-    "text": " I'm going to set my counter to 1 just to keep checking."
-  },
-  {
-    "start": 2331.24,
-    "end": 2335.12,
-    "text": " Then say, while the absolute value of the guess squared"
-  },
-  {
-    "start": 2335.12,
-    "end": 2338.52,
-    "text": " minus x is greater than epsilon, that is to say, while my"
-  },
-  {
-    "start": 2338.52,
-    "end": 2343.2,
-    "text": " guess is not yet good enough, and the counter is not greater"
-  },
-  {
-    "start": 2343.2,
-    "end": 2349.24,
-    "text": " than 100, I'll get the next guess."
-  },
-  {
-    "start": 2349.24,
-    "end": 2351.48,
-    "text": " Notice by the way, I have a print statement here, which"
-  },
-  {
-    "start": 2351.48,
-    "end": 2353.24,
-    "text": " I've commented out."
-  },
-  {
-    "start": 2353.24,
-    "end": 2356.64,
-    "text": " But I sort of figured that my program would not work"
-  },
-  {
-    "start": 2356.64,
-    "end": 2358.72,
-    "text": " correctly the first time."
-  },
-  {
-    "start": 2358.72,
-    "end": 2363.12,
-    "text": " And so when I first typed it, put in a print statement that"
-  },
-  {
-    "start": 2363.12,
-    "end": 2365.76,
-    "text": " would let me see what was happening each iteration"
-  },
-  {
-    "start": 2365.76,
-    "end": 2368.76,
-    "text": " through this loop, so that if it didn't work, I could get a"
-  },
-  {
-    "start": 2368.76,
-    "end": 2371.0,
-    "text": " sense of why not."
-  },
-  {
-    "start": 2371.0,
-    "end": 2373.8,
-    "text": " In the next lecture, when we look for the bug in this"
-  },
-  {
-    "start": 2373.8,
-    "end": 2376.88,
-    "text": " program, you will see me uncomment out that print"
-  },
-  {
-    "start": 2376.88,
-    "end": 2379.0,
-    "text": " statement."
-  },
-  {
-    "start": 2379.0,
-    "end": 2382.76,
-    "text": " But for now, we go to the next thing."
-  },
-  {
-    "start": 2382.76,
-    "end": 2386.0,
-    "text": " And we're here, we know the guess wasn't good enough."
-  },
-  {
-    "start": 2386.0,
-    "end": 2391.56,
-    "text": " So I now say, if the guess squared was less than x, then"
-  },
-  {
-    "start": 2391.56,
-    "end": 2398.36,
-    "text": " I will change the low bound to be the guess."
-  },
-  {
-    "start": 2398.36,
-    "end": 2403.12,
-    "text": " Otherwise, I'll change the high bound to be the guess."
-  },
-  {
-    "start": 2403.12,
-    "end": 2405.96,
-    "text": " So I move either the low bound or I move the high bound."
-  },
-  {
-    "start": 2405.96,
-    "end": 2410.56,
-    "text": " Either way, I'm cutting the search space in half each step."
-  },
-  {
-    "start": 2410.56,
-    "end": 2413.12,
-    "text": " I'll get my new guess."
-  },
-  {
-    "start": 2413.12,
-    "end": 2418.0,
-    "text": " I'll increment my counter, and off I go."
-  },
-  {
-    "start": 2418.04,
-    "end": 2420.2,
-    "text": " In the happy event that eventually I get a good"
-  },
-  {
-    "start": 2420.2,
-    "end": 2426.2,
-    "text": " enough guess, you'll see I'll exit the loop."
-  },
-  {
-    "start": 2426.2,
-    "end": 2430.2,
-    "text": " When I exit the loop, I check, did I exit it because I"
-  },
-  {
-    "start": 2430.2,
-    "end": 2433.08,
-    "text": " exceeded the counter, i.e. I didn't have a good enough"
-  },
-  {
-    "start": 2433.08,
-    "end": 2434.24,
-    "text": " guess."
-  },
-  {
-    "start": 2434.24,
-    "end": 2439.2,
-    "text": " If so, I'll print the message iteration count exceeded."
-  },
-  {
-    "start": 2439.2,
-    "end": 2446.36,
-    "text": " Otherwise, I'll print the result and return it."
-  },
-  {
-    "start": 2446.36,
-    "end": 2448.76,
-    "text": " Now again, if I were writing a square root function to be"
-  },
-  {
-    "start": 2448.76,
-    "end": 2451.6,
-    "text": " used in another program, I probably wouldn't bother"
-  },
-  {
-    "start": 2451.6,
-    "end": 2454.2,
-    "text": " printing the result and the number of iterations and all"
-  },
-  {
-    "start": 2454.2,
-    "end": 2455.28,
-    "text": " of that."
-  },
-  {
-    "start": 2455.28,
-    "end": 2458.2,
-    "text": " But again, I'm doing that here because we want to see"
-  },
-  {
-    "start": 2458.2,
-    "end": 2459.92,
-    "text": " what it's doing."
-  },
-  {
-    "start": 2459.92,
-    "end": 2462.4,
-    "text": " All right, we'll run it a couple times, and then I'll"
-  },
-  {
-    "start": 2462.4,
-    "end": 2466.44,
-    "text": " let you out for the day."
-  },
-  {
-    "start": 2466.44,
-    "end": 2467.76,
-    "text": " Let's go do this."
-  },
-  {
-    "start": 2477.04,
-    "end": 2483.32,
-    "text": " All right, we're here."
-  },
-  {
-    "start": 2483.32,
-    "end": 2485.36,
-    "text": " Notice when I run it, nothing happens."
-  },
-  {
-    "start": 2485.36,
-    "end": 2487.04,
-    "text": " Why did nothing happen?"
-  },
-  {
-    "start": 2487.04,
-    "end": 2489.8,
-    "text": " Well, nothing happens, it was just a function."
-  },
-  {
-    "start": 2489.8,
-    "end": 2493.08,
-    "text": " Functions don't do anything until I call them."
-  },
-  {
-    "start": 2493.08,
-    "end": 2494.36,
-    "text": " So let's call it."
-  },
-  {
-    "start": 2495.0,
-    "end": 2502.84,
-    "text": " Let's call square root by with 4.001."
-  },
-  {
-    "start": 2505.92,
-    "end": 2507.52,
-    "text": " Took only one iteration."
-  },
-  {
-    "start": 2507.52,
-    "end": 2508.92,
-    "text": " That was pretty fast."
-  },
-  {
-    "start": 2508.92,
-    "end": 2511.2,
-    "text": " Estimated two is an answer."
-  },
-  {
-    "start": 2511.2,
-    "end": 2513.72,
-    "text": " We're pretty happy with that answer."
-  },
-  {
-    "start": 2513.72,
-    "end": 2517.2,
-    "text": " Let's try another example."
-  },
-  {
-    "start": 2517.2,
-    "end": 2520.36,
-    "text": " Let's look at nine."
-  },
-  {
-    "start": 2520.36,
-    "end": 2523.36,
-    "text": " I always like to, by the way, write the answer."
-  },
-  {
-    "start": 2523.36,
-    "end": 2525.56,
-    "text": " I always like to, by the way, start with questions whose"
-  },
-  {
-    "start": 2525.56,
-    "end": 2528.84,
-    "text": " answer I know."
-  },
-  {
-    "start": 2528.84,
-    "end": 2531.2,
-    "text": " We'll try and get a little bit more precise."
-  },
-  {
-    "start": 2531.2,
-    "end": 2532.4,
-    "text": " Well, all right."
-  },
-  {
-    "start": 2532.4,
-    "end": 2536.64,
-    "text": " Here it took 18 iterations."
-  },
-  {
-    "start": 2536.64,
-    "end": 2540.4,
-    "text": " Didn't actually give me the answer 3, which we know happens"
-  },
-  {
-    "start": 2540.4,
-    "end": 2542.16,
-    "text": " to be the answer."
-  },
-  {
-    "start": 2542.16,
-    "end": 2546.12,
-    "text": " But it gave me something that was with an epsilon of 3."
-  },
-  {
-    "start": 2546.12,
-    "end": 2549.68,
-    "text": " So it meets the specification, so I should be"
-  },
-  {
-    "start": 2549.68,
-    "end": 2552.44,
-    "text": " perfectly happy."
-  },
-  {
-    "start": 2552.48,
-    "end": 2554.04,
-    "text": " Let's look at another example."
-  },
-  {
-    "start": 2558.72,
-    "end": 2560.08,
-    "text": " Try a bigger number here."
-  },
-  {
-    "start": 2567.0,
-    "end": 2570.0,
-    "text": " All right, so I've looked for the square root of 1,000."
-  },
-  {
-    "start": 2570.0,
-    "end": 2572.0,
-    "text": " Here it took 29 iterations."
-  },
-  {
-    "start": 2572.0,
-    "end": 2574.08,
-    "text": " We're kind of creeping up there."
-  },
-  {
-    "start": 2574.08,
-    "end": 2576.72,
-    "text": " Gave me an estimate."
-  },
-  {
-    "start": 2576.72,
-    "end": 2579.12,
-    "text": " Let's look at our infamous example of two."
-  },
-  {
-    "start": 2579.12,
-    "end": 2580.32,
-    "text": " See what it does here."
-  },
-  {
-    "start": 2582.44,
-    "end": 2594.08,
-    "text": " Worked around."
-  },
-  {
-    "start": 2594.08,
-    "end": 2600.0,
-    "text": " Now, we can see that it's actually working."
-  },
-  {
-    "start": 2600.0,
-    "end": 2602.92,
-    "text": " And I'm getting answers that we believe are good enough"
-  },
-  {
-    "start": 2602.92,
-    "end": 2605.32,
-    "text": " answers."
-  },
-  {
-    "start": 2605.32,
-    "end": 2608.24,
-    "text": " But we also see that the speed of what we talk about is"
-  },
-  {
-    "start": 2608.24,
-    "end": 2611.28,
-    "text": " convergence, how many iterations it takes, the"
-  },
-  {
-    "start": 2611.28,
-    "end": 2614.6,
-    "text": " number of iterations, is variable."
-  },
-  {
-    "start": 2614.6,
-    "end": 2617.88,
-    "text": " And it seems to be related to at least two things."
-  },
-  {
-    "start": 2617.88,
-    "end": 2620.52,
-    "text": " And we'll see more about this in the next lecture."
-  },
-  {
-    "start": 2620.52,
-    "end": 2624.32,
-    "text": " The size of the number of the square root we're looking for"
-  },
-  {
-    "start": 2624.32,
-    "end": 2629.28,
-    "text": " and the precision to which I want the answer."
-  },
-  {
-    "start": 2629.28,
-    "end": 2634.88,
-    "text": " Next lecture, we'll look at, A, what's wrong with this one."
-  },
-  {
-    "start": 2634.88,
-    "end": 2638.16,
-    "text": " And I would ask you to between now and the next lecture,"
-  },
-  {
-    "start": 2638.16,
-    "end": 2638.88,
-    "text": " think about it."
-  },
-  {
-    "start": 2638.88,
-    "end": 2641.76,
-    "text": " See if you can find the bug yourself."
-  },
-  {
-    "start": 2641.76,
-    "end": 2644.08,
-    "text": " We'll look first for the bug."
-  },
-  {
-    "start": 2644.08,
-    "end": 2647.04,
-    "text": " And then after that, we'll look at a better method of"
-  },
-  {
-    "start": 2647.04,
-    "end": 2648.84,
-    "text": " finding the answer."
-  },
-  {
-    "start": 2648.84,
-    "end": 2649.84,
-    "text": " Thank you."
+    "start": 1464.6,
+    "end": 1465.6,
+    "text": " for the user processes."
   }
 ]

@@ -1,4342 +1,2786 @@
 [
   {
-    "id": "seg_0b294a07",
+    "id": "seg_ecebf29b",
     "start_time": 0.0,
-    "end_time": 2.48,
-    "text": "The following content is provided under a Creative",
-    "tag": "LECTURE_CONTENT"
+    "end_time": 9.88,
+    "text": "In this lecture, we will understand how virtual memory and paging works in XV6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_4ccfcf7b",
-    "start_time": 2.48,
-    "end_time": 3.88,
-    "text": "Commons license.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d3873b16",
+    "start_time": 9.88,
+    "end_time": 17.92,
+    "text": "Please refer to this URL for information about the complete series of lectures.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_8a8e2780",
-    "start_time": 3.88,
-    "end_time": 6.92,
-    "text": "Your support will help MIT OpenCourseWare continue to",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_7f61dc1f",
+    "start_time": 17.92,
+    "end_time": 23.44,
+    "text": "So let us understand how the virtual address space of the process looks in XV6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_afef79e3",
-    "start_time": 6.92,
-    "end_time": 10.56,
-    "text": "offer high quality educational resources for free.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_babab9d5",
+    "start_time": 23.44,
+    "end_time": 27.84,
+    "text": "So XV6, the version of code that we are reading is a 32-bit operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_3772b8cd",
-    "start_time": 10.56,
-    "end_time": 13.48,
-    "text": "To make a donation or view additional materials from",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_2b132702",
+    "start_time": 27.84,
+    "end_time": 35.96,
+    "text": "So you have 2 to the 32, that is 4 gigabytes of virtual address space for every process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_a4da1be9",
-    "start_time": 13.48,
-    "end_time": 17.4,
-    "text": "hundreds of MIT courses, visit MIT OpenCourseWare at",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_b3d3e59b",
+    "start_time": 35.96,
+    "end_time": 40.8,
+    "text": "So we have seen this concept of a virtual address space before in the earlier lectures.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_28b545ad",
-    "start_time": 17.4,
-    "end_time": 18.68,
-    "text": "ocw.mit.edu.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_e0a0812d",
+    "start_time": 40.8,
+    "end_time": 46.04,
+    "text": "So the virtual address space of a process is divided into pages, multiple pages, say",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f34e4b7c",
-    "start_time": 21.56,
-    "end_time": 24.24,
-    "text": "Good morning.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_b81c2b41",
+    "start_time": 46.04,
+    "end_time": 48.64,
+    "text": "4KB pages.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ee67fca2",
-    "start_time": 24.24,
-    "end_time": 26.92,
-    "text": "We should start with a confession for those of you",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_454cf3b3",
+    "start_time": 48.64,
+    "end_time": 55.96,
+    "text": "And each of these pages, each of these valid logical pages is mapped to a physical frame",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_4e886bdc",
-    "start_time": 26.92,
-    "end_time": 30.56,
-    "text": "looking at this in OpenCourseWare that I'm currently",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_00a96b4f",
+    "start_time": 55.96,
+    "end_time": 60.4,
+    "text": "by the operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f07099f6",
-    "start_time": 30.56,
-    "end_time": 34.84,
-    "text": "lecturing to an empty auditorium.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_d147df14",
+    "start_time": 60.4,
+    "end_time": 66.48,
+    "text": "So the address space, which has a bunch of pages, each of these pages is mapped to a",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2db7ea7f",
-    "start_time": 34.84,
-    "end_time": 38.8,
-    "text": "The fifth lecture for 600 this term, we ran into some",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ddc54cac",
+    "start_time": 66.48,
+    "end_time": 68.64,
+    "text": "physical frame by the operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_690a9dc5",
-    "start_time": 38.8,
-    "end_time": 43.88,
-    "text": "technical difficulties, which left us with a recording we",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_4dccbc85",
+    "start_time": 68.64,
+    "end_time": 75.4,
+    "text": "And every process has a data structure called the page table that keeps track of this mappings",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3981ec10",
-    "start_time": 43.88,
-    "end_time": 46.0,
-    "text": "weren't very satisfied with.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_157c01b7",
+    "start_time": 75.4,
+    "end_time": 80.04,
+    "text": "from virtual addresses to physical addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_c630cd63",
-    "start_time": 46.0,
-    "end_time": 48.8,
-    "text": "So this is a redo.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_b89fd30f",
+    "start_time": 80.04,
+    "end_time": 88.36,
+    "text": "Every process has a page table and there is one page table entry for every page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a1674b9e",
-    "start_time": 48.8,
-    "end_time": 52.0,
-    "text": "And if you will hear no questions from the audience,",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_61ec9098",
+    "start_time": 88.36,
+    "end_time": 93.84,
+    "text": "If you have n pages, you will have n page table entries in the page table of the process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3cb111fe",
-    "start_time": 52.0,
-    "end_time": 54.52,
-    "text": "and that's because there is no audience.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_dc06ffc5",
+    "start_time": 93.84,
+    "end_time": 100.36,
+    "text": "And each page table entry contains the physical frame number to which that particular logical",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_84e0d516",
-    "start_time": 54.52,
-    "end_time": 57.72,
-    "text": "Nevertheless, I will do my best to pretend.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_5893d1d8",
+    "start_time": 100.36,
+    "end_time": 105.6,
+    "text": "page is mapped by the operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a9bea99b",
-    "start_time": 57.72,
-    "end_time": 61.32,
-    "text": "I've been told this is a little bit like giving a speech in",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_c468377c",
+    "start_time": 105.6,
+    "end_time": 113.16,
+    "text": "So this is the basic concept of paging that we've seen in previous lectures.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_52569d83",
-    "start_time": 61.32,
-    "end_time": 64.96,
-    "text": "the floor of the US Congress when C-SPAN is the only",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_c6131323",
+    "start_time": 113.16,
+    "end_time": 121.48,
+    "text": "Now getting into more details about how this page table is organized in Xv6, as we've seen",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9ed857fa",
-    "start_time": 64.96,
-    "end_time": 67.36,
-    "text": "thing watching.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_08be8ca6",
+    "start_time": 121.48,
+    "end_time": 126.52,
+    "text": "your virtual address space is 2 to the 32 bytes, your page size is 2 to the 12 bytes,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ac54745d",
-    "start_time": 67.36,
-    "end_time": 69.88,
-    "text": "OK.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_14ee15db",
+    "start_time": 126.52,
+    "end_time": 127.52,
+    "text": "which is 4KB.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_4b17a207",
-    "start_time": 69.88,
-    "end_time": 74.44,
-    "text": "Computers are supposed to be good for crunching numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e00536f7",
+    "start_time": 127.52,
+    "end_time": 132.68,
+    "text": "Therefore, you can have up to 2 to the 20 pages per process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1d02b424",
-    "start_time": 74.44,
-    "end_time": 78.24,
-    "text": "And we've looked a little bit at numbers this term.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c35d590a",
+    "start_time": 132.68,
+    "end_time": 137.04,
+    "text": "And therefore, you will have 2 to the 20 page table entries.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2deb81b2",
-    "start_time": 78.24,
-    "end_time": 81.6,
-    "text": "But I now want to get into looking at them in more depth",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_65554d5f",
+    "start_time": 137.04,
+    "end_time": 142.92,
+    "text": "So a page table is nothing but you can think of it as logically an array with these 2 to",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_8731f4de",
-    "start_time": 81.6,
-    "end_time": 83.12,
-    "text": "than we've been doing.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_f5813fe4",
+    "start_time": 142.92,
+    "end_time": 145.8,
+    "text": "the 20 page table entries.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5ec68f63",
-    "start_time": 83.12,
-    "end_time": 85.8,
-    "text": "Python has two different kinds of numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4a48c1d7",
+    "start_time": 145.8,
+    "end_time": 149.92,
+    "text": "So there are 2 to the 20 page table entries in a page table.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_fb8c5cf9",
-    "start_time": 92.16,
-    "end_time": 95.4,
-    "text": "So far, the only con we've really paid any",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_2bfbe07c",
+    "start_time": 149.92,
+    "end_time": 155.48,
+    "text": "You can think of it like they're arranged in an array.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_06c330d5",
-    "start_time": 95.4,
-    "end_time": 97.6,
-    "text": "attention to is type int.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c9137bc7",
-    "start_time": 100.52,
-    "end_time": 105.48,
-    "text": "And those are intended to mirror the integers, as we all",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_655efe84",
-    "start_time": 105.48,
-    "end_time": 109.0,
-    "text": "learned about starting an elementary school.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_2aff5532",
-    "start_time": 109.0,
-    "end_time": 112.56,
-    "text": "And they're good for things that you can count.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1b3a89d9",
-    "start_time": 112.56,
-    "end_time": 115.64,
-    "text": "Any place you use hold numbers.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_35c1f5d9",
-    "start_time": 115.64,
-    "end_time": 120.6,
-    "text": "Interestingly, Python, unlike some languages, has what are",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_dad87608",
-    "start_time": 120.6,
-    "end_time": 122.88,
-    "text": "called arbitrary precision integers.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ce753cc3",
-    "start_time": 129.56,
-    "end_time": 133.24,
-    "text": "By that, we mean you can make numbers as big as you want",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9f88ee23",
-    "start_time": 133.24,
-    "end_time": 134.44,
-    "text": "them to.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b1900e82",
-    "start_time": 134.44,
-    "end_time": 137.64,
-    "text": "Let's look at an example.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_f37ee1dc",
-    "start_time": 137.64,
-    "end_time": 140.24,
-    "text": "We'll just take a for a variable name.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c3a0d6bd",
-    "start_time": 140.24,
-    "end_time": 147.08,
-    "text": "And we'll set a to be 2 raised to the 1,000th power.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8c3e0d4f",
-    "start_time": 147.08,
-    "end_time": 151.48,
-    "text": "That, by the way, is a really big number.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_02e3bf7e",
-    "start_time": 151.48,
-    "end_time": 154.96,
-    "text": "And now what happens if we try and display it?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_44889f13",
-    "start_time": 154.96,
-    "end_time": 157.44,
-    "text": "We get a lot of digits.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_dbfe91f9",
-    "start_time": 157.44,
-    "end_time": 159.84,
-    "text": "You can see why I'm doing this on the screen instead of",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a896b030",
-    "start_time": 159.84,
+    "id": "seg_f18d83f4",
+    "start_time": 155.48,
     "end_time": 161.32,
-    "text": "writing it on the blackboard.",
-    "tag": "LECTURE_CONTENT"
+    "text": "So you look at your virtual address, your 32 bit virtual address, look at the top 20",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_61a1224a",
-    "start_time": 163.8,
-    "end_time": 165.8,
-    "text": "I'm not going to ask you whether you believe this is the",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_e66bd266",
+    "start_time": 162.08,
+    "end_time": 167.32,
+    "text": "bits, that will give you the page number and use these 20 bits to index into the page",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_45433d3b",
-    "start_time": 165.8,
-    "end_time": 166.6,
-    "text": "right answer.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_d2e61ee8",
+    "start_time": 167.32,
+    "end_time": 175.12,
+    "text": "table to find the suitable page table entry corresponding to that particular page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_15ee6ccd",
-    "start_time": 166.6,
-    "end_time": 167.44,
-    "text": "Trust me.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_57812dc5",
+    "start_time": 175.12,
+    "end_time": 180.6,
+    "text": "Look at the page number index into the page table using the page number to locate the",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5a3955fe",
-    "start_time": 167.44,
-    "end_time": 169.08,
-    "text": "Trust Python.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b9d27e41",
+    "start_time": 180.6,
+    "end_time": 184.52,
+    "text": "page table entry of a particular page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_01ff0cd6",
-    "start_time": 169.08,
-    "end_time": 172.12,
-    "text": "I would like you to notice that the very end of this is the",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_3c3291ec",
+    "start_time": 184.52,
+    "end_time": 188.12,
+    "text": "So if you look inside this page table entry, what will it have?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_29d52d2f",
-    "start_time": 172.12,
-    "end_time": 178.36,
-    "text": "letter L. What does that mean?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_de98bb6f",
+    "start_time": 188.12,
+    "end_time": 193.2,
+    "text": "This page table entry will have a physical frame number and it will have some flags.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3ed2a9f0",
-    "start_time": 178.36,
-    "end_time": 179.92,
-    "text": "It means long.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_403ee211",
+    "start_time": 193.2,
+    "end_time": 198.2,
+    "text": "In essence, a page table entry is simply a pointer to the actual physical frame that",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_333a7c80",
-    "start_time": 185.52,
-    "end_time": 190.96,
-    "text": "That's telling us that it's representing this particular",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_55644c42",
+    "start_time": 198.2,
+    "end_time": 200.24,
+    "text": "has the contents of that page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1ca37300",
-    "start_time": 190.96,
-    "end_time": 195.56,
-    "text": "integer in what it calls its internal long format.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_21ac4d68",
+    "start_time": 200.24,
+    "end_time": 203.92,
+    "text": "So if you look inside the page table entry, what will you find?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b281ea2f",
-    "start_time": 196.0,
-    "end_time": 197.96,
-    "text": "You needn't worry about that.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_eed386ad",
+    "start_time": 203.92,
+    "end_time": 210.96,
+    "text": "You will find a physical frame number and you're going to find some flags.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b99a2db6",
-    "start_time": 197.96,
-    "end_time": 200.12,
-    "text": "The only thing to say about it is when you're dealing with",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3c4b8403",
+    "start_time": 210.96,
+    "end_time": 216.36,
+    "text": "We'll come to what these flags are in a little bit.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_f1684f01",
-    "start_time": 200.12,
-    "end_time": 203.24,
-    "text": "long integers, it's a lot less efficient than when you're",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a54bf707",
+    "start_time": 216.4,
+    "end_time": 218.4,
+    "text": "How do you translate an address?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_85bc17c5",
-    "start_time": 203.24,
-    "end_time": 205.84,
-    "text": "dealing with smaller numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_657f87ae",
+    "start_time": 218.4,
+    "end_time": 225.48,
+    "text": "You are given this virtual address, which is a 20 bit page number along with a 12 bit",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_0b6cb539",
-    "start_time": 205.84,
-    "end_time": 208.36,
-    "text": "And that's all it's kind of warning you by printing this",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_3d5b8ecc",
+    "start_time": 225.48,
+    "end_time": 226.68,
+    "text": "offset.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_17ec9291",
-    "start_time": 208.36,
-    "end_time": 215.28,
-    "text": "L. About 2 billion is the magic number.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a3519112",
+    "start_time": 226.68,
+    "end_time": 231.6,
+    "text": "So you index into the page table, locate the page table entry, find the physical frame",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9a1ed9f3",
-    "start_time": 215.28,
-    "end_time": 218.2,
-    "text": "When you get over 2 billion, it's now going to deal with",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4bf5b0a0",
+    "start_time": 231.6,
+    "end_time": 237.68,
+    "text": "number and then this physical frame number plus the 12 bit offset.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_c4090e4b",
-    "start_time": 218.2,
-    "end_time": 219.12,
-    "text": "long integers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_81d1cf02",
+    "start_time": 237.68,
+    "end_time": 244.36,
+    "text": "If you add, that will give you the physical address that you need corresponding to this",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_66d18fef",
-    "start_time": 219.12,
-    "end_time": 222.32,
-    "text": "So if, for example, you're trying to deal with US",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_e6c788b2",
+    "start_time": 244.36,
+    "end_time": 246.72,
+    "text": "virtual address.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_60f7b7d9",
-    "start_time": 222.32,
-    "end_time": 230.2,
-    "text": "budget deficit, you will need integers of type L.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_1497bb28",
+    "start_time": 246.72,
+    "end_time": 248.64,
+    "text": "So now what are these flags?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f556077a",
-    "start_time": 230.2,
-    "end_time": 232.2,
-    "text": "OK.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_289ede02",
+    "start_time": 248.64,
+    "end_time": 249.64,
+    "text": "There are many flags.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_33f12512",
-    "start_time": 232.2,
-    "end_time": 234.68,
-    "text": "Let's look at another interesting example.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_18744a8b",
+    "start_time": 249.64,
+    "end_time": 251.76,
+    "text": "The important ones are indicated here.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_a346e7b6",
-    "start_time": 234.68,
-    "end_time": 244.08,
-    "text": "Suppose I set B equal to 2 raised to the 999th power.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c10e82f5",
+    "start_time": 251.76,
+    "end_time": 256.04,
+    "text": "There is one flag indicating if a page is present or not.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_d73ae574",
-    "start_time": 244.08,
-    "end_time": 246.64,
-    "text": "I can display B.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_1985f8b2",
+    "start_time": 256.04,
+    "end_time": 259.8,
+    "text": "Note that every process need not use all the two to the 20 pages.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_a6f772fe",
-    "start_time": 246.64,
-    "end_time": 252.76,
-    "text": "And it's a different number, considerably smaller, but again",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ec402f69",
+    "start_time": 259.8,
+    "end_time": 262.08,
+    "text": "It may not have that much memory to store.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_63433f5c",
-    "start_time": 252.76,
-    "end_time": 254.48,
-    "text": "ending in an L.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_251b90eb",
+    "start_time": 262.08,
+    "end_time": 266.64,
+    "text": "So this flag indicates if a page table entry, if the page corresponding to that page table",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_7e12ba61",
-    "start_time": 254.48,
-    "end_time": 261.64,
-    "text": "And now, what do you think I'll get if we try A divided by B?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c45626fd",
+    "start_time": 266.64,
+    "end_time": 271.56,
+    "text": "entry is present or not, if it is not present and the program tries to access it, it will",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_f844e963",
-    "start_time": 261.64,
-    "end_time": 265.56,
-    "text": "And remember, we're now doing integer division.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e41c01ff",
+    "start_time": 271.56,
+    "end_time": 273.52,
+    "text": "cause a page fault.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9c9a9107",
-    "start_time": 265.56,
-    "end_time": 267.84,
-    "text": "Well, let's see.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_fa854d4e",
+    "start_time": 273.52,
+    "end_time": 276.96,
+    "text": "Another flag indicates if the page is writable or not.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_fc827bc4",
-    "start_time": 267.84,
-    "end_time": 271.16,
-    "text": "We get 2 L.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_20a356c1",
+    "start_time": 276.96,
+    "end_time": 282.56,
+    "text": "If it is not writable, you can only read and if a process tries to write to it, once again,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_453255ad",
-    "start_time": 271.16,
-    "end_time": 273.2,
-    "text": "Well, you'd expect it to be 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_2c2bc74f",
+    "start_time": 282.56,
+    "end_time": 284.96,
+    "text": "it will trap into the operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9b4da054",
-    "start_time": 273.24,
-    "end_time": 274.92,
-    "text": "Because if you think about the meaning of the",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_adbd95ea",
+    "start_time": 284.96,
+    "end_time": 287.8,
+    "text": "And another flag indicates if it's a user page or not.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5ab38721",
-    "start_time": 274.92,
-    "end_time": 278.68,
-    "text": "exponentiation, indeed, the difference between raising",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3d3d3934",
+    "start_time": 287.8,
+    "end_time": 294.32,
+    "text": "If this flag is set, then it is a user page and if it is not a user page, then only the",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d5984788",
-    "start_time": 278.68,
-    "end_time": 283.64,
-    "text": "something to the 999th power and to the 1,000th power",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_17e9f51c",
+    "start_time": 294.32,
+    "end_time": 296.8,
+    "text": "kernel can access that page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_85c81a69",
-    "start_time": 283.64,
-    "end_time": 287.0,
-    "text": "should be, in this case, 2, since that's what we're",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_de3f4d2f",
+    "start_time": 296.8,
+    "end_time": 303.64,
+    "text": "So in all the pages of a process, for all the valid pages, all of these permission bits,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3c3fb816",
-    "start_time": 287.0,
-    "end_time": 289.28,
-    "text": "raising to a power.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_f236082a",
+    "start_time": 303.64,
+    "end_time": 306.48,
+    "text": "everything are set.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ba88dbff",
-    "start_time": 289.28,
-    "end_time": 292.4,
-    "text": "Why does it say 2 L?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_7eacdd7b",
+    "start_time": 306.48,
+    "end_time": 308.72,
+    "text": "And we've already seen how address translation happens.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b4478577",
-    "start_time": 292.4,
-    "end_time": 295.68,
-    "text": "2 is considerably less than 2 billion.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6bf79194",
+    "start_time": 308.72,
+    "end_time": 314.16,
+    "text": "You look at the virtual address, get the page number, map it to the physical frame number",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_156770dc",
-    "start_time": 295.68,
-    "end_time": 300.32,
-    "text": "And that's because once you get L, you stay L. Not",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_053ecb77",
+    "start_time": 314.16,
+    "end_time": 317.8,
+    "text": "at the offset that will give you the physical address.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d33aea73",
-    "start_time": 300.36,
-    "end_time": 303.36,
-    "text": "particularly important, but kind of worth knowing.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_bebdf7ba",
+    "start_time": 317.8,
+    "end_time": 324.44,
+    "text": "And this address translation is what is done by the memory management unit.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ee831325",
-    "start_time": 305.92,
-    "end_time": 309.04,
-    "text": "Why am I bothering you with this whole issue of how numbers",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_faf0bdb3",
+    "start_time": 324.44,
+    "end_time": 329.8,
+    "text": "Now, the actual page table is actually not a logical array, a big array like that.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9e060ec5",
-    "start_time": 309.04,
-    "end_time": 312.44,
-    "text": "are represented in the computer?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3553ca84",
+    "start_time": 329.8,
+    "end_time": 333.72,
+    "text": "All these two to the 20 page table entries cannot be stored continuously.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_011607f1",
-    "start_time": 312.44,
-    "end_time": 316.0,
-    "text": "In an ideal world, you would ignore this completely and",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3e5ef2d8",
+    "start_time": 333.72,
+    "end_time": 336.76,
+    "text": "Therefore, your page table will have two levels.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_6fae744b",
-    "start_time": 316.0,
-    "end_time": 320.12,
-    "text": "just say, numbers do what numbers are supposed to do.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6f1c3f74",
+    "start_time": 336.76,
+    "end_time": 341.04,
+    "text": "In XV6, it is a two level page table because it's a 32-bit operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_0e235c91",
-    "start_time": 320.12,
-    "end_time": 324.0,
-    "text": "But as we're about to see, sometimes in Python, and in",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3d0a4309",
+    "start_time": 341.04,
+    "end_time": 345.4,
+    "text": "In 64-bit operating systems, you can have many more levels in the page table.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ea050cf7",
-    "start_time": 324.0,
-    "end_time": 328.92,
-    "text": "fact in every programming language, things behave",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a43e0705",
+    "start_time": 345.4,
+    "end_time": 346.68,
+    "text": "So what are these two levels?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_5c1a5171",
-    "start_time": 328.92,
-    "end_time": 332.48,
-    "text": "contrary to what your intuition suggests.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e00e500c",
+    "start_time": 346.68,
+    "end_time": 356.56,
+    "text": "You first have two to the 10 inner page table pages, each of which stores two to the 10",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_34143c9a",
-    "start_time": 332.48,
-    "end_time": 335.88,
-    "text": "And I want to spend a little time helping you understand",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_411c5b46",
+    "start_time": 356.56,
+    "end_time": 358.4,
+    "text": "page table entries each.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1bdbf75e",
-    "start_time": 335.88,
-    "end_time": 338.56,
-    "text": "why this happens.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ba4e0757",
+    "start_time": 358.4,
+    "end_time": 363.76,
+    "text": "So you have a bunch of inner page tables which store the page table entries, that is, which",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_4378ce7d",
-    "start_time": 338.56,
-    "end_time": 341.64,
-    "text": "So let's look at a different kind of number.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_25c654e3",
+    "start_time": 363.76,
+    "end_time": 368.72,
+    "text": "actually point to the physical frame numbers.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9289d9b0",
-    "start_time": 341.64,
-    "end_time": 348.68,
-    "text": "And now we're going to look at what Python and almost every",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6be129dd",
+    "start_time": 368.72,
+    "end_time": 374.56,
+    "text": "So you have two to the 10 such inner page table pages, each with two to the 10 page",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f6dad23c",
-    "start_time": 348.68,
-    "end_time": 354.04,
-    "text": "other programming language calls type float, which is",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_2fcd410f",
+    "start_time": 374.56,
+    "end_time": 381.32,
+    "text": "table entries, so that all of these total two to the 20 page table entries can be accommodated.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1405f3b4",
-    "start_time": 354.04,
-    "end_time": 355.64,
-    "text": "short for floating point.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_717a5886",
+    "start_time": 381.32,
+    "end_time": 390.32,
+    "text": "And then you have an outer page directory which in turn stores pointers to all of these",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ca7f5129",
-    "start_time": 363.28,
-    "end_time": 367.4,
-    "text": "And that's the way that programming languages typically",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a436661e",
+    "start_time": 390.32,
+    "end_time": 392.48,
+    "text": "inner page tables.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3048c44c",
-    "start_time": 367.4,
-    "end_time": 372.64,
-    "text": "represent what we think of as real numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8e712ff5",
+    "start_time": 392.48,
+    "end_time": 398.16,
+    "text": "It also stores PT-like references to these inner page tables.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d0169969",
-    "start_time": 372.64,
-    "end_time": 375.08,
-    "text": "So let's look at an example.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_5bbba35c",
+    "start_time": 398.16,
+    "end_time": 402.48,
+    "text": "So this is called the outer page directory.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_97814349",
-    "start_time": 375.08,
-    "end_time": 383.84,
-    "text": "I'm going to set the variable x to be 0.1, 1 tenth.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ed149b51",
+    "start_time": 403.44,
+    "end_time": 404.44,
+    "text": "Okay.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_611c2cf1",
-    "start_time": 383.88,
-    "end_time": 385.96,
-    "text": "And now we're going to display x.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c09d0acb",
+    "start_time": 404.44,
+    "end_time": 413.2,
+    "text": "And the address of this page directory is what is stored in the CR3 register of your CPU.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_acafc35e",
-    "start_time": 389.84,
-    "end_time": 391.8,
-    "text": "Take a look at this.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_9522d720",
+    "start_time": 413.2,
+    "end_time": 418.32,
+    "text": "And this is what is used by the MMU during address translation.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_79000596",
-    "start_time": 391.8,
-    "end_time": 394.84,
-    "text": "Why isn't it 0.1?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_27b9d40d",
+    "start_time": 418.32,
+    "end_time": 420.92,
+    "text": "So how does the MMU translate an address?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_ffbd76c4",
-    "start_time": 394.84,
-    "end_time": 398.84,
-    "text": "Why is it 0.1, a whole bunch of zeros, and then this",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_aca00072",
+    "start_time": 420.92,
+    "end_time": 424.0,
+    "text": "It will start with a 32-bit virtual address.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_70497fe5",
-    "start_time": 398.84,
-    "end_time": 403.16,
-    "text": "mysterious 1 appearing at the end?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_5a606b05",
+    "start_time": 424.0,
+    "end_time": 430.44,
+    "text": "It will extract the first 10 bits of that virtual address that will be used to index",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f35b15f0",
-    "start_time": 403.16,
-    "end_time": 405.96,
-    "text": "Is it because Python just wants to be obnoxious and is",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_363422b5",
+    "start_time": 430.44,
+    "end_time": 433.04,
+    "text": "into the page directory.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_aee0efe1",
-    "start_time": 405.96,
-    "end_time": 408.04,
-    "text": "making life hard?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c259fb5a",
+    "start_time": 433.04,
+    "end_time": 440.4,
+    "text": "Then the next 10 bits will be used to index into the inner page table.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_facfe9ec",
-    "start_time": 408.04,
-    "end_time": 409.28,
-    "text": "No.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3754e4a6",
+    "start_time": 440.4,
+    "end_time": 442.6,
+    "text": "And from that, you will get the physical frame number.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_29fb103f",
-    "start_time": 409.28,
-    "end_time": 412.72,
-    "text": "It has to do with the way the numbers are represented",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b3876f2d",
+    "start_time": 442.6,
+    "end_time": 447.16,
+    "text": "You will add that to the offset and that will give you the final physical address.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_dc9d080d",
-    "start_time": 412.72,
-    "end_time": 414.4,
-    "text": "inside the computer.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_dc9d5e13",
+    "start_time": 447.16,
+    "end_time": 453.04,
+    "text": "So this translation is done by the MMU using these page tables which are set up by the",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a9101565",
-    "start_time": 414.4,
-    "end_time": 419.84,
-    "text": "Python, like almost every modern programming language,",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d50e7f99",
+    "start_time": 453.04,
+    "end_time": 455.2,
+    "text": "operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a99af13f",
-    "start_time": 419.84,
-    "end_time": 426.0,
-    "text": "represents numbers using the IEEE floating point standard.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_32e75bfc",
+    "start_time": 455.2,
+    "end_time": 462.4,
+    "text": "So Xv6 code defines a lot of macros like this that will help you extract the various indices",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_8672b5e6",
-    "start_time": 430.36,
-    "end_time": 431.84,
-    "text": "And it's IEEE 754.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6ffdd546",
+    "start_time": 462.4,
+    "end_time": 468.48,
+    "text": "into the page directory and the inner page tables.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_95162aea",
-    "start_time": 431.84,
-    "end_time": 440.84,
-    "text": "IEEE 754.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c34aabb4",
+    "start_time": 468.48,
+    "end_time": 474.44,
+    "text": "So now that we've understood how a page table works, let us look at how the virtual address",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b0ba7de8",
-    "start_time": 440.84,
-    "end_time": 443.76,
-    "text": "Never again will you have to remember that it's 754.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_fcfa1cf6",
+    "start_time": 474.44,
+    "end_time": 477.88,
+    "text": "space of a process is set up in Xv6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_03b979e7",
-    "start_time": 443.76,
-    "end_time": 447.48,
-    "text": "I promise not to ask you that question on a quiz.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_2fb586af",
+    "start_time": 477.88,
+    "end_time": 482.8,
+    "text": "So the memory image of a process, the address space of a process starting at zero has the",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e27c6bcc",
-    "start_time": 447.48,
-    "end_time": 449.36,
-    "text": "But that's what they do.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_18aaecc9",
+    "start_time": 482.8,
+    "end_time": 484.76,
+    "text": "following things.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e28c19b1",
-    "start_time": 449.36,
-    "end_time": 453.4,
-    "text": "This is a variant of scientific notation.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c77f40b5",
+    "start_time": 484.76,
+    "end_time": 491.36,
+    "text": "So starting at zero, you have this address space that has a bunch of things.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_b2f993cd",
-    "start_time": 461.88,
-    "end_time": 465.8,
-    "text": "Something you probably learned about in high school, as a",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_90fca7c0",
+    "start_time": 491.36,
+    "end_time": 496.16,
+    "text": "At the beginning, you have the code data from the executable.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_0641a3f2",
-    "start_time": 465.8,
-    "end_time": 469.2,
-    "text": "way to represent very large numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_858a3d78",
+    "start_time": 496.16,
+    "end_time": 499.48,
+    "text": "And then in Xv6, you have a fixed size stack.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_fcd7446a",
-    "start_time": 469.2,
-    "end_time": 474.32,
-    "text": "Typically, the way we do that is we represent the numbers in",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_84db64b9",
+    "start_time": 499.48,
+    "end_time": 503.0,
+    "text": "The stack is not variable sized like in real operating systems.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_806015b3",
-    "start_time": 474.32,
-    "end_time": 482.76,
-    "text": "the form of a mantissa and an exponent.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b7209ebe",
+    "start_time": 503.0,
+    "end_time": 505.72,
+    "text": "You have a fixed size stack.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_223aa5fd",
-    "start_time": 482.96,
-    "end_time": 489.72,
-    "text": "So we represent a floating point number as a pair of a",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_62740af6",
+    "start_time": 505.72,
+    "end_time": 514.04,
+    "text": "And the stack also has a guard page so that it doesn't overflow into other pages that",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_44fdcad2",
-    "start_time": 489.72,
-    "end_time": 493.96,
-    "text": "mantissa and an exponent.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_fa2417e7",
+    "start_time": 514.04,
+    "end_time": 516.4,
+    "text": "have useful information.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_88b75259",
-    "start_time": 497.52,
-    "end_time": 502.72,
-    "text": "And because computers work in the binary system, it's",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_818caf45",
+    "start_time": 516.4,
+    "end_time": 518.68,
+    "text": "And then finally, you have a heap.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_711e6da9",
-    "start_time": 502.72,
-    "end_time": 506.24,
-    "text": "unlike what you probably learned in high school, where we",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_759d7381",
+    "start_time": 518.68,
+    "end_time": 523.44,
+    "text": "So this heap initially it's not allocated but as and when memory is required, this heap",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_bbe78e5d",
-    "start_time": 506.24,
-    "end_time": 508.72,
-    "text": "raise 10 to some power.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_63e5a865",
+    "start_time": 523.44,
+    "end_time": 526.28,
+    "text": "can expand to whatever says.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9112e6ae",
-    "start_time": 508.72,
-    "end_time": 511.16,
-    "text": "Here we'll always be raised to 10.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_da189fa2",
+    "start_time": 526.28,
+    "end_time": 531.92,
+    "text": "So this is how the user part of the memory is organized in the virtual address space",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e7ed90a3",
-    "start_time": 511.56,
-    "end_time": 515.72,
-    "text": "Here we'll always be raising 2 to some power.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_fe7bbbc9",
+    "start_time": 531.92,
+    "end_time": 534.04,
+    "text": "of a process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9f0a8a0e",
-    "start_time": 515.72,
-    "end_time": 517.92,
-    "text": "Maybe a little later in the term, if we talk about",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3a8ee907",
+    "start_time": 534.04,
+    "end_time": 540.28,
+    "text": "Now in addition to all this code data stack and heap, the virtual address space of a process",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_38d1c77e",
-    "start_time": 517.92,
-    "end_time": 520.56,
-    "text": "computer architecture, we'll get around to explaining why",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_9b6ea8c8",
+    "start_time": 540.28,
+    "end_time": 549.16,
+    "text": "beginning at address 2GB also has the kernel code and data mapped into it.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_0acd4bbb",
-    "start_time": 520.56,
-    "end_time": 522.8,
-    "text": "computers work in binary.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6aa339c1",
+    "start_time": 549.16,
+    "end_time": 554.32,
+    "text": "So if you look into the page table of the process into the virtual address space of",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b984e41f",
-    "start_time": 522.8,
-    "end_time": 527.0,
-    "text": "But for now, just assume that they do, and in fact, they",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4e45a10d",
+    "start_time": 554.32,
+    "end_time": 561.24,
+    "text": "a process, you will have the OS code and data also mapped into the virtual address space",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_684ac838",
-    "start_time": 527.0,
-    "end_time": 529.72,
-    "text": "always have.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c7c52ea4",
+    "start_time": 561.24,
+    "end_time": 568.32,
+    "text": "of a process starting from this variable defined as Kern base, which is equal to 2GB.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e23aab99",
-    "start_time": 529.72,
-    "end_time": 530.84,
-    "text": "All right.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_30eac1e7",
+    "start_time": 568.32,
+    "end_time": 575.8,
+    "text": "So high virtual addresses in a process, they will map to actual OS code and data stored",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a53f71e8",
-    "start_time": 530.84,
-    "end_time": 541.08,
-    "text": "Purists manage to refer to the mantissa as a significant hand.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e6a19002",
+    "start_time": 575.8,
+    "end_time": 578.52,
+    "text": "in RAM.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b435bd09",
-    "start_time": 541.08,
-    "end_time": 545.44,
-    "text": "But I won't do that, because I'm an old guy, and it was a",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b24ee173",
+    "start_time": 578.52,
+    "end_time": 582.84,
+    "text": "So the page table of a process basically has two sets of page table entries.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_de0dcb23",
-    "start_time": 545.44,
-    "end_time": 547.32,
-    "text": "mantissa when I first learned about it.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_5de9f0fd",
+    "start_time": 582.84,
+    "end_time": 588.44,
+    "text": "One set of page table entries have mapping to the user code data stack heap and so on.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_0b1427bf",
-    "start_time": 547.32,
-    "end_time": 551.52,
-    "text": "And I just can't break myself of the habit.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_9b440ec0",
+    "start_time": 588.44,
+    "end_time": 595.88,
+    "text": "And the other set of page table entries contain mapping to the kernel code and other data structures",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_cfd34d32",
-    "start_time": 551.52,
-    "end_time": 553.12,
-    "text": "All right, so how does this work?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_157352cf",
+    "start_time": 595.88,
+    "end_time": 597.28,
+    "text": "of the kernel.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_555e10b8",
-    "start_time": 553.72,
-    "end_time": 561.44,
-    "text": "Well, when we recognize something, when we represent",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d5c7f86d",
+    "start_time": 597.28,
+    "end_time": 603.68,
+    "text": "So these kernel entries will map high virtual addresses and the user entries will map low",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5a44d315",
-    "start_time": 561.44,
-    "end_time": 577.28,
-    "text": "something, the mantissa is between 1 and 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7f75e002",
+    "start_time": 603.68,
+    "end_time": 605.64,
+    "text": "virtual addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f10a0376",
-    "start_time": 577.28,
-    "end_time": 582.12,
-    "text": "Strictly less than 2, greater than or equal to 1.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_819fb264",
+    "start_time": 605.64,
+    "end_time": 610.32,
+    "text": "And note that a process can only access the memory that is mapped by its page table.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_6bc09d11",
-    "start_time": 582.12,
-    "end_time": 607.44,
-    "text": "The exponent is in the range minus 1022 to plus 1023.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_0809b036",
+    "start_time": 610.32,
+    "end_time": 613.72,
+    "text": "A process can only access this virtual address space that it sees.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_2d1df931",
-    "start_time": 607.48,
-    "end_time": 613.36,
-    "text": "So this lets us represent numbers up to about 10 to the",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_43d08c8c",
+    "start_time": 613.72,
+    "end_time": 618.84,
+    "text": "It can access its own code and data and it can access some OS code and data, but it cannot",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_3d35edf8",
-    "start_time": 613.36,
-    "end_time": 616.16,
-    "text": "300th or 8th plus or minus.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a5db5b8a",
+    "start_time": 618.84,
+    "end_time": 621.92,
+    "text": "go and access the memory of other processes and so on.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_98d12156",
-    "start_time": 616.16,
-    "end_time": 619.84,
-    "text": "10 to 308 plus or minus.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_abc9903a",
+    "start_time": 621.92,
+    "end_time": 627.72,
+    "text": "So the page table, whatever is mapped in the page table, only that a process can access.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9cfea5f5",
-    "start_time": 619.84,
-    "end_time": 624.12,
-    "text": "So quite a large range of numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_334beae9",
+    "start_time": 627.72,
+    "end_time": 632.8,
+    "text": "And you have different page tables for different processes and the page table has to be switched.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_8b06287d",
-    "start_time": 624.12,
-    "end_time": 627.24,
-    "text": "Where did these magic things come from?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_5c637476",
+    "start_time": 632.8,
+    "end_time": 636.8,
+    "text": "For example, when you do a context switch, you will have to update the page table of",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_3054200e",
-    "start_time": 627.24,
-    "end_time": 629.76,
-    "text": "Kind of a strange number to see here.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_f0823eab",
+    "start_time": 636.8,
+    "end_time": 638.8,
+    "text": "a process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_0097e894",
-    "start_time": 629.76,
-    "end_time": 637.08,
-    "text": "Well, it has to do with the fact that computers typically",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_714eb181",
+    "start_time": 638.8,
+    "end_time": 642.64,
+    "text": "So this is the virtual address space of a process in Xv6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_0641830f",
-    "start_time": 637.08,
-    "end_time": 639.6,
-    "text": "have words in them.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7adc8852",
+    "start_time": 642.64,
+    "end_time": 646.76,
+    "text": "We'll understand this in a little bit more detail in the coming slides.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_940fd50d",
-    "start_time": 639.6,
-    "end_time": 646.36,
-    "text": "And the words today in a modern computer are 64 bits.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4dbfd49b",
+    "start_time": 646.76,
+    "end_time": 651.36,
+    "text": "So first thing is why is the OS mapped into the address space of every process?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_31ad2daa",
-    "start_time": 646.36,
-    "end_time": 649.28,
-    "text": "For many years, they were 32 bits.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c6aa0424",
+    "start_time": 651.36,
+    "end_time": 653.28,
+    "text": "What is this that's happening?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_7d6d148c",
-    "start_time": 649.28,
-    "end_time": 651.12,
-    "text": "Before that, they were 16 bits.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_38a56708",
+    "start_time": 653.28,
+    "end_time": 655.76,
+    "text": "Let us understand that in some detail.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e60d9245",
-    "start_time": 651.12,
-    "end_time": 653.44,
-    "text": "Before that, they were 8 bits.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e17ad5a1",
+    "start_time": 655.76,
+    "end_time": 663.44,
+    "text": "So the OS code and data structures is part of the virtual address space of every process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_60286428",
-    "start_time": 653.44,
-    "end_time": 655.6,
-    "text": "They continually grown.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e33df9bf",
+    "start_time": 663.44,
+    "end_time": 664.92,
+    "text": "So what does that mean?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_c71214c0",
-    "start_time": 655.6,
-    "end_time": 658.76,
-    "text": "But we've been at 64 for a while, and I think we'll be",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c8bb99c7",
+    "start_time": 664.92,
+    "end_time": 666.44,
+    "text": "Here you have your process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_877b9dd3",
-    "start_time": 658.76,
-    "end_time": 662.32,
-    "text": "stuck at 64 for a while.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_71f213dc",
+    "start_time": 666.44,
+    "end_time": 669.16,
+    "text": "Here you have the virtual address space of a process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_dc0336de",
-    "start_time": 662.32,
-    "end_time": 670.08,
-    "text": "So as we do this, what we do is we get one bit for the sign.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3d548ac1",
+    "start_time": 669.16,
+    "end_time": 680.76,
+    "text": "So beginning from 2GB to 2GB plus a five stop, whatever variable is called five stop",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3524bf71",
-    "start_time": 670.08,
-    "end_time": 673.2,
-    "text": "Is it a positive or a negative number?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_278e7099",
+    "start_time": 680.84,
+    "end_time": 682.84,
+    "text": "is defined in Xv6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5d827596",
-    "start_time": 673.2,
-    "end_time": 677.68,
-    "text": "11 for the exponent.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_2baa101f",
+    "start_time": 682.84,
+    "end_time": 691.72,
+    "text": "This virtual addresses map to the actual OS code and data structures and everything",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_35e10ad1",
-    "start_time": 677.68,
-    "end_time": 688.24,
-    "text": "And that leaves 52 for the mantissa.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_91735791",
+    "start_time": 691.72,
+    "end_time": 697.88,
+    "text": "located in RAM at addresses 0 to five stop.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_680f38f8",
-    "start_time": 688.28,
-    "end_time": 692.4,
-    "text": "And that basically tells us how we're storing numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4510ede0",
+    "start_time": 697.88,
+    "end_time": 698.88,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_cd14d01b",
-    "start_time": 692.4,
-    "end_time": 694.92,
-    "text": "Hi, are you here for the 600 lecture?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_543255df",
+    "start_time": 698.88,
+    "end_time": 705.12,
+    "text": "So at boot up the OS code and data and everything is copied into RAM and starting from address",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f40f9b13",
-    "start_time": 694.92,
-    "end_time": 697.08,
-    "text": "There is none today, because we have a quiz this evening.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_3b792db8",
+    "start_time": 705.12,
+    "end_time": 706.12,
+    "text": "zero.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_304a58b7",
-    "start_time": 700.92,
-    "end_time": 703.16,
-    "text": "It's now the time that the lecture would normally have",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_27167382",
+    "start_time": 706.24,
+    "end_time": 711.28,
+    "text": "It's not exactly starting at zero, but let's assume for now somewhere starting close to",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a60bde5e",
-    "start_time": 703.16,
-    "end_time": 706.48,
-    "text": "started, and a couple of students who forgot that we",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_e394e95d",
+    "start_time": 711.28,
+    "end_time": 712.28,
+    "text": "zero.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_56ef5c8c",
-    "start_time": 706.48,
-    "end_time": 709.24,
-    "text": "have a quiz this evening instead of a lecture just",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_11be9c28",
+    "start_time": 712.28,
+    "end_time": 718.88,
+    "text": "So the OS code and data resides here and these physical addresses are added to the page table",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_00f303e8",
-    "start_time": 709.24,
-    "end_time": 713.8,
-    "text": "strolled in and now strolled out.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_a35d579d",
+    "start_time": 718.88,
+    "end_time": 722.28,
+    "text": "at virtual addresses starting at 2GB.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_51ea3585",
-    "start_time": 713.84,
-    "end_time": 720.28,
-    "text": "OK, you may never need to know these constants again, but",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e79af630",
+    "start_time": 722.28,
+    "end_time": 727.52,
+    "text": "So the page table entries will map 2GB to 2GB plus five stop.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d3986784",
-    "start_time": 720.28,
-    "end_time": 724.36,
-    "text": "it's worth knowing that they exist, and that basically",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_10458be9",
+    "start_time": 727.52,
+    "end_time": 732.88,
+    "text": "This range of virtual addresses to zero to five stop these physical addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_17666d3a",
-    "start_time": 724.36,
-    "end_time": 728.96,
-    "text": "this gives us about the equivalent of 17 decimal",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7da62737",
+    "start_time": 732.88,
+    "end_time": 733.88,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_be74c6c5",
-    "start_time": 728.96,
-    "end_time": 730.4,
-    "text": "digits of precision.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_448ffb8e",
+    "start_time": 734.44,
+    "end_time": 742.52,
+    "text": "Note that there's only one copy of the OS code in memory and another process also, it's",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_adad7e1a",
-    "start_time": 733.24,
-    "end_time": 738.08,
-    "text": "So we can represent numbers up to 17 decimal digits long.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_fdd99c8f",
+    "start_time": 742.52,
+    "end_time": 747.44,
+    "text": "high virtual addresses also will map to the same physical addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_8020873a",
-    "start_time": 739.08,
-    "end_time": 744.08,
-    "text": "This is an important concept to understand that unlike the",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8810f6ac",
+    "start_time": 747.44,
+    "end_time": 748.44,
+    "text": "Right.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_153b1617",
-    "start_time": 744.08,
-    "end_time": 747.56,
-    "text": "long ints where they can grow arbitrarily big, when we're",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_0d2c9de0",
+    "start_time": 748.44,
+    "end_time": 750.32,
+    "text": "So this is process P1.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_f6701a5c",
-    "start_time": 747.56,
-    "end_time": 751.36,
-    "text": "dealing with floating points, if we need something more than",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a40229d1",
+    "start_time": 750.32,
+    "end_time": 752.12,
+    "text": "This is process P2.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_b6ba3f39",
-    "start_time": 751.36,
-    "end_time": 755.68,
-    "text": "17 decimal digits, in Python at least, we won't be able to",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_0b1dfeb8",
+    "start_time": 752.12,
+    "end_time": 758.52,
+    "text": "Both of them, their page tables will map to the same physical memory that has the OS code",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_0b09e426",
-    "start_time": 755.68,
-    "end_time": 756.84,
-    "text": "get it.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_813cb2f3",
+    "start_time": 758.52,
+    "end_time": 759.52,
+    "text": "and data.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_6cfd9130",
-    "start_time": 756.84,
-    "end_time": 758.88,
-    "text": "And that's true in many languages.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_13984d03",
+    "start_time": 759.52,
+    "end_time": 760.52,
+    "text": "Right.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_eb3570d8",
-    "start_time": 758.88,
-    "end_time": 762.64,
-    "text": "Now the good news, this is an enormous number, and it's",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8878b8f2",
+    "start_time": 760.52,
+    "end_time": 762.52,
+    "text": "You don't have multiple copies of the operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_7afac2ab",
-    "start_time": 762.64,
-    "end_time": 766.32,
-    "text": "highly unlikely that ever in your life, you'll be able to",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6768af46",
+    "start_time": 763.16,
+    "end_time": 768.2,
+    "text": "The same physical memory is mapped into the address space into the page table of every",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d03815fc",
-    "start_time": 766.32,
-    "end_time": 769.8,
-    "text": "see that ever in your life, you will need more precision than",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_14058d49",
+    "start_time": 768.2,
+    "end_time": 770.0,
+    "text": "process in Xv6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_c19ac945",
-    "start_time": 769.8,
-    "end_time": 771.92,
-    "text": "that.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_50f7344e",
+    "start_time": 770.0,
+    "end_time": 772.2,
+    "text": "And these kernel mappings are of course identical.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1f145afe",
-    "start_time": 771.92,
-    "end_time": 778.88,
-    "text": "All right, now let's go back to the 0.1 mystery that we",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_ba64b0b3",
+    "start_time": 772.2,
+    "end_time": 775.2,
+    "text": "This page table entries are identical across all processes.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_4f3a5c0d",
-    "start_time": 778.88,
-    "end_time": 785.0,
-    "text": "started at and ask ourselves why we have a problem",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8b05bfab",
+    "start_time": 775.2,
+    "end_time": 776.2,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_96a0bdec",
-    "start_time": 785.0,
-    "end_time": 788.88,
-    "text": "representing that number in the computer.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_14e23399",
+    "start_time": 776.2,
+    "end_time": 778.28,
+    "text": "So the question comes up, why are you doing this?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_9cfd7f29",
-    "start_time": 788.88,
-    "end_time": 791.12,
-    "text": "Hence, we get something funny out when we",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_95307a00",
+    "start_time": 778.28,
+    "end_time": 782.08,
+    "text": "Why are you adding the OS code into the page table of every process?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_46efbdba",
-    "start_time": 791.12,
-    "end_time": 794.76,
-    "text": "try and print it back.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c1bebfc7",
+    "start_time": 782.08,
+    "end_time": 786.04,
+    "text": "If you know where the OS code is located in memory, can't you just directly access it?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_273bee97",
-    "start_time": 794.76,
-    "end_time": 798.24,
-    "text": "Well, let's look at an easier problem first.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_f5d15664",
+    "start_time": 786.04,
+    "end_time": 788.2,
+    "text": "Why add it to the page table?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_b6a1103b",
-    "start_time": 798.24,
-    "end_time": 802.36,
-    "text": "Let's look at representing the fraction 1 eighth.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_5e89776e",
+    "start_time": 788.2,
+    "end_time": 792.76,
+    "text": "You need to add it to the page table because once MMU is turned on, once paging is turned",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_548c237e",
-    "start_time": 806.4,
-    "end_time": 809.2,
-    "text": "That has a nice representation.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a6775a33",
+    "start_time": 792.76,
+    "end_time": 798.0,
+    "text": "on physical memory can only be accessed by assigning a virtual address to it by mapping",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3c10d95e",
-    "start_time": 809.2,
-    "end_time": 815.52,
-    "text": "That's equal in decimal to 0.125.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d6b650b1",
+    "start_time": 798.0,
+    "end_time": 799.92,
+    "text": "it into some page table.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_fa03e354",
-    "start_time": 815.52,
-    "end_time": 820.48,
-    "text": "And we can represent it conveniently in both base 10",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_0c656b9b",
+    "start_time": 799.92,
+    "end_time": 800.92,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_964ecac8",
-    "start_time": 820.48,
-    "end_time": 823.0,
-    "text": "and base 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_77090fee",
+    "start_time": 800.92,
+    "end_time": 807.16,
+    "text": "So if you want to access a certain OS code or data structure, you have to assign a virtual",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_86ad87fd",
-    "start_time": 823.04,
-    "end_time": 833.28,
-    "text": "So if we want to represent it in base 10, what is it?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_75b847c5",
+    "start_time": 807.16,
+    "end_time": 812.28,
+    "text": "address to it and you have to use this virtual address to access that physical memory.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_faf17f2d",
-    "start_time": 833.28,
-    "end_time": 836.16,
-    "text": "What is that equal to?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_9cbe6044",
+    "start_time": 812.28,
+    "end_time": 813.28,
+    "text": "Right.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_d2bc0414",
-    "start_time": 836.16,
-    "end_time": 842.04,
-    "text": "Well, we'll take a mantissa, 1.25, and now we need to",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8b5561e5",
+    "start_time": 813.28,
+    "end_time": 815.4,
+    "text": "You cannot directly jump to this physical memory.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_8d72a025",
-    "start_time": 842.04,
-    "end_time": 849.6,
-    "text": "multiply it by something that we can represent nicely.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_36e04167",
+    "start_time": 815.4,
+    "end_time": 821.96,
+    "text": "So in order to access the OS code, you will map it to some virtual address and then use",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_56b0f255",
-    "start_time": 849.6,
-    "end_time": 854.48,
-    "text": "And in fact, that will be times 10 to the minus 1.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_cf997302",
+    "start_time": 821.96,
+    "end_time": 825.52,
+    "text": "this virtual address to access the OS code and data.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1384c364",
-    "start_time": 854.48,
-    "end_time": 857.92,
-    "text": "So the exponent would simply be minus 1, and we have a nice",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_fae69ba1",
+    "start_time": 825.52,
+    "end_time": 826.52,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_3ed8ee1e",
-    "start_time": 857.92,
-    "end_time": 860.76,
-    "text": "representation.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_52f3464d",
+    "start_time": 826.52,
+    "end_time": 832.04,
+    "text": "So the convenience of having the OS code and data mapped into the same page table as",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_44e6fafa",
-    "start_time": 860.76,
-    "end_time": 869.36,
-    "text": "Suppose we want to represent it in base 2, what would it be?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8d511cae",
+    "start_time": 832.04,
+    "end_time": 838.48,
+    "text": "that of the process is that when a trap occurs, you can simply easily jump to the OS code",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_c5ab3dde",
-    "start_time": 869.36,
-    "end_time": 877.28,
-    "text": "1.0 times anybody?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_894b99a5",
+    "start_time": 838.48,
+    "end_time": 839.48,
+    "text": "and data.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5a9c1fb5",
-    "start_time": 877.28,
-    "end_time": 884.08,
-    "text": "Well, 2 to the minus 3.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_781ca96e",
+    "start_time": 839.48,
+    "end_time": 840.92,
+    "text": "The same page table has all the mapping.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_0c056250",
-    "start_time": 884.08,
-    "end_time": 893.4,
-    "text": "So in binary notation, that would be written as 0.001.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d3303a6f",
+    "start_time": 840.92,
+    "end_time": 843.48,
+    "text": "So you don't have to switch a page table or anything.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_01250a78",
-    "start_time": 893.4,
-    "end_time": 896.16,
-    "text": "So you see, 1 eighth is kind of a nice number.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3c97d817",
+    "start_time": 843.48,
+    "end_time": 848.2,
+    "text": "The same page table can be used to access all the kernel code and data during a trap.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_cc1c9266",
-    "start_time": 896.16,
-    "end_time": 901.92,
-    "text": "We can represent it nicely in either base 10 or base 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_070a5472",
+    "start_time": 848.2,
+    "end_time": 849.2,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_4b0b5453",
-    "start_time": 901.92,
-    "end_time": 915.04,
-    "text": "But how about that pesky fraction 1 over 10?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e2bfe7d3",
+    "start_time": 849.2,
+    "end_time": 852.44,
+    "text": "So the OS were not part of the virtual address list and you would have to use a different",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_26493e58",
-    "start_time": 915.04,
-    "end_time": 918.68,
-    "text": "Well, in base 10, we know how to represent.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_07495cf4",
+    "start_time": 852.44,
+    "end_time": 854.4,
+    "text": "page table or something like that.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ab058e6b",
-    "start_time": 918.68,
-    "end_time": 928.44,
-    "text": "It's 1 times 10 to the what?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4b40c2e8",
+    "start_time": 854.4,
+    "end_time": 855.4,
+    "text": "Right.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_bf686bb1",
-    "start_time": 928.44,
-    "end_time": 930.12,
-    "text": "10 to the 1?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d941c303",
+    "start_time": 855.4,
+    "end_time": 860.68,
+    "text": "So having the OS mapped into your page table of every process, let's the process easily",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f53a278f",
-    "start_time": 930.12,
+    "id": "seg_9fbd1f6e",
+    "start_time": 860.68,
+    "end_time": 867.28,
+    "text": "access the OS code and data during the trap.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_59bdddd4",
+    "start_time": 867.28,
+    "end_time": 871.72,
+    "text": "So a little bit more about the OS page table mappings.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_b05cbe25",
+    "start_time": 871.72,
+    "end_time": 883.8,
+    "text": "So as we have seen, let us draw that figure again starting at 2 GB to 2 GB plus five stop.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_6b34c88f",
+    "start_time": 883.8,
+    "end_time": 893.68,
+    "text": "These virtual addresses in every process are mapped to these physical addresses 0 to 5",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_dd4b0fe2",
+    "start_time": 893.68,
+    "end_time": 896.2,
+    "text": "stop.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_1dc830bd",
+    "start_time": 896.2,
+    "end_time": 899.16,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
+  },
+  {
+    "id": "seg_3b026ce3",
+    "start_time": 899.16,
+    "end_time": 905.52,
+    "text": "And this portion 0 to 5 stop has the kernel code data, some memory reserved for IO devices",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_269a7c06",
+    "start_time": 905.52,
+    "end_time": 907.52,
+    "text": "and it has a lot of free pages.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_d64c01c3",
+    "start_time": 907.52,
+    "end_time": 909.88,
+    "text": "So the OS will not occupy all of it.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_da091bd4",
+    "start_time": 909.88,
+    "end_time": 913.16,
+    "text": "Most of it is free pages and these free pages.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_45712dfc",
+    "start_time": 913.16,
+    "end_time": 918.52,
+    "text": "So some part of it is taken up by the OS and some part of it is free pages.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_440a1584",
+    "start_time": 918.52,
+    "end_time": 919.52,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
+  },
+  {
+    "id": "seg_d868e249",
+    "start_time": 919.52,
+    "end_time": 922.8,
+    "text": "Now, within these free pages, what happens to these free pages?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_2305658c",
+    "start_time": 922.8,
+    "end_time": 924.76,
+    "text": "These free pages are assigned to user processes.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_bc54ca98",
+    "start_time": 924.76,
+    "end_time": 930.24,
+    "text": "Whenever a user process wants a memory to store its code, data, stack, heap, whatever,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_36110a01",
+    "start_time": 930.24,
+    "end_time": 931.88,
+    "text": "these free pages are assigned.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_9f00cf81",
+    "start_time": 931.88,
     "end_time": 932.88,
-    "text": "No.",
-    "tag": "LECTURE_CONTENT"
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_9352161b",
+    "id": "seg_2b7949de",
     "start_time": 932.88,
-    "end_time": 941.08,
-    "text": "But in base 2, it's a problem.",
-    "tag": "LECTURE_CONTENT"
+    "end_time": 937.04,
+    "text": "So let us understand how this free pages are managed.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
+  {
+    "id": "seg_cfd6ace4",
+    "start_time": 937.04,
+    "end_time": 943.68,
+    "text": "So suppose there is a frame, a physical frame at address P. Okay.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_19d1ad80",
+    "start_time": 943.68,
+    "end_time": 951.92,
+    "text": "So this physical frame, this physical memory can be accessed by virtual address V by the",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_320fa997",
+    "start_time": 951.92,
+    "end_time": 952.92,
+    "text": "kernel.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_7cd87a98",
+    "start_time": 952.92,
+    "end_time": 953.92,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
+  },
+  {
+    "id": "seg_b521843c",
+    "start_time": 953.92,
+    "end_time": 959.16,
+    "text": "Where this V is nothing but P plus 2 GB, right?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_f394bc1c",
+    "start_time": 959.16,
+    "end_time": 962.0,
+    "text": "Everything is just offset by Kern base 2 GB here.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_1f0b71f9",
+    "start_time": 962.0,
+    "end_time": 967.2,
+    "text": "So a certain physical memory location P can be accessed by the kernel at a virtual address",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_d735eae0",
+    "start_time": 967.2,
+    "end_time": 968.2,
+    "text": "V.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_74384ac3",
+    "start_time": 968.2,
+    "end_time": 976.96,
+    "text": "Now, this free page can now, this piece of memory can now be assigned to a user process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_fa73ad43",
+    "start_time": 976.96,
+    "end_time": 982.72,
+    "text": "And the user process, when it asks for memory, the kernel will return a pointer to this physical",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_1eaa4c3a",
+    "start_time": 983.52,
+    "end_time": 984.52,
+    "text": "memory frame.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_f9363734",
+    "start_time": 984.52,
+    "end_time": 990.64,
+    "text": "And the user process will map this physical memory frame at address U. Right?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_d3e1a32f",
+    "start_time": 990.64,
+    "end_time": 993.88,
+    "text": "It cannot use the same address V to access that physical memory frame.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_beeac981",
+    "start_time": 993.88,
+    "end_time": 994.88,
+    "text": "Why?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_a2c81da2",
+    "start_time": 994.88,
+    "end_time": 997.16,
+    "text": "Because this high virtual addresses are kernel virtual addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
   {
-    "id": "seg_3e21f636",
-    "start_time": 941.08,
-    "end_time": 946.48,
-    "text": "There is no finite binary number that exactly",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_efdab02a",
+    "start_time": 997.16,
+    "end_time": 1000.64,
+    "text": "These page table mappings are not accessible to a user process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9e4371a1",
-    "start_time": 946.52,
-    "end_time": 951.4,
-    "text": "represents this decimal fraction.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_571dc883",
+    "start_time": 1000.64,
+    "end_time": 1006.44,
+    "text": "Therefore, the user process will use another virtual address in the range 0 to 2 GB.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_66c2bedc",
-    "start_time": 951.4,
-    "end_time": 955.92,
-    "text": "In fact, if we try and find the binary number, what we find",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_09c2e828",
+    "start_time": 1006.44,
+    "end_time": 1013.32,
+    "text": "Say let's call that address U to access the same physical frame P. Right?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f5650911",
-    "start_time": 955.92,
-    "end_time": 959.64,
-    "text": "is we get an infinitely repeating series.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_dcb101e2",
+    "start_time": 1013.32,
+    "end_time": 1014.8,
+    "text": "So what do you have in the page table?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_8de4aa15",
-    "start_time": 959.64,
-    "end_time": 969.96,
-    "text": "0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, and et cetera.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_8cf7d7da",
+    "start_time": 1014.8,
+    "end_time": 1021.28,
+    "text": "You have the page table maps address U to P. It also maps address V to P. Right?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_ba3725ee",
-    "start_time": 969.96,
-    "end_time": 974.52,
-    "text": "Stop at any finite number of bits, and you get only an",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a044d0aa",
+    "start_time": 1021.28,
+    "end_time": 1025.32,
+    "text": "Both these mappings are present in the page table of the process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_65bb688e",
-    "start_time": 974.56,
-    "end_time": 977.44,
-    "text": "approximation to the decimal fraction 1 tenth.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ab4c30bc",
+    "start_time": 1025.32,
+    "end_time": 1031.56,
+    "text": "The same frame P is mapped twice into the page table at different virtual addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_65cc878e",
-    "start_time": 980.84,
-    "end_time": 987.28,
-    "text": "So on most computers, if you were to print the decimal",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d8b3f1e9",
+    "start_time": 1031.56,
+    "end_time": 1032.56,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_d5841ba5",
-    "start_time": 987.28,
-    "end_time": 991.2,
-    "text": "value of the binary approximation, and that's",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_0cc3cc97",
+    "start_time": 1032.56,
+    "end_time": 1037.28,
+    "text": "When the user process is accessing this memory, suppose the user process has stored its code",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_65dda554",
-    "start_time": 991.2,
-    "end_time": 994.96,
-    "text": "what we're printing here on the screen, we think in",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4c0aba6e",
+    "start_time": 1037.28,
+    "end_time": 1041.88,
+    "text": "here and it's accessing this code to run it, then it will use these virtual addresses",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_890e0685",
-    "start_time": 994.96,
-    "end_time": 998.44,
-    "text": "decimal, so Python quite nicely for us is printing",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_58541eaf",
+    "start_time": 1041.88,
+    "end_time": 1044.4,
+    "text": "starting at U to access that memory.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_87767075",
-    "start_time": 998.44,
-    "end_time": 1003.72,
-    "text": "things in decimal, it would have to display, well, I'm not",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_70a31f3c",
+    "start_time": 1044.4,
+    "end_time": 1048.52,
+    "text": "When the kernel wants to access that page, suppose it wants to zero out that page or",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_6c264fb3",
-    "start_time": 1003.72,
-    "end_time": 1004.88,
-    "text": "going to write it.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_e36e3c56",
+    "start_time": 1048.52,
+    "end_time": 1051.56,
+    "text": "store the code in that page from the disk, whatever.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_515cded7",
-    "start_time": 1004.88,
-    "end_time": 1009.44,
-    "text": "It's a very long number, lots of digits.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_dd618e01",
+    "start_time": 1051.56,
+    "end_time": 1057.64,
+    "text": "When the kernel is accessing that page, it will use the high virtual address V. Okay?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5cf9dd99",
-    "start_time": 1009.44,
-    "end_time": 1017.12,
-    "text": "However, in Python, whenever we display something, it uses",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_45a827f8",
+    "start_time": 1057.64,
+    "end_time": 1064.6,
+    "text": "So in this way, most of the RAM is accessible to the kernel at high virtual addresses and",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_4e5a97b9",
-    "start_time": 1017.12,
-    "end_time": 1023.36,
-    "text": "the built-in function, R E P R, short for representation,",
-    "tag": "UNDECIDED"
+    "id": "seg_2afd8fa2",
+    "start_time": 1064.6,
+    "end_time": 1065.72,
+    "text": "it's also accessible.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_47771b53",
-    "start_time": 1023.36,
-    "end_time": 1027.6,
-    "text": "that converts the internal representation, in this case of",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b8e6bc86",
+    "start_time": 1065.72,
+    "end_time": 1070.2,
+    "text": "The free pages are accessible to user processes at low virtual addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_7ef9dd19",
-    "start_time": 1027.6,
-    "end_time": 1032.64,
-    "text": "a number, to a string, and then displays that string, in",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ceeb08d6",
+    "start_time": 1070.2,
+    "end_time": 1072.72,
+    "text": "One, what is the result of this?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_d565aea4",
-    "start_time": 1032.64,
-    "end_time": 1035.52,
-    "text": "this case, on the screen.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_08632146",
+    "start_time": 1072.72,
+    "end_time": 1077.68,
+    "text": "Every byte of RAM actually consumes two bytes in the virtual address space.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_84f8e6bf",
-    "start_time": 1035.52,
-    "end_time": 1044.08,
-    "text": "For floats, it rounds it to 17 digits.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_965882f1",
+    "start_time": 1077.68,
+    "end_time": 1081.44,
+    "text": "One byte of RAM eats up two bytes in the virtual address space.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_6349bfe5",
-    "start_time": 1044.08,
-    "end_time": 1051.12,
-    "text": "There's that magic number 17 again.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_5ebbf8aa",
+    "start_time": 1081.44,
+    "end_time": 1088.32,
+    "text": "So therefore, because you have 32-bit virtual address space, XV6 can only access up to two",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_8a30be0f",
-    "start_time": 1051.12,
-    "end_time": 1057.32,
-    "text": "Hence, when it rounds it to 17 digits, we get exactly what",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b22784d4",
+    "start_time": 1088.32,
+    "end_time": 1089.32,
+    "text": "GB of RAM.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_6777b082",
-    "start_time": 1057.32,
-    "end_time": 1060.08,
-    "text": "you see in the bottom of the screen up there.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4466393e",
+    "start_time": 1089.32,
+    "end_time": 1090.32,
+    "text": "Right?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9148b8b9",
-    "start_time": 1064.16,
-    "end_time": 1069.24,
-    "text": "Answer to the mystery, why does it display this?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_457063b2",
+    "start_time": 1090.32,
+    "end_time": 1095.0,
+    "text": "This two GB of RAM has eaten up four GB of virtual address space.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a397715b",
-    "start_time": 1069.24,
-    "end_time": 1072.56,
-    "text": "Now why should we care?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_da811cbd",
+    "start_time": 1095.0,
+    "end_time": 1100.64,
+    "text": "And therefore, if your system that is running XV6 has more than two GB of RAM, XV6 will",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_cf4a1d4b",
-    "start_time": 1072.56,
-    "end_time": 1074.92,
-    "text": "Well, it's not so much that we care about what gets",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6ec69e4b",
+    "start_time": 1100.64,
+    "end_time": 1104.76,
+    "text": "not be able to use it because there is not enough virtual addresses to assign to all that",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_9955f96f",
-    "start_time": 1074.92,
-    "end_time": 1079.12,
-    "text": "displayed, but we have to think about the implications, at",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_f06740ed",
+    "start_time": 1104.76,
+    "end_time": 1105.76,
+    "text": "memory.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_60f1424c",
-    "start_time": 1079.12,
-    "end_time": 1082.52,
-    "text": "least sometimes we have to think about the implications, of",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_60e400c1",
+    "start_time": 1105.76,
+    "end_time": 1109.6,
+    "text": "And if you don't assign virtual addresses, if something is not mapped in your page table,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_2b56befb",
-    "start_time": 1082.52,
-    "end_time": 1087.0,
-    "text": "what this inexact representation of numbers means when we",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3d8633e1",
+    "start_time": 1109.6,
+    "end_time": 1111.88,
+    "text": "you cannot access it.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_920532a1",
-    "start_time": 1087.0,
-    "end_time": 1091.16,
-    "text": "start doing more or less complex computations on",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a7de51a8",
+    "start_time": 1111.88,
+    "end_time": 1113.64,
+    "text": "So then what about real operating systems?",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_3c9a6d48",
-    "start_time": 1091.16,
-    "end_time": 1093.28,
-    "text": "those numbers.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_9925e007",
+    "start_time": 1113.64,
+    "end_time": 1115.92,
+    "text": "So real operating systems deal with it much better.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_ec6feacb",
-    "start_time": 1093.28,
-    "end_time": 1097.04,
-    "text": "So let's look at a little example here.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_643e0874",
+    "start_time": 1115.92,
+    "end_time": 1116.92,
+    "text": "Right?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_86a1cff1",
-    "start_time": 1097.04,
-    "end_time": 1101.32,
-    "text": "I'll start by setting the variable s to 0.0.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_97016d41",
+    "start_time": 1116.92,
+    "end_time": 1120.88,
+    "text": "So for example, when a free page is assigned to a user process, the kernel's page table",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_273a0a83",
-    "start_time": 1101.32,
-    "end_time": 1104.36,
-    "text": "Notice I'm being careful to make it a float.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_9947d9d1",
+    "start_time": 1120.88,
+    "end_time": 1122.28,
+    "text": "entry can be deleted.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_56c37cd4",
-    "start_time": 1104.36,
-    "end_time": 1114.0,
-    "text": "And then for i in range, let's see, let's take 10, will",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_6d8d5af4",
+    "start_time": 1122.28,
+    "end_time": 1125.6,
+    "text": "There's no reason for both of them to keep a pointer to it.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_8a30701c",
-    "start_time": 1114.0,
-    "end_time": 1124.76,
-    "text": "increase s by 0.1.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d6b763d7",
+    "start_time": 1125.6,
+    "end_time": 1128.96,
+    "text": "Either the user is using the page or the kernel is using the page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_186d621b",
-    "start_time": 1124.76,
-    "end_time": 1126.28,
-    "text": "All right, we've done that.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_2b29786f",
+    "start_time": 1128.96,
+    "end_time": 1129.96,
+    "text": "Right?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_6a29635c",
-    "start_time": 1126.28,
-    "end_time": 1128.8,
-    "text": "And now, what happens when I print s?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_bc87be5d",
+    "start_time": 1129.96,
+    "end_time": 1134.0,
+    "text": "So some such optimizations are done by real operating systems because obviously modern",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_8bbafe21",
-    "start_time": 1132.44,
-    "end_time": 1136.6,
-    "text": "Well, again, you don't get what your intuition says you",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_0a195c44",
+    "start_time": 1134.0,
+    "end_time": 1137.28,
+    "text": "systems use more than two GB of RAM.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_1518c824",
-    "start_time": 1136.6,
-    "end_time": 1138.24,
-    "text": "should get.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_67d12404",
+    "start_time": 1137.28,
+    "end_time": 1144.72,
+    "text": "But this is a limitation of XV6, which is why XV6 cannot use more than two GB of RAM.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_09d4c84b",
-    "start_time": 1138.24,
-    "end_time": 1145.48,
-    "text": "Notice the last two digits, which are 8 and 9.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_28612d7c",
+    "start_time": 1144.72,
+    "end_time": 1146.04,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_4e35443b",
-    "start_time": 1145.48,
-    "end_time": 1147.04,
-    "text": "Well, what's happening here?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_90f181fe",
+    "start_time": 1146.04,
+    "end_time": 1154.08,
+    "text": "So now we've seen that after boot up, the RAM contains OS code and data and a lot of",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_02083067",
-    "start_time": 1149.8,
-    "end_time": 1153.68,
-    "text": "What's happened is the error has accumulated.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_700ce565",
+    "start_time": 1154.08,
+    "end_time": 1155.08,
+    "text": "the RAM is free.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9f0ff26b",
-    "start_time": 1153.68,
-    "end_time": 1157.2,
-    "text": "I had a small error when I started, but every time I",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7655a484",
+    "start_time": 1155.08,
+    "end_time": 1156.8,
+    "text": "It just contains free pages.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_467de796",
-    "start_time": 1157.2,
-    "end_time": 1162.56,
-    "text": "added it, the error got bigger and it accumulates.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ae4ef9c7",
+    "start_time": 1156.8,
+    "end_time": 1160.12,
+    "text": "And these three pages we've just seen are allotted to user processes.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_135c0a95",
-    "start_time": 1162.56,
-    "end_time": 1167.2,
-    "text": "Sometimes you can get in trouble in a computation",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4a699e4f",
+    "start_time": 1160.12,
+    "end_time": 1161.12,
+    "text": "Right?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_74e78819",
-    "start_time": 1167.2,
-    "end_time": 1170.44,
-    "text": "because of that.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_66016cd9",
+    "start_time": 1161.12,
+    "end_time": 1166.64,
+    "text": "They are mapped into the user part of the virtual address space at different virtual addresses.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2110fa84",
-    "start_time": 1170.44,
-    "end_time": 1172.96,
-    "text": "Now what happens, by the way, if I print s?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_67ce11d2",
+    "start_time": 1166.64,
+    "end_time": 1169.8,
+    "text": "So how does the OS maintain all of these three pages?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_8c6742e0",
-    "start_time": 1172.96,
-    "end_time": 1176.16,
-    "text": "That's kind of an interesting question.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_bc757a0b",
+    "start_time": 1169.8,
+    "end_time": 1174.88,
+    "text": "It maintains them in some sort of a linked list like structure called the free list.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_9b0c6687",
-    "start_time": 1176.16,
-    "end_time": 1180.8,
-    "text": "Notice that it prints 1.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7e851403",
+    "start_time": 1174.88,
+    "end_time": 1175.88,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_939be699",
-    "start_time": 1180.8,
-    "end_time": 1182.6,
-    "text": "And why is that?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d2e52291",
+    "start_time": 1175.88,
+    "end_time": 1177.88,
+    "text": "So it is defined here.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_145bf8a9",
-    "start_time": 1182.6,
-    "end_time": 1187.96,
-    "text": "It's because the print command has done a rounding here.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7a84e8ac",
+    "start_time": 1177.88,
+    "end_time": 1179.96,
+    "text": "There is a free list.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e22770f2",
-    "start_time": 1187.96,
-    "end_time": 1190.4,
-    "text": "It automatically rounds.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_742894e0",
+    "start_time": 1179.96,
+    "end_time": 1184.0,
+    "text": "This is nothing but a pointer to a structure called run.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_7f71b95a",
-    "start_time": 1190.4,
-    "end_time": 1194.84,
-    "text": "And that's kind of good, but it's also kind of bad, because",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d6db1f30",
+    "start_time": 1184.0,
+    "end_time": 1185.0,
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_cf2d07a7",
-    "start_time": 1194.84,
-    "end_time": 1197.2,
-    "text": "that means when you're debugging your program, you can",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a7ef981f",
+    "start_time": 1185.0,
+    "end_time": 1192.52,
+    "text": "So the way it is organized is these are all the free pages and the pointers across this",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_bc0bbe0c",
-    "start_time": 1197.2,
-    "end_time": 1199.04,
-    "text": "get very confused.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_5405e694",
+    "start_time": 1192.52,
+    "end_time": 1195.0,
+    "text": "linked list are stored within the page itself.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_7a860f5f",
-    "start_time": 1199.04,
-    "end_time": 1201.36,
-    "text": "You say, it says it's 1.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_2e77b600",
+    "start_time": 1195.0,
+    "end_time": 1196.0,
+    "text": "So the page is empty.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e4b3efd0",
-    "start_time": 1201.36,
-    "end_time": 1203.44,
-    "text": "Why am I getting a different answer when I do the",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d70e0290",
+    "start_time": 1196.0,
+    "end_time": 1197.4,
+    "text": "It has nothing inside it.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_6d00573e",
-    "start_time": 1203.44,
-    "end_time": 1204.92,
-    "text": "computation?",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_1ae7a87b",
+    "start_time": 1197.4,
+    "end_time": 1202.48,
+    "text": "Therefore, the address of the next free page is stored in the previous free page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_14a77697",
-    "start_time": 1204.92,
-    "end_time": 1208.12,
-    "text": "And that's because it's not really 1 inside.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3d6b0e57",
+    "start_time": 1202.48,
+    "end_time": 1206.64,
+    "text": "The address of the next page is stored in the previous page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2884bdaa",
-    "start_time": 1208.12,
-    "end_time": 1210.76,
-    "text": "So you have to be careful.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_7b8f4722",
+    "start_time": 1206.64,
+    "end_time": 1212.8,
+    "text": "In this way, within the page itself, you will write a small structure, this run structure,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_ab2095fc",
-    "start_time": 1210.76,
-    "end_time": 1216.04,
-    "text": "Now, mostly, these round off errors balance each other out.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_21803fb1",
+    "start_time": 1212.8,
+    "end_time": 1213.8,
+    "text": "which is nothing.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_bf4b4b04",
-    "start_time": 1216.04,
-    "end_time": 1218.8,
-    "text": "Some floats are slightly higher than they're supposed to",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_791cc2eb",
+    "start_time": 1213.8,
+    "end_time": 1216.28,
+    "text": "It just has a pointer to the next page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d93ac622",
-    "start_time": 1218.8,
-    "end_time": 1220.88,
-    "text": "be, some are slightly lower.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e46b23c7",
+    "start_time": 1216.28,
+    "end_time": 1221.16,
+    "text": "It just has a pointer to the next run structure, which has a pointer to the next run structure",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_db1ba9e5",
-    "start_time": 1220.88,
-    "end_time": 1223.92,
-    "text": "And in most computations, it all comes out in the wash and",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_4a7e8616",
+    "start_time": 1221.16,
+    "end_time": 1222.16,
+    "text": "and so on.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_b96e4b75",
-    "start_time": 1223.92,
-    "end_time": 1225.88,
-    "text": "you get the right answer.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_aab685f0",
+    "start_time": 1222.16,
+    "end_time": 1223.16,
+    "text": "Right?",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_15daa76c",
-    "start_time": 1225.88,
-    "end_time": 1230.44,
-    "text": "Truth be told, most of the time you can avoid worrying",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ecdfc8d9",
+    "start_time": 1224.16,
+    "end_time": 1231.96,
+    "text": "A free page has and the kernel will simply maintain a pointer to this KMM.free list.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_4aa56dab",
-    "start_time": 1230.44,
-    "end_time": 1232.24,
-    "text": "about these things.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a7d5d370",
+    "start_time": 1231.96,
+    "end_time": 1235.0,
+    "text": "Simply maintains a pointer to the first free page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_1821fabd",
-    "start_time": 1232.24,
-    "end_time": 1237.48,
-    "text": "But as we say in Latin, caveat computor.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_ca7719eb",
+    "start_time": 1235.0,
+    "end_time": 1238.96,
+    "text": "And from then on, you follow these pointers to get the entire free list.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_2f434f95",
-    "start_time": 1237.48,
-    "end_time": 1240.56,
-    "text": "Sometimes you have to worry a little bit.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_d3ba6462",
+    "start_time": 1238.96,
+    "end_time": 1239.96,
+    "text": "Right?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_2093ae8d",
-    "start_time": 1240.56,
-    "end_time": 1244.96,
-    "text": "Now there is one thing about floating points, about which",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_1f4e64f6",
+    "start_time": 1239.96,
+    "end_time": 1245.52,
+    "text": "It is a linked list and the pointer to the first page is maintained by the kernel.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_b2d08f95",
-    "start_time": 1244.96,
+    "id": "seg_19c9b818",
+    "start_time": 1245.52,
     "end_time": 1246.52,
-    "text": "you should always worry.",
-    "tag": "LECTURE_CONTENT"
+    "text": "Okay.",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_9628badf",
-    "start_time": 1249.84,
-    "end_time": 1253.44,
-    "text": "And that's really the point I want to drive home.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a927f2b5",
+    "start_time": 1246.52,
+    "end_time": 1251.8,
+    "text": "And whenever a process wants free pages, it is assigned from this list.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_e09768de",
-    "start_time": 1253.44,
-    "end_time": 1255.88,
-    "text": "And that's about the meaning of double equal.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e9bb4162",
+    "start_time": 1251.8,
+    "end_time": 1258.48,
+    "text": "And whenever a process frees up memory, it is sent back to this list.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d5905532",
-    "start_time": 1268.32,
-    "end_time": 1269.84,
-    "text": "Let's look at an example of this.",
-    "tag": "ADMINISTRATIVE"
+    "id": "seg_2d0c1a80",
+    "start_time": 1258.48,
+    "end_time": 1265.16,
+    "text": "So these functions, KLOC and K-free by the kernel are responsible for allocating and",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_5ec5ef5b",
-    "start_time": 1273.04,
-    "end_time": 1276.36,
-    "text": "So we've before seen the use of import.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_10d96db8",
+    "start_time": 1265.16,
+    "end_time": 1271.28,
+    "text": "freeing memory from this list of free pages.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_f2e54b98",
-    "start_time": 1276.36,
-    "end_time": 1278.64,
-    "text": "So I'm going to import math.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_1e788f05",
+    "start_time": 1271.28,
+    "end_time": 1273.72,
+    "text": "So what does KLOC do?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_3964e46a",
-    "start_time": 1278.64,
-    "end_time": 1281.72,
-    "text": "Gives me some useful mathematical functions.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c5a2a70a",
+    "start_time": 1273.72,
+    "end_time": 1283.76,
+    "text": "So you have your free list pointer, this KMM.free list is pointing to some free page,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_955ffd71",
-    "start_time": 1281.72,
-    "end_time": 1285.28,
-    "text": "Then I'm going to set the variable a to the square root",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_bf140e46",
+    "start_time": 1283.76,
+    "end_time": 1286.36,
+    "text": "which is pointing to the next free page and so on.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_0bfbf08a",
-    "start_time": 1285.28,
-    "end_time": 1286.24,
-    "text": "of 2.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_8d588bc0",
+    "start_time": 1286.36,
+    "end_time": 1287.36,
+    "text": "So what do you do?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_1f9f33aa",
-    "start_time": 1291.64,
-    "end_time": 1293.12,
-    "text": "Why didn't this work?",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_81775fdf",
+    "start_time": 1287.36,
+    "end_time": 1297.64,
+    "text": "You first take a pointer to this first free page and then you shift this KMM to the next",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_afeb88a1",
-    "start_time": 1293.12,
-    "end_time": 1297.88,
-    "text": "Because what I should have said is math.square root of 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_5c055b63",
+    "start_time": 1297.64,
+    "end_time": 1298.64,
+    "text": "pointer.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d8b1b9ea",
-    "start_time": 1302.16,
-    "end_time": 1305.44,
-    "text": "Explaining to the interpreter that I want to get the",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_13072a53",
+    "start_time": 1298.64,
+    "end_time": 1303.36,
+    "text": "Now KMM will go to the next variable of R. Right?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_cdffdbcc",
-    "start_time": 1305.44,
-    "end_time": 1309.4,
-    "text": "function sqrt from the module math.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_a4ec4c35",
+    "start_time": 1303.36,
+    "end_time": 1309.08,
+    "text": "So your KMM has been updated and this value of R is what you will return.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_44583d40",
-    "start_time": 1312.64,
-    "end_time": 1316.12,
-    "text": "So now I've got a here.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_222f89a5",
+    "start_time": 1309.08,
+    "end_time": 1316.8,
+    "text": "When somebody asks for a free page, you will return the first page in this list and KMM.free",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2a64c4a3",
-    "start_time": 1316.12,
-    "end_time": 1319.48,
-    "text": "And I can look at what a is.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_e67c9278",
+    "start_time": 1316.8,
+    "end_time": 1319.16,
+    "text": "list will point to the next page.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_dbcd7996",
-    "start_time": 1319.48,
-    "end_time": 1322.96,
-    "text": "Some approximation to the square root of 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_637878eb",
+    "start_time": 1319.16,
+    "end_time": 1324.04,
+    "text": "Similarly, when somebody frees up memory also, it is similar.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2b94bc0e",
-    "start_time": 1322.96,
-    "end_time": 1324.56,
-    "text": "Now here's the interesting question.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_747437f1",
+    "start_time": 1324.04,
+    "end_time": 1334.52,
+    "text": "So your KMM is .free list is pointing to some page, some free page and then a new page has",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_82eb708f",
-    "start_time": 1324.56,
-    "end_time": 1333.0,
-    "text": "Suppose I ask about the Boolean a times a equals equals 2.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_b092a06b",
+    "start_time": 1334.52,
+    "end_time": 1335.64,
+    "text": "come in.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_fa15a95f",
-    "start_time": 1333.0,
-    "end_time": 1336.44,
-    "text": "Now in my heart, I think if I've taken this square root of",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_872c4045",
+    "start_time": 1335.64,
+    "end_time": 1337.12,
+    "text": "You put the run structure, right?",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_7ab54f19",
-    "start_time": 1336.44,
-    "end_time": 1340.16,
-    "text": "number and then I've multiplied it by itself, I should get",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_582adb1b",
+    "start_time": 1337.12,
+    "end_time": 1346.96,
+    "text": "The run structure into that new page and this page R. Then you set its next pointer to KMM.free",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_d569a6a2",
-    "start_time": 1340.16,
-    "end_time": 1342.08,
-    "text": "the original number back.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_2b4f0821",
+    "start_time": 1346.96,
+    "end_time": 1353.12,
+    "text": "list and then you update KMM.free list to .2R.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_69636233",
-    "start_time": 1342.08,
-    "end_time": 1345.4,
-    "text": "After all, that's the meaning of square root.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_de499199",
+    "start_time": 1353.2,
+    "end_time": 1359.76,
+    "text": "In this way, freed up page is added to the head of the free list and the free list pointer",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_6544b30a",
-    "start_time": 1345.4,
-    "end_time": 1348.48,
-    "text": "But by now, you won't be surprised at the answer of",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_33f552a6",
+    "start_time": 1359.76,
+    "end_time": 1360.76,
+    "text": "is updated.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_a5d4fac3",
-    "start_time": 1348.48,
-    "end_time": 1350.88,
-    "text": "this is false.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_f976664c",
+    "start_time": 1360.76,
+    "end_time": 1361.76,
+    "text": "Right?",
+    "tag": "OTHER_CHATTER",
+    "emphasis": false
   },
   {
-    "id": "seg_4eba80dd",
-    "start_time": 1350.88,
-    "end_time": 1353.04,
-    "text": "Because we know what we've stored is only an",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_547fba92",
+    "start_time": 1361.76,
+    "end_time": 1367.2,
+    "text": "So the kernel has a list of free pages and user processes or any other system call or",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   },
   {
-    "id": "seg_2018659c",
-    "start_time": 1353.04,
-    "end_time": 1354.96,
-    "text": "approximation to the square root.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_c30f2c78",
+    "start_time": 1367.2,
+    "end_time": 1373.04,
+    "text": "any other piece of code can allocate and free up these free pages.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_53764245",
-    "start_time": 1357.64,
-    "end_time": 1359.04,
-    "text": "And that's kind of interesting.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_c28832d2",
+    "start_time": 1373.04,
+    "end_time": 1377.52,
+    "text": "So this is the summary of what we've studied in this lecture.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_401d157a",
-    "start_time": 1359.04,
-    "end_time": 1364.64,
-    "text": "So we can see that by if I look at a times a, I'll get 2",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_14d348e1",
+    "start_time": 1377.52,
+    "end_time": 1382.08,
+    "text": "We've studied how virtual address spaces are built in XV6.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_fab9d291",
-    "start_time": 1364.64,
-    "end_time": 1368.76,
-    "text": "point, a whole bunch of zeros, and then a 4 at the end.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_e64e56fd",
+    "start_time": 1382.08,
+    "end_time": 1384.52,
+    "text": "There's a 4GB virtual address space for each process.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_4fac1e1c",
-    "start_time": 1368.76,
-    "end_time": 1373.2,
-    "text": "So this means if I've got a test in my program, in some",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_655aad09",
+    "start_time": 1384.52,
+    "end_time": 1388.68,
+    "text": "Note that XV6 does not have demand paging.",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
   },
   {
-    "id": "seg_a1f28874",
-    "start_time": 1373.2,
-    "end_time": 1375.64,
-    "text": "sense it will give me the unexpected answer false.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_5273389f",
+    "start_time": 1388.68,
+    "end_time": 1393.68,
+    "text": "Whatever virtual address space is created, it is assigned a physical field.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_8029c4a1",
-    "start_time": 1378.92,
-    "end_time": 1384.6,
-    "text": "What this tells us is that it's very risky to ever use the",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_1f73e542",
+    "start_time": 1393.68,
+    "end_time": 1395.92,
+    "text": "And we've seen that there is a 2-tier page table.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_ab3b123a",
-    "start_time": 1384.6,
-    "end_time": 1388.72,
-    "text": "built-in double equals to compare floating points.",
-    "tag": "LECTURE_CONTENT"
+    "id": "seg_3f3f883c",
+    "start_time": 1395.92,
+    "end_time": 1401.08,
+    "text": "There's an outer page directory and a bunch of inner page tables.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
   },
   {
-    "id": "seg_355f51a4",
-    "start_time": 1388.72,
-    "end_time": 1393.04,
-    "text": "And in fact, you should never be testing for equality.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_19a820fa",
-    "start_time": 1393.04,
-    "end_time": 1396.2,
-    "text": "You should always be testing for close enough.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_24f9d1c5",
-    "start_time": 1398.76,
-    "end_time": 1402.84,
-    "text": "So typically what you want to do in your program is ask the",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1c3f0695",
-    "start_time": 1402.84,
-    "end_time": 1404.64,
-    "text": "following question.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_766ed5e8",
-    "start_time": 1404.64,
-    "end_time": 1415.16,
-    "text": "Is the absolute value of a times a minus 2.0 less than",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0e3addae",
-    "start_time": 1415.16,
-    "end_time": 1416.84,
-    "text": "epsilon?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d96608ec",
-    "start_time": 1420.56,
-    "end_time": 1423.04,
-    "text": "If we could easily type Greek, we'd have written it that",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_c3ca103a",
-    "start_time": 1423.04,
-    "end_time": 1426.36,
-    "text": "way, but we can't.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_f5a33f98",
-    "start_time": 1426.4,
-    "end_time": 1430.88,
-    "text": "So that's some small value chosen to be appropriate for",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_71bc334d",
-    "start_time": 1430.88,
-    "end_time": 1432.56,
-    "text": "the application.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fdbca70f",
-    "start_time": 1432.56,
-    "end_time": 1435.72,
-    "text": "Saying if these two things are with an epsilon of each",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_42480aff",
-    "start_time": 1435.72,
-    "end_time": 1440.92,
-    "text": "other, then I'm going to treat them as equal.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a19b3c45",
-    "start_time": 1440.92,
-    "end_time": 1444.04,
-    "text": "And so what I typically do when I'm writing a Python code",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_105d0c9c",
-    "start_time": 1444.04,
-    "end_time": 1447.04,
-    "text": "that's going to deal with floating point numbers, and I",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_96c849cd",
-    "start_time": 1447.04,
-    "end_time": 1452.08,
-    "text": "do this from time to time, is I introduce a function called",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e81c64f1",
-    "start_time": 1452.08,
-    "end_time": 1458.96,
-    "text": "almost equal, or near, or pick your favorite word, that does",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_48dd907d",
-    "start_time": 1458.96,
-    "end_time": 1460.12,
-    "text": "this for me.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c0eb51b2",
-    "start_time": 1460.12,
-    "end_time": 1463.36,
-    "text": "And wherever I would normally have written x double equals",
-    "tag": "UNDECIDED"
-  },
-  {
-    "id": "seg_4337ade0",
-    "start_time": 1463.36,
-    "end_time": 1468.76,
-    "text": "y, instead I write near x comma y, and it",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_08d79136",
-    "start_time": 1468.76,
-    "end_time": 1472.0,
-    "text": "computes it for me.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_aed33682",
-    "start_time": 1472.0,
-    "end_time": 1476.36,
-    "text": "Not a big deal, but keep this in mind, or as soon as you",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_cada46ed",
-    "start_time": 1476.36,
-    "end_time": 1479.52,
-    "text": "start dealing with numbers, you will get very frustrated in",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7aab8d42",
-    "start_time": 1479.52,
-    "end_time": 1483.4,
-    "text": "trying to understand what your program does.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4b6adaaa",
-    "start_time": 1483.4,
-    "end_time": 1487.44,
-    "text": "OK, enough of numbers for a while.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_e54d303f",
-    "start_time": 1487.44,
-    "end_time": 1489.44,
-    "text": "I'm sure some of you will find this a relief.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_204bd7c6",
-    "start_time": 1492.16,
-    "end_time": 1497.12,
-    "text": "I now want to get away from details of floating point",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_69081e59",
-    "start_time": 1497.12,
-    "end_time": 1501.76,
-    "text": "and talk about general methods, again returning to the real",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5548f93b",
-    "start_time": 1501.76,
-    "end_time": 1506.84,
-    "text": "theme of the course of solving problems using computers.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1fd41bc3",
-    "start_time": 1506.84,
-    "end_time": 1511.12,
-    "text": "Last week, we looked at the rather silly problem of",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_036bf392",
-    "start_time": 1511.12,
-    "end_time": 1515.88,
-    "text": "finding the square root of a perfect square.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_929e1049",
-    "start_time": 1515.88,
-    "end_time": 1519.08,
-    "text": "Well, that's not usually what you need.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9ca540c4",
-    "start_time": 1521.68,
-    "end_time": 1525.24,
-    "text": "Let's think about the more useful problem of finding the",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ec430036",
-    "start_time": 1525.24,
-    "end_time": 1527.72,
-    "text": "square root of a real number.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f61d1373",
-    "start_time": 1527.72,
-    "end_time": 1529.64,
-    "text": "Well, you've just seen how you do that.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f001f92f",
-    "start_time": 1529.64,
-    "end_time": 1532.72,
-    "text": "You import math and you call SQRT.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5e5228d1",
-    "start_time": 1532.72,
-    "end_time": 1536.28,
-    "text": "Let's pretend that we didn't know that trick.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_72b76547",
-    "start_time": 1536.28,
-    "end_time": 1541.24,
-    "text": "Or let's pretend it's your job to implement rather math.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_cb6a5f62",
-    "start_time": 1541.24,
-    "end_time": 1546.28,
-    "text": "And so you need to figure out how to implement square root.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_848ccdb1",
-    "start_time": 1546.28,
-    "end_time": 1549.28,
-    "text": "Why might this be a challenge?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6933a3a0",
-    "start_time": 1549.28,
-    "end_time": 1552.24,
-    "text": "What are some of the issues?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_db5d0301",
-    "start_time": 1552.24,
-    "end_time": 1553.88,
-    "text": "And there are several.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_79aa8603",
-    "start_time": 1553.88,
-    "end_time": 1563.2,
-    "text": "One is what we've just seen might not be an exact answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_88246f47",
-    "start_time": 1567.28,
-    "end_time": 1572.6,
-    "text": "For example, the square root of 2.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_3e8ce53f",
-    "start_time": 1576.48,
-    "end_time": 1579.28,
-    "text": "So we need to worry about that.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_a1c901a5",
-    "start_time": 1579.28,
-    "end_time": 1583.04,
-    "text": "And clearly, the way we're going to solve that, as we'll see,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a856daea",
-    "start_time": 1583.04,
-    "end_time": 1586.92,
-    "text": "is using a concept similar to epsilon.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1c6fabb1",
-    "start_time": 1586.92,
-    "end_time": 1588.44,
-    "text": "In fact, we'll even call it epsilon.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4395bcd6",
-    "start_time": 1589.44,
-    "end_time": 1597.0,
-    "text": "Another problem with the method we looked at last time is",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_df2879b3",
-    "start_time": 1597.0,
-    "end_time": 1600.12,
-    "text": "there we were doing exhaustive enumeration.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5e5f676f",
-    "start_time": 1600.12,
-    "end_time": 1603.96,
-    "text": "We were enumerating all the possible answers, checking",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d0a4a386",
-    "start_time": 1603.96,
-    "end_time": 1607.68,
-    "text": "each one, and if it was goods, stopping.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fd618acd",
-    "start_time": 1607.68,
-    "end_time": 1615.36,
-    "text": "Well, the problem with reels as opposed to integers is we",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_64ffe234",
-    "start_time": 1615.36,
-    "end_time": 1621.68,
-    "text": "can't enumerate all guesses.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_eeb23adb",
-    "start_time": 1626.44,
-    "end_time": 1629.68,
-    "text": "And that's because the reels are uncountable.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c8da13e8",
-    "start_time": 1634.56,
-    "end_time": 1639.32,
-    "text": "If I ask you to enumerate the positive integers, you'll say",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c4307076",
-    "start_time": 1639.32,
-    "end_time": 1647.88,
-    "text": "1, 2, 3, 4, 5, if I ask you to enumerate the reels, the",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a022158c",
-    "start_time": 1647.88,
-    "end_time": 1649.96,
-    "text": "positive reels, where do you start?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_04946a07",
-    "start_time": 1649.96,
-    "end_time": 1652.96,
-    "text": "1 over a billion plus who knows?",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_0885f111",
-    "start_time": 1652.96,
-    "end_time": 1657.64,
-    "text": "Now as we've just seen, in fact, since there's a limit to",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1c4e7ac1",
-    "start_time": 1657.64,
-    "end_time": 1661.52,
-    "text": "the precision in floating point, technically you could",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fb2b532d",
-    "start_time": 1661.52,
-    "end_time": 1665.0,
-    "text": "enumerate all the floating point numbers.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_2e9a81ec",
-    "start_time": 1665.0,
-    "end_time": 1668.36,
-    "text": "And I say technically, because if you tried to do that,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d824f825",
-    "start_time": 1668.4,
-    "end_time": 1673.68,
-    "text": "your computation would not terminate anytime soon.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_17154184",
-    "start_time": 1673.68,
-    "end_time": 1677.8,
-    "text": "So even though in principle you could enumerate them, in",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_50f3f33c",
-    "start_time": 1677.8,
-    "end_time": 1679.84,
-    "text": "fact, you really can't.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1ee94555",
-    "start_time": 1679.84,
-    "end_time": 1683.16,
-    "text": "And so we think of the floating points like the reels as",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fc06fd3d",
-    "start_time": 1683.16,
-    "end_time": 1687.32,
-    "text": "being innumerable, or not innumerable, as to say as being",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_eead917e",
-    "start_time": 1687.32,
-    "end_time": 1690.12,
-    "text": "uncountable.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7134a57d",
-    "start_time": 1690.12,
-    "end_time": 1691.44,
-    "text": "So we can't do that.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9b4685de",
-    "start_time": 1691.88,
-    "end_time": 1696.8,
-    "text": "So we have to find something clever, because we're now",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9762ad1f",
-    "start_time": 1696.8,
-    "end_time": 1702.12,
-    "text": "searching a very large space of possible answers, what",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e054177c",
-    "start_time": 1702.12,
-    "end_time": 1706.6,
-    "text": "technically we might call a large state space.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_07653514",
-    "start_time": 1706.6,
-    "end_time": 1710.32,
-    "text": "So we're going to take our previous method of guess and",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b20188d0",
-    "start_time": 1710.32,
-    "end_time": 1717.16,
-    "text": "check and replace it by something called guess check",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_aa3d1eac",
-    "start_time": 1718.16,
-    "end_time": 1719.16,
-    "text": "and improve.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_02bdca3b",
-    "start_time": 1721.68,
-    "end_time": 1727.68,
-    "text": "Previously, we just generated guesses in some systematic way,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_03a9bbd5",
-    "start_time": 1727.68,
-    "end_time": 1731.0,
-    "text": "but without knowing that we were getting closer to the",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8e60eb78",
-    "start_time": 1731.0,
-    "end_time": 1732.32,
-    "text": "answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_66cd3d17",
-    "start_time": 1732.32,
-    "end_time": 1735.44,
-    "text": "Think of the original barnyard problem with the chickens and",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_39dba153",
-    "start_time": 1735.44,
-    "end_time": 1736.88,
-    "text": "the heads and the legs.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_dd763978",
-    "start_time": 1736.88,
-    "end_time": 1739.88,
-    "text": "We just enumerated possibilities, but we didn't know",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_33627282",
-    "start_time": 1739.88,
-    "end_time": 1742.28,
-    "text": "that one guess was better than the previous guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_dce64063",
-    "start_time": 1742.28,
-    "end_time": 1746.08,
-    "text": "Now we're going to find a way to do the enumeration where we",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_699c2fe0",
-    "start_time": 1746.08,
-    "end_time": 1753.36,
-    "text": "have good reason to believe, at least with high probability,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_cdaa8a11",
-    "start_time": 1753.36,
-    "end_time": 1758.88,
-    "text": "that each guess is better than the previous guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b41ec1ce",
-    "start_time": 1758.88,
-    "end_time": 1760.96,
-    "text": "This is what's called successive approximation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fd517045",
-    "start_time": 1772.28,
-    "end_time": 1785.88,
-    "text": "And that's a very important concept.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_2f86444b",
-    "start_time": 1785.88,
-    "end_time": 1790.2,
-    "text": "Many problems are solved computationally using",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4faae2e9",
-    "start_time": 1790.2,
-    "end_time": 1791.72,
-    "text": "successive approximation.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_123d6e2f",
-    "start_time": 1796.24,
-    "end_time": 1801.96,
-    "text": "Every successive approximation method has the same rough",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ebca2b46",
-    "start_time": 1801.96,
-    "end_time": 1803.68,
-    "text": "structure.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_44397b14",
-    "start_time": 1803.68,
-    "end_time": 1816.44,
-    "text": "You start with some guess, which will be the initial guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0f67d0e6",
-    "start_time": 1816.44,
-    "end_time": 1820.16,
-    "text": "You then iterate, and in a minute I'll tell you why I'm",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_1ff02228",
-    "start_time": 1820.16,
-    "end_time": 1823.52,
-    "text": "doing it this particular way, over some range.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_69fc1b54",
-    "start_time": 1824.52,
-    "end_time": 1833.52,
-    "text": "I've chosen 100, but it doesn't have to be 100, just some",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5e9004d6",
-    "start_time": 1833.52,
-    "end_time": 1838.32,
-    "text": "number there.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a1f1048f",
-    "start_time": 1838.32,
-    "end_time": 1847.88,
-    "text": "If f of x, that is to say some function of my, whoops, I",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8faa6e35",
-    "start_time": 1847.88,
-    "end_time": 1850.4,
-    "text": "shouldn't have said x.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c8515929",
-    "start_time": 1850.4,
-    "end_time": 1854.84,
-    "text": "My notes say x, but it's the wrong thing.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_570d1d5a",
-    "start_time": 1854.84,
-    "end_time": 1864.96,
-    "text": "If f of x, f of the guess is close enough, so for example,",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_400a6ff1",
-    "start_time": 1864.96,
-    "end_time": 1868.76,
-    "text": "if when I square a guess, I get close enough to the number",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ed7fb4af",
-    "start_time": 1868.76,
-    "end_time": 1873.76,
-    "text": "whose square root I'm looking for, then I'll return the guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6e469457",
-    "start_time": 1880.76,
-    "end_time": 1899.8,
-    "text": "If it's not close enough, I'll get a better guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5f20a8bb",
-    "start_time": 1899.8,
-    "end_time": 1906.4,
-    "text": "If I do my, in this case, 100 iterations, and I've not gotten",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f9812ca5",
-    "start_time": 1906.4,
-    "end_time": 1910.12,
-    "text": "the guess that it's good enough, I'm going to quit with",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_caa8a1dc",
-    "start_time": 1910.12,
-    "end_time": 1914.36,
-    "text": "some error.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e06ef6b4",
-    "start_time": 1914.36,
-    "end_time": 1918.28,
-    "text": "Saying, wow, I thought my method was good enough that",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_04e8d33f",
-    "start_time": 1918.28,
-    "end_time": 1920.72,
-    "text": "100 guesses should have gotten me there.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_b3146560",
-    "start_time": 1920.72,
-    "end_time": 1923.48,
-    "text": "If it didn't, I may be wrong.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_7be62007",
-    "start_time": 1923.48,
-    "end_time": 1927.44,
-    "text": "I always like to have some limit so that my program can't",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7900e30c",
-    "start_time": 1927.44,
-    "end_time": 1932.04,
-    "text": "spin off into the ether guessing forever.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_f1eff454",
-    "start_time": 1932.04,
-    "end_time": 1955.4,
-    "text": "OK, let's look at an example of that.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_708e51d0",
-    "start_time": 1955.4,
-    "end_time": 1961.4,
-    "text": "So here's a successive approximations to the square",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7fa03861",
-    "start_time": 1961.4,
-    "end_time": 1962.8,
-    "text": "root.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_490d3bbd",
-    "start_time": 1962.8,
-    "end_time": 1965.92,
-    "text": "I've called it square root bi.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_87b93126",
-    "start_time": 1965.92,
-    "end_time": 1969.44,
-    "text": "The bi is not a reference to the sexual preferences of the",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_f3cc0d27",
-    "start_time": 1969.44,
-    "end_time": 1973.04,
-    "text": "function, but a reference to the fact that this is an",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ebae57d7",
-    "start_time": 1973.04,
-    "end_time": 1993.0,
-    "text": "example of what's called a bisection method.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_d67408ae",
-    "start_time": 1993.0,
-    "end_time": 1998.0,
-    "text": "The basic idea behind any bisection method is the same.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6a69d0bd",
-    "start_time": 1998.0,
-    "end_time": 2001.64,
-    "text": "And we'll see lots of examples of this this semester, is that",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_742254fd",
-    "start_time": 2001.64,
-    "end_time": 2007.56,
-    "text": "you have some linearly arranged space of possible answers.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_060463b8",
-    "start_time": 2011.56,
-    "end_time": 2016.16,
-    "text": "And it has the property that if I take a guess somewhere, let's",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8636718b",
-    "start_time": 2016.16,
-    "end_time": 2021.92,
-    "text": "say there, I guess that's the answer to the question.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7f948493",
-    "start_time": 2021.92,
-    "end_time": 2026.12,
-    "text": "If it turns out that's not the answer, I can easily",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_621ed5da",
-    "start_time": 2026.12,
-    "end_time": 2031.2,
-    "text": "determine whether the answer lies to the left or the right of",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1e044c97",
-    "start_time": 2031.2,
-    "end_time": 2033.68,
-    "text": "the guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6cea4467",
-    "start_time": 2033.68,
-    "end_time": 2039.88,
-    "text": "So if I guess that 89.12 is the square root of a number, and",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_dabedfa0",
-    "start_time": 2039.88,
-    "end_time": 2043.48,
-    "text": "turns out not to be the square root of the number, I have a",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0493659c",
-    "start_time": 2043.48,
-    "end_time": 2048.8,
-    "text": "way of saying is 89.12 too big or too small.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_374ed8b7",
-    "start_time": 2048.8,
-    "end_time": 2052.0,
-    "text": "If it was too big, then I know I better guess some number",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_09fb2d51",
-    "start_time": 2052.0,
-    "end_time": 2053.68,
-    "text": "over here.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_62515059",
-    "start_time": 2053.68,
-    "end_time": 2057.16,
-    "text": "If it was too small, then I better guess some number over",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_414ef3a8",
-    "start_time": 2057.16,
-    "end_time": 2058.16,
-    "text": "here.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_627d5a9a",
-    "start_time": 2059.16,
-    "end_time": 2063.84,
-    "text": "Why do I call it bisection?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_793dda81",
-    "start_time": 2063.84,
-    "end_time": 2066.4,
-    "text": "Because I'm dividing it in half.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a38d6650",
-    "start_time": 2066.4,
-    "end_time": 2070.56,
-    "text": "And in general, as we'll see, when I know what my space of",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_2f4d735c",
-    "start_time": 2070.56,
-    "end_time": 2076.04,
-    "text": "answers is, I always as my next guess choose something halfway",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_40fb46e6",
-    "start_time": 2076.04,
-    "end_time": 2077.84,
-    "text": "along that line.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b23a9414",
-    "start_time": 2077.84,
-    "end_time": 2081.28,
-    "text": "So I made a guess, and let's say it was too small.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_cbec2c03",
-    "start_time": 2081.28,
-    "end_time": 2084.32,
-    "text": "And I know the answer is between here and here.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_36965377",
-    "start_time": 2084.32,
-    "end_time": 2085.92,
-    "text": "This was too small.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_9a824e55",
-    "start_time": 2085.92,
-    "end_time": 2089.68,
-    "text": "I now know that the answer is between here and here.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7e639f63",
-    "start_time": 2089.68,
-    "end_time": 2093.24,
-    "text": "So my next guess will be in the middle.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c034f624",
-    "start_time": 2093.24,
-    "end_time": 2096.88,
-    "text": "The beauty of always guessing in the middle is that each",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_732cde49",
-    "start_time": 2096.88,
-    "end_time": 2100.6,
-    "text": "guess, if it's wrong, I get to throw out half of the state",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_eaadb60b",
-    "start_time": 2100.6,
-    "end_time": 2102.44,
-    "text": "space.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ed5bfa1c",
-    "start_time": 2102.44,
-    "end_time": 2105.96,
-    "text": "So I know how long it's going to take me to search the",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_eef35a8c",
-    "start_time": 2105.96,
-    "end_time": 2109.24,
-    "text": "possibilities in some sense.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_73d8fc09",
-    "start_time": 2109.24,
-    "end_time": 2113.08,
-    "text": "Because I'm getting logarithmically progress.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a33432c7",
-    "start_time": 2116.48,
-    "end_time": 2121.24,
-    "text": "This is exactly what we saw when we looked at recursion in",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_03ed18e6",
-    "start_time": 2121.24,
-    "end_time": 2125.88,
-    "text": "some sense, where we solved the problem by, at each step,",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_00e273d4",
-    "start_time": 2125.88,
-    "end_time": 2128.64,
-    "text": "solving a smaller problem.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_91679b2c",
-    "start_time": 2128.64,
-    "end_time": 2133.24,
-    "text": "The same problem, but on a smaller solution space.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_79323921",
-    "start_time": 2133.24,
-    "end_time": 2136.0,
-    "text": "Now, as it happens, I'm not using recursion in this",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_04cb8be6",
-    "start_time": 2136.0,
-    "end_time": 2138.44,
-    "text": "implementation we have up on the screen.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8b119c62",
-    "start_time": 2138.44,
-    "end_time": 2140.8,
-    "text": "I'm doing it iteratively.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7a98fb45",
-    "start_time": 2140.8,
-    "end_time": 2143.44,
-    "text": "But the idea is the same.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_b7876a96",
-    "start_time": 2143.44,
-    "end_time": 2146.68,
-    "text": "So we'll take a quick look at it now, then we'll quit, and",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_d78d6317",
-    "start_time": 2146.68,
-    "end_time": 2148.76,
-    "text": "we'll come back to it in the next lecture a little more",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3f69c9ba",
-    "start_time": 2148.76,
-    "end_time": 2151.44,
-    "text": "thoroughly.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_56888c75",
-    "start_time": 2151.44,
-    "end_time": 2154.04,
-    "text": "I'm going to warn you right now that there's a bug in this",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_31d65b81",
-    "start_time": 2154.04,
-    "end_time": 2157.52,
-    "text": "code, and in the next lecture we'll see if we can",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_adbf417d",
-    "start_time": 2157.52,
-    "end_time": 2160.56,
-    "text": "discover what that is.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d3fbf8e1",
-    "start_time": 2160.56,
-    "end_time": 2164.96,
-    "text": "So it takes two arguments, x, the number whose square root",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0cfd5b1b",
-    "start_time": 2164.96,
-    "end_time": 2169.96,
-    "text": "we're looking for, and epsilon, how close we need to get.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d1df8153",
-    "start_time": 2169.96,
-    "end_time": 2175.88,
-    "text": "It assumes that x is non-negative, and that epsilon is",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_2a770592",
-    "start_time": 2175.88,
-    "end_time": 2178.56,
-    "text": "greater than zero.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fae1f673",
-    "start_time": 2178.56,
-    "end_time": 2182.04,
-    "text": "Why do we need to assume that epsilon is greater than zero?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_27d8da7e",
-    "start_time": 2182.04,
-    "end_time": 2184.68,
-    "text": "Well, if you made epsilon zero, and then say we're looking",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d864ad43",
-    "start_time": 2184.68,
-    "end_time": 2189.88,
-    "text": "for the square root of two, we know we'll never get an answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_92525011",
-    "start_time": 2189.88,
-    "end_time": 2193.88,
-    "text": "So we want it to be positive.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0d999079",
-    "start_time": 2193.88,
-    "end_time": 2198.16,
-    "text": "And then it returns y such that y times y is within epsilon",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_2b5b6e53",
-    "start_time": 2198.16,
-    "end_time": 2199.44,
-    "text": "of x.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6ad14aa8",
-    "start_time": 2199.44,
-    "end_time": 2204.4,
-    "text": "It's near to use the terminology we used before.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f79c2379",
-    "start_time": 2204.4,
-    "end_time": 2207.4,
-    "text": "The next thing we see in the program is two",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8f632460",
-    "start_time": 2207.4,
-    "end_time": 2209.88,
-    "text": "assert statements.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6e4f6652",
-    "start_time": 2209.88,
-    "end_time": 2214.56,
-    "text": "This is because I never trust the people who call my",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_c8fde3fa",
-    "start_time": 2214.56,
-    "end_time": 2217.36,
-    "text": "functions to do the right thing.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_882b3c86",
-    "start_time": 2217.36,
-    "end_time": 2220.48,
-    "text": "Even though I've said I'm going to assume certain things",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_dacec10d",
-    "start_time": 2220.48,
-    "end_time": 2224.32,
-    "text": "about x and epsilon, I'm actually going to test it.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_805e3baa",
-    "start_time": 2224.32,
-    "end_time": 2228.08,
-    "text": "And so I'm going to assert that x is greater than or equal to",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d98a3bc3",
-    "start_time": 2228.08,
-    "end_time": 2231.72,
-    "text": "zero, and that epsilon is greater than zero.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9e6366ca",
-    "start_time": 2231.72,
-    "end_time": 2236.76,
-    "text": "What assert does is it tests the predicate, say x greater",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3ce12708",
-    "start_time": 2236.76,
-    "end_time": 2238.44,
-    "text": "than or equal to zero.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4f35ff98",
-    "start_time": 2238.44,
-    "end_time": 2241.24,
-    "text": "If it's true, it does nothing.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_55621f0b",
-    "start_time": 2241.24,
-    "end_time": 2243.2,
-    "text": "Just goes on to the next statement.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d88d3dc6",
-    "start_time": 2243.2,
-    "end_time": 2248.44,
-    "text": "But if it's false, it prints a message, the string, which is",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6519e6aa",
-    "start_time": 2248.44,
-    "end_time": 2253.2,
-    "text": "my second argument here, and then the program just stops.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4efc67b8",
-    "start_time": 2253.2,
-    "end_time": 2255.64,
-    "text": "So rather than my function going off and doing something",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f72273f3",
-    "start_time": 2255.64,
-    "end_time": 2259.44,
-    "text": "bizarre, for example, running forever, it just stops with",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_8a73b1bb",
-    "start_time": 2259.44,
-    "end_time": 2262.12,
-    "text": "the message saying, you called me with arguments you",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_ac363b7f",
-    "start_time": 2262.12,
-    "end_time": 2263.36,
-    "text": "shouldn't have called me with.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_afe9aae9",
-    "start_time": 2266.24,
-    "end_time": 2269.56,
-    "text": "So that's the specification, and then my",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_31dd7e89",
-    "start_time": 2269.56,
-    "end_time": 2272.96,
-    "text": "check of the assumptions.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_83662dee",
-    "start_time": 2272.96,
-    "end_time": 2279.84,
-    "text": "The next thing it does is it looks for a range such that I",
-    "tag": "UNDECIDED"
-  },
-  {
-    "id": "seg_a94253c2",
-    "start_time": 2279.84,
-    "end_time": 2284.28,
-    "text": "believe I'm assured that my answer lies between these",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3f79e62b",
-    "start_time": 2284.28,
-    "end_time": 2288.56,
-    "text": "values, and I'm going to say, well, my answer will be no",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fd19f06c",
-    "start_time": 2288.56,
-    "end_time": 2294.0,
-    "text": "smaller than zero and no bigger than x.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0ff904b4",
-    "start_time": 2294.0,
-    "end_time": 2296.04,
-    "text": "Now, is this the tightest possible range?",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3648679c",
-    "start_time": 2296.04,
-    "end_time": 2297.32,
-    "text": "Maybe not.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_4fef8d21",
-    "start_time": 2297.32,
-    "end_time": 2299.28,
-    "text": "But I'm not too fussy about that.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_8f748451",
-    "start_time": 2299.28,
-    "end_time": 2305.04,
-    "text": "I'm just trying to make sure that I cover the space.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_9f54b115",
-    "start_time": 2305.04,
-    "end_time": 2307.6,
-    "text": "Then I'll start with a guess.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_dbaf43e2",
-    "start_time": 2307.6,
-    "end_time": 2310.8,
-    "text": "And again, I'm not going to worry too much about the guess.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_44f260ab",
-    "start_time": 2310.8,
-    "end_time": 2315.24,
-    "text": "I'm going to take low plus high and divide it by 2.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_7d33ac8f",
-    "start_time": 2315.24,
-    "end_time": 2317.48,
-    "text": "That is to say, choose something in the middle of this",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_73ba55d3",
-    "start_time": 2317.48,
-    "end_time": 2324.24,
-    "text": "space, and then essentially do what we've got here.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f173518e",
-    "start_time": 2324.24,
-    "end_time": 2326.28,
-    "text": "So it's a little bit more involved here.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8acd72d8",
-    "start_time": 2326.28,
-    "end_time": 2331.24,
-    "text": "I'm going to set my counter to 1 just to keep checking.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_adebaf5a",
-    "start_time": 2331.24,
-    "end_time": 2335.12,
-    "text": "Then say, while the absolute value of the guess squared",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_6a525ec5",
-    "start_time": 2335.12,
-    "end_time": 2338.52,
-    "text": "minus x is greater than epsilon, that is to say, while my",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3bce133e",
-    "start_time": 2338.52,
-    "end_time": 2343.2,
-    "text": "guess is not yet good enough, and the counter is not greater",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1dd19dcc",
-    "start_time": 2343.2,
-    "end_time": 2349.24,
-    "text": "than 100, I'll get the next guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ab38995f",
-    "start_time": 2349.24,
-    "end_time": 2351.48,
-    "text": "Notice by the way, I have a print statement here, which",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_721a024c",
-    "start_time": 2351.48,
-    "end_time": 2353.24,
-    "text": "I've commented out.",
-    "tag": "UNDECIDED"
-  },
-  {
-    "id": "seg_482c8e9a",
-    "start_time": 2353.24,
-    "end_time": 2356.64,
-    "text": "But I sort of figured that my program would not work",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5e3d2052",
-    "start_time": 2356.64,
-    "end_time": 2358.72,
-    "text": "correctly the first time.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_bd93991b",
-    "start_time": 2358.72,
-    "end_time": 2363.12,
-    "text": "And so when I first typed it, put in a print statement that",
-    "tag": "UNDECIDED"
-  },
-  {
-    "id": "seg_f95653b9",
-    "start_time": 2363.12,
-    "end_time": 2365.76,
-    "text": "would let me see what was happening each iteration",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_76ead8ad",
-    "start_time": 2365.76,
-    "end_time": 2368.76,
-    "text": "through this loop, so that if it didn't work, I could get a",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c6d99c26",
-    "start_time": 2368.76,
-    "end_time": 2371.0,
-    "text": "sense of why not.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_3c645648",
-    "start_time": 2371.0,
-    "end_time": 2373.8,
-    "text": "In the next lecture, when we look for the bug in this",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_1f238398",
-    "start_time": 2373.8,
-    "end_time": 2376.88,
-    "text": "program, you will see me uncomment out that print",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9b724448",
-    "start_time": 2376.88,
-    "end_time": 2379.0,
-    "text": "statement.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_ace78989",
-    "start_time": 2379.0,
-    "end_time": 2382.76,
-    "text": "But for now, we go to the next thing.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_c2143633",
-    "start_time": 2382.76,
-    "end_time": 2386.0,
-    "text": "And we're here, we know the guess wasn't good enough.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_245de991",
-    "start_time": 2386.0,
-    "end_time": 2391.56,
-    "text": "So I now say, if the guess squared was less than x, then",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_da291264",
-    "start_time": 2391.56,
-    "end_time": 2398.36,
-    "text": "I will change the low bound to be the guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_0ff5835f",
-    "start_time": 2398.36,
-    "end_time": 2403.12,
-    "text": "Otherwise, I'll change the high bound to be the guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9c2fd8a8",
-    "start_time": 2403.12,
-    "end_time": 2405.96,
-    "text": "So I move either the low bound or I move the high bound.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3d120cd2",
-    "start_time": 2405.96,
-    "end_time": 2410.56,
-    "text": "Either way, I'm cutting the search space in half each step.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_9c9e1c8b",
-    "start_time": 2410.56,
-    "end_time": 2413.12,
-    "text": "I'll get my new guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f2c949ba",
-    "start_time": 2413.12,
-    "end_time": 2418.0,
-    "text": "I'll increment my counter, and off I go.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_c341085c",
-    "start_time": 2418.04,
-    "end_time": 2420.2,
-    "text": "In the happy event that eventually I get a good",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_790c2823",
-    "start_time": 2420.2,
-    "end_time": 2426.2,
-    "text": "enough guess, you'll see I'll exit the loop.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_38427fb9",
-    "start_time": 2426.2,
-    "end_time": 2430.2,
-    "text": "When I exit the loop, I check, did I exit it because I",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_052ab871",
-    "start_time": 2430.2,
-    "end_time": 2433.08,
-    "text": "exceeded the counter, i.e. I didn't have a good enough",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_babf8a9e",
-    "start_time": 2433.08,
-    "end_time": 2434.24,
-    "text": "guess.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_47322c52",
-    "start_time": 2434.24,
-    "end_time": 2439.2,
-    "text": "If so, I'll print the message iteration count exceeded.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8a298ef1",
-    "start_time": 2439.2,
-    "end_time": 2446.36,
-    "text": "Otherwise, I'll print the result and return it.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_bf302b5e",
-    "start_time": 2446.36,
-    "end_time": 2448.76,
-    "text": "Now again, if I were writing a square root function to be",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_072fcdc0",
-    "start_time": 2448.76,
-    "end_time": 2451.6,
-    "text": "used in another program, I probably wouldn't bother",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fe98ddfb",
-    "start_time": 2451.6,
-    "end_time": 2454.2,
-    "text": "printing the result and the number of iterations and all",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a0a707ff",
-    "start_time": 2454.2,
-    "end_time": 2455.28,
-    "text": "of that.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d45b694f",
-    "start_time": 2455.28,
-    "end_time": 2458.2,
-    "text": "But again, I'm doing that here because we want to see",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f0bdabf7",
-    "start_time": 2458.2,
-    "end_time": 2459.92,
-    "text": "what it's doing.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_9bca2edb",
-    "start_time": 2459.92,
-    "end_time": 2462.4,
-    "text": "All right, we'll run it a couple times, and then I'll",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_22246b94",
-    "start_time": 2462.4,
-    "end_time": 2466.44,
-    "text": "let you out for the day.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_75d434bc",
-    "start_time": 2466.44,
-    "end_time": 2467.76,
-    "text": "Let's go do this.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_a5e025a3",
-    "start_time": 2477.04,
-    "end_time": 2483.32,
-    "text": "All right, we're here.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_9fbd31f4",
-    "start_time": 2483.32,
-    "end_time": 2485.36,
-    "text": "Notice when I run it, nothing happens.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8f8e05aa",
-    "start_time": 2485.36,
-    "end_time": 2487.04,
-    "text": "Why did nothing happen?",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_168ffdf0",
-    "start_time": 2487.04,
-    "end_time": 2489.8,
-    "text": "Well, nothing happens, it was just a function.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_514cd755",
-    "start_time": 2489.8,
-    "end_time": 2493.08,
-    "text": "Functions don't do anything until I call them.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_38b276b8",
-    "start_time": 2493.08,
-    "end_time": 2494.36,
-    "text": "So let's call it.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_e6a6317b",
-    "start_time": 2495.0,
-    "end_time": 2502.84,
-    "text": "Let's call square root by with 4.001.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_717d97b3",
-    "start_time": 2505.92,
-    "end_time": 2507.52,
-    "text": "Took only one iteration.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3a2f79ef",
-    "start_time": 2507.52,
-    "end_time": 2508.92,
-    "text": "That was pretty fast.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_8a95c3ca",
-    "start_time": 2508.92,
-    "end_time": 2511.2,
-    "text": "Estimated two is an answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_8e9c4941",
-    "start_time": 2511.2,
-    "end_time": 2513.72,
-    "text": "We're pretty happy with that answer.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_4c7d384e",
-    "start_time": 2513.72,
-    "end_time": 2517.2,
-    "text": "Let's try another example.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_899717c1",
-    "start_time": 2517.2,
-    "end_time": 2520.36,
-    "text": "Let's look at nine.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_77fe5be6",
-    "start_time": 2520.36,
-    "end_time": 2523.36,
-    "text": "I always like to, by the way, write the answer.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_f6995944",
-    "start_time": 2523.36,
-    "end_time": 2525.56,
-    "text": "I always like to, by the way, start with questions whose",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_5b613945",
-    "start_time": 2525.56,
-    "end_time": 2528.84,
-    "text": "answer I know.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_65d7fb73",
-    "start_time": 2528.84,
-    "end_time": 2531.2,
-    "text": "We'll try and get a little bit more precise.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_42690f8a",
-    "start_time": 2531.2,
-    "end_time": 2532.4,
-    "text": "Well, all right.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_e2703323",
-    "start_time": 2532.4,
-    "end_time": 2536.64,
-    "text": "Here it took 18 iterations.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_157687e0",
-    "start_time": 2536.64,
-    "end_time": 2540.4,
-    "text": "Didn't actually give me the answer 3, which we know happens",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a4c66b9a",
-    "start_time": 2540.4,
-    "end_time": 2542.16,
-    "text": "to be the answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_a134e180",
-    "start_time": 2542.16,
-    "end_time": 2546.12,
-    "text": "But it gave me something that was with an epsilon of 3.",
-    "tag": "UNDECIDED"
-  },
-  {
-    "id": "seg_c55d6b2d",
-    "start_time": 2546.12,
-    "end_time": 2549.68,
-    "text": "So it meets the specification, so I should be",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_971856e5",
-    "start_time": 2549.68,
-    "end_time": 2552.44,
-    "text": "perfectly happy.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_73c462f0",
-    "start_time": 2552.48,
-    "end_time": 2554.04,
-    "text": "Let's look at another example.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_5efd501d",
-    "start_time": 2558.72,
-    "end_time": 2560.08,
-    "text": "Try a bigger number here.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_62dfb4f2",
-    "start_time": 2567.0,
-    "end_time": 2570.0,
-    "text": "All right, so I've looked for the square root of 1,000.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5c4f08ce",
-    "start_time": 2570.0,
-    "end_time": 2572.0,
-    "text": "Here it took 29 iterations.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_377a67d5",
-    "start_time": 2572.0,
-    "end_time": 2574.08,
-    "text": "We're kind of creeping up there.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4f49f7ea",
-    "start_time": 2574.08,
-    "end_time": 2576.72,
-    "text": "Gave me an estimate.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_4ce33c81",
-    "start_time": 2576.72,
-    "end_time": 2579.12,
-    "text": "Let's look at our infamous example of two.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_64a4deed",
-    "start_time": 2579.12,
-    "end_time": 2580.32,
-    "text": "See what it does here.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_73ecaa62",
-    "start_time": 2582.44,
-    "end_time": 2594.08,
-    "text": "Worked around.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_2279a1f5",
-    "start_time": 2594.08,
-    "end_time": 2600.0,
-    "text": "Now, we can see that it's actually working.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f14a19cb",
-    "start_time": 2600.0,
-    "end_time": 2602.92,
-    "text": "And I'm getting answers that we believe are good enough",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_fc33c9f9",
-    "start_time": 2602.92,
-    "end_time": 2605.32,
-    "text": "answers.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_d9f1de68",
-    "start_time": 2605.32,
-    "end_time": 2608.24,
-    "text": "But we also see that the speed of what we talk about is",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4a0f2326",
-    "start_time": 2608.24,
-    "end_time": 2611.28,
-    "text": "convergence, how many iterations it takes, the",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_f4d2e8bd",
-    "start_time": 2611.28,
-    "end_time": 2614.6,
-    "text": "number of iterations, is variable.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_3cc6a8ad",
-    "start_time": 2614.6,
-    "end_time": 2617.88,
-    "text": "And it seems to be related to at least two things.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_20d72c3c",
-    "start_time": 2617.88,
-    "end_time": 2620.52,
-    "text": "And we'll see more about this in the next lecture.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_dacc2425",
-    "start_time": 2620.52,
-    "end_time": 2624.32,
-    "text": "The size of the number of the square root we're looking for",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_cfb7b68a",
-    "start_time": 2624.32,
-    "end_time": 2629.28,
-    "text": "and the precision to which I want the answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_52ddb654",
-    "start_time": 2629.28,
-    "end_time": 2634.88,
-    "text": "Next lecture, we'll look at, A, what's wrong with this one.",
-    "tag": "ADMINISTRATIVE"
-  },
-  {
-    "id": "seg_818127c6",
-    "start_time": 2634.88,
-    "end_time": 2638.16,
-    "text": "And I would ask you to between now and the next lecture,",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_8c00af12",
-    "start_time": 2638.16,
-    "end_time": 2638.88,
-    "text": "think about it.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_45533310",
-    "start_time": 2638.88,
-    "end_time": 2641.76,
-    "text": "See if you can find the bug yourself.",
-    "tag": "OTHER_CHATTER"
-  },
-  {
-    "id": "seg_04e33a63",
-    "start_time": 2641.76,
-    "end_time": 2644.08,
-    "text": "We'll look first for the bug.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_26371559",
-    "start_time": 2644.08,
-    "end_time": 2647.04,
-    "text": "And then after that, we'll look at a better method of",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_5058c786",
-    "start_time": 2647.04,
-    "end_time": 2648.84,
-    "text": "finding the answer.",
-    "tag": "LECTURE_CONTENT"
-  },
-  {
-    "id": "seg_4879f9e2",
-    "start_time": 2648.84,
-    "end_time": 2649.84,
-    "text": "Thank you.",
-    "tag": "OTHER_CHATTER"
+    "id": "seg_6db734bd",
+    "start_time": 1401.08,
+    "end_time": 1408.44,
+    "text": "And the process address space has user memory mapped at low virtual addresses and the kernel",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_1af9e2a6",
+    "start_time": 1408.44,
+    "end_time": 1413.96,
+    "text": "code and data is mapped at high virtual addresses beyond 2GB.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_e83c1bef",
+    "start_time": 1413.96,
+    "end_time": 1420.24,
+    "text": "And in this part of the kernel code and data that is mapped at high virtual addresses,",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_c1200fce",
+    "start_time": 1420.24,
+    "end_time": 1425.28,
+    "text": "there is the operating system image itself and its data structures and some small amount",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_6313a7ec",
+    "start_time": 1425.28,
+    "end_time": 1427.0,
+    "text": "of memory for IO devices.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_3bf8d213",
+    "start_time": 1427.0,
+    "end_time": 1433.32,
+    "text": "And most of it is free pages, which are available to be assigned to user processes.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_cd82adb7",
+    "start_time": 1433.32,
+    "end_time": 1438.08,
+    "text": "So I have omitted in this discussion how this free page list is constructed during boot",
+    "tag": "ADMINISTRATIVE",
+    "emphasis": false
+  },
+  {
+    "id": "seg_0e291674",
+    "start_time": 1438.08,
+    "end_time": 1445.96,
+    "text": "up and how the available RAM is added into this free page list by the operating system.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
+  },
+  {
+    "id": "seg_56e6e658",
+    "start_time": 1445.96,
+    "end_time": 1450.08,
+    "text": "So I've omitted those details for the sake of simplicity, but please go back and refer",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
+  },
+  {
+    "id": "seg_ce7ac176",
+    "start_time": 1450.08,
+    "end_time": 1454.8,
+    "text": "to the XV6 code in the XV6 book to understand them in more detail.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": true
+  },
+  {
+    "id": "seg_01e1612c",
+    "start_time": 1454.8,
+    "end_time": 1459.4,
+    "text": "So in the next lecture, we are going to see how memory is allocated to user processes",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_131212f8",
+    "start_time": 1459.4,
+    "end_time": 1464.6,
+    "text": "in various system calls from this list of free pages and how the page tables are built",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
+  },
+  {
+    "id": "seg_d2792702",
+    "start_time": 1464.6,
+    "end_time": 1465.6,
+    "text": "for the user processes.",
+    "tag": "LECTURE_CONTENT",
+    "emphasis": false
   }
 ]
