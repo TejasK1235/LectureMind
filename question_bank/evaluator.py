@@ -1,10 +1,15 @@
 # question_bank/evaluator.py
 
 from typing import List, Dict
+from sentence_transformers import SentenceTransformer, util
 
 
 # If two questions share this fraction of words, one gets dropped
-SIMILARITY_THRESHOLD = 0.65
+# SIMILARITY_THRESHOLD = 0.65
+JACCARD_THRESHOLD = 0.65
+SEMANTIC_THRESHOLD = 0.85
+
+_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 def evaluate_questions(
@@ -67,28 +72,71 @@ def _is_valid(question: str) -> bool:
     return starts_with_question_word or ends_with_question_mark
 
 
-def _deduplicate(questions: List[Dict]) -> List[Dict]:
-    """
-    Removes questions that are too similar to one already selected.
-    Uses word-overlap (Jaccard similarity) — no LLM, no embeddings.
-    """
-    selected = []
+# def _deduplicate(questions: List[Dict]) -> List[Dict]:
+#     """
+#     Removes questions that are too similar to one already selected.
+#     Uses word-overlap (Jaccard similarity) — no LLM, no embeddings.
+#     """
+#     selected = []
 
-    for candidate in questions:
+#     for candidate in questions:
+#         candidate_words = set(candidate["text"].lower().split())
+
+#         too_similar = False
+#         for kept in selected:
+#             kept_words = set(kept["text"].lower().split())
+#             intersection = candidate_words & kept_words
+#             union = candidate_words | kept_words
+#             jaccard = len(intersection) / len(union) if union else 0
+
+#             if jaccard >= SIMILARITY_THRESHOLD:
+#                 too_similar = True
+#                 break
+
+#         if not too_similar:
+#             selected.append(candidate)
+
+#     return selected
+
+def _deduplicate(questions: List[Dict]) -> List[Dict]:
+    if not questions:
+        return []
+
+    # Encode all question texts in one batch — much faster than one by one
+    texts = [q["text"] for q in questions]
+    embeddings = _model.encode(texts, convert_to_tensor=True)
+
+    selected = []
+    selected_embeddings = []
+
+    for i, candidate in enumerate(questions):
         candidate_words = set(candidate["text"].lower().split())
 
         too_similar = False
-        for kept in selected:
+
+        for j, kept in enumerate(selected):
+            # Fast Jaccard check first — if it passes, then do the more
+            # expensive semantic check. Avoids unnecessary embedding comparisons.
             kept_words = set(kept["text"].lower().split())
             intersection = candidate_words & kept_words
             union = candidate_words | kept_words
             jaccard = len(intersection) / len(union) if union else 0
 
-            if jaccard >= SIMILARITY_THRESHOLD:
+            if jaccard >= JACCARD_THRESHOLD:
+                too_similar = True
+                break
+
+            # Semantic check — catches paraphrased duplicates Jaccard misses
+            cosine_score = util.cos_sim(
+                embeddings[i], selected_embeddings[j]
+            ).item()
+
+            if cosine_score >= SEMANTIC_THRESHOLD:
                 too_similar = True
                 break
 
         if not too_similar:
             selected.append(candidate)
+            selected_embeddings.append(embeddings[i])
 
     return selected
