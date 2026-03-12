@@ -19,20 +19,36 @@ def main():
 
 
 
+# def run_summarization_pipeline(tagged_segments):
+#     """
+#     Input: tagged segments (list of dicts)
+#     Output: summary string
+#     """
+#     lecture_segments = [
+#         s for s in tagged_segments if s["tag"] == "LECTURE_CONTENT"
+#     ]
+
+#     selected = select_top_segments(lecture_segments, ratio=0.30)
+#     summary = summarize_with_llm(selected)
+
+#     return summary
+
 def run_summarization_pipeline(tagged_segments):
-    """
-    Input: tagged segments (list of dicts)
-    Output: summary string
-    """
+    print(f"[Summarization] Step 1: Filtering to LECTURE_CONTENT segments...")
     lecture_segments = [
         s for s in tagged_segments if s["tag"] == "LECTURE_CONTENT"
     ]
+    print(f"[Summarization] {len(lecture_segments)} lecture segments from {len(tagged_segments)} total.")
 
+    print(f"[Summarization] Step 2: Scoring and extracting top 30% segments...")
     selected = select_top_segments(lecture_segments, ratio=0.30)
+    print(f"[Summarization] {len(selected)} segments selected after scoring and deduplication.")
+
+    print(f"[Summarization] Step 3: Sending to LLM for rewrite...")
     summary = summarize_with_llm(selected)
 
+    print(f"[Summarization] Done. Summary generated ({len(summary)} chars).")
     return summary
-
 
 
 if __name__ == "__main__":
