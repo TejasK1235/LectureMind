@@ -94,10 +94,28 @@ def run_qb_pipeline(
         scored_concepts=scored_concepts
     )
 
+    # if result["warnings"]:
+    #     print("[QB] Warnings:")
+    #     for w in result["warnings"]:
+    #         print(f"  ⚠ {w}")
+
+    # return result
+
     if result["warnings"]:
         print("[QB] Warnings:")
         for w in result["warnings"]:
             print(f"  ⚠ {w}")
+
+    result["concepts"] = [
+        {
+            "concept_id": c["concept_id"],
+            "text": c["text"],
+            "score": c["score"],
+            "word_count": c["word_count"],
+            "emphasis_count": c["emphasis_count"]
+        }
+        for c in scored_concepts
+    ]
 
     return result
 
@@ -126,7 +144,7 @@ if __name__ == "__main__":
 
     # Set this to your PDF or PPTX path to test slide integration.
     # Set to None to run without slides (original behavior).
-    SLIDE_FILE_PATH = "OS_test_notes.pdf"  # e.g. "notes/lecture1.pdf" or "notes/lecture1.pptx"
+    SLIDE_FILE_PATH = "OS_test_notes2.pdf"  # e.g. "notes/lecture1.pdf" or "notes/lecture1.pptx"
     # ─────────────────────────────────────────────────────────────────────────
 
     result = run_qb_pipeline(
