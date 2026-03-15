@@ -4,7 +4,7 @@
 
 from typing import Optional
 
-MCQ_BLOOM_LEVELS = ["Remember", "Understand"]
+MCQ_BLOOM_LEVELS = ["remember", "understand"]
 
 def build_mcq_prompt(question: str, concept_text: str) -> str:
     """

@@ -43,6 +43,17 @@ def run_mcq_quiz(
         }
     """
 
+    # Guard: cap num_questions against available candidate pool
+    available = sum(
+        len(qb_result.get("questions", {}).get(level, []))
+        for level in MCQ_BLOOM_LEVELS
+    )
+    if available == 0:
+        return {"total": 0, "mcqs": [], "warnings": [f"No questions found at Bloom levels: {MCQ_BLOOM_LEVELS}"]}
+    if num_questions > available:
+        print(f"[Quiz/MCQ] Requested {num_questions} but only {available} candidates available. Capping.")
+        num_questions = available
+
     # Step 1: collect candidate questions from allowed Bloom levels only
     candidates = []
     for level in MCQ_BLOOM_LEVELS:
@@ -114,7 +125,7 @@ def run_extempore_quiz(concepts: List[Dict]) -> Dict:
     """
 
     # Filter to only concepts substantial enough for a presentation
-    eligible = [c for c in concepts if c["score"] >= EXTEMPORE_SCORE_THRESHOLD]
+    eligible = [c for c in concepts if c["score"] >= EXTEMPORE_SCORE_THRESHOLD and c["word_count"] >= 80]
 
     if not eligible:
         # Fallback: take top half regardless of threshold
@@ -133,6 +144,31 @@ def run_extempore_quiz(concepts: List[Dict]) -> Dict:
 
     if not topics:
         warnings.append("No extempore topics could be generated.")
+
+    from sentence_transformers import SentenceTransformer, util
+    # import torch
+
+    # EXTEMPORE_DEDUP_THRESHOLD = 0.82
+    # EXTEMPORE_DEDUP_THRESHOLD = 0.72
+    EXTEMPORE_DEDUP_THRESHOLD = 0.65
+
+    if len(topics) > 1:
+        _model = SentenceTransformer("all-MiniLM-L6-v2")
+        titles = [t["title"] for t in topics]
+        embeddings = _model.encode(titles, convert_to_tensor=True)
+        kept_indices = []
+        for i in range(len(topics)):
+            is_duplicate = False
+            for j in kept_indices:
+                sim = util.cos_sim(embeddings[i], embeddings[j]).item()
+                if sim >= EXTEMPORE_DEDUP_THRESHOLD:
+                    print(f"[Quiz/Extempore] Dedup dropped '{topics[i]['title']}' (similar to '{topics[j]['title']}', sim={sim:.2f})")
+                    is_duplicate = True
+                    break
+            if not is_duplicate:
+                kept_indices.append(i)
+        topics = [topics[i] for i in kept_indices]
+
 
     # Keep sorted by score descending so frontend can slice top-N easily
     topics.sort(key=lambda t: t["score"], reverse=True)
