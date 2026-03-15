@@ -133,18 +133,18 @@ if __name__ == "__main__":
         tagged_segments = json.load(f)
 
     # ── Configure your test run here ─────────────────────────────────────────
-    TOTAL_QUESTIONS = 20
+    TOTAL_QUESTIONS = 5
     BLOOM_PERCENTAGES = {
-        "Remember":  0.2,
-        "Understand": 0.2,
-        "Apply":     0.2,
-        "Analyze":   0.2,
-        "Evaluate":  0.2
+        "remember":  0.5,
+        "understand": 0.0,
+        "apply":     0.0,
+        "analyze":   0.5,
+        "evaluate":  0.0
     }
 
     # Set this to your PDF or PPTX path to test slide integration.
     # Set to None to run without slides (original behavior).
-    SLIDE_FILE_PATH = "OS_test_notes2.pdf"  # e.g. "notes/lecture1.pdf" or "notes/lecture1.pptx"
+    SLIDE_FILE_PATH = "test_slides.pdf"  # e.g. "notes/lecture1.pdf" or "notes/lecture1.pptx"
     # ─────────────────────────────────────────────────────────────────────────
 
     result = run_qb_pipeline(

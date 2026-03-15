@@ -50,13 +50,16 @@ def assemble_question_bank(
                 f"only {len(selected)} available (short by {shortfall})"
             )
 
+    ALL_BLOOM_LEVELS = ["remember", "understand", "apply", "analyze", "evaluate"]
+    full_distribution = {level: len(final_questions.get(level, [])) for level in ALL_BLOOM_LEVELS}
+    full_questions = {level: final_questions.get(level, []) for level in ALL_BLOOM_LEVELS}
+
     return {
         "total_questions": total,
-        "bloom_distribution": {k: len(v) for k, v in final_questions.items()},
-        "questions": final_questions,
+        "bloom_distribution": full_distribution,
+        "questions": full_questions,
         "warnings": warnings
     }
-
 
 def compute_bloom_counts(
     total_questions: int,

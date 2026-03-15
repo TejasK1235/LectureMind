@@ -3,21 +3,21 @@
 from typing import Optional
 
 BLOOM_DESCRIPTIONS = {
-    "Remember":   "recall facts, definitions, and basic concepts directly stated in the text",
-    "Understand": "explain ideas or concepts in your own words, interpret meaning",
-    "Apply":      "use the concept in a new or practical situation",
-    "Analyze":    "break down the concept, examine relationships, identify causes or structure",
-    "Evaluate":   "make a judgment, critique, or justify a position based on the concept",
-    "Create":     "propose, design, or formulate something new based on the concept"
+    "remember":   "recall facts, definitions, and basic concepts directly stated in the text",
+    "understand": "explain ideas or concepts in your own words, interpret meaning",
+    "apply":      "use the concept in a new or practical situation",
+    "analyze":    "break down the concept, examine relationships, identify causes or structure",
+    "evaluate":   "make a judgment, critique, or justify a position based on the concept",
+    "create":     "propose, design, or formulate something new based on the concept"
 }
 
 BLOOM_STARTERS = {
-    "Remember":   ["What is...", "Define...", "List...", "State...", "Name..."],
-    "Understand": ["Explain why...", "Describe how...", "What does ... mean?", "Summarize..."],
-    "Apply":      ["How would you use ... in a situation where...", "Given that ..., calculate/determine...", "Illustrate how ... applies when..."],
-    "Analyze":    ["What are the differences between ... and ...?", "Why does ... cause ...?", "Break down the relationship between...", "What are the implications of..."],
-    "Evaluate":   ["To what extent is ... true?", "Assess the validity of...", "Critique the claim that...", "Is ... an appropriate approach? Why?", "Justify why..."],
-    "Create":     ["Design a ... that...", "Propose a method to...", "Formulate a hypothesis about...", "How would you construct..."]
+    "remember":   ["What is...", "Define...", "List...", "State...", "Name..."],
+    "understand": ["Explain why...", "Describe how...", "What does ... mean?", "Summarize..."],
+    "apply":      ["How would you use ... in a situation where...", "Given that ..., calculate/determine...", "Illustrate how ... applies when..."],
+    "analyze":    ["What are the differences between ... and ...?", "Why does ... cause ...?", "Break down the relationship between...", "What are the implications of..."],
+    "evaluate":   ["To what extent is ... true?", "Assess the validity of...", "Critique the claim that...", "Is ... an appropriate approach? Why?", "Justify why..."],
+    "create":     ["Design a ... that...", "Propose a method to...", "Formulate a hypothesis about...", "How would you construct..."]
 }
 
 MAX_CONCEPT_WORDS = 200
