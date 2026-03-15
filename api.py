@@ -20,7 +20,7 @@ import io
 
 import whisper
 import torch
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
@@ -223,10 +223,7 @@ async def transcribe(
         dist = Counter(s.get("tag") for s in tagged)
         print(f"[/transcribe] Tagging done: {dict(dist)}")
 
-        return JSONResponse(content={
-            "segment_count": len(tagged),
-            "segments": tagged
-        })
+        return JSONResponse(content=tagged)
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Transcription failed: {str(e)}")
@@ -280,10 +277,7 @@ async def tag(request: TranscriptRequest):
         dist = Counter(s.get("tag") for s in tagged)
         print(f"[/tag] {len(tagged)} segments tagged: {dict(dist)}")
 
-        return JSONResponse(content={
-            "segment_count": len(tagged),
-            "segments": tagged
-        })
+        return JSONResponse(content=tagged)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Tagging failed: {str(e)}")
 
@@ -307,7 +301,6 @@ async def tag(request: TranscriptRequest):
 #     "summary": "## File Systems\n\n- Point one\n- Point two\n..."
 #   }
 #
-# Summary is a markdown string. Backend writes it to .md or serves it directly.
 # ─────────────────────────────────────────────────────────────────────────────
 class TaggedRequest(BaseModel):
     segments: List[dict]
@@ -344,6 +337,7 @@ async def summarize(request: TaggedRequest):
     try:
         summary_md = run_summarization_pipeline(request.segments)
         print(f"[/summarize] {len(summary_md)} chars from {len(lecture_segments)} lecture segments.")
+        print(f"[/summarize] Summary content:\n{summary_md}\n")
 
         # Convert markdown → HTML → PDF
         html_body = markdown.markdown(summary_md, extensions=["extra", "tables"])
@@ -376,8 +370,16 @@ async def summarize(request: TaggedRequest):
         </html>
         """
 
+        # config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+        # pdf_bytes = pdfkit.from_string(html_full, False, configuration=config)
         config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
-        pdf_bytes = pdfkit.from_string(html_full, False, configuration=config)
+        options = {
+            "page-size": "A4",
+            "encoding": "UTF-8",
+            "no-outline": None,
+            "enable-local-file-access": None,
+        }
+        pdf_bytes = pdfkit.from_string(html_full, False, configuration=config, options=options)
         pdf_buffer = io.BytesIO(pdf_bytes)
 
         print(f"[/summarize] PDF generated ({len(pdf_bytes)} bytes).")
@@ -389,7 +391,93 @@ async def summarize(request: TaggedRequest):
         )
 
     except Exception as e:
+        print(f"[/summarize] ERROR: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Summarization failed: {str(e)}")
+    
+# @app.post("/summarize")
+# async def summarize(request: Request):
+#     body = await request.body()
+#     print(f"[/summarize DEBUG] Raw body: {body[:500]}")  # first 500 chars so it doesnt flood terminal
+#     print(f"[/summarize DEBUG] Content-Type: {request.headers.get('content-type')}")
+#     raise HTTPException(status_code=200, detail="debug")
+
+
+
+@app.post("/summarize/with-slides")
+async def summarize_with_slides(
+    segments_json: str = Form(...),
+    slide_file: UploadFile = File(...),
+):
+    try:
+        segments = json.loads(segments_json)
+    except json.JSONDecodeError as e:
+        raise HTTPException(status_code=400, detail=f"Invalid segments_json: {e}")
+
+    if not segments:
+        raise HTTPException(status_code=400, detail="No segments provided.")
+
+    lecture_segments = [s for s in segments if s.get("tag") == "LECTURE_CONTENT"]
+    if not lecture_segments:
+        raise HTTPException(status_code=400, detail="No LECTURE_CONTENT segments found.")
+
+    ext = os.path.splitext(slide_file.filename or "")[1].lower()
+    if ext not in (".pdf", ".pptx", ".ppt"):
+        raise HTTPException(status_code=400, detail=f"Unsupported slide format: {ext}")
+
+    slide_tmp_path = None
+    try:
+        slide_tmp_path = _save_upload(slide_file, suffix=ext)
+        print(f"[/summarize/with-slides] Slide file received: {slide_file.filename}")
+
+        summary_md = run_summarization_pipeline(segments, slide_file_path=slide_tmp_path)
+        print(f"[/summarize/with-slides] {len(summary_md)} chars from {len(lecture_segments)} lecture segments.")
+
+        html_body = markdown.markdown(summary_md, extensions=["extra", "tables"])
+        html_full = f"""
+        <html>
+        <head>
+        <meta charset="utf-8">
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                font-size: 13px;
+                line-height: 1.7;
+                margin: 48px 56px;
+                color: #1a1a1a;
+            }}
+            h1 {{ font-size: 22px; color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 6px; margin-top: 32px; }}
+            h2 {{ font-size: 17px; color: #1a3a5c; margin-top: 24px; }}
+            h3 {{ font-size: 14px; color: #333; margin-top: 16px; }}
+            ul {{ padding-left: 20px; }}
+            li {{ margin-bottom: 5px; }}
+            code {{ background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-size: 12px; }}
+            pre {{ background: #f4f4f4; padding: 12px; border-radius: 4px; overflow-x: auto; }}
+            strong {{ color: #1a3a5c; }}
+        </style>
+        </head>
+        <body>
+        {html_body}
+        </body>
+        </html>
+        """
+        config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+        pdf_bytes = pdfkit.from_string(html_full, False, configuration=config)
+        pdf_buffer = io.BytesIO(pdf_bytes)
+        print(f"[/summarize/with-slides] PDF generated ({len(pdf_bytes)} bytes).")
+
+        return StreamingResponse(
+            pdf_buffer,
+            media_type="application/pdf",
+            headers={"Content-Disposition": "attachment; filename=lecture_summary.pdf"}
+        )
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Summarization failed: {str(e)}")
+    finally:
+        if slide_tmp_path and os.path.exists(slide_tmp_path):
+            os.remove(slide_tmp_path)
 
 # ── Shared helper so both QB endpoints don't repeat the same logic ────────────
 class QBRequest(BaseModel):
@@ -404,11 +492,11 @@ class QBRequest(BaseModel):
 
 def _build_bloom(request: QBRequest) -> dict:
     bloom_percentages = {
-        "Remember":   request.bloom_remember,
-        "Understand": request.bloom_understand,
-        "Apply":      request.bloom_apply,
-        "Analyze":    request.bloom_analyze,
-        "Evaluate":   request.bloom_evaluate,
+        "remember":   request.bloom_remember,
+        "understand": request.bloom_understand,
+        "apply":      request.bloom_apply,
+        "analyze":    request.bloom_analyze,
+        "evaluate":   request.bloom_evaluate,
     }
     bloom_percentages = {k: v for k, v in bloom_percentages.items() if v > 0}
     total_pct = sum(bloom_percentages.values())
@@ -560,7 +648,7 @@ async def quiz_mcq(request: MCQRequest):
 
     questions_exist = any(
         request.qb_result.get("questions", {}).get(level)
-        for level in ["Remember", "Understand"]
+        for level in ["remember", "understand"]
     )
     if not questions_exist:
         raise HTTPException(
