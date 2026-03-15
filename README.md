@@ -246,7 +246,3 @@ LectureMind is built by a three-person team. This repository covers the NLP/AI s
 - **Frontend**, React
 
 ---
-
-## License
-
-MIT
