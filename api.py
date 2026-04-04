@@ -11,11 +11,15 @@ import json
 import os   
 import tempfile 
 import shutil
+import uuid
+import time
 from contextlib import asynccontextmanager
 from typing import Optional, List
 import markdown
 import pdfkit
+# from weasyprint import HTML as WeasyprintHTML
 from fastapi.responses import StreamingResponse
+from fastapi.background import BackgroundTasks
 import io
 
 import whisper
@@ -119,6 +123,33 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan
 )
+
+# ── Async job store ───────────────────────────────────────────────────────────
+# In-memory dict. Survives for the lifetime of the uvicorn process.
+# If uvicorn restarts, all jobs are lost — backend must re-trigger generate.
+# Keys: job_id (str)
+# Values: {"status": "processing"|"done"|"failed", "result": dict|None, "error": str|None, "created_at": float}
+#
+# TTL cleanup: jobs older than 2 hours are purged on every result poll.
+# This prevents the dict from growing forever across a long test session.
+
+_job_store: dict = {}
+JOB_TTL_SECONDS = 7200
+
+# Fallback callback URL — used if backend doesn't send one in the request.
+# Replace with backend guy's current ngrok URL when testing.
+# Set to None to disable fallback entirely.
+FALLBACK_CALLBACK_URL = "https://dab8-163-223-67-15.ngrok-free.app/unit/update-question-bank"
+
+
+def _cleanup_old_jobs():
+    """Remove jobs older than JOB_TTL_SECONDS. Called on every GET /result poll."""
+    now = time.time()
+    expired = [jid for jid, job in _job_store.items() if now - job["created_at"] > JOB_TTL_SECONDS]
+    for jid in expired:
+        del _job_store[jid]
+    if expired:
+        print(f"[JobStore] Cleaned up {len(expired)} expired job(s).")
 
 # @app.on_event("startup")
 # def load_model():
@@ -479,7 +510,7 @@ async def summarize_with_slides(
         if slide_tmp_path and os.path.exists(slide_tmp_path):
             os.remove(slide_tmp_path)
 
-# ── Shared helper so both QB endpoints don't repeat the same logic ────────────
+
 class QBRequest(BaseModel):
     segments: List[dict]
     total_questions: int = 20
@@ -488,7 +519,8 @@ class QBRequest(BaseModel):
     bloom_apply:      float = 0.2
     bloom_analyze:    float = 0.2
     bloom_evaluate:   float = 0.2
-
+    callback_url: Optional[str] = None   # backend's endpoint to call when done
+    request_id: Optional[str] = None     # backend's own ID for this request
 
 def _build_bloom(request: QBRequest) -> dict:
     bloom_percentages = {
@@ -508,66 +540,278 @@ def _build_bloom(request: QBRequest) -> dict:
     return bloom_percentages
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# ENDPOINT 4a: /question-bank
-#
-# Input (JSON body):
-#   {
-#     "segments": [...],        ← tagged segments array from /tag
-#     "total_questions": 20,    ← optional, default 20
-#     "bloom_remember":   0.2,  ← optional, all default to 0.2
-#     "bloom_understand": 0.2,
-#     "bloom_apply":      0.2,
-#     "bloom_analyze":    0.2,
-#     "bloom_evaluate":   0.2
-#   }
-#
-# Output: same QB JSON as before
-# ─────────────────────────────────────────────────────────────────────────────
-@app.post("/question-bank")
-async def question_bank(request: QBRequest):
-    if not request.segments:
-        raise HTTPException(status_code=400, detail="No segments provided.")
 
-    bloom_percentages = _build_bloom(request)
+# def _run_qb_job(job_id: str, tagged_segments: list, total_questions: int,
+#                 bloom_percentages: dict, slide_file_path: str = None,
+#                 callback_url: str = None, request_id: str = None):
+#     """
+#     Background worker function. Runs the full QB pipeline and writes
+#     result (or error) into _job_store under the given job_id.
+
+#     This runs in a thread managed by FastAPI's BackgroundTasks.
+#     The temp slide file (if any) is cleaned up here after the pipeline finishes.
+#     """
+#     import requests as req_lib  # import here to avoid polluting global scope
+#     effective_callback = callback_url or FALLBACK_CALLBACK_URL
+#     print(f"[Job {job_id}] QB pipeline starting...")
+#     try:
+#         result = run_qb_pipeline(
+#             tagged_segments=tagged_segments,
+#             total_questions=total_questions,
+#             bloom_percentages=bloom_percentages,
+#             slide_file_path=slide_file_path
+#         )
+#         _job_store[job_id]["status"] = "done"
+
+#         os.makedirs("qb_results", exist_ok=True)
+#         file_path = os.path.join("qb_results", f"{job_id}.json")
+#         with open(file_path, "w", encoding="utf-8") as f:
+#             json.dump(result, f, indent=2, ensure_ascii=False)
+#         print(f"[Job {job_id}] Result saved to {file_path}")
+#         print(f"[Job {job_id}] Done. {result['total_questions']} questions.")
+
+#         # Fire callback if backend provided one
+#         if effective_callback:
+#             try:
+#                 # payload = {"request_id": request_id, "qb_result": result}
+#                 json=result
+#                 # response = req_lib.post(effective_callback , json=payload, timeout=30)
+#                 callback_endpoint = f"{effective_callback}/{request_id}"
+
+#                 response = req_lib.post(
+#                     callback_endpoint,
+#                     json=result,   # send raw QB only
+#                     timeout=30
+#                 )
+#                 print(f"[Job {job_id}] Callback fired to {effective_callback } — status {response.status_code}")
+#             except Exception as cb_err:
+#                 print(f"[Job {job_id}] Callback failed (non-fatal): {cb_err}")
+
+#     except Exception as e:
+#         _job_store[job_id]["status"] = "failed"
+#         _job_store[job_id]["error"] = str(e)
+#         print(f"[Job {job_id}] Failed: {e}")
+
+#         # Fire failure callback too so backend isn't left hanging
+#         if effective_callback :
+#             try:
+#                 # payload = {"request_id": request_id, "status": "failed", "error": str(e)}
+#                 # req_lib.post(effective_callback , json=payload, timeout=30)
+#                 callback_endpoint = f"{effective_callback}/{request_id}"
+
+#                 req_lib.post(
+#                     callback_endpoint,
+#                     json={"status": "failed", "error": str(e)},
+#                     timeout=30
+#                 )
+#             except Exception:
+#                 pass
+
+#     finally:
+#         if slide_file_path and os.path.exists(slide_file_path):
+#             os.remove(slide_file_path)
+#             print(f"[Job {job_id}] Temp slide file cleaned up.")
+
+def _run_qb_job(job_id: str, tagged_segments: list, total_questions: int,
+                bloom_percentages: dict, slide_file_path: str = None,
+                callback_url: str = None, request_id: str = None):
+    """
+    Background worker function. Runs the full QB pipeline and writes
+    result (or error) into _job_store under the given job_id.
+
+    This runs in a thread managed by FastAPI's BackgroundTasks.
+    The temp slide file (if any) is cleaned up here after the pipeline finishes.
+    """
+    import requests as req_lib  # import here to avoid polluting global scope
+    effective_callback = callback_url or FALLBACK_CALLBACK_URL
+    print(f"[Job {job_id}] QB pipeline starting...")
 
     try:
         result = run_qb_pipeline(
-            tagged_segments=request.segments,
-            total_questions=request.total_questions,
+            tagged_segments=tagged_segments,
+            total_questions=total_questions,
             bloom_percentages=bloom_percentages,
-            slide_file_path=None
+            slide_file_path=slide_file_path
         )
-        print(f"[/question-bank] {result['total_questions']} questions. Warnings: {result['warnings']}")
-        return JSONResponse(content=result)
-    except HTTPException:
-        raise
+
+        _job_store[job_id]["status"] = "done"
+
+        # Save result to file for persistence
+        os.makedirs("qb_results", exist_ok=True)
+        file_path = os.path.join("qb_results", f"{job_id}.json")
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+
+        print(f"[Job {job_id}] Result saved to {file_path}")
+        print(f"[Job {job_id}] Done. {result['total_questions']} questions.")
+
+        # Fire callback if backend provided one AND request_id is valid
+        # request_id is required because backend expects it as a path variable
+        if effective_callback and request_id:
+            try:
+                callback_endpoint = f"{effective_callback}/{request_id}"
+
+                response = req_lib.post(
+                    callback_endpoint,
+                    json=result,   # send raw QB only as backend expects @RequestBody QuestionBank
+                    timeout=30
+                )
+
+                print(f"[Job {job_id}] Callback fired to {callback_endpoint} — status {response.status_code}")
+
+            except Exception as cb_err:
+                print(f"[Job {job_id}] Callback failed (non-fatal): {cb_err}")
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"QB generation failed: {str(e)}")
+        _job_store[job_id]["status"] = "failed"
+        _job_store[job_id]["error"] = str(e)
+        print(f"[Job {job_id}] Failed: {e}")
+
+        # Fire failure callback too so backend isn't left hanging
+        # Only send if both callback and request_id are available
+        if effective_callback and request_id:
+            try:
+                callback_endpoint = f"{effective_callback}/{request_id}"
+
+                req_lib.post(
+                    callback_endpoint,
+                    json={"status": "failed", "error": str(e)},
+                    timeout=30
+                )
+
+            except Exception:
+                pass
+
+    finally:
+        # Clean up temp slide file regardless of success/failure
+        if slide_file_path and os.path.exists(slide_file_path):
+            os.remove(slide_file_path)
+            print(f"[Job {job_id}] Temp slide file cleaned up.")    
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ENDPOINT 4b: /question-bank/with-slides
+# ENDPOINT 4a: /question-bank/generate
+#
+# Replaces the old blocking /question-bank endpoint.
+# Returns a job_id immediately. QB runs in the background.
+#
+# Input (JSON body):
+#   {
+#     "segments": [...],
+#     "total_questions": 20,
+#     "bloom_remember": 0.2, "bloom_understand": 0.2, "bloom_apply": 0.2,
+#     "bloom_analyze": 0.2, "bloom_evaluate": 0.2
+#   }
+#
+# Output (immediate, ~0s):
+#   {"job_id": "abc123", "status": "processing"}
+# ─────────────────────────────────────────────────────────────────────────────
+# @app.post("/question-bank/generate")
+# async def question_bank_generate(request: QBRequest, background_tasks: BackgroundTasks):
+#     if not request.segments:
+#         raise HTTPException(status_code=400, detail="No segments provided.")
+
+#     bloom_percentages = _build_bloom(request)
+
+#     job_id = uuid.uuid4().hex[:12]
+#     _job_store[job_id] = {
+#         "status": "processing",
+#         "result": None,
+#         "error": None,
+#         "created_at": time.time()
+#     }
+
+#     background_tasks.add_task(
+#         _run_qb_job,
+#         job_id=job_id,
+#         tagged_segments=request.segments,
+#         total_questions=request.total_questions,
+#         bloom_percentages=bloom_percentages,
+#         slide_file_path=None,
+#         callback_url=request.callback_url,
+#         request_id=request.request_id
+#     )
+
+#     print(f"[/question-bank/generate] Job {job_id} queued (no slides).")
+#     return JSONResponse(content={"job_id": job_id, "status": "processing"})
+@app.post("/question-bank/generate")
+async def question_bank_generate(request: Request, background_tasks: BackgroundTasks):
+    body = await request.json()
+
+    # Extract segments from nested structure
+    if "transcript" in body:
+        segments = body["transcript"].get("segments", [])
+    else:
+        segments = body.get("segments", [])
+
+    if not segments:
+        raise HTTPException(status_code=400, detail="No segments provided.")
+
+    # Extract optional fields
+    request_id = body.get("unitId")  # map unitId → request_id
+    callback_url = FALLBACK_CALLBACK_URL
+
+    bloom_percentages = _build_bloom(QBRequest(segments=segments))
+
+    job_id = uuid.uuid4().hex[:12]
+    _job_store[job_id] = {
+        "status": "processing",
+        "result": None,
+        "error": None,
+        "created_at": time.time()
+    }
+
+    background_tasks.add_task(
+        _run_qb_job,
+        job_id=job_id,
+        tagged_segments=segments,
+        total_questions=20,
+        bloom_percentages=bloom_percentages,
+        slide_file_path=None,
+        callback_url=callback_url,
+        request_id=request_id
+    )
+
+    return JSONResponse(content={"job_id": job_id, "status": "processing"})
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ENDPOINT 4b: /question-bank/generate/with-slides
+#
+# Same as /question-bank/generate but accepts a slide file.
 #
 # Input (multipart/form-data):
-#   segments_json     — tagged segments array, JSON stringified (required)
-#   slide_file        — PDF or PPTX file (required, that's the whole point)
-#   total_questions   — integer, default 20 (optional)
-#   bloom_*           — floats summing to 1.0, default 0.2 each (optional)
+#   segments_json, slide_file, total_questions, bloom_*
 #
-# Output: same QB JSON as /question-bank
+# Output (immediate, ~0s):
+#   {"job_id": "abc123", "status": "processing"}
 # ─────────────────────────────────────────────────────────────────────────────
-@app.post("/question-bank/with-slides")
-async def question_bank_with_slides(
-    segments_json:    str          = Form(...),
-    slide_file:       UploadFile   = File(...),
-    total_questions:  int          = Form(20),
-    bloom_remember:   float        = Form(0.2),
-    bloom_understand: float        = Form(0.2),
-    bloom_apply:      float        = Form(0.2),
-    bloom_analyze:    float        = Form(0.2),
-    bloom_evaluate:   float        = Form(0.2),
+
+@app.post("/question-bank/generate/with-slides")
+async def question_bank_generate_with_slides(
+    background_tasks: BackgroundTasks,
+    segments_json:    str        = Form(...),
+    slide_file:       UploadFile = File(...),
+    total_questions:  int        = Form(20),
+    bloom_remember:   float      = Form(0.2),
+    bloom_understand: float      = Form(0.2),
+    bloom_apply:      float      = Form(0.2),
+    bloom_analyze:    float      = Form(0.2),
+    bloom_evaluate:   float      = Form(0.2),
+    callback_url:     Optional[str] = Form(None),
+    request_id:       Optional[str] = Form(None),
 ):
+# async def question_bank_generate_with_slides(
+#     background_tasks: BackgroundTasks,
+#     segments_json:    str        = Form(...),
+#     slide_file:       UploadFile = File(...),
+#     total_questions:  int        = Form(20),
+#     bloom_remember:   float      = Form(0.2),
+#     bloom_understand: float      = Form(0.2),
+#     bloom_apply:      float      = Form(0.2),
+#     bloom_analyze:    float      = Form(0.2),
+#     bloom_evaluate:   float      = Form(0.2),
+# ):
     try:
         segments = json.loads(segments_json)
     except json.JSONDecodeError as e:
@@ -576,7 +820,6 @@ async def question_bank_with_slides(
     if not segments:
         raise HTTPException(status_code=400, detail="No segments provided.")
 
-    # Reuse the same bloom validation via a throwaway QBRequest
     dummy = QBRequest(
         segments=segments,
         total_questions=total_questions,
@@ -592,29 +835,132 @@ async def question_bank_with_slides(
     if ext not in (".pdf", ".pptx", ".ppt"):
         raise HTTPException(status_code=400, detail=f"Unsupported slide format: {ext}. Use PDF or PPTX.")
 
-    slide_tmp_path = None
-    try:
-        slide_tmp_path = _save_upload(slide_file, suffix=ext)
-        print(f"[/question-bank/with-slides] Slide file received: {slide_file.filename}")
+    # Save the slide file to a temp path NOW (before returning).
+    # The background job will clean it up after it finishes.
+    slide_tmp_path = _save_upload(slide_file, suffix=ext)
+    print(f"[/question-bank/generate/with-slides] Slide saved to temp: {slide_tmp_path}")
 
-        result = run_qb_pipeline(
-            tagged_segments=segments,
-            total_questions=total_questions,
-            bloom_percentages=bloom_percentages,
-            slide_file_path=slide_tmp_path
+    job_id = uuid.uuid4().hex[:12]
+    _job_store[job_id] = {
+        "status": "processing",
+        "result": None,
+        "error": None,
+        "created_at": time.time()
+    }
+
+    # background_tasks.add_task(
+    #     _run_qb_job,
+    #     job_id=job_id,
+    #     tagged_segments=segments,
+    #     total_questions=total_questions,
+    #     bloom_percentages=bloom_percentages,
+    #     slide_file_path=slide_tmp_path
+    # )
+
+    background_tasks.add_task(
+        _run_qb_job,
+        job_id=job_id,
+        tagged_segments=segments,
+        total_questions=total_questions,
+        bloom_percentages=bloom_percentages,
+        slide_file_path=slide_tmp_path,
+        callback_url=callback_url,
+        request_id=request_id
+    )
+
+    print(f"[/question-bank/generate/with-slides] Job {job_id} queued.")
+    return JSONResponse(content={"job_id": job_id, "status": "processing"})
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ENDPOINT 4c: GET /question-bank/result/{job_id}
+#
+# Backend polls this every 30 seconds after calling /generate.
+# Three possible responses:
+#   processing → {"status": "processing"}                 (keep polling)
+#   done       → {"status": "done", "result": {...}}      (full QB JSON)
+#   failed     → {"status": "failed", "error": "..."}     (surface to user)
+#   not found  → 404 {"detail": "..."}                    (server restarted — re-trigger /generate)
+# ─────────────────────────────────────────────────────────────────────────────
+@app.get("/question-bank/result/{job_id}")
+async def question_bank_result(job_id: str):
+    # Opportunistic cleanup of expired jobs on every poll
+    _cleanup_old_jobs()
+
+    # job = _job_store.get(job_id)
+    # if job is None:
+    #     raise HTTPException(
+    #         status_code=404,
+    #         detail=f"Job '{job_id}' not found. Server may have restarted. Re-trigger /question-bank/generate."
+    #     )
+    job = _job_store.get(job_id)
+
+    # NEW: fallback to file
+    if job is None:
+        file_path = os.path.join("qb_results", f"{job_id}.json")
+
+        if os.path.exists(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                result = json.load(f)
+
+            return JSONResponse(content=result)
+
+        raise HTTPException(
+            status_code=404,
+            detail=f"Job '{job_id}' not found."
         )
-        print(f"[/question-bank/with-slides] {result['total_questions']} questions. Warnings: {result['warnings']}")
+
+    if job["status"] == "processing":
+        return JSONResponse(content={"status": "processing"})
+
+    # if job["status"] == "done":
+    #     return JSONResponse(content=job["result"])
+    if job["status"] == "done":
+        file_path = os.path.join("qb_results", f"{job_id}.json")
+
+        if not os.path.exists(file_path):
+            raise HTTPException(
+                status_code=500,
+                detail="Result file missing."
+            )
+
+        with open(file_path, "r", encoding="utf-8") as f:
+            result = json.load(f)
+
         return JSONResponse(content=result)
+    
+    if job["status"] == "failed":
+        return JSONResponse(
+            status_code=500,
+            content={"status": "failed", "error": job["error"]}
+        )
 
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"QB generation failed: {str(e)}")
-    finally:
-        if slide_tmp_path and os.path.exists(slide_tmp_path):
-            os.remove(slide_tmp_path)
+    # Should never reach here, but just in case
+    raise HTTPException(status_code=500, detail="Unknown job state.")
 
 
+def _render_pdf(html_body: str) -> bytes:
+    html_full = f"""
+    <html>
+    <head><meta charset="utf-8">
+    <style>
+        body {{ font-family: Arial, sans-serif; font-size: 13px;
+                line-height: 1.7; margin: 48px 56px; color: #1a1a1a; }}
+        h1 {{ font-size: 22px; color: #1a3a5c; border-bottom: 2px solid #1a3a5c;
+              padding-bottom: 6px; margin-top: 32px; }}
+        h2 {{ font-size: 17px; color: #1a3a5c; margin-top: 24px; }}
+        ul {{ padding-left: 20px; }}
+        li {{ margin-bottom: 5px; }}
+        th, td {{ border: 1px solid #ccc; padding: 8px 12px; }}
+        th {{ background: #1a3a5c; color: white; }}
+    </style>
+    </head>
+    <body>{html_body}</body>
+    </html>
+    """
+    config = pdfkit.configuration(wkhtmltopdf=r"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe")
+    options = {"page-size": "A4", "encoding": "UTF-8", "no-outline": None}
+    return pdfkit.from_string(html_full, False, configuration=config, options=options)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # ENDPOINT 5: /quiz/mcq
@@ -663,7 +1009,27 @@ async def quiz_mcq(request: MCQRequest):
             num_questions=request.num_questions
         )
         print(f"[/quiz/mcq] {result['total']} MCQs generated. Warnings: {result['warnings']}")
-        return JSONResponse(content=result)
+
+        # Build markdown
+        md_lines = ["# MCQ Quiz\n"]
+        for i, mcq in enumerate(result["mcqs"], 1):
+            md_lines.append(f"**Q{i}. {mcq['question']}**\n")
+            for letter, text in mcq["options"].items():
+                md_lines.append(f"- {letter}) {text}")
+            md_lines.append(f"\n**Answer:** {mcq['correct']}) {mcq['correct_text']}\n")
+
+        if result["warnings"]:
+            md_lines.append("\n---\n**Warnings:** " + "; ".join(result["warnings"]))
+
+        html_body = markdown.markdown("\n".join(md_lines), extensions=["extra", "tables"])
+        pdf_bytes = _render_pdf(html_body)
+
+        print(f"[/quiz/mcq] PDF generated ({len(pdf_bytes)} bytes).")
+        return StreamingResponse(
+            io.BytesIO(pdf_bytes),
+            media_type="application/pdf",
+            headers={"Content-Disposition": "attachment; filename=mcq_quiz.pdf"}
+        )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"MCQ generation failed: {str(e)}")
 
@@ -711,7 +1077,26 @@ async def quiz_extempore(request: ExtemporeRequest):
         }
 
         print(f"[/quiz/extempore] {len(top_topics)} topics returned. Warnings: {result['warnings']}")
-        return JSONResponse(content=response)
+        # return JSONResponse(content=response)
+        # Build markdown
+        md_lines = ["# Extempore Topics\n"]
+        for i, topic in enumerate(top_topics, 1):
+            md_lines.append(f"**{i}. {topic['title']}**\n")
+            # md_lines.append(f"- Concept Score: {round(topic['score'], 3)}")
+            # md_lines.append(f"- Word Count: {topic['word_count']}\n")
+
+        if response["warnings"]:
+            md_lines.append("\n---\n**Warnings:** " + "; ".join(response["warnings"]))
+
+        html_body = markdown.markdown("\n".join(md_lines), extensions=["extra", "tables"])
+        pdf_bytes = _render_pdf(html_body)
+
+        print(f"[/quiz/extempore] PDF generated ({len(pdf_bytes)} bytes).")
+        return StreamingResponse(
+            io.BytesIO(pdf_bytes),
+            media_type="application/pdf",
+            headers={"Content-Disposition": "attachment; filename=extempore_topics.pdf"}
+        )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Extempore generation failed: {str(e)}")
 
