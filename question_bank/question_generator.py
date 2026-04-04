@@ -37,7 +37,7 @@ def generate_questions_for_concept(
             response = client.chat.completions.create(
                 model=GROQ_MODEL_QB,
                 messages=[{"role": "user", "content": prompt}],
-                temperature=0.4,
+                temperature=0.85,
             )
             raw = response.choices[0].message.content.strip()
             questions = _parse_response(raw)
